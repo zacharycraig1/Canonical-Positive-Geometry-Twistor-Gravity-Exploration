@@ -25,9 +25,9 @@ venv/
 
 # Project specific caches and artifacts
 checkpoints/
+.dcp_cache/
 dcp_cache/
 runs/
 results/
 *_output.log
 reportzip.zip
-
