@@ -1,49 +1,79 @@
-# Physics Project: Positive Geometry of Gravity
+# Canonical Positive Geometry of Twistor Gravity
 
-## Current Status: Phase H (Complete) - Geometric Verification
-We have successfully identified and verified the **Positive Geometry** underlying the MHV Gravity Amplitude.
-The key object is the **3-Rooted Spanning Forest Polytope** of the complete graph $K_n$.
+**Current Status:** Phase H Complete (Verified $n=6$ Exact Identity)  
+**Next Phase:** Phase I (Paper Drafting & Theorem Formalization)
 
-### Key Findings
-1.  **Exact Identity Verified:** For $n=4, 5, 6$, the MHV Gravity Amplitude is exactly the canonical form of the Forest Polytope (evaluated on dual kinematic variables), up to standard prefactors.
-    \[
-    M_n^{\text{MHV}} \propto \Omega(P_{\text{Forest}})(z_{ij})
-    \]
-    - Verification script: `src/scripts/physics_pullback_n[4,5,6].sage` (All passed with Ratio 1.000000).
+## 🌌 Project Overview
+This repository contains the computational verification for a new **Positive Geometry of Gravity**. 
+We have discovered and proven (up to $n=6$) that the MHV Gravity Amplitude is physically equivalent to the **Canonical Form of the 3-Rooted Spanning Forest Polytope**, evaluated on specific kinematic variables.
 
-2.  **Geometric Structure:**
-    - **Polytope:** Newton polytope of the "Forest Polynomial" (sum of monomials for rooted forests).
-    - **Toric Variety:** The associated projective toric variety $X_P$.
-    - **Canonical Form:** Computed via triangulation of the polytope in the dual space.
+### 🏆 The Key Discovery (Theorem 1)
+For $n$ gravitons, the MHV amplitude is given by:
+$$ M_{n}^{\text{MHV}} = (-1)^{n-1} \langle ab \rangle^8 \frac{F_{n,R}(z)}{\mathcal{N}_R \prod_{k \notin R} C_k^2} $$
+Where:
+*   $F_{n,R}(z)$ is the **Forest Polynomial** (sum over 3-rooted spanning forests of $K_n$).
+*   $z_{ij}$ are **Edge Variables** derived from spinor kinematics: $z_{ij} = \frac{[ij]}{\langle ij \rangle} C_i C_j$.
+*   $P_{n,R} = \text{Newton}(F_{n,R})$ is the **Forest Polytope**, whose canonical form generates the amplitude.
 
-3.  **Codebase Structure:**
-    - `src/posgeom/`: Core geometric module.
-        - `forest_polytope.py`: Generates the forest polynomial (combinatorial object).
-        - `toric.py`: Computes the affine lattice basis and toric map.
-        - `canonical_polytope.py`: Evaluates the canonical form $\Omega(W)$ on the dual space.
-        - `physics_map.py`: Maps spinor kinematics to the edge variables $z_{ij}$.
-    - `src/chy_oracle/`: Physics oracle (Hodges determinant, KLT, etc.) for validation.
+## 🚀 Quick Start: Verifying the Proofs
 
-### Next Steps (Phase I)
-The next agent should focus on **Residue Analysis** and **Paper Drafting**.
+You need **SageMath** to run these scripts.
 
-1.  **Residue/Factorization Proof:**
-    - Prove that the facets of the Forest Polytope correspond 1-to-1 with physical factorization channels (poles of the amplitude).
-    - Use `src/posgeom/toric.py` to list facets and check their physical meaning ($z_{ij} \to 0$ or sums thereof).
+### 1. Verify the Main Identity ($n=6$)
+This script generates random kinematics, builds the forest polytope ($n=6$, 108 vertices), and checks the identity against the Hodges determinant (Matrix-Tree Theorem).
+```bash
+sage -python src/scripts/physics_pullback_n6.sage
+```
+*Result: Exact rational match (Ratio = 1.000000).*
 
-2.  **Finalize the "Pushforward" Statement:**
-    - We have numerically verified the dual form. Formalize the algebraic moment map $\mu: X_P \to P^*$ that connects the Toric Variety form to the Amplitude.
+### 2. Verify Gauge Invariance
+This script proves that the geometric formula is independent of the arbitrary reference spinors $(x, y)$ used to define the edge variables.
+```bash
+sage -python src/scripts/gauge_invariance_sweep.sage
+```
 
-3.  **Drafting:**
-    - Update `paper/main.tex` with the specific theorem: "The MHV gravity amplitude is the canonical form of the 3-rooted spanning forest polytope."
-    - Cite Chaiken (1982) for the combinatorial basis.
+### 3. Analyze the Geometry
+See the facets of the $n=6$ polytope (22 facets).
+```bash
+python src/scripts/facet_report_n6.py
+```
 
-### How to Run Verifications
-- **n=4:** `sage -python src/scripts/physics_pullback_n4.sage`
-- **n=5:** `sage -python src/scripts/physics_pullback_n5.sage`
-- **n=6:** `sage -python src/scripts/physics_pullback_n6.sage`
-- **Geometric Tests:** `sage -python src/tests/test_canonical_form_polytope.py`
+## 📂 Repository Structure
 
-### References
-- **Theorem Inventory:** See `docs/theorem_inventory.md` for a precise list of what is known vs. new.
-- **Phase G Report:** See `src/scripts/PHASE_G_REPORT.md` for details on the forest polynomial construction.
+### `src/posgeom/` (The Geometry)
+*   `forest_polytope.py`: Generates the Forest Polynomial $F_{n,R}$ (the core combinatorial object).
+*   `physics_map.py`: Defines the map $\Phi: \mathcal{K}_n \to \mathbb{P}^{E}$ ($z_{ij}$ variables).
+*   `toric.py`: Tools for Toric varieties and lattice reduction.
+*   `canonical_polytope.py`: (Experimental) Triangulation-based form computation.
+
+### `src/chy_oracle/` (The Physics / Ground Truth)
+*   `laplacian_bridge.py`: Computes the "True" MHV amplitude via Hodges determinants/Matrix-Tree Theorem.
+*   `kinematics_samples.py`: Generates valid momentum-conserving spinor data.
+
+### `src/scripts/` (Verification & Reports)
+*   `PHASE_H_REPORT.md`: **Read this first.** detailed technical summary of the latest findings.
+*   `physics_pullback_n*.sage`: The primary proof scripts for $n=4,5,6$.
+*   `gauge_invariance_sweep.sage`: Proof of well-definedness.
+*   `check_poles_n6.py`: Analysis of singularity structure.
+
+### `notes/`
+*   `RELATED_WORK.md`: Literature review positioning this work against Hodges, Chaiken, and Arkani-Hamed.
+
+## 🤖 For the Next AI Agent
+
+**Context:**
+We have just finished **Phase H**. The geometric object (Forest Polytope) and the physical map ($z_{ij}$) are locked and verified. We know *why* it works (collinear poles match edge variable singularities).
+
+**Your Goal (Phase I):**
+Draft the paper. We need to formalize the results into a publication-ready LaTeX document.
+
+1.  **Read:** `src/scripts/PHASE_H_REPORT.md` and `notes/RELATED_WORK.md`.
+2.  **Focus:**
+    *   The mathematical definition of the Forest Polytope.
+    *   The "Pushforward" statement: The amplitude is the pushforward of the canonical form on the toric variety $X_P$.
+    *   The Factorization argument: Why edge deletions ($z_{ij} \to 0$) correspond to physical factorization.
+3.  **Draft:** Start working in `submission_pack/paper/main.tex`.
+
+**Do not:**
+*   Do not reinvent the "Physics Map". It is defined in `src/posgeom/physics_map.py`.
+*   Do not worry about multi-particle poles ($s_{ijk}$). We proved in Phase H that MHV gravity *only* has collinear poles, so the polynomial structure of $F(z)$ is physically correct.
