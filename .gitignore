@@ -1,0 +1,33 @@
+# Python/Sage
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.env
+.venv
+
+# SageMath
+*.sobj
+*.sage.py
+
+# Logs and temporary files
+*.log
+*.out
+*.tmp
+
+# Cursor/IDE
+.cursor/
+.vscode/
+.idea/
+
+# Project specific caches and artifacts
+checkpoints/
+dcp_cache/
+runs/
+results/
+*_output.log
+reportzip.zip
+

@@ -1,0 +1,20 @@
+\section{Reproducibility Guide}
+
+The results presented in this paper can be reproduced using the code provided in the supplementary material.
+
+\subsection{Environment}
+The code requires Python 3 and SageMath. A \texttt{Dockerfile} is provided for containerized execution.
+
+\subsection{Verification Scripts}
+The \texttt{repro/run\_all.sh} script executes the following checks:
+\begin{enumerate}
+    \item \textbf{Reference Independence:} Verifies that the amplitude is independent of the auxiliary spinors $x, y$.
+    \item \textbf{Deletion Independence:} Verifies that the choice of deleted rows/columns $R$ does not affect the result.
+    \item \textbf{Pole Analysis:} Confirms the correct factorization properties at adjacent and non-adjacent singularities.
+    \item \textbf{Forest Expansion:} Checks the combinatorial identity between the determinant minor and the rooted forest sum.
+    \item \textbf{Newton Polytopes:} Computes the vertex and facet counts for the associated forest polytopes.
+    \item \textbf{Generalization:} Verifies the master identity for $n=7$ MHV amplitudes.
+\end{enumerate}
+
+
+

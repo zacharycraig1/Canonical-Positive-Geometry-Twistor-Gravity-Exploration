@@ -1,0 +1,134 @@
+Cursor Handoff Report — Factorization stalls at dim = 8 (n=6 gravity / positive-geometry / OS-DCP)
+
+Current status (what the logs mean)
+- We have a candidate vector space of log-forms / OS-type classes on the De Concini–Procesi (DCP) wonderful compactification for the 6-pt channel arrangement {s_S=0} (2≤|S|≤3).
+- We run boundary-by-boundary “INTERSECT” tests:
+  - For each boundary s_S=0, the code searches for good nested-set charts and tests residue/factorization constraints.
+  - The run reports repeated: status=HIT null_dim=8 bad=0, and after intersection new_dim=8.
+- Interpretation: All tested factorization constraints are satisfied by an 8D family, so factorization alone is not cutting down the solution to a unique amplitude-form (dim 1).
+
+The core problem
+“Tree-level factorization on all physical poles” is a necessary constraint but can be insufficient to uniquely pick the gravity form (Hodges det’Φ at MHV). We need extra constraints that are not equivalent to factorization.
+
+Goal: introduce additional constraints that (ideally) reduce dim(candidate space) = 8 → 1.
+
+Priority constraints to try (recommended order)
+
+1) Enforce full S6 invariance (hard enforcement, not just measuring)
+Why: Gravity amplitudes are fully permutation invariant. If the current code only reports the S6-invariant subspace but doesn’t project onto it, you can be sitting in a larger equivariant space.
+
+Implementation (linear):
+- Represent candidate space by coefficient vectors c ∈ Q^d in a fixed basis.
+- For each generator σ of S6, compute the representation matrix M_σ acting on the basis.
+- Impose invariance equations: (M_σ − I)c = 0 for σ in generators.
+- Solve the combined linear system; intersect with current candidate space.
+
+Expected effect: can reduce 8 → smaller quickly; sometimes all the way to 1.
+
+2) Use all physical channels: include 2-particle and 3-particle poles (not only 3|3)
+Why: If the current run only checks 10 three-particle channels, it’s missing 2-particle channels and/or nontrivial boundary strata.
+
+For n=6:
+- 2-particle channels: C(6,2)=15
+- 3-particle channels: 10 (since S and complement define the same divisor)
+Total physical divisors: 25.
+
+Implementation (linear):
+- Loop over all S with |S|=2 or 3 (mod complement identification).
+- For each S, impose the same residue structure equations already used.
+- Intersect constraints cumulatively.
+
+Expected effect: often cuts the space further than 3-particle-only.
+
+3) Add iterated residue / associativity constraints (“boundary of boundary” consistency)
+Why: Single-boundary factorization can be satisfied while double (or triple) residues fail. Physics requires compatibility of sequential factorizations: different orders of taking residues on intersecting divisors must agree (up to sign) and match product structures.
+
+Example:
+- If divisors s_A=0 and s_B=0 intersect (compatible channels), enforce:
+  Res_{s_A=0} Res_{s_B=0} Ω = Res_{s_B=0} Res_{s_A=0} Ω
+(with orientation sign tracked), and that the result equals wedge of lower-point forms.
+
+Implementation (linear-ish):
+- Choose many pairs (A,B) of compatible channels (nested/disjoint as appropriate to DCP charts).
+- Compute iterated residues in charts.
+- Convert to linear constraints on coefficients by sampling or exact evaluation.
+- Intersect all such constraints.
+
+Expected effect: strong new constraint beyond “single-pole factorization”.
+
+4) Impose soft limits (universal gravitational soft theorem)
+Why: Soft behavior is not equivalent to ordinary factorization constraints and is extremely selective for gravity.
+
+For a soft leg p_6 → 0:
+  Ω_6 → S^grav · Ω_5
+
+Implementation options:
+- Kinematic sampling: parameterize p_6 = ε q and take ε→0; compare leading behavior to expected soft factor times lower-point object.
+- Algebraic: encode scaling constraints on the form near a chosen degeneration corresponding to softness.
+
+Expected effect: often collapses remaining ambiguity (8 → 1).
+
+5) Restrict to 4D kinematics via Gram determinant constraints
+Why: Abstract kinematic-space solutions may not correspond to realizable 4D momenta. Physical 4D scattering satisfies Gram determinant relations (Gram minors vanish).
+
+Implementation:
+- Evaluate candidates on random 4D kinematic points (spinor-helicity or explicit 4-vectors).
+- Require agreement with known 4D gravity amplitude behavior (or require extra solutions vanish on the 4D locus).
+
+Expected effect: selects physically relevant solution; can reduce dimension.
+
+6) Enforce BCFW large-z scaling (gravity falls faster than YM)
+Why: Gravity amplitudes typically scale like 1/z^2 under appropriate BCFW shifts; this is a powerful extra selection principle not captured by local factorization alone.
+
+Implementation:
+- Choose a BCFW shift (i,j).
+- Express shifted invariants; evaluate candidate at large z sample points.
+- Impose leading power ≤ −2 (or exact expected scaling).
+
+Expected effect: filters out “factorizing but wrong UV behavior” solutions.
+
+7) Enforce CHY / KLT equivalence check on random points (projection to the physical line)
+Why: For MHV gravity, Hodges is equivalent to CHY/KLT forms. If you can compute a numerical reference amplitude at sample points, you can directly project your 8D space onto the 1D line that matches physics.
+
+Implementation (pragmatic):
+- Pick random rational kinematic points (preferably 4D spinor-helicity).
+- Compute reference amplitude A_ref using Hodges det’Φ (MHV) or KLT square of Parke–Taylor (MHV) in 4D.
+- Evaluate each basis candidate f_i at the same point.
+- Solve linear system for coefficients c_i matching A_ref (up to overall scale).
+- Verify across multiple random points.
+
+Expected effect: immediately yields the unique physical combination if it exists in the span.
+
+Diagnostics: why constraints might not reduce dimension even if “correct”
+If factorization always returns HIT without reducing dim:
+- The test might be too weak (e.g., comparing only a subset of residue components).
+- The charts used might accidentally be in a locus where distinctions vanish.
+- The check might allow a large nullspace because it tests underdetermined conditions.
+
+Strengthen the test:
+- Increase number of independent sample points per boundary (not just best chart).
+- Require matching of the full residue form, not just “nonzero / structure ok”.
+- Add random chart selection, not only “best size chart”.
+
+Concrete recommended plan for Cursor (fastest path to dim 1)
+
+Phase A (purely linear, easiest)
+1) Enforce full S6 invariance by solving (M_σ − I)c=0.
+2) Expand boundary set to all |S|=2,3 channels (25 total).
+3) Add iterated residue consistency for many compatible pairs (A,B).
+
+Phase B (physics-selective)
+4) Add soft theorem constraint (take leg soft; match expected leading behavior).
+5) If still >1: enforce 4D Gram locus (evaluate on 4D points, remove solutions that disagree).
+
+Phase C (ground truth projection)
+6) Implement “match Hodges / CHY / KLT at points” projection to explicitly isolate the physical line.
+
+What success looks like
+- Candidate-space dimension goes 8 → 1.
+- The surviving 1D space is stable under:
+  - different random seeds,
+  - different charts,
+  - increased trial counts,
+  - additional boundaries / iterated residues.
+- Optional: the 1D candidate matches Hodges (up to scale) on random 4D kinematic points.

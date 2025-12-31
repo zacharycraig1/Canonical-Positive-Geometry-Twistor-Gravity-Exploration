@@ -1,0 +1,14 @@
+[
+  {
+    "seed": 0,
+    "max_deviation": 0.0,
+    "failures": 0,
+    "refs_tested": 20
+  },
+  {
+    "seed": 2,
+    "max_deviation": 0.0,
+    "failures": 0,
+    "refs_tested": 20
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "status": "partial",
+  "dim": 58,
+  "n_samples": 200,
+  "matrix_rank": 58,
+  "max_residual": 0.08211756234261225,
+  "avg_residual": 0.012934371861892556,
+  "verification_max_error": 29307.502768994025,
+  "nnz": 

@@ -1,0 +1,9838 @@
+[
+  {
+    "point_idx": 0,
+    "Z": [
+      [
+        2.0,
+        5.0,
+        -10.0,
+        -7.0
+      ],
+      [
+        -7.0,
+        -3.0,
+        -1.0,
+        9.0
+      ],
+      [
+        8.0,
+        -6.0,
+        -4.0,
+        2.0
+      ],
+      [
+        -9.0,
+        -4.0,
+        -3.0,
+        4.0
+      ],
+      [
+        7.0,
+        -5.0,
+        3.0,
+        -2.0
+      ],
+      [
+        -1.0,
+        10.0,
+        9.0,
+        6.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "25",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_5"
+  },
+  {
+    "point_idx": 1,
+    "Z": [
+      [
+        -5.0,
+        1.0,
+        2.0,
+        -2.0
+      ],
+      [
+        -1.0,
+        1.0,
+        -5.0,
+        5.0
+      ],
+      [
+        -10.0,
+        6.0,
+        -9.0,
+        2.0
+      ],
+      [
+        -3.0,
+        3.0,
+        -4.0,
+        8.0
+      ],
+      [
+        10.0,
+        -5.0,
+        8.0,
+        10.0
+      ],
+      [
+        1.0,
+        0.0,
+        4.0,
+        8.0
+      ]
+    ],
+    "A": null,
+    "H": null,
+    "A_reason": "zero_angle_bracket",
+    "H_reason": "zero_angle_bracket",
+    "status": "None",
+    "reason": "A: zero_angle_bracket; H: zero_angle_bracket",
+    "min_minor": "1",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 2,
+    "Z": [
+      [
+        -2.0,
+        5.0,
+        3.0,
+        -2.0
+      ],
+      [
+        1.0,
+        8.0,
+        1.0,
+        -2.0
+      ],
+      [
+        -3.0,
+        -8.0,
+        7.0,
+        1.0
+      ],
+      [
+        5.0,
+        10.0,
+        10.0,
+        -5.0
+      ],
+      [
+        -3.0,
+        -7.0,
+        -4.0,
+        -6.0
+      ],
+      [
+        0.0,
+        1.0,
+        9.0,
+        -3.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "2",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_4_5"
+  },
+  {
+    "point_idx": 3,
+    "Z": [
+      [
+        0.0,
+        -7.0,
+        -2.0,
+        -10.0
+      ],
+      [
+        9.0,
+        0.0,
+        1.0,
+        -1.0
+      ],
+      [
+        0.0,
+        -4.0,
+        -10.0,
+        10.0
+      ],
+      [
+        2.0,
+        -3.0,
+        4.0,
+        7.0
+      ],
+      [
+        -8.0,
+        -8.0,
+        -9.0,
+        9.0
+      ],
+      [
+        -5.0,
+        -2.0,
+        4.0,
+        -9.0
+      ]
+    ],
+    "A": "-5048059912247/1317849219770729103360000",
+    "H": "-5048059912247/1317849219770729103360000",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "computation_error",
+    "error": "'sage.rings.rational.Rational' object has no attribute 'simplify_rational'",
+    "min_minor": "8",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 4,
+    "Z": [
+      [
+        4.0,
+        -5.0,
+        -9.0,
+        -2.0
+      ],
+      [
+        -2.0,
+        8.0,
+        -1.0,
+        -3.0
+      ],
+      [
+        3.0,
+        -2.0,
+        -6.0,
+        8.0
+      ],
+      [
+        2.0,
+        -4.0,
+        0.0,
+        10.0
+      ],
+      [
+        -7.0,
+        -10.0,
+        -1.0,
+        -4.0
+      ],
+      [
+        -4.0,
+        -8.0,
+        4.0,
+        -2.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "8",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 5,
+    "Z": [
+      [
+        -7.0,
+        4.0,
+        5.0,
+        -4.0
+      ],
+      [
+        6.0,
+        -1.0,
+        -2.0,
+        -6.0
+      ],
+      [
+        -3.0,
+        6.0,
+        6.0,
+        -3.0
+      ],
+      [
+        2.0,
+        5.0,
+        7.0,
+        -3.0
+      ],
+      [
+        6.0,
+        2.0,
+        3.0,
+        1.0
+      ],
+      [
+        -9.0,
+        5.0,
+        10.0,
+        8.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "1",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_3_4"
+  },
+  {
+    "point_idx": 6,
+    "Z": [
+      [
+        0.0,
+        -1.0,
+        -7.0,
+        10.0
+      ],
+      [
+        0.0,
+        3.0,
+        5.0,
+        0.0
+      ],
+      [
+        6.0,
+        -9.0,
+        1.0,
+        3.0
+      ],
+      [
+        5.0,
+        -9.0,
+        2.0,
+        4.0
+      ],
+      [
+        -6.0,
+        -9.0,
+        -2.0,
+        -8.0
+      ],
+      [
+        2.0,
+        10.0,
+        -8.0,
+        -5.0
+      ]
+    ],
+    "A": null,
+    "H": null,
+    "A_reason": "zero_square_bracket",
+    "H_reason": "zero_square_bracket",
+    "status": "None",
+    "reason": "A: zero_square_bracket; H: zero_square_bracket",
+    "min_minor": "2",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_5"
+  },
+  {
+    "point_idx": 7,
+    "Z": [
+      [
+        5.0,
+        -6.0,
+        -7.0,
+        9.0
+      ],
+      [
+        -3.0,
+        4.0,
+        -2.0,
+        4.0
+      ],
+      [
+        0.0,
+        -2.0,
+        -3.0,
+        -4.0
+      ],
+      [
+        -6.0,
+        6.0,
+        -3.0,
+        2.0
+      ],
+      [
+        -10.0,
+        1.0,
+        -4.0,
+        9.0
+      ],
+      [
+        2.0,
+        -5.0,
+        6.0,
+        -10.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "2",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 8,
+    "Z": [
+      [
+        -7.0,
+        10.0,
+        7.0,
+        -1.0
+      ],
+      [
+        -5.0,
+        -2.0,
+        9.0,
+        -2.0
+      ],
+      [
+        6.0,
+        3.0,
+        7.0,
+        9.0
+      ],
+      [
+        0.0,
+        2.0,
+        3.0,
+        -1.0
+      ],
+      [
+        5.0,
+        -8.0,
+        8.0,
+        4.0
+      ],
+      [
+        -4.0,
+        -1.0,
+        9.0,
+        -6.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "3",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 9,
+    "Z": [
+      [
+        -9.0,
+        10.0,
+        -2.0,
+        7.0
+      ],
+      [
+        -9.0,
+        -10.0,
+        4.0,
+        0.0
+      ],
+      [
+        0.0,
+        2.0,
+        8.0,
+        -9.0
+      ],
+      [
+        -7.0,
+        1.0,
+        -5.0,
+        9.0
+      ],
+      [
+        -4.0,
+        -1.0,
+        6.0,
+        7.0
+      ],
+      [
+        -2.0,
+        3.0,
+        -9.0,
+        3.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "7",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 10,
+    "Z": [
+      [
+        -1.0,
+        -6.0,
+        5.0,
+        -10.0
+      ],
+      [
+        7.0,
+        6.0,
+        7.0,
+        -2.0
+      ],
+      [
+        -1.0,
+        -10.0,
+        0.0,
+        -2.0
+      ],
+      [
+        -6.0,
+        9.0,
+        6.0,
+        -6.0
+      ],
+      [
+        5.0,
+        1.0,
+        1.0,
+        -9.0
+      ],
+      [
+        -2.0,
+        -6.0,
+        4.0,
+        7.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "6",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 11,
+    "Z": [
+      [
+        6.0,
+        7.0,
+        3.0,
+        2.0
+      ],
+      [
+        -9.0,
+        -3.0,
+        8.0,
+        3.0
+      ],
+      [
+        6.0,
+        -10.0,
+        3.0,
+        2.0
+      ],
+      [
+        -6.0,
+        -8.0,
+        2.0,
+        -9.0
+      ],
+      [
+        0.0,
+        -5.0,
+        -3.0,
+        10.0
+      ],
+      [
+        7.0,
+        7.0,
+        -7.0,
+        -4.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "7",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 12,
+    "Z": [
+      [
+        1.0,
+        -4.0,
+        7.0,
+        -8.0
+      ],
+      [
+        -7.0,
+        -7.0,
+        2.0,
+        6.0
+      ],
+      [
+        7.0,
+        10.0,
+        -5.0,
+        3.0
+      ],
+      [
+        -8.0,
+        1.0,
+        0.0,
+        -10.0
+      ],
+      [
+        -2.0,
+        2.0,
+        3.0,
+        8.0
+      ],
+      [
+        -7.0,
+        -6.0,
+        -7.0,
+        -9.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "14",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_5"
+  },
+  {
+    "point_idx": 13,
+    "Z": [
+      [
+        8.0,
+        6.0,
+        0.0,
+        6.0
+      ],
+      [
+        -4.0,
+        -8.0,
+        10.0,
+        2.0
+      ],
+      [
+        -7.0,
+        10.0,
+        -8.0,
+        4.0
+      ],
+      [
+        -5.0,
+        3.0,
+        0.0,
+        -1.0
+      ],
+      [
+        1.0,
+        10.0,
+        -8.0,
+        -10.0
+      ],
+      [
+        9.0,
+        9.0,
+        1.0,
+        1.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "18",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_2_3_4"
+  },
+  {
+    "point_idx": 14,
+    "Z": [
+      [
+        1.0,
+        2.0,
+        -3.0,
+        -4.0
+      ],
+      [
+        0.0,
+        0.0,
+        6.0,
+        -2.0
+      ],
+      [
+        3.0,
+        1.0,
+        -10.0,
+        -6.0
+      ],
+      [
+        3.0,
+        0.0,
+        0.0,
+        -10.0
+      ],
+      [
+        10.0,
+        -5.0,
+        -5.0,
+        -5.0
+      ],
+      [
+        -1.0,
+        -2.0,
+        -3.0,
+        -7.0
+      ]
+    ],
+    "A": null,
+    "H": null,
+    "A_reason": "zero_angle_bracket",
+    "H_reason": "zero_angle_bracket",
+    "status": "None",
+    "reason": "A: zero_angle_bracket; H: zero_angle_bracket",
+    "min_minor": "3",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 15,
+    "Z": [
+      [
+        -2.0,
+        2.0,
+        -5.0,
+        -10.0
+      ],
+      [
+        -3.0,
+        1.0,
+        5.0,
+        7.0
+      ],
+      [
+        3.0,
+        -10.0,
+        0.0,
+        5.0
+      ],
+      [
+        -6.0,
+        -1.0,
+        -3.0,
+        -5.0
+      ],
+      [
+        9.0,
+        2.0,
+        3.0,
+        5.0
+      ],
+      [
+        -4.0,
+        5.0,
+        8.0,
+        7.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "2",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 16,
+    "Z": [
+      [
+        -1.0,
+        4.0,
+        -5.0,
+        -9.0
+      ],
+      [
+        -6.0,
+        -6.0,
+        -1.0,
+        -10.0
+      ],
+      [
+        6.0,
+        4.0,
+        8.0,
+        10.0
+      ],
+      [
+        -10.0,
+        -9.0,
+        0.0,
+        -8.0
+      ],
+      [
+        10.0,
+        4.0,
+        3.0,
+        -10.0
+      ],
+      [
+        -5.0,
+        8.0,
+        2.0,
+        9.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "12",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_4"
+  },
+  {
+    "point_idx": 17,
+    "Z": [
+      [
+        5.0,
+        7.0,
+        5.0,
+        -4.0
+      ],
+      [
+        6.0,
+        3.0,
+        -6.0,
+        -3.0
+      ],
+      [
+        10.0,
+        2.0,
+        -3.0,
+        -9.0
+      ],
+      [
+        4.0,
+        7.0,
+        -1.0,
+        0.0
+      ],
+      [
+        -8.0,
+        -7.0,
+        -4.0,
+        -4.0
+      ],
+      [
+        -1.0,
+        7.0,
+        4.0,
+        3.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "18",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 18,
+    "Z": [
+      [
+        0.0,
+        9.0,
+        -5.0,
+        7.0
+      ],
+      [
+        4.0,
+        8.0,
+        -8.0,
+        -2.0
+      ],
+      [
+        -8.0,
+        7.0,
+        -5.0,
+        5.0
+      ],
+      [
+        0.0,
+        0.0,
+        10.0,
+        1.0
+      ],
+      [
+        -6.0,
+        -6.0,
+        1.0,
+        -9.0
+      ],
+      [
+        -7.0,
+        -1.0,
+        -5.0,
+        4.0
+      ]
+    ],
+    "A": null,
+    "H": null,
+    "A_reason": "zero_angle_bracket",
+    "H_reason": "zero_angle_bracket",
+    "status": "None",
+    "reason": "A: zero_angle_bracket; H: zero_angle_bracket",
+    "min_minor": "36",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 19,
+    "Z": [
+      [
+        4.0,
+        -8.0,
+        -2.0,
+        9.0
+      ],
+      [
+        10.0,
+        0.0,
+        -8.0,
+        -8.0
+      ],
+      [
+        -5.0,
+        -9.0,
+        0.0,
+        8.0
+      ],
+      [
+        2.0,
+        -3.0,
+        5.0,
+        -3.0
+      ],
+      [
+        6.0,
+        -3.0,
+        -3.0,
+        -1.0
+      ],
+      [
+        1.0,
+        -1.0,
+        -6.0,
+        -5.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "3",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_5"
+  },
+  {
+    "point_idx": 20,
+    "Z": [
+      [
+        -7.0,
+        5.0,
+        -1.0,
+        10.0
+      ],
+      [
+        1.0,
+        -3.0,
+        -8.0,
+        -10.0
+      ],
+      [
+        -2.0,
+        9.0,
+        6.0,
+        -4.0
+      ],
+      [
+        -4.0,
+        6.0,
+        -1.0,
+        -5.0
+      ],
+      [
+        -3.0,
+        -5.0,
+        -8.0,
+        -4.0
+      ],
+      [
+        3.0,
+        1.0,
+        -7.0,
+        0.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "3",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_5"
+  },
+  {
+    "point_idx": 21,
+    "Z": [
+      [
+        -1.0,
+        5.0,
+        -6.0,
+        6.0
+      ],
+      [
+        6.0,
+        -7.0,
+        -8.0,
+        7.0
+      ],
+      [
+        0.0,
+        -2.0,
+        4.0,
+        2.0
+      ],
+      [
+        -1.0,
+        6.0,
+        4.0,
+        -6.0
+      ],
+      [
+        -4.0,
+        10.0,
+        10.0,
+        2.0
+      ],
+      [
+        -1.0,
+        -5.0,
+        -4.0,
+        -5.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "2",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_5"
+  },
+  {
+    "point_idx": 22,
+    "Z": [
+      [
+        -6.0,
+        2.0,
+        -10.0,
+        -6.0
+      ],
+      [
+        -4.0,
+        1.0,
+        10.0,
+        -2.0
+      ],
+      [
+        -6.0,
+        8.0,
+        4.0,
+        3.0
+      ],
+      [
+        -3.0,
+        -8.0,
+        -1.0,
+        -2.0
+      ],
+      [
+        -2.0,
+        -5.0,
+        5.0,
+        10.0
+      ],
+      [
+        -8.0,
+        8.0,
+        7.0,
+        -4.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "1",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_5"
+  },
+  {
+    "point_idx": 23,
+    "Z": [
+      [
+        9.0,
+        -4.0,
+        -2.0,
+        -1.0
+      ],
+      [
+        -2.0,
+        3.0,
+        2.0,
+        -3.0
+      ],
+      [
+        9.0,
+        -4.0,
+        3.0,
+        2.0
+      ],
+      [
+        7.0,
+        -8.0,
+        1.0,
+        -5.0
+      ],
+      [
+        -10.0,
+        2.0,
+        6.0,
+        -1.0
+      ],
+      [
+        5.0,
+        9.0,
+        -9.0,
+        -3.0
+      ]
+    ],
+    "A": "-15153979/5455380275183266057916",
+    "H": "-15153979/5455380275183266057916",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "computation_error",
+    "error": "'sage.rings.rational.Rational' object has no attribute 'simplify_rational'",
+    "min_minor": "19",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 24,
+    "Z": [
+      [
+        -8.0,
+        -7.0,
+        -10.0,
+        7.0
+      ],
+      [
+        7.0,
+        -9.0,
+        -6.0,
+        5.0
+      ],
+      [
+        -6.0,
+        5.0,
+        -7.0,
+        8.0
+      ],
+      [
+        1.0,
+        -7.0,
+        9.0,
+        5.0
+      ],
+      [
+        -3.0,
+        -1.0,
+        8.0,
+        -3.0
+      ],
+      [
+        -7.0,
+        3.0,
+        -10.0,
+        2.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "16",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 25,
+    "Z": [
+      [
+        -6.0,
+        5.0,
+        2.0,
+        8.0
+      ],
+      [
+        -2.0,
+        -6.0,
+        10.0,
+        -5.0
+      ],
+      [
+        -9.0,
+        -3.0,
+        -7.0,
+        -7.0
+      ],
+      [
+        10.0,
+        3.0,
+        -7.0,
+        -9.0
+      ],
+      [
+        6.0,
+        5.0,
+        -1.0,
+        6.0
+      ],
+      [
+        2.0,
+        3.0,
+        8.0,
+        -6.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "3",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_4_5"
+  },
+  {
+    "point_idx": 26,
+    "Z": [
+      [
+        -4.0,
+        6.0,
+        -9.0,
+        -4.0
+      ],
+      [
+        9.0,
+        3.0,
+        -10.0,
+        -6.0
+      ],
+      [
+        -8.0,
+        3.0,
+        7.0,
+        9.0
+      ],
+      [
+        10.0,
+        4.0,
+        5.0,
+        0.0
+      ],
+      [
+        4.0,
+        -4.0,
+        5.0,
+        8.0
+      ],
+      [
+        5.0,
+        2.0,
+        5.0,
+        6.0
+      ]
+    ],
+    "A": "-186645414931/34840823165085547823431680",
+    "H": "-186645414931/34840823165085547823431680",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "computation_error",
+    "error": "'sage.rings.rational.Rational' object has no attribute 'simplify_rational'",
+    "min_minor": "28",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_4"
+  },
+  {
+    "point_idx": 27,
+    "Z": [
+      [
+        9.0,
+        -2.0,
+        6.0,
+        -5.0
+      ],
+      [
+        3.0,
+        7.0,
+        -8.0,
+        0.0
+      ],
+      [
+        -9.0,
+        4.0,
+        0.0,
+        7.0
+      ],
+      [
+        -6.0,
+        9.0,
+        5.0,
+        5.0
+      ],
+      [
+        9.0,
+        -10.0,
+        9.0,
+        2.0
+      ],
+      [
+        -7.0,
+        2.0,
+        -3.0,
+        -8.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "4",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 28,
+    "Z": [
+      [
+        -9.0,
+        -5.0,
+        10.0,
+        -10.0
+      ],
+      [
+        -7.0,
+        2.0,
+        -10.0,
+        9.0
+      ],
+      [
+        2.0,
+        2.0,
+        -5.0,
+        -2.0
+      ],
+      [
+        8.0,
+        1.0,
+        -3.0,
+        -9.0
+      ],
+      [
+        4.0,
+        3.0,
+        -8.0,
+        9.0
+      ],
+      [
+        -10.0,
+        -10.0,
+        -5.0,
+        -4.0
+      ]
+    ],
+    "A": "56585883167/28150020159899904000000",
+    "H": "56585883167/28150020159899904000000",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "computation_error",
+    "error": "'sage.rings.rational.Rational' object has no attribute 'simplify_rational'",
+    "min_minor": "10",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_4_5"
+  },
+  {
+    "point_idx": 29,
+    "Z": [
+      [
+        9.0,
+        2.0,
+        -8.0,
+        -2.0
+      ],
+      [
+        -10.0,
+        -1.0,
+        7.0,
+        9.0
+      ],
+      [
+        -9.0,
+        7.0,
+        1.0,
+        -5.0
+      ],
+      [
+        10.0,
+        4.0,
+        -10.0,
+        -6.0
+      ],
+      [
+        -8.0,
+        5.0,
+        -4.0,
+        -3.0
+      ],
+      [
+        -7.0,
+        -10.0,
+        1.0,
+        -7.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "11",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 30,
+    "Z": [
+      [
+        -5.0,
+        -5.0,
+        3.0,
+        3.0
+      ],
+      [
+        10.0,
+        2.0,
+        -8.0,
+        7.0
+      ],
+      [
+        4.0,
+        -7.0,
+        -1.0,
+        -3.0
+      ],
+      [
+        -9.0,
+        7.0,
+        3.0,
+        -7.0
+      ],
+      [
+        8.0,
+        8.0,
+        10.0,
+        10.0
+      ],
+      [
+        -4.0,
+        2.0,
+        6.0,
+        -4.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "30",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 31,
+    "Z": [
+      [
+        8.0,
+        6.0,
+        -8.0,
+        -4.0
+      ],
+      [
+        0.0,
+        4.0,
+        -4.0,
+        8.0
+      ],
+      [
+        8.0,
+        7.0,
+        1.0,
+        7.0
+      ],
+      [
+        0.0,
+        7.0,
+        10.0,
+        2.0
+      ],
+      [
+        1.0,
+        -7.0,
+        -7.0,
+        8.0
+      ],
+      [
+        -3.0,
+        5.0,
+        -9.0,
+        0.0
+      ]
+    ],
+    "A": null,
+    "H": null,
+    "A_reason": "zero_angle_bracket",
+    "H_reason": "zero_angle_bracket",
+    "status": "None",
+    "reason": "A: zero_angle_bracket; H: zero_angle_bracket",
+    "min_minor": "7",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 32,
+    "Z": [
+      [
+        1.0,
+        -5.0,
+        9.0,
+        -3.0
+      ],
+      [
+        -7.0,
+        -5.0,
+        0.0,
+        -1.0
+      ],
+      [
+        -6.0,
+        1.0,
+        7.0,
+        -7.0
+      ],
+      [
+        -9.0,
+        -8.0,
+        -7.0,
+        0.0
+      ],
+      [
+        8.0,
+        0.0,
+        10.0,
+        8.0
+      ],
+      [
+        -6.0,
+        -6.0,
+        -5.0,
+        -4.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "36",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_4"
+  },
+  {
+    "point_idx": 33,
+    "Z": [
+      [
+        10.0,
+        -3.0,
+        -8.0,
+        8.0
+      ],
+      [
+        -1.0,
+        -7.0,
+        -4.0,
+        9.0
+      ],
+      [
+        4.0,
+        0.0,
+        3.0,
+        -7.0
+      ],
+      [
+        -9.0,
+        3.0,
+        2.0,
+        -3.0
+      ],
+      [
+        2.0,
+        1.0,
+        6.0,
+        6.0
+      ],
+      [
+        0.0,
+        -4.0,
+        6.0,
+        10.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "8",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_4"
+  },
+  {
+    "point_idx": 34,
+    "Z": [
+      [
+        -9.0,
+        0.0,
+        -1.0,
+        -6.0
+      ],
+      [
+        -7.0,
+        -5.0,
+        1.0,
+        0.0
+      ],
+      [
+        4.0,
+        8.0,
+        -4.0,
+        10.0
+      ],
+      [
+        -5.0,
+        -10.0,
+        -5.0,
+        10.0
+      ],
+      [
+        9.0,
+        9.0,
+        -2.0,
+        -2.0
+      ],
+      [
+        5.0,
+        0.0,
+        3.0,
+        10.0
+      ]
+    ],
+    "A": null,
+    "H": null,
+    "A_reason": "zero_square_bracket",
+    "H_reason": "zero_square_bracket",
+    "status": "None",
+    "reason": "A: zero_square_bracket; H: zero_square_bracket",
+    "min_minor": "16",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_4"
+  },
+  {
+    "point_idx": 35,
+    "Z": [
+      [
+        -1.0,
+        5.0,
+        2.0,
+        -9.0
+      ],
+      [
+        2.0,
+        -10.0,
+        -2.0,
+        1.0
+      ],
+      [
+        1.0,
+        -2.0,
+        2.0,
+        -10.0
+      ],
+      [
+        -1.0,
+        2.0,
+        8.0,
+        5.0
+      ],
+      [
+        -7.0,
+        9.0,
+        9.0,
+        -1.0
+      ],
+      [
+        3.0,
+        -3.0,
+        -5.0,
+        -4.0
+      ]
+    ],
+    "A": null,
+    "H": null,
+    "A_reason": "zero_square_bracket",
+    "H_reason": "zero_square_bracket",
+    "status": "None",
+    "reason": "A: zero_square_bracket; H: zero_square_bracket",
+    "min_minor": "5",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_5"
+  },
+  {
+    "point_idx": 36,
+    "Z": [
+      [
+        -5.0,
+        -8.0,
+        -2.0,
+        -9.0
+      ],
+      [
+        2.0,
+        -1.0,
+        -5.0,
+        -4.0
+      ],
+      [
+        -6.0,
+        -10.0,
+        -4.0,
+        -4.0
+      ],
+      [
+        -9.0,
+        -1.0,
+        10.0,
+        -6.0
+      ],
+      [
+        4.0,
+        9.0,
+        9.0,
+        3.0
+      ],
+      [
+        3.0,
+        3.0,
+        -5.0,
+        4.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "9",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_4"
+  },
+  {
+    "point_idx": 37,
+    "Z": [
+      [
+        5.0,
+        1.0,
+        2.0,
+        -7.0
+      ],
+      [
+        -7.0,
+        0.0,
+        -2.0,
+        -2.0
+      ],
+      [
+        -7.0,
+        8.0,
+        2.0,
+        4.0
+      ],
+      [
+        2.0,
+        7.0,
+        9.0,
+        10.0
+      ],
+      [
+        7.0,
+        0.0,
+        -7.0,
+        -8.0
+      ],
+      [
+        9.0,
+        -7.0,
+        -8.0,
+        -7.0
+      ]
+    ],
+    "A": null,
+    "H": null,
+    "A_reason": "zero_angle_bracket",
+    "H_reason": "zero_angle_bracket",
+    "status": "None",
+    "reason": "A: zero_angle_bracket; H: zero_angle_bracket",
+    "min_minor": "7",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 38,
+    "Z": [
+      [
+        -9.0,
+        1.0,
+        9.0,
+        -6.0
+      ],
+      [
+        -8.0,
+        -9.0,
+        6.0,
+        0.0
+      ],
+      [
+        -9.0,
+        3.0,
+        10.0,
+        -7.0
+      ],
+      [
+        -9.0,
+        -3.0,
+        8.0,
+        3.0
+      ],
+      [
+        3.0,
+        5.0,
+        -9.0,
+        -2.0
+      ],
+      [
+        8.0,
+        1.0,
+        -7.0,
+        9.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "10",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_4"
+  },
+  {
+    "point_idx": 39,
+    "Z": [
+      [
+        -1.0,
+        -1.0,
+        -1.0,
+        -10.0
+      ],
+      [
+        10.0,
+        -4.0,
+        -7.0,
+        6.0
+      ],
+      [
+        -6.0,
+        1.0,
+        3.0,
+        3.0
+      ],
+      [
+        2.0,
+        2.0,
+        7.0,
+        10.0
+      ],
+      [
+        -10.0,
+        4.0,
+        -6.0,
+        10.0
+      ],
+      [
+        10.0,
+        3.0,
+        -4.0,
+        -5.0
+      ]
+    ],
+    "A": null,
+    "H": null,
+    "A_reason": "zero_angle_bracket",
+    "H_reason": "zero_angle_bracket",
+    "status": "None",
+    "reason": "A: zero_angle_bracket; H: zero_angle_bracket",
+    "min_minor": "7",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 40,
+    "Z": [
+      [
+        -4.0,
+        -3.0,
+        -5.0,
+        8.0
+      ],
+      [
+        -9.0,
+        2.0,
+        -3.0,
+        8.0
+      ],
+      [
+        9.0,
+        0.0,
+        9.0,
+        -1.0
+      ],
+      [
+        -10.0,
+        7.0,
+        -1.0,
+        -2.0
+      ],
+      [
+        10.0,
+        5.0,
+        4.0,
+        10.0
+      ],
+      [
+        -2.0,
+        0.0,
+        -7.0,
+        -7.0
+      ]
+    ],
+    "A": "55934833457/1576301722351065964800000000",
+    "H": "55934833457/1576301722351065964800000000",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "computation_error",
+    "error": "'sage.rings.rational.Rational' object has no attribute 'simplify_rational'",
+    "min_minor": "6",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_4"
+  },
+  {
+    "point_idx": 41,
+    "Z": [
+      [
+        -10.0,
+        -7.0,
+        2.0,
+        -8.0
+      ],
+      [
+        6.0,
+        -9.0,
+        9.0,
+        3.0
+      ],
+      [
+        2.0,
+        -7.0,
+        -7.0,
+        8.0
+      ],
+      [
+        -4.0,
+        6.0,
+        10.0,
+        -1.0
+      ],
+      [
+        9.0,
+        1.0,
+        10.0,
+        7.0
+      ],
+      [
+        -8.0,
+        7.0,
+        9.0,
+        3.0
+      ]
+    ],
+    "A": null,
+    "H": null,
+    "A_reason": "zero_angle_bracket",
+    "H_reason": "zero_angle_bracket",
+    "status": "None",
+    "reason": "A: zero_angle_bracket; H: zero_angle_bracket",
+    "min_minor": "16",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 42,
+    "Z": [
+      [
+        -4.0,
+        9.0,
+        4.0,
+        0.0
+      ],
+      [
+        -3.0,
+        10.0,
+        -4.0,
+        8.0
+      ],
+      [
+        0.0,
+        0.0,
+        10.0,
+        -7.0
+      ],
+      [
+        -3.0,
+        -8.0,
+        10.0,
+        -9.0
+      ],
+      [
+        1.0,
+        -5.0,
+        -9.0,
+        10.0
+      ],
+      [
+        -10.0,
+        1.0,
+        1.0,
+        6.0
+      ]
+    ],
+    "A": null,
+    "H": null,
+    "A_reason": "zero_angle_bracket",
+    "H_reason": "zero_angle_bracket",
+    "status": "None",
+    "reason": "A: zero_angle_bracket; H: zero_angle_bracket",
+    "min_minor": "13",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 43,
+    "Z": [
+      [
+        -6.0,
+        -10.0,
+        7.0,
+        6.0
+      ],
+      [
+        9.0,
+        7.0,
+        -8.0,
+        4.0
+      ],
+      [
+        -10.0,
+        -7.0,
+        8.0,
+        1.0
+      ],
+      [
+        -9.0,
+        5.0,
+        -8.0,
+        1.0
+      ],
+      [
+        -8.0,
+        -7.0,
+        -6.0,
+        -6.0
+      ],
+      [
+        6.0,
+        2.0,
+        5.0,
+        -10.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "7",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_5"
+  },
+  {
+    "point_idx": 44,
+    "Z": [
+      [
+        10.0,
+        -7.0,
+        7.0,
+        3.0
+      ],
+      [
+        -7.0,
+        -10.0,
+        10.0,
+        -7.0
+      ],
+      [
+        5.0,
+        0.0,
+        -7.0,
+        -3.0
+      ],
+      [
+        -7.0,
+        -7.0,
+        -4.0,
+        3.0
+      ],
+      [
+        -6.0,
+        -9.0,
+        4.0,
+        -3.0
+      ],
+      [
+        -6.0,
+        9.0,
+        -10.0,
+        0.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "21",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_3_4"
+  },
+  {
+    "point_idx": 45,
+    "Z": [
+      [
+        1.0,
+        -7.0,
+        -10.0,
+        -7.0
+      ],
+      [
+        -6.0,
+        5.0,
+        -9.0,
+        4.0
+      ],
+      [
+        -2.0,
+        4.0,
+        -2.0,
+        2.0
+      ],
+      [
+        -8.0,
+        2.0,
+        7.0,
+        -4.0
+      ],
+      [
+        -6.0,
+        4.0,
+        4.0,
+        0.0
+      ],
+      [
+        -6.0,
+        -6.0,
+        5.0,
+        7.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "14",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 46,
+    "Z": [
+      [
+        -5.0,
+        -2.0,
+        10.0,
+        9.0
+      ],
+      [
+        8.0,
+        1.0,
+        6.0,
+        1.0
+      ],
+      [
+        -8.0,
+        -2.0,
+        -10.0,
+        -8.0
+      ],
+      [
+        5.0,
+        -8.0,
+        -8.0,
+        8.0
+      ],
+      [
+        -2.0,
+        6.0,
+        -8.0,
+        1.0
+      ],
+      [
+        1.0,
+        10.0,
+        -2.0,
+        -2.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "8",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 47,
+    "Z": [
+      [
+        -3.0,
+        -4.0,
+        -3.0,
+        -2.0
+      ],
+      [
+        -2.0,
+        9.0,
+        6.0,
+        6.0
+      ],
+      [
+        -3.0,
+        -3.0,
+        3.0,
+        7.0
+      ],
+      [
+        8.0,
+        8.0,
+        1.0,
+        -9.0
+      ],
+      [
+        10.0,
+        -2.0,
+        -1.0,
+        8.0
+      ],
+      [
+        -1.0,
+        -9.0,
+        6.0,
+        -1.0
+      ]
+    ],
+    "A": null,
+    "H": null,
+    "A_reason": "zero_square_bracket",
+    "H_reason": "zero_square_bracket",
+    "status": "None",
+    "reason": "A: zero_square_bracket; H: zero_square_bracket",
+    "min_minor": "23",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_4"
+  },
+  {
+    "point_idx": 48,
+    "Z": [
+      [
+        -10.0,
+        9.0,
+        7.0,
+        -6.0
+      ],
+      [
+        6.0,
+        -10.0,
+        -4.0,
+        -4.0
+      ],
+      [
+        -8.0,
+        6.0,
+        2.0,
+        -4.0
+      ],
+      [
+        4.0,
+        6.0,
+        -3.0,
+        -2.0
+      ],
+      [
+        5.0,
+        -8.0,
+        8.0,
+        8.0
+      ],
+      [
+        0.0,
+        -8.0,
+        -8.0,
+        3.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "40",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_4"
+  },
+  {
+    "point_idx": 49,
+    "Z": [
+      [
+        0.0,
+        3.0,
+        -2.0,
+        10.0
+      ],
+      [
+        8.0,
+        2.0,
+        -5.0,
+        -5.0
+      ],
+      [
+        7.0,
+        8.0,
+        -6.0,
+        2.0
+      ],
+      [
+        -10.0,
+        8.0,
+        -7.0,
+        -4.0
+      ],
+      [
+        -9.0,
+        -4.0,
+        -6.0,
+        5.0
+      ],
+      [
+        5.0,
+        -2.0,
+        -7.0,
+        -2.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "15",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_1_2_3_4"
+  },
+  {
+    "point_idx": 50,
+    "Z": [
+      [
+        6.0,
+        -10.0,
+        1.0,
+        3.0
+      ],
+      [
+        -9.0,
+        -6.0,
+        -4.0,
+        -5.0
+      ],
+      [
+        -4.0,
+        3.0,
+        -5.0,
+        -8.0
+      ],
+      [
+        -3.0,
+        5.0,
+        -6.0,
+        4.0
+      ],
+      [
+        -7.0,
+        -4.0,
+        10.0,
+        1.0
+      ],
+      [
+        7.0,
+        0.0,
+        -1.0,
+        -10.0
+      ]
+    ],
+    "A": "-23880859/63176679991550293245",
+    "H": "-23880859/63176679991550293245",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "computation_error",
+    "error": "'sage.rings.rational.Rational' object has no attribute 'simplify_rational'",
+    "min_minor": "11",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_4"
+  },
+  {
+    "point_idx": 51,
+    "Z": [
+      [
+        -5.0,
+        -10.0,
+        -1.0,
+        -5.0
+      ],
+      [
+        6.0,
+        10.0,
+        -1.0,
+        -5.0
+      ],
+      [
+        4.0,
+        -5.0,
+        10.0,
+        -6.0
+      ],
+      [
+        -7.0,
+        -4.0,
+        0.0,
+        10.0
+      ],
+      [
+        0.0,
+        -4.0,
+        -9.0,
+        3.0
+      ],
+      [
+        10.0,
+        -3.0,
+        6.0,
+        -2.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "10",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 52,
+    "Z": [
+      [
+        1.0,
+        3.0,
+        -10.0,
+        -5.0
+      ],
+      [
+        0.0,
+        1.0,
+        -7.0,
+        -7.0
+      ],
+      [
+        -9.0,
+        -7.0,
+        -9.0,
+        -5.0
+      ],
+      [
+        7.0,
+        6.0,
+        1.0,
+        6.0
+      ],
+      [
+        4.0,
+        0.0,
+        3.0,
+        5.0
+      ],
+      [
+        2.0,
+        -3.0,
+        -6.0,
+        -3.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "1",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_3_4"
+  },
+  {
+    "point_idx": 53,
+    "Z": [
+      [
+        -5.0,
+        10.0,
+        6.0,
+        2.0
+      ],
+      [
+        -1.0,
+        -5.0,
+        8.0,
+        1.0
+      ],
+      [
+        10.0,
+        -7.0,
+        -4.0,
+        -1.0
+      ],
+      [
+        3.0,
+        -7.0,
+        1.0,
+        -4.0
+      ],
+      [
+        4.0,
+        2.0,
+        6.0,
+        0.0
+      ],
+      [
+        8.0,
+        5.0,
+        6.0,
+        -7.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "4",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 54,
+    "Z": [
+      [
+        5.0,
+        -5.0,
+        -8.0,
+        5.0
+      ],
+      [
+        -9.0,
+        -10.0,
+        -3.0,
+        7.0
+      ],
+      [
+        -1.0,
+        -4.0,
+        -1.0,
+        -6.0
+      ],
+      [
+        10.0,
+        10.0,
+        3.0,
+        10.0
+      ],
+      [
+        6.0,
+        -4.0,
+        -7.0,
+        8.0
+      ],
+      [
+        -9.0,
+        8.0,
+        1.0,
+        7.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "5",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 55,
+    "Z": [
+      [
+        3.0,
+        -3.0,
+        -2.0,
+        -5.0
+      ],
+      [
+        -5.0,
+        -9.0,
+        6.0,
+        -7.0
+      ],
+      [
+        4.0,
+        3.0,
+        2.0,
+        5.0
+      ],
+      [
+        -3.0,
+        -9.0,
+        -2.0,
+        9.0
+      ],
+      [
+        0.0,
+        -3.0,
+        -10.0,
+        1.0
+      ],
+      [
+        3.0,
+        8.0,
+        7.0,
+        6.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "9",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 56,
+    "Z": [
+      [
+        -6.0,
+        5.0,
+        -10.0,
+        -8.0
+      ],
+      [
+        1.0,
+        4.0,
+        -1.0,
+        -6.0
+      ],
+      [
+        5.0,
+        7.0,
+        2.0,
+        -8.0
+      ],
+      [
+        1.0,
+        1.0,
+        4.0,
+        6.0
+      ],
+      [
+        -4.0,
+        -9.0,
+        0.0,
+        -5.0
+      ],
+      [
+        -8.0,
+        5.0,
+        9.0,
+        -5.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "2",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_4"
+  },
+  {
+    "point_idx": 57,
+    "Z": [
+      [
+        5.0,
+        -5.0,
+        5.0,
+        -8.0
+      ],
+      [
+        -2.0,
+        7.0,
+        -5.0,
+        -2.0
+      ],
+      [
+        1.0,
+        7.0,
+        -9.0,
+        -8.0
+      ],
+      [
+        6.0,
+        -9.0,
+        -4.0,
+        -6.0
+      ],
+      [
+        -5.0,
+        8.0,
+        4.0,
+        -2.0
+      ],
+      [
+        8.0,
+        -10.0,
+        7.0,
+        2.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "3",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_5"
+  },
+  {
+    "point_idx": 58,
+    "Z": [
+      [
+        -7.0,
+        -10.0,
+        4.0,
+        -7.0
+      ],
+      [
+        10.0,
+        -9.0,
+        -5.0,
+        -10.0
+      ],
+      [
+        -4.0,
+        10.0,
+        10.0,
+        0.0
+      ],
+      [
+        -8.0,
+        -10.0,
+        -7.0,
+        4.0
+      ],
+      [
+        -7.0,
+        2.0,
+        10.0,
+        -2.0
+      ],
+      [
+        7.0,
+        7.0,
+        -4.0,
+        -10.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "21",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 59,
+    "Z": [
+      [
+        7.0,
+        2.0,
+        3.0,
+        1.0
+      ],
+      [
+        5.0,
+        -10.0,
+        -7.0,
+        -10.0
+      ],
+      [
+        9.0,
+        3.0,
+        6.0,
+        -1.0
+      ],
+      [
+        10.0,
+        -5.0,
+        -8.0,
+        -9.0
+      ],
+      [
+        1.0,
+        -4.0,
+        8.0,
+        -6.0
+      ],
+      [
+        7.0,
+        -8.0,
+        -1.0,
+        0.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "20",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_4"
+  },
+  {
+    "point_idx": 60,
+    "Z": [
+      [
+        3.0,
+        -9.0,
+        -4.0,
+        0.0
+      ],
+      [
+        5.0,
+        -7.0,
+        -2.0,
+        7.0
+      ],
+      [
+        -8.0,
+        -9.0,
+        0.0,
+        -2.0
+      ],
+      [
+        2.0,
+        -8.0,
+        -2.0,
+        -7.0
+      ],
+      [
+        2.0,
+        8.0,
+        -10.0,
+        -7.0
+      ],
+      [
+        5.0,
+        0.0,
+        -6.0,
+        -10.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "24",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 61,
+    "Z": [
+      [
+        -7.0,
+        8.0,
+        -8.0,
+        6.0
+      ],
+      [
+        5.0,
+        -8.0,
+        0.0,
+        -9.0
+      ],
+      [
+        -5.0,
+        3.0,
+        5.0,
+        2.0
+      ],
+      [
+        9.0,
+        6.0,
+        0.0,
+        9.0
+      ],
+      [
+        5.0,
+        -6.0,
+        -8.0,
+        9.0
+      ],
+      [
+        0.0,
+        -5.0,
+        4.0,
+        -2.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "16",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 62,
+    "Z": [
+      [
+        8.0,
+        7.0,
+        -1.0,
+        9.0
+      ],
+      [
+        1.0,
+        7.0,
+        -6.0,
+        3.0
+      ],
+      [
+        -5.0,
+        -9.0,
+        -1.0,
+        -2.0
+      ],
+      [
+        9.0,
+        -9.0,
+        -10.0,
+        0.0
+      ],
+      [
+        9.0,
+        0.0,
+        -2.0,
+        4.0
+      ],
+      [
+        -10.0,
+        3.0,
+        -9.0,
+        2.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "26",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_5"
+  },
+  {
+    "point_idx": 63,
+    "Z": [
+      [
+        2.0,
+        10.0,
+        1.0,
+        8.0
+      ],
+      [
+        -10.0,
+        7.0,
+        -10.0,
+        4.0
+      ],
+      [
+        8.0,
+        -4.0,
+        2.0,
+        9.0
+      ],
+      [
+        4.0,
+        -5.0,
+        -4.0,
+        -2.0
+      ],
+      [
+        0.0,
+        -10.0,
+        9.0,
+        4.0
+      ],
+      [
+        -1.0,
+        -3.0,
+        -5.0,
+        -1.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "4",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_4"
+  },
+  {
+    "point_idx": 64,
+    "Z": [
+      [
+        -6.0,
+        -4.0,
+        -4.0,
+        7.0
+      ],
+      [
+        10.0,
+        9.0,
+        6.0,
+        0.0
+      ],
+      [
+        -2.0,
+        -8.0,
+        6.0,
+        7.0
+      ],
+      [
+        -6.0,
+        -8.0,
+        -4.0,
+        10.0
+      ],
+      [
+        5.0,
+        2.0,
+        4.0,
+        -10.0
+      ],
+      [
+        0.0,
+        -5.0,
+        4.0,
+        -4.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "6",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 65,
+    "Z": [
+      [
+        4.0,
+        -2.0,
+        -3.0,
+        -4.0
+      ],
+      [
+        -4.0,
+        -9.0,
+        -2.0,
+        -5.0
+      ],
+      [
+        -9.0,
+        5.0,
+        -1.0,
+        7.0
+      ],
+      [
+        2.0,
+        0.0,
+        -4.0,
+        5.0
+      ],
+      [
+        0.0,
+        9.0,
+        -2.0,
+        -6.0
+      ],
+      [
+        1.0,
+        -10.0,
+        -8.0,
+        -7.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "9",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_4"
+  },
+  {
+    "point_idx": 66,
+    "Z": [
+      [
+        10.0,
+        9.0,
+        3.0,
+        5.0
+      ],
+      [
+        9.0,
+        0.0,
+        3.0,
+        6.0
+      ],
+      [
+        -3.0,
+        3.0,
+        1.0,
+        -4.0
+      ],
+      [
+        5.0,
+        0.0,
+        -10.0,
+        8.0
+      ],
+      [
+        8.0,
+        -8.0,
+        -4.0,
+        -10.0
+      ],
+      [
+        2.0,
+        -2.0,
+        -1.0,
+        2.0
+      ]
+    ],
+    "A": null,
+    "H": null,
+    "A_reason": "zero_angle_bracket",
+    "H_reason": "zero_angle_bracket",
+    "status": "None",
+    "reason": "A: zero_angle_bracket; H: zero_angle_bracket",
+    "min_minor": "15",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_3_4"
+  },
+  {
+    "point_idx": 67,
+    "Z": [
+      [
+        -7.0,
+        0.0,
+        -5.0,
+        -3.0
+      ],
+      [
+        -1.0,
+        -7.0,
+        3.0,
+        -7.0
+      ],
+      [
+        -2.0,
+        -7.0,
+        -6.0,
+        4.0
+      ],
+      [
+        3.0,
+        -9.0,
+        0.0,
+        9.0
+      ],
+      [
+        -3.0,
+        -8.0,
+        -1.0,
+        -7.0
+      ],
+      [
+        -8.0,
+        4.0,
+        -1.0,
+        -6.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "7",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 68,
+    "Z": [
+      [
+        8.0,
+        -3.0,
+        -6.0,
+        0.0
+      ],
+      [
+        2.0,
+        6.0,
+        10.0,
+        5.0
+      ],
+      [
+        2.0,
+        2.0,
+        9.0,
+        5.0
+      ],
+      [
+        9.0,
+        -2.0,
+        1.0,
+        -9.0
+      ],
+      [
+        -1.0,
+        -2.0,
+        -9.0,
+        10.0
+      ],
+      [
+        1.0,
+        -10.0,
+        0.0,
+        4.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "8",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 69,
+    "Z": [
+      [
+        1.0,
+        -1.0,
+        1.0,
+        10.0
+      ],
+      [
+        7.0,
+        -1.0,
+        -9.0,
+        -4.0
+      ],
+      [
+        -10.0,
+        2.0,
+        -5.0,
+        0.0
+      ],
+      [
+        10.0,
+        1.0,
+        -7.0,
+        6.0
+      ],
+      [
+        -3.0,
+        -8.0,
+        -7.0,
+        -3.0
+      ],
+      [
+        5.0,
+        1.0,
+        2.0,
+        -7.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "4",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 70,
+    "Z": [
+      [
+        4.0,
+        8.0,
+        -10.0,
+        10.0
+      ],
+      [
+        4.0,
+        10.0,
+        -3.0,
+        -2.0
+      ],
+      [
+        -10.0,
+        10.0,
+        -9.0,
+        10.0
+      ],
+      [
+        8.0,
+        -9.0,
+        6.0,
+        5.0
+      ],
+      [
+        -1.0,
+        3.0,
+        5.0,
+        -8.0
+      ],
+      [
+        5.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "8",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 71,
+    "Z": [
+      [
+        1.0,
+        3.0,
+        1.0,
+        -2.0
+      ],
+      [
+        -2.0,
+        8.0,
+        -9.0,
+        6.0
+      ],
+      [
+        -4.0,
+        -9.0,
+        9.0,
+        -1.0
+      ],
+      [
+        -10.0,
+        -2.0,
+        3.0,
+        6.0
+      ],
+      [
+        -2.0,
+        5.0,
+        7.0,
+        6.0
+      ],
+      [
+        2.0,
+        -5.0,
+        4.0,
+        6.0
+      ]
+    ],
+    "A": null,
+    "H": null,
+    "A_reason": "zero_denominator_angle",
+    "H_reason": "zero_denominator_angle",
+    "status": "None",
+    "reason": "A: zero_denominator_angle; H: zero_denominator_angle",
+    "min_minor": "11",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 72,
+    "Z": [
+      [
+        9.0,
+        4.0,
+        0.0,
+        -5.0
+      ],
+      [
+        -5.0,
+        5.0,
+        5.0,
+        -3.0
+      ],
+      [
+        3.0,
+        2.0,
+        -2.0,
+        6.0
+      ],
+      [
+        -2.0,
+        -9.0,
+        -10.0,
+        -3.0
+      ],
+      [
+        -10.0,
+        2.0,
+        -8.0,
+        -2.0
+      ],
+      [
+        10.0,
+        0.0,
+        -8.0,
+        -7.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "20",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_3_4"
+  },
+  {
+    "point_idx": 73,
+    "Z": [
+      [
+        8.0,
+        4.0,
+        0.0,
+        6.0
+      ],
+      [
+        -2.0,
+        -7.0,
+        -9.0,
+        -4.0
+      ],
+      [
+        0.0,
+        -3.0,
+        -9.0,
+        -6.0
+      ],
+      [
+        4.0,
+        -3.0,
+        10.0,
+        1.0
+      ],
+      [
+        -1.0,
+        4.0,
+        -7.0,
+        8.0
+      ],
+      [
+        10.0,
+        -6.0,
+        -7.0,
+        -9.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "6",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 74,
+    "Z": [
+      [
+        -1.0,
+        -1.0,
+        -6.0,
+        -1.0
+      ],
+      [
+        0.0,
+        -5.0,
+        1.0,
+        -1.0
+      ],
+      [
+        -7.0,
+        -7.0,
+        -2.0,
+        0.0
+      ],
+      [
+        5.0,
+        -5.0,
+        8.0,
+        9.0
+      ],
+      [
+        -7.0,
+        -3.0,
+        5.0,
+        4.0
+      ],
+      [
+        -9.0,
+        0.0,
+        -6.0,
+        10.0
+      ]
+    ],
+    "A": "46730465011/158334988403320312500000",
+    "H": "46730465011/158334988403320312500000",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "computation_error",
+    "error": "'sage.rings.rational.Rational' object has no attribute 'simplify_rational'",
+    "min_minor": "5",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_3_4"
+  },
+  {
+    "point_idx": 75,
+    "Z": [
+      [
+        6.0,
+        9.0,
+        7.0,
+        -2.0
+      ],
+      [
+        -10.0,
+        -4.0,
+        -8.0,
+        7.0
+      ],
+      [
+        -10.0,
+        -3.0,
+        -4.0,
+        9.0
+      ],
+      [
+        1.0,
+        3.0,
+        -4.0,
+        0.0
+      ],
+      [
+        10.0,
+        -6.0,
+        6.0,
+        -10.0
+      ],
+      [
+        6.0,
+        10.0,
+        -10.0,
+        2.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "6",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_4"
+  },
+  {
+    "point_idx": 76,
+    "Z": [
+      [
+        -9.0,
+        -3.0,
+        -10.0,
+        0.0
+      ],
+      [
+        -9.0,
+        5.0,
+        -8.0,
+        -2.0
+      ],
+      [
+        2.0,
+        -3.0,
+        5.0,
+        8.0
+      ],
+      [
+        -2.0,
+        2.0,
+        10.0,
+        -5.0
+      ],
+      [
+        6.0,
+        -7.0,
+        -9.0,
+        10.0
+      ],
+      [
+        7.0,
+        8.0,
+        9.0,
+        3.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "2",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_4"
+  },
+  {
+    "point_idx": 77,
+    "Z": [
+      [
+        10.0,
+        10.0,
+        1.0,
+        -5.0
+      ],
+      [
+        -10.0,
+        -3.0,
+        2.0,
+        9.0
+      ],
+      [
+        -10.0,
+        -6.0,
+        -6.0,
+        5.0
+      ],
+      [
+        4.0,
+        5.0,
+        0.0,
+        -3.0
+      ],
+      [
+        -7.0,
+        -9.0,
+        1.0,
+        7.0
+      ],
+      [
+        -4.0,
+        10.0,
+        -5.0,
+        -9.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "1",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_4"
+  },
+  {
+    "point_idx": 78,
+    "Z": [
+      [
+        -5.0,
+        -2.0,
+        -1.0,
+        10.0
+      ],
+      [
+        10.0,
+        9.0,
+        4.0,
+        -7.0
+      ],
+      [
+        2.0,
+        1.0,
+        -6.0,
+        10.0
+      ],
+      [
+        -4.0,
+        -10.0,
+        -7.0,
+        -4.0
+      ],
+      [
+        -6.0,
+        -8.0,
+        3.0,
+        -7.0
+      ],
+      [
+        -5.0,
+        7.0,
+        -8.0,
+        10.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "8",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_5"
+  },
+  {
+    "point_idx": 79,
+    "Z": [
+      [
+        0.0,
+        -7.0,
+        10.0,
+        8.0
+      ],
+      [
+        -2.0,
+        -9.0,
+        7.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        5.0,
+        3.0
+      ],
+      [
+        8.0,
+        5.0,
+        -1.0,
+        10.0
+      ],
+      [
+        -8.0,
+        3.0,
+        1.0,
+        2.0
+      ],
+      [
+        5.0,
+        -4.0,
+        -6.0,
+        -7.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "5",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_4"
+  },
+  {
+    "point_idx": 80,
+    "Z": [
+      [
+        5.0,
+        -4.0,
+        9.0,
+        0.0
+      ],
+      [
+        8.0,
+        -7.0,
+        9.0,
+        5.0
+      ],
+      [
+        7.0,
+        -5.0,
+        8.0,
+        10.0
+      ],
+      [
+        -10.0,
+        -1.0,
+        -1.0,
+        4.0
+      ],
+      [
+        0.0,
+        -6.0,
+        9.0,
+        2.0
+      ],
+      [
+        3.0,
+        8.0,
+        -7.0,
+        4.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "3",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_5"
+  },
+  {
+    "point_idx": 81,
+    "Z": [
+      [
+        -7.0,
+        -9.0,
+        4.0,
+        1.0
+      ],
+      [
+        1.0,
+        -7.0,
+        7.0,
+        7.0
+      ],
+      [
+        0.0,
+        -9.0,
+        -7.0,
+        -1.0
+      ],
+      [
+        -6.0,
+        9.0,
+        0.0,
+        0.0
+      ],
+      [
+        10.0,
+        3.0,
+        -9.0,
+        6.0
+      ],
+      [
+        -5.0,
+        5.0,
+        3.0,
+        10.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "9",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 82,
+    "Z": [
+      [
+        -7.0,
+        -8.0,
+        -7.0,
+        3.0
+      ],
+      [
+        -8.0,
+        4.0,
+        6.0,
+        4.0
+      ],
+      [
+        0.0,
+        -9.0,
+        7.0,
+        1.0
+      ],
+      [
+        -7.0,
+        9.0,
+        -5.0,
+        -6.0
+      ],
+      [
+        6.0,
+        -9.0,
+        -3.0,
+        7.0
+      ],
+      [
+        9.0,
+        10.0,
+        -2.0,
+        -1.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "2",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_4"
+  },
+  {
+    "point_idx": 83,
+    "Z": [
+      [
+        8.0,
+        -2.0,
+        -3.0,
+        -10.0
+      ],
+      [
+        -10.0,
+        -2.0,
+        -7.0,
+        -6.0
+      ],
+      [
+        -2.0,
+        -6.0,
+        6.0,
+        -10.0
+      ],
+      [
+        4.0,
+        5.0,
+        8.0,
+        -6.0
+      ],
+      [
+        -5.0,
+        3.0,
+        4.0,
+        -10.0
+      ],
+      [
+        -1.0,
+        -1.0,
+        -5.0,
+        6.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "8",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_5"
+  },
+  {
+    "point_idx": 84,
+    "Z": [
+      [
+        0.0,
+        7.0,
+        4.0,
+        3.0
+      ],
+      [
+        -10.0,
+        4.0,
+        -9.0,
+        0.0
+      ],
+      [
+        -6.0,
+        -9.0,
+        3.0,
+        -2.0
+      ],
+      [
+        4.0,
+        -10.0,
+        6.0,
+        3.0
+      ],
+      [
+        4.0,
+        -6.0,
+        -6.0,
+        10.0
+      ],
+      [
+        8.0,
+        -8.0,
+        10.0,
+        5.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "16",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_4_5"
+  },
+  {
+    "point_idx": 85,
+    "Z": [
+      [
+        0.0,
+        -10.0,
+        3.0,
+        -6.0
+      ],
+      [
+        9.0,
+        3.0,
+        10.0,
+        9.0
+      ],
+      [
+        -5.0,
+        5.0,
+        -9.0,
+        3.0
+      ],
+      [
+        -7.0,
+        1.0,
+        -4.0,
+        -10.0
+      ],
+      [
+        -3.0,
+        -3.0,
+        -1.0,
+        7.0
+      ],
+      [
+        -4.0,
+        7.0,
+        2.0,
+        9.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "24",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 86,
+    "Z": [
+      [
+        10.0,
+        -10.0,
+        2.0,
+        -7.0
+      ],
+      [
+        -2.0,
+        -1.0,
+        -1.0,
+        2.0
+      ],
+      [
+        3.0,
+        7.0,
+        3.0,
+        -1.0
+      ],
+      [
+        2.0,
+        4.0,
+        -6.0,
+        4.0
+      ],
+      [
+        10.0,
+        7.0,
+        -10.0,
+        3.0
+      ],
+      [
+        6.0,
+        -5.0,
+        6.0,
+        -7.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "2",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 87,
+    "Z": [
+      [
+        -4.0,
+        3.0,
+        5.0,
+        -4.0
+      ],
+      [
+        -4.0,
+        9.0,
+        -10.0,
+        -1.0
+      ],
+      [
+        -10.0,
+        4.0,
+        0.0,
+        -2.0
+      ],
+      [
+        9.0,
+        -7.0,
+        -2.0,
+        -7.0
+      ],
+      [
+        -2.0,
+        1.0,
+        8.0,
+        1.0
+      ],
+      [
+        9.0,
+        -2.0,
+        10.0,
+        2.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "5",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 88,
+    "Z": [
+      [
+        -10.0,
+        5.0,
+        7.0,
+        0.0
+      ],
+      [
+        10.0,
+        -5.0,
+        -9.0,
+        6.0
+      ],
+      [
+        -5.0,
+        2.0,
+        6.0,
+        -8.0
+      ],
+      [
+        -9.0,
+        1.0,
+        -6.0,
+        -3.0
+      ],
+      [
+        -3.0,
+        -3.0,
+        -4.0,
+        0.0
+      ],
+      [
+        3.0,
+        -7.0,
+        3.0,
+        -9.0
+      ]
+    ],
+    "A": null,
+    "H": null,
+    "A_reason": "zero_square_bracket",
+    "H_reason": "zero_square_bracket",
+    "status": "None",
+    "reason": "A: zero_square_bracket; H: zero_square_bracket",
+    "min_minor": "5",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 89,
+    "Z": [
+      [
+        9.0,
+        -6.0,
+        3.0,
+        1.0
+      ],
+      [
+        -5.0,
+        -2.0,
+        8.0,
+        -9.0
+      ],
+      [
+        -3.0,
+        -10.0,
+        10.0,
+        7.0
+      ],
+      [
+        -4.0,
+        -9.0,
+        -4.0,
+        -3.0
+      ],
+      [
+        3.0,
+        9.0,
+        7.0,
+        7.0
+      ],
+      [
+        -2.0,
+        -5.0,
+        -3.0,
+        6.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "3",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 90,
+    "Z": [
+      [
+        8.0,
+        -7.0,
+        -3.0,
+        -6.0
+      ],
+      [
+        -5.0,
+        8.0,
+        0.0,
+        -10.0
+      ],
+      [
+        1.0,
+        9.0,
+        6.0,
+        8.0
+      ],
+      [
+        3.0,
+        8.0,
+        -1.0,
+        -10.0
+      ],
+      [
+        -10.0,
+        0.0,
+        -2.0,
+        6.0
+      ],
+      [
+        1.0,
+        2.0,
+        -6.0,
+        -1.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "19",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_4_5"
+  },
+  {
+    "point_idx": 91,
+    "Z": [
+      [
+        8.0,
+        4.0,
+        0.0,
+        8.0
+      ],
+      [
+        10.0,
+        4.0,
+        -6.0,
+        -5.0
+      ],
+      [
+        -8.0,
+        0.0,
+        4.0,
+        7.0
+      ],
+      [
+        7.0,
+        -9.0,
+        8.0,
+        10.0
+      ],
+      [
+        -2.0,
+        7.0,
+        0.0,
+        10.0
+      ],
+      [
+        4.0,
+        7.0,
+        1.0,
+        -4.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "8",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_4"
+  },
+  {
+    "point_idx": 92,
+    "Z": [
+      [
+        0.0,
+        -7.0,
+        8.0,
+        1.0
+      ],
+      [
+        -4.0,
+        5.0,
+        4.0,
+        -9.0
+      ],
+      [
+        10.0,
+        -10.0,
+        -10.0,
+        -8.0
+      ],
+      [
+        4.0,
+        8.0,
+        -8.0,
+        1.0
+      ],
+      [
+        3.0,
+        5.0,
+        -9.0,
+        2.0
+      ],
+      [
+        7.0,
+        -6.0,
+        -9.0,
+        -9.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "4",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 93,
+    "Z": [
+      [
+        -5.0,
+        -6.0,
+        5.0,
+        -9.0
+      ],
+      [
+        6.0,
+        3.0,
+        3.0,
+        10.0
+      ],
+      [
+        10.0,
+        9.0,
+        7.0,
+        0.0
+      ],
+      [
+        -9.0,
+        -2.0,
+        -3.0,
+        6.0
+      ],
+      [
+        -1.0,
+        1.0,
+        -5.0,
+        2.0
+      ],
+      [
+        1.0,
+        -1.0,
+        7.0,
+        8.0
+      ]
+    ],
+    "A": null,
+    "H": null,
+    "A_reason": "zero_denominator_angle",
+    "H_reason": "zero_denominator_angle",
+    "status": "None",
+    "reason": "A: zero_denominator_angle; H: zero_denominator_angle",
+    "min_minor": "11",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_3_5"
+  },
+  {
+    "point_idx": 94,
+    "Z": [
+      [
+        8.0,
+        -10.0,
+        -5.0,
+        -7.0
+      ],
+      [
+        8.0,
+        9.0,
+        -4.0,
+        6.0
+      ],
+      [
+        -2.0,
+        -3.0,
+        6.0,
+        8.0
+      ],
+      [
+        -1.0,
+        4.0,
+        -9.0,
+        -2.0
+      ],
+      [
+        0.0,
+        -10.0,
+        1.0,
+        -2.0
+      ],
+      [
+        -7.0,
+        5.0,
+        3.0,
+        1.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "6",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_5"
+  },
+  {
+    "point_idx": 95,
+    "Z": [
+      [
+        -1.0,
+        9.0,
+        -5.0,
+        -8.0
+      ],
+      [
+        -6.0,
+        -8.0,
+        -9.0,
+        -10.0
+      ],
+      [
+        5.0,
+        10.0,
+        -3.0,
+        -8.0
+      ],
+      [
+        -2.0,
+        7.0,
+        10.0,
+        -7.0
+      ],
+      [
+        -3.0,
+        5.0,
+        5.0,
+        1.0
+      ],
+      [
+        -7.0,
+        -6.0,
+        9.0,
+        10.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "11",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_2_3_4"
+  },
+  {
+    "point_idx": 96,
+    "Z": [
+      [
+        10.0,
+        -4.0,
+        2.0,
+        10.0
+      ],
+      [
+        -9.0,
+        -9.0,
+        -8.0,
+        -4.0
+      ],
+      [
+        5.0,
+        -1.0,
+        -8.0,
+        -5.0
+      ],
+      [
+        7.0,
+        8.0,
+        -7.0,
+        3.0
+      ],
+      [
+        -9.0,
+        -3.0,
+        -9.0,
+        5.0
+      ],
+      [
+        10.0,
+        10.0,
+        2.0,
+        -2.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "47",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_3_5"
+  },
+  {
+    "point_idx": 97,
+    "Z": [
+      [
+        -7.0,
+        -1.0,
+        9.0,
+        -3.0
+      ],
+      [
+        9.0,
+        -5.0,
+        -6.0,
+        8.0
+      ],
+      [
+        9.0,
+        10.0,
+        2.0,
+        10.0
+      ],
+      [
+        -6.0,
+        -6.0,
+        -7.0,
+        4.0
+      ],
+      [
+        3.0,
+        6.0,
+        0.0,
+        -7.0
+      ],
+      [
+        -7.0,
+        -2.0,
+        -2.0,
+        2.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "6",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_4"
+  },
+  {
+    "point_idx": 98,
+    "Z": [
+      [
+        0.0,
+        10.0,
+        -9.0,
+        -6.0
+      ],
+      [
+        -3.0,
+        -4.0,
+        -1.0,
+        -8.0
+      ],
+      [
+        -8.0,
+        -1.0,
+        -1.0,
+        -8.0
+      ],
+      [
+        -1.0,
+        -7.0,
+        5.0,
+        -3.0
+      ],
+      [
+        -6.0,
+        -4.0,
+        10.0,
+        -1.0
+      ],
+      [
+        8.0,
+        -1.0,
+        0.0,
+        -2.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "29",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 99,
+    "Z": [
+      [
+        -9.0,
+        -7.0,
+        -2.0,
+        -1.0
+      ],
+      [
+        -2.0,
+        8.0,
+        -6.0,
+        -5.0
+      ],
+      [
+        10.0,
+        -9.0,
+        -7.0,
+        7.0
+      ],
+      [
+        -9.0,
+        6.0,
+        -4.0,
+        1.0
+      ],
+      [
+        10.0,
+        -8.0,
+        -10.0,
+        2.0
+      ],
+      [
+        -2.0,
+        -2.0,
+        10.0,
+        -3.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "4",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_4"
+  },
+  {
+    "point_idx": 100,
+    "Z": [
+      [
+        -2.0,
+        -7.0,
+        -3.0,
+        5.0
+      ],
+      [
+        6.0,
+        0.0,
+        10.0,
+        -8.0
+      ],
+      [
+        -8.0,
+        -8.0,
+        4.0,
+        -8.0
+      ],
+      [
+        7.0,
+        6.0,
+        5.0,
+        -6.0
+      ],
+      [
+        1.0,
+        6.0,
+        -1.0,
+        -8.0
+      ],
+      [
+        2.0,
+        -6.0,
+        -9.0,
+        3.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "8",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 101,
+    "Z": [
+      [
+        1.0,
+        7.0,
+        -4.0,
+        1.0
+      ],
+      [
+        5.0,
+        -1.0,
+        3.0,
+        -2.0
+      ],
+      [
+        -6.0,
+        -2.0,
+        -10.0,
+        4.0
+      ],
+      [
+        -5.0,
+        2.0,
+        -2.0,
+        7.0
+      ],
+      [
+        9.0,
+        5.0,
+        -2.0,
+        9.0
+      ],
+      [
+        9.0,
+        -8.0,
+        2.0,
+        -2.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "16",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_3_4"
+  },
+  {
+    "point_idx": 102,
+    "Z": [
+      [
+        -10.0,
+        9.0,
+        4.0,
+        8.0
+      ],
+      [
+        8.0,
+        5.0,
+        -8.0,
+        1.0
+      ],
+      [
+        -1.0,
+        -2.0,
+        3.0,
+        -2.0
+      ],
+      [
+        -1.0,
+        5.0,
+        -3.0,
+        -6.0
+      ],
+      [
+        6.0,
+        -4.0,
+        8.0,
+        -7.0
+      ],
+      [
+        -10.0,
+        -10.0,
+        6.0,
+        -4.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "7",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_4"
+  },
+  {
+    "point_idx": 103,
+    "Z": [
+      [
+        -3.0,
+        -1.0,
+        9.0,
+        -4.0
+      ],
+      [
+        7.0,
+        2.0,
+        1.0,
+        2.0
+      ],
+      [
+        10.0,
+        3.0,
+        -4.0,
+        3.0
+      ],
+      [
+        -9.0,
+        0.0,
+        10.0,
+        -2.0
+      ],
+      [
+        7.0,
+        10.0,
+        -5.0,
+        6.0
+      ],
+      [
+        -9.0,
+        -10.0,
+        0.0,
+        3.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "1",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_5"
+  },
+  {
+    "point_idx": 104,
+    "Z": [
+      [
+        -5.0,
+        -9.0,
+        4.0,
+        -4.0
+      ],
+      [
+        -2.0,
+        -6.0,
+        6.0,
+        -7.0
+      ],
+      [
+        3.0,
+        -7.0,
+        -10.0,
+        -2.0
+      ],
+      [
+        4.0,
+        -8.0,
+        -10.0,
+        -5.0
+      ],
+      [
+        -5.0,
+        7.0,
+        -1.0,
+        5.0
+      ],
+      [
+        -5.0,
+        -8.0,
+        -2.0,
+        -4.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "4",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_4_5"
+  },
+  {
+    "point_idx": 105,
+    "Z": [
+      [
+        -10.0,
+        -1.0,
+        -6.0,
+        -10.0
+      ],
+      [
+        -10.0,
+        -6.0,
+        6.0,
+        -6.0
+      ],
+      [
+        3.0,
+        -9.0,
+        -4.0,
+        5.0
+      ],
+      [
+        -1.0,
+        5.0,
+        9.0,
+        10.0
+      ],
+      [
+        10.0,
+        0.0,
+        -8.0,
+        10.0
+      ],
+      [
+        7.0,
+        7.0,
+        2.0,
+        -2.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "6",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 106,
+    "Z": [
+      [
+        4.0,
+        -3.0,
+        10.0,
+        10.0
+      ],
+      [
+        0.0,
+        9.0,
+        9.0,
+        -8.0
+      ],
+      [
+        8.0,
+        3.0,
+        6.0,
+        2.0
+      ],
+      [
+        -7.0,
+        -9.0,
+        -5.0,
+        -8.0
+      ],
+      [
+        -4.0,
+        -6.0,
+        -3.0,
+        -8.0
+      ],
+      [
+        -5.0,
+        8.0,
+        3.0,
+        -7.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "6",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_5"
+  },
+  {
+    "point_idx": 107,
+    "Z": [
+      [
+        6.0,
+        -4.0,
+        4.0,
+        1.0
+      ],
+      [
+        -8.0,
+        -1.0,
+        -4.0,
+        4.0
+      ],
+      [
+        5.0,
+        6.0,
+        8.0,
+        -8.0
+      ],
+      [
+        3.0,
+        -1.0,
+        10.0,
+        -10.0
+      ],
+      [
+        -1.0,
+        -2.0,
+        -6.0,
+        -7.0
+      ],
+      [
+        -2.0,
+        6.0,
+        5.0,
+        -1.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "7",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_5"
+  },
+  {
+    "point_idx": 108,
+    "Z": [
+      [
+        -7.0,
+        7.0,
+        1.0,
+        4.0
+      ],
+      [
+        8.0,
+        10.0,
+        8.0,
+        -1.0
+      ],
+      [
+        -4.0,
+        -1.0,
+        2.0,
+        -9.0
+      ],
+      [
+        8.0,
+        -6.0,
+        -4.0,
+        6.0
+      ],
+      [
+        2.0,
+        -2.0,
+        5.0,
+        8.0
+      ],
+      [
+        -4.0,
+        -7.0,
+        8.0,
+        9.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "4",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 109,
+    "Z": [
+      [
+        -4.0,
+        3.0,
+        6.0,
+        5.0
+      ],
+      [
+        1.0,
+        -9.0,
+        -6.0,
+        0.0
+      ],
+      [
+        9.0,
+        6.0,
+        3.0,
+        8.0
+      ],
+      [
+        -5.0,
+        -6.0,
+        4.0,
+        -10.0
+      ],
+      [
+        10.0,
+        -4.0,
+        -2.0,
+        6.0
+      ],
+      [
+        -3.0,
+        3.0,
+        1.0,
+        3.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "3",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 110,
+    "Z": [
+      [
+        -10.0,
+        -7.0,
+        5.0,
+        5.0
+      ],
+      [
+        -10.0,
+        6.0,
+        6.0,
+        -4.0
+      ],
+      [
+        -8.0,
+        -2.0,
+        -1.0,
+        -5.0
+      ],
+      [
+        -10.0,
+        7.0,
+        -9.0,
+        6.0
+      ],
+      [
+        -2.0,
+        -3.0,
+        2.0,
+        -1.0
+      ],
+      [
+        0.0,
+        -9.0,
+        -1.0,
+        -8.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "18",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_4"
+  },
+  {
+    "point_idx": 111,
+    "Z": [
+      [
+        10.0,
+        2.0,
+        10.0,
+        10.0
+      ],
+      [
+        9.0,
+        -1.0,
+        -8.0,
+        8.0
+      ],
+      [
+        -2.0,
+        -3.0,
+        -3.0,
+        2.0
+      ],
+      [
+        0.0,
+        -9.0,
+        6.0,
+        4.0
+      ],
+      [
+        -8.0,
+        -2.0,
+        -5.0,
+        2.0
+      ],
+      [
+        -4.0,
+        2.0,
+        3.0,
+        -5.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "18",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_4"
+  },
+  {
+    "point_idx": 112,
+    "Z": [
+      [
+        -6.0,
+        1.0,
+        -2.0,
+        -9.0
+      ],
+      [
+        10.0,
+        -5.0,
+        2.0,
+        -3.0
+      ],
+      [
+        -2.0,
+        10.0,
+        -1.0,
+        0.0
+      ],
+      [
+        6.0,
+        -6.0,
+        -2.0,
+        -4.0
+      ],
+      [
+        6.0,
+        9.0,
+        -5.0,
+        -5.0
+      ],
+      [
+        -2.0,
+        -7.0,
+        7.0,
+        0.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "20",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 113,
+    "Z": [
+      [
+        -5.0,
+        -8.0,
+        0.0,
+        2.0
+      ],
+      [
+        -8.0,
+        6.0,
+        -10.0,
+        5.0
+      ],
+      [
+        -8.0,
+        2.0,
+        -3.0,
+        10.0
+      ],
+      [
+        5.0,
+        -5.0,
+        -5.0,
+        -4.0
+      ],
+      [
+        7.0,
+        -6.0,
+        -5.0,
+        1.0
+      ],
+      [
+        4.0,
+        -7.0,
+        -3.0,
+        -5.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "5",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 114,
+    "Z": [
+      [
+        0.0,
+        9.0,
+        -4.0,
+        8.0
+      ],
+      [
+        8.0,
+        -2.0,
+        -1.0,
+        4.0
+      ],
+      [
+        -7.0,
+        -6.0,
+        -6.0,
+        -10.0
+      ],
+      [
+        9.0,
+        -5.0,
+        -3.0,
+        6.0
+      ],
+      [
+        -6.0,
+        -4.0,
+        3.0,
+        1.0
+      ],
+      [
+        -1.0,
+        10.0,
+        2.0,
+        6.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "9",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_5"
+  },
+  {
+    "point_idx": 115,
+    "Z": [
+      [
+        8.0,
+        -10.0,
+        5.0,
+        -8.0
+      ],
+      [
+        -4.0,
+        6.0,
+        4.0,
+        -9.0
+      ],
+      [
+        -1.0,
+        4.0,
+        2.0,
+        -9.0
+      ],
+      [
+        -7.0,
+        -3.0,
+        4.0,
+        7.0
+      ],
+      [
+        -6.0,
+        1.0,
+        -8.0,
+        7.0
+      ],
+      [
+        10.0,
+        -5.0,
+        7.0,
+        10.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "8",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_5"
+  },
+  {
+    "point_idx": 116,
+    "Z": [
+      [
+        7.0,
+        4.0,
+        -8.0,
+        0.0
+      ],
+      [
+        -9.0,
+        7.0,
+        1.0,
+        2.0
+      ],
+      [
+        3.0,
+        1.0,
+        8.0,
+        -2.0
+      ],
+      [
+        -7.0,
+        9.0,
+        3.0,
+        -7.0
+      ],
+      [
+        -1.0,
+        10.0,
+        -7.0,
+        2.0
+      ],
+      [
+        1.0,
+        0.0,
+        3.0,
+        2.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "4",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 117,
+    "Z": [
+      [
+        4.0,
+        6.0,
+        6.0,
+        7.0
+      ],
+      [
+        9.0,
+        -9.0,
+        -5.0,
+        7.0
+      ],
+      [
+        1.0,
+        6.0,
+        -8.0,
+        -1.0
+      ],
+      [
+        -8.0,
+        1.0,
+        -4.0,
+        -8.0
+      ],
+      [
+        7.0,
+        7.0,
+        -9.0,
+        4.0
+      ],
+      [
+        6.0,
+        7.0,
+        3.0,
+        2.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "7",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_4"
+  },
+  {
+    "point_idx": 118,
+    "Z": [
+      [
+        -10.0,
+        5.0,
+        1.0,
+        -1.0
+      ],
+      [
+        -8.0,
+        1.0,
+        -2.0,
+        6.0
+      ],
+      [
+        -5.0,
+        3.0,
+        -8.0,
+        5.0
+      ],
+      [
+        -8.0,
+        -7.0,
+        7.0,
+        7.0
+      ],
+      [
+        -7.0,
+        -6.0,
+        7.0,
+        -2.0
+      ],
+      [
+        -1.0,
+        2.0,
+        -9.0,
+        -7.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "1",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_3_4"
+  },
+  {
+    "point_idx": 119,
+    "Z": [
+      [
+        -8.0,
+        -8.0,
+        -8.0,
+        -3.0
+      ],
+      [
+        -6.0,
+        2.0,
+        -4.0,
+        -2.0
+      ],
+      [
+        -2.0,
+        4.0,
+        -1.0,
+        0.0
+      ],
+      [
+        4.0,
+        10.0,
+        7.0,
+        0.0
+      ],
+      [
+        -8.0,
+        4.0,
+        -6.0,
+        1.0
+      ],
+      [
+        2.0,
+        5.0,
+        -3.0,
+        -5.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "6",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 120,
+    "Z": [
+      [
+        -3.0,
+        -10.0,
+        0.0,
+        5.0
+      ],
+      [
+        10.0,
+        7.0,
+        2.0,
+        -9.0
+      ],
+      [
+        9.0,
+        -1.0,
+        10.0,
+        -1.0
+      ],
+      [
+        -1.0,
+        -4.0,
+        4.0,
+        3.0
+      ],
+      [
+        -9.0,
+        -6.0,
+        -5.0,
+        -3.0
+      ],
+      [
+        3.0,
+        8.0,
+        -8.0,
+        -8.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "6",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 121,
+    "Z": [
+      [
+        -8.0,
+        -2.0,
+        10.0,
+        -9.0
+      ],
+      [
+        10.0,
+        9.0,
+        -10.0,
+        4.0
+      ],
+      [
+        -8.0,
+        10.0,
+        -7.0,
+        -1.0
+      ],
+      [
+        10.0,
+        1.0,
+        5.0,
+        -4.0
+      ],
+      [
+        -3.0,
+        -1.0,
+        -1.0,
+        9.0
+      ],
+      [
+        10.0,
+        3.0,
+        9.0,
+        10.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "1",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_3_4"
+  },
+  {
+    "point_idx": 122,
+    "Z": [
+      [
+        5.0,
+        0.0,
+        2.0,
+        6.0
+      ],
+      [
+        2.0,
+        5.0,
+        -8.0,
+        5.0
+      ],
+      [
+        0.0,
+        -1.0,
+        -4.0,
+        4.0
+      ],
+      [
+        -7.0,
+        -6.0,
+        9.0,
+        9.0
+      ],
+      [
+        3.0,
+        -10.0,
+        3.0,
+        10.0
+      ],
+      [
+        5.0,
+        7.0,
+        1.0,
+        0.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "2",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 123,
+    "Z": [
+      [
+        3.0,
+        -8.0,
+        -8.0,
+        -4.0
+      ],
+      [
+        7.0,
+        9.0,
+        0.0,
+        -9.0
+      ],
+      [
+        -10.0,
+        7.0,
+        5.0,
+        -1.0
+      ],
+      [
+        -10.0,
+        4.0,
+        -10.0,
+        5.0
+      ],
+      [
+        9.0,
+        4.0,
+        -6.0,
+        -10.0
+      ],
+      [
+        6.0,
+        -6.0,
+        7.0,
+        -7.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "30",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 124,
+    "Z": [
+      [
+        4.0,
+        7.0,
+        -3.0,
+        -8.0
+      ],
+      [
+        -1.0,
+        -10.0,
+        10.0,
+        10.0
+      ],
+      [
+        4.0,
+        -1.0,
+        4.0,
+        6.0
+      ],
+      [
+        -2.0,
+        -1.0,
+        -1.0,
+        -10.0
+      ],
+      [
+        -8.0,
+        8.0,
+        7.0,
+        -9.0
+      ],
+      [
+        -1.0,
+        3.0,
+        1.0,
+        -9.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "6",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 125,
+    "Z": [
+      [
+        -8.0,
+        -7.0,
+        4.0,
+        3.0
+      ],
+      [
+        1.0,
+        -10.0,
+        -5.0,
+        -8.0
+      ],
+      [
+        3.0,
+        -10.0,
+        10.0,
+        8.0
+      ],
+      [
+        2.0,
+        -10.0,
+        -8.0,
+        -1.0
+      ],
+      [
+        -7.0,
+        2.0,
+        5.0,
+        2.0
+      ],
+      [
+        -3.0,
+        -1.0,
+        -1.0,
+        7.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "10",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_4"
+  },
+  {
+    "point_idx": 126,
+    "Z": [
+      [
+        -4.0,
+        5.0,
+        0.0,
+        -9.0
+      ],
+      [
+        -7.0,
+        6.0,
+        -6.0,
+        3.0
+      ],
+      [
+        -1.0,
+        7.0,
+        -8.0,
+        0.0
+      ],
+      [
+        -4.0,
+        6.0,
+        8.0,
+        0.0
+      ],
+      [
+        6.0,
+        -7.0,
+        8.0,
+        2.0
+      ],
+      [
+        7.0,
+        -6.0,
+        4.0,
+        -2.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "8",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 127,
+    "Z": [
+      [
+        -1.0,
+        -8.0,
+        -6.0,
+        -7.0
+      ],
+      [
+        -1.0,
+        -6.0,
+        -3.0,
+        7.0
+      ],
+      [
+        9.0,
+        8.0,
+        -1.0,
+        3.0
+      ],
+      [
+        8.0,
+        4.0,
+        -6.0,
+        -6.0
+      ],
+      [
+        3.0,
+        6.0,
+        9.0,
+        -7.0
+      ],
+      [
+        2.0,
+        -5.0,
+        7.0,
+        -8.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "2",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 128,
+    "Z": [
+      [
+        8.0,
+        9.0,
+        -5.0,
+        8.0
+      ],
+      [
+        0.0,
+        -8.0,
+        10.0,
+        1.0
+      ],
+      [
+        7.0,
+        6.0,
+        6.0,
+        5.0
+      ],
+      [
+        -5.0,
+        0.0,
+        -1.0,
+        -10.0
+      ],
+      [
+        2.0,
+        9.0,
+        -9.0,
+        0.0
+      ],
+      [
+        -7.0,
+        -4.0,
+        6.0,
+        -3.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "26",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_5"
+  },
+  {
+    "point_idx": 129,
+    "Z": [
+      [
+        -3.0,
+        -2.0,
+        -10.0,
+        -1.0
+      ],
+      [
+        3.0,
+        -1.0,
+        7.0,
+        -9.0
+      ],
+      [
+        -10.0,
+        -9.0,
+        7.0,
+        -4.0
+      ],
+      [
+        10.0,
+        3.0,
+        7.0,
+        10.0
+      ],
+      [
+        8.0,
+        6.0,
+        2.0,
+        4.0
+      ],
+      [
+        -10.0,
+        -8.0,
+        -2.0,
+        -10.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "4",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_5"
+  },
+  {
+    "point_idx": 130,
+    "Z": [
+      [
+        9.0,
+        0.0,
+        7.0,
+        6.0
+      ],
+      [
+        3.0,
+        1.0,
+        -4.0,
+        1.0
+      ],
+      [
+        -2.0,
+        1.0,
+        -10.0,
+        -5.0
+      ],
+      [
+        -3.0,
+        -9.0,
+        7.0,
+        4.0
+      ],
+      [
+        4.0,
+        -8.0,
+        2.0,
+        -9.0
+      ],
+      [
+        -6.0,
+        0.0,
+        -2.0,
+        -8.0
+      ]
+    ],
+    "A": null,
+    "H": null,
+    "A_reason": "zero_denominator_angle",
+    "H_reason": "zero_denominator_angle",
+    "status": "None",
+    "reason": "A: zero_denominator_angle; H: zero_denominator_angle",
+    "min_minor": "5",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 131,
+    "Z": [
+      [
+        9.0,
+        2.0,
+        -1.0,
+        0.0
+      ],
+      [
+        1.0,
+        -5.0,
+        -10.0,
+        8.0
+      ],
+      [
+        -9.0,
+        -10.0,
+        0.0,
+        2.0
+      ],
+      [
+        3.0,
+        10.0,
+        -10.0,
+        6.0
+      ],
+      [
+        2.0,
+        -9.0,
+        7.0,
+        -8.0
+      ],
+      [
+        -3.0,
+        -2.0,
+        -3.0,
+        -5.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "12",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 132,
+    "Z": [
+      [
+        -9.0,
+        7.0,
+        8.0,
+        0.0
+      ],
+      [
+        -4.0,
+        -8.0,
+        -8.0,
+        8.0
+      ],
+      [
+        -7.0,
+        10.0,
+        6.0,
+        -7.0
+      ],
+      [
+        -1.0,
+        -9.0,
+        -1.0,
+        1.0
+      ],
+      [
+        10.0,
+        -2.0,
+        -8.0,
+        -2.0
+      ],
+      [
+        -10.0,
+        9.0,
+        -1.0,
+        8.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "6",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_4"
+  },
+  {
+    "point_idx": 133,
+    "Z": [
+      [
+        -9.0,
+        -2.0,
+        -9.0,
+        2.0
+      ],
+      [
+        10.0,
+        -8.0,
+        -4.0,
+        3.0
+      ],
+      [
+        1.0,
+        4.0,
+        2.0,
+        -4.0
+      ],
+      [
+        -4.0,
+        -2.0,
+        -2.0,
+        10.0
+      ],
+      [
+        1.0,
+        -7.0,
+        -9.0,
+        0.0
+      ],
+      [
+        -7.0,
+        5.0,
+        -5.0,
+        -4.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "6",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 134,
+    "Z": [
+      [
+        -7.0,
+        -4.0,
+        8.0,
+        8.0
+      ],
+      [
+        10.0,
+        10.0,
+        5.0,
+        -5.0
+      ],
+      [
+        6.0,
+        -7.0,
+        9.0,
+        4.0
+      ],
+      [
+        9.0,
+        2.0,
+        -2.0,
+        -7.0
+      ],
+      [
+        8.0,
+        3.0,
+        -9.0,
+        4.0
+      ],
+      [
+        -2.0,
+        -10.0,
+        9.0,
+        -1.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "11",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_4"
+  },
+  {
+    "point_idx": 135,
+    "Z": [
+      [
+        1.0,
+        -5.0,
+        0.0,
+        2.0
+      ],
+      [
+        9.0,
+        4.0,
+        -2.0,
+        -7.0
+      ],
+      [
+        -2.0,
+        -2.0,
+        -7.0,
+        -2.0
+      ],
+      [
+        10.0,
+        10.0,
+        1.0,
+        5.0
+      ],
+      [
+        -3.0,
+        5.0,
+        6.0,
+        -9.0
+      ],
+      [
+        -3.0,
+        -2.0,
+        0.0,
+        6.0
+      ]
+    ],
+    "A": null,
+    "H": null,
+    "A_reason": "zero_square_bracket",
+    "H_reason": "zero_square_bracket",
+    "status": "None",
+    "reason": "A: zero_square_bracket; H: zero_square_bracket",
+    "min_minor": "10",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 136,
+    "Z": [
+      [
+        -1.0,
+        -5.0,
+        -1.0,
+        0.0
+      ],
+      [
+        10.0,
+        0.0,
+        0.0,
+        -4.0
+      ],
+      [
+        5.0,
+        7.0,
+        0.0,
+        -8.0
+      ],
+      [
+        -10.0,
+        7.0,
+        2.0,
+        5.0
+      ],
+      [
+        2.0,
+        -2.0,
+        1.0,
+        -9.0
+      ],
+      [
+        10.0,
+        -3.0,
+        0.0,
+        -4.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "6",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_3_4"
+  },
+  {
+    "point_idx": 137,
+    "Z": [
+      [
+        -4.0,
+        3.0,
+        9.0,
+        6.0
+      ],
+      [
+        1.0,
+        4.0,
+        -9.0,
+        -1.0
+      ],
+      [
+        9.0,
+        -5.0,
+        10.0,
+        -2.0
+      ],
+      [
+        6.0,
+        2.0,
+        -2.0,
+        -3.0
+      ],
+      [
+        -4.0,
+        5.0,
+        -5.0,
+        -4.0
+      ],
+      [
+        2.0,
+        2.0,
+        10.0,
+        6.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "14",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_5"
+  },
+  {
+    "point_idx": 138,
+    "Z": [
+      [
+        -1.0,
+        7.0,
+        -5.0,
+        -8.0
+      ],
+      [
+        10.0,
+        -2.0,
+        -10.0,
+        -1.0
+      ],
+      [
+        -3.0,
+        -10.0,
+        6.0,
+        10.0
+      ],
+      [
+        -6.0,
+        -5.0,
+        7.0,
+        8.0
+      ],
+      [
+        5.0,
+        -10.0,
+        -8.0,
+        -4.0
+      ],
+      [
+        -2.0,
+        -7.0,
+        -8.0,
+        -8.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "21",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_4"
+  },
+  {
+    "point_idx": 139,
+    "Z": [
+      [
+        -6.0,
+        6.0,
+        10.0,
+        2.0
+      ],
+      [
+        -9.0,
+        -5.0,
+        5.0,
+        -9.0
+      ],
+      [
+        10.0,
+        -6.0,
+        -2.0,
+        -7.0
+      ],
+      [
+        9.0,
+        5.0,
+        9.0,
+        8.0
+      ],
+      [
+        1.0,
+        8.0,
+        -5.0,
+        -10.0
+      ],
+      [
+        -7.0,
+        7.0,
+        6.0,
+        -4.0
+      ]
+    ],
+    "A": null,
+    "H": null,
+    "A_reason": "zero_angle_bracket",
+    "H_reason": "zero_angle_bracket",
+    "status": "None",
+    "reason": "A: zero_angle_bracket; H: zero_angle_bracket",
+    "min_minor": "63",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_4"
+  },
+  {
+    "point_idx": 140,
+    "Z": [
+      [
+        -2.0,
+        -4.0,
+        3.0,
+        6.0
+      ],
+      [
+        -10.0,
+        9.0,
+        -7.0,
+        -3.0
+      ],
+      [
+        8.0,
+        10.0,
+        -6.0,
+        -5.0
+      ],
+      [
+        6.0,
+        -10.0,
+        -8.0,
+        3.0
+      ],
+      [
+        2.0,
+        6.0,
+        5.0,
+        -8.0
+      ],
+      [
+        1.0,
+        -5.0,
+        7.0,
+        -3.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "14",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 141,
+    "Z": [
+      [
+        7.0,
+        -3.0,
+        -7.0,
+        -8.0
+      ],
+      [
+        2.0,
+        5.0,
+        -9.0,
+        6.0
+      ],
+      [
+        1.0,
+        -10.0,
+        3.0,
+        -7.0
+      ],
+      [
+        -4.0,
+        7.0,
+        9.0,
+        -6.0
+      ],
+      [
+        10.0,
+        1.0,
+        -5.0,
+        6.0
+      ],
+      [
+        -3.0,
+        0.0,
+        -9.0,
+        1.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "3",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_4"
+  },
+  {
+    "point_idx": 142,
+    "Z": [
+      [
+        -5.0,
+        2.0,
+        3.0,
+        6.0
+      ],
+      [
+        7.0,
+        3.0,
+        -8.0,
+        2.0
+      ],
+      [
+        1.0,
+        10.0,
+        8.0,
+        8.0
+      ],
+      [
+        8.0,
+        1.0,
+        -8.0,
+        10.0
+      ],
+      [
+        9.0,
+        9.0,
+        8.0,
+        -6.0
+      ],
+      [
+        -1.0,
+        9.0,
+        -2.0,
+        5.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "29",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 143,
+    "Z": [
+      [
+        4.0,
+        7.0,
+        -9.0,
+        -8.0
+      ],
+      [
+        5.0,
+        4.0,
+        0.0,
+        8.0
+      ],
+      [
+        -3.0,
+        -1.0,
+        -9.0,
+        6.0
+      ],
+      [
+        0.0,
+        -10.0,
+        3.0,
+        2.0
+      ],
+      [
+        10.0,
+        10.0,
+        5.0,
+        6.0
+      ],
+      [
+        3.0,
+        -9.0,
+        8.0,
+        8.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "7",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 144,
+    "Z": [
+      [
+        -3.0,
+        -4.0,
+        -4.0,
+        -7.0
+      ],
+      [
+        -8.0,
+        0.0,
+        6.0,
+        -5.0
+      ],
+      [
+        7.0,
+        -9.0,
+        4.0,
+        7.0
+      ],
+      [
+        -4.0,
+        -8.0,
+        -8.0,
+        7.0
+      ],
+      [
+        7.0,
+        -8.0,
+        -6.0,
+        0.0
+      ],
+      [
+        4.0,
+        -8.0,
+        -8.0,
+        4.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "24",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 145,
+    "Z": [
+      [
+        -5.0,
+        0.0,
+        8.0,
+        -5.0
+      ],
+      [
+        -2.0,
+        -9.0,
+        8.0,
+        -10.0
+      ],
+      [
+        -2.0,
+        10.0,
+        -5.0,
+        0.0
+      ],
+      [
+        5.0,
+        3.0,
+        -2.0,
+        -9.0
+      ],
+      [
+        -4.0,
+        -4.0,
+        3.0,
+        -2.0
+      ],
+      [
+        -8.0,
+        -6.0,
+        7.0,
+        9.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "8",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_4"
+  },
+  {
+    "point_idx": 146,
+    "Z": [
+      [
+        -8.0,
+        7.0,
+        -10.0,
+        -1.0
+      ],
+      [
+        -1.0,
+        -9.0,
+        -6.0,
+        3.0
+      ],
+      [
+        -3.0,
+        2.0,
+        -1.0,
+        -7.0
+      ],
+      [
+        1.0,
+        7.0,
+        9.0,
+        10.0
+      ],
+      [
+        7.0,
+        4.0,
+        -10.0,
+        9.0
+      ],
+      [
+        -6.0,
+        1.0,
+        5.0,
+        0.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "23",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_4"
+  },
+  {
+    "point_idx": 147,
+    "Z": [
+      [
+        -2.0,
+        -1.0,
+        1.0,
+        7.0
+      ],
+      [
+        8.0,
+        0.0,
+        10.0,
+        8.0
+      ],
+      [
+        4.0,
+        -6.0,
+        -1.0,
+        -10.0
+      ],
+      [
+        1.0,
+        -2.0,
+        3.0,
+        4.0
+      ],
+      [
+        -10.0,
+        1.0,
+        -2.0,
+        0.0
+      ],
+      [
+        4.0,
+        -2.0,
+        3.0,
+        2.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "2",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_5"
+  },
+  {
+    "point_idx": 148,
+    "Z": [
+      [
+        9.0,
+        9.0,
+        9.0,
+        9.0
+      ],
+      [
+        4.0,
+        -5.0,
+        7.0,
+        -8.0
+      ],
+      [
+        -10.0,
+        10.0,
+        -4.0,
+        -1.0
+      ],
+      [
+        -6.0,
+        -4.0,
+        6.0,
+        -9.0
+      ],
+      [
+        -7.0,
+        4.0,
+        10.0,
+        7.0
+      ],
+      [
+        -3.0,
+        6.0,
+        -9.0,
+        -3.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "10",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 149,
+    "Z": [
+      [
+        7.0,
+        1.0,
+        -9.0,
+        4.0
+      ],
+      [
+        -8.0,
+        -5.0,
+        -6.0,
+        -9.0
+      ],
+      [
+        -2.0,
+        8.0,
+        -9.0,
+        -1.0
+      ],
+      [
+        -7.0,
+        5.0,
+        -7.0,
+        7.0
+      ],
+      [
+        -9.0,
+        -8.0,
+        -8.0,
+        10.0
+      ],
+      [
+        -4.0,
+        -2.0,
+        -8.0,
+        -8.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "10",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_5"
+  },
+  {
+    "point_idx": 150,
+    "Z": [
+      [
+        -6.0,
+        6.0,
+        8.0,
+        -6.0
+      ],
+      [
+        4.0,
+        -5.0,
+        -1.0,
+        -2.0
+      ],
+      [
+        -7.0,
+        -2.0,
+        4.0,
+        7.0
+      ],
+      [
+        3.0,
+        7.0,
+        10.0,
+        10.0
+      ],
+      [
+        7.0,
+        -9.0,
+        1.0,
+        9.0
+      ],
+      [
+        -3.0,
+        1.0,
+        -4.0,
+        2.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "6",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 151,
+    "Z": [
+      [
+        2.0,
+        -3.0,
+        0.0,
+        -10.0
+      ],
+      [
+        0.0,
+        -8.0,
+        1.0,
+        8.0
+      ],
+      [
+        -3.0,
+        -3.0,
+        -5.0,
+        -3.0
+      ],
+      [
+        2.0,
+        -6.0,
+        8.0,
+        0.0
+      ],
+      [
+        -3.0,
+        4.0,
+        -5.0,
+        -4.0
+      ],
+      [
+        9.0,
+        -6.0,
+        -4.0,
+        1.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "10",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 152,
+    "Z": [
+      [
+        -3.0,
+        1.0,
+        -4.0,
+        -10.0
+      ],
+      [
+        7.0,
+        -3.0,
+        7.0,
+        2.0
+      ],
+      [
+        7.0,
+        -4.0,
+        -3.0,
+        7.0
+      ],
+      [
+        0.0,
+        2.0,
+        -10.0,
+        10.0
+      ],
+      [
+        -7.0,
+        8.0,
+        7.0,
+        -2.0
+      ],
+      [
+        7.0,
+        -1.0,
+        7.0,
+        -4.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "2",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_4_5"
+  },
+  {
+    "point_idx": 153,
+    "Z": [
+      [
+        -10.0,
+        -2.0,
+        -3.0,
+        7.0
+      ],
+      [
+        -3.0,
+        0.0,
+        -4.0,
+        -7.0
+      ],
+      [
+        -4.0,
+        6.0,
+        -8.0,
+        10.0
+      ],
+      [
+        8.0,
+        -4.0,
+        10.0,
+        -2.0
+      ],
+      [
+        1.0,
+        -8.0,
+        -9.0,
+        4.0
+      ],
+      [
+        -9.0,
+        -10.0,
+        -10.0,
+        6.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "6",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 154,
+    "Z": [
+      [
+        -1.0,
+        10.0,
+        9.0,
+        -1.0
+      ],
+      [
+        -4.0,
+        -7.0,
+        -5.0,
+        1.0
+      ],
+      [
+        8.0,
+        7.0,
+        5.0,
+        0.0
+      ],
+      [
+        -6.0,
+        4.0,
+        -4.0,
+        -10.0
+      ],
+      [
+        5.0,
+        10.0,
+        7.0,
+        -1.0
+      ],
+      [
+        -3.0,
+        -10.0,
+        7.0,
+        9.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "20",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_5"
+  },
+  {
+    "point_idx": 155,
+    "Z": [
+      [
+        10.0,
+        -10.0,
+        -5.0,
+        10.0
+      ],
+      [
+        -9.0,
+        -7.0,
+        2.0,
+        -1.0
+      ],
+      [
+        -1.0,
+        -1.0,
+        -4.0,
+        -4.0
+      ],
+      [
+        -2.0,
+        -6.0,
+        8.0,
+        -5.0
+      ],
+      [
+        5.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      [
+        -2.0,
+        -3.0,
+        7.0,
+        1.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "2",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 156,
+    "Z": [
+      [
+        2.0,
+        2.0,
+        -8.0,
+        -5.0
+      ],
+      [
+        1.0,
+        0.0,
+        7.0,
+        -6.0
+      ],
+      [
+        -8.0,
+        -5.0,
+        6.0,
+        9.0
+      ],
+      [
+        7.0,
+        3.0,
+        5.0,
+        10.0
+      ],
+      [
+        -6.0,
+        4.0,
+        1.0,
+        2.0
+      ],
+      [
+        6.0,
+        -8.0,
+        -2.0,
+        7.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "2",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 157,
+    "Z": [
+      [
+        -2.0,
+        9.0,
+        -8.0,
+        -8.0
+      ],
+      [
+        -9.0,
+        10.0,
+        -10.0,
+        7.0
+      ],
+      [
+        1.0,
+        8.0,
+        -9.0,
+        8.0
+      ],
+      [
+        7.0,
+        -7.0,
+        9.0,
+        3.0
+      ],
+      [
+        2.0,
+        0.0,
+        1.0,
+        -5.0
+      ],
+      [
+        1.0,
+        -9.0,
+        -9.0,
+        7.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "9",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 158,
+    "Z": [
+      [
+        4.0,
+        4.0,
+        3.0,
+        8.0
+      ],
+      [
+        -1.0,
+        -2.0,
+        10.0,
+        -5.0
+      ],
+      [
+        10.0,
+        -5.0,
+        -3.0,
+        3.0
+      ],
+      [
+        -6.0,
+        -2.0,
+        -2.0,
+        7.0
+      ],
+      [
+        9.0,
+        4.0,
+        9.0,
+        -2.0
+      ],
+      [
+        0.0,
+        -8.0,
+        8.0,
+        -3.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "4",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_4"
+  },
+  {
+    "point_idx": 159,
+    "Z": [
+      [
+        1.0,
+        5.0,
+        -3.0,
+        10.0
+      ],
+      [
+        2.0,
+        -7.0,
+        3.0,
+        6.0
+      ],
+      [
+        -4.0,
+        -7.0,
+        3.0,
+        -2.0
+      ],
+      [
+        -7.0,
+        3.0,
+        3.0,
+        -1.0
+      ],
+      [
+        8.0,
+        -1.0,
+        -8.0,
+        -7.0
+      ],
+      [
+        7.0,
+        1.0,
+        -3.0,
+        5.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "15",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_4"
+  },
+  {
+    "point_idx": 160,
+    "Z": [
+      [
+        -2.0,
+        5.0,
+        -2.0,
+        -9.0
+      ],
+      [
+        -2.0,
+        6.0,
+        2.0,
+        -8.0
+      ],
+      [
+        7.0,
+        7.0,
+        5.0,
+        5.0
+      ],
+      [
+        -5.0,
+        -6.0,
+        9.0,
+        9.0
+      ],
+      [
+        -7.0,
+        -6.0,
+        5.0,
+        8.0
+      ],
+      [
+        -7.0,
+        -3.0,
+        10.0,
+        -4.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "2",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_5"
+  },
+  {
+    "point_idx": 161,
+    "Z": [
+      [
+        4.0,
+        1.0,
+        9.0,
+        -6.0
+      ],
+      [
+        -7.0,
+        7.0,
+        -9.0,
+        6.0
+      ],
+      [
+        1.0,
+        0.0,
+        -7.0,
+        -6.0
+      ],
+      [
+        -9.0,
+        -2.0,
+        -1.0,
+        -10.0
+      ],
+      [
+        -4.0,
+        -7.0,
+        -4.0,
+        8.0
+      ],
+      [
+        -7.0,
+        -9.0,
+        10.0,
+        -8.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "2",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_4_5"
+  },
+  {
+    "point_idx": 162,
+    "Z": [
+      [
+        1.0,
+        8.0,
+        7.0,
+        8.0
+      ],
+      [
+        8.0,
+        4.0,
+        3.0,
+        1.0
+      ],
+      [
+        7.0,
+        -3.0,
+        -5.0,
+        9.0
+      ],
+      [
+        10.0,
+        -10.0,
+        -6.0,
+        -4.0
+      ],
+      [
+        -8.0,
+        1.0,
+        -9.0,
+        8.0
+      ],
+      [
+        -7.0,
+        2.0,
+        -9.0,
+        7.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "9",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_4"
+  },
+  {
+    "point_idx": 163,
+    "Z": [
+      [
+        -9.0,
+        4.0,
+        -3.0,
+        5.0
+      ],
+      [
+        -8.0,
+        -3.0,
+        -6.0,
+        9.0
+      ],
+      [
+        -3.0,
+        6.0,
+        -5.0,
+        -10.0
+      ],
+      [
+        10.0,
+        10.0,
+        -5.0,
+        -6.0
+      ],
+      [
+        -7.0,
+        0.0,
+        2.0,
+        -5.0
+      ],
+      [
+        4.0,
+        6.0,
+        9.0,
+        7.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "42",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 164,
+    "Z": [
+      [
+        -8.0,
+        -1.0,
+        6.0,
+        7.0
+      ],
+      [
+        8.0,
+        -3.0,
+        2.0,
+        6.0
+      ],
+      [
+        9.0,
+        -8.0,
+        7.0,
+        9.0
+      ],
+      [
+        10.0,
+        -7.0,
+        10.0,
+        1.0
+      ],
+      [
+        -3.0,
+        8.0,
+        -5.0,
+        -4.0
+      ],
+      [
+        -5.0,
+        1.0,
+        -7.0,
+        -2.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "13",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_5"
+  },
+  {
+    "point_idx": 165,
+    "Z": [
+      [
+        -10.0,
+        -8.0,
+        -2.0,
+        -10.0
+      ],
+      [
+        8.0,
+        -5.0,
+        10.0,
+        7.0
+      ],
+      [
+        5.0,
+        -7.0,
+        1.0,
+        -8.0
+      ],
+      [
+        4.0,
+        -4.0,
+        4.0,
+        -6.0
+      ],
+      [
+        4.0,
+        2.0,
+        4.0,
+        -5.0
+      ],
+      [
+        -4.0,
+        -9.0,
+        -7.0,
+        -9.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "8",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_5"
+  },
+  {
+    "point_idx": 166,
+    "Z": [
+      [
+        -5.0,
+        -4.0,
+        7.0,
+        2.0
+      ],
+      [
+        -6.0,
+        2.0,
+        -9.0,
+        0.0
+      ],
+      [
+        10.0,
+        0.0,
+        1.0,
+        -10.0
+      ],
+      [
+        -3.0,
+        -6.0,
+        5.0,
+        -8.0
+      ],
+      [
+        -4.0,
+        -1.0,
+        10.0,
+        8.0
+      ],
+      [
+        -10.0,
+        7.0,
+        -1.0,
+        -1.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "20",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_4"
+  },
+  {
+    "point_idx": 167,
+    "Z": [
+      [
+        -9.0,
+        0.0,
+        6.0,
+        -7.0
+      ],
+      [
+        6.0,
+        -3.0,
+        4.0,
+        -5.0
+      ],
+      [
+        -6.0,
+        -7.0,
+        8.0,
+        -3.0
+      ],
+      [
+        2.0,
+        -7.0,
+        -3.0,
+        3.0
+      ],
+      [
+        -4.0,
+        4.0,
+        10.0,
+        7.0
+      ],
+      [
+        -2.0,
+        -4.0,
+        -3.0,
+        7.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "20",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_4"
+  },
+  {
+    "point_idx": 168,
+    "Z": [
+      [
+        3.0,
+        5.0,
+        10.0,
+        -5.0
+      ],
+      [
+        10.0,
+        -3.0,
+        5.0,
+        6.0
+      ],
+      [
+        6.0,
+        -9.0,
+        -4.0,
+        -1.0
+      ],
+      [
+        10.0,
+        -1.0,
+        -4.0,
+        5.0
+      ],
+      [
+        10.0,
+        -10.0,
+        -7.0,
+        -6.0
+      ],
+      [
+        2.0,
+        -2.0,
+        -3.0,
+        -1.0
+      ]
+    ],
+    "A": null,
+    "H": null,
+    "A_reason": "zero_denominator_angle",
+    "H_reason": "zero_denominator_angle",
+    "status": "None",
+    "reason": "A: zero_denominator_angle; H: zero_denominator_angle",
+    "min_minor": "16",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_3_4"
+  },
+  {
+    "point_idx": 169,
+    "Z": [
+      [
+        -7.0,
+        7.0,
+        -6.0,
+        9.0
+      ],
+      [
+        -7.0,
+        -6.0,
+        6.0,
+        2.0
+      ],
+      [
+        -9.0,
+        -1.0,
+        -1.0,
+        1.0
+      ],
+      [
+        5.0,
+        -2.0,
+        -7.0,
+        1.0
+      ],
+      [
+        4.0,
+        -3.0,
+        -1.0,
+        0.0
+      ],
+      [
+        10.0,
+        -5.0,
+        -1.0,
+        -10.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "7",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 170,
+    "Z": [
+      [
+        -3.0,
+        -6.0,
+        2.0,
+        2.0
+      ],
+      [
+        0.0,
+        3.0,
+        -6.0,
+        -8.0
+      ],
+      [
+        5.0,
+        -3.0,
+        4.0,
+        -5.0
+      ],
+      [
+        -4.0,
+        -2.0,
+        -1.0,
+        5.0
+      ],
+      [
+        -4.0,
+        -4.0,
+        9.0,
+        6.0
+      ],
+      [
+        -4.0,
+        -3.0,
+        6.0,
+        8.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "4",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_4"
+  },
+  {
+    "point_idx": 171,
+    "Z": [
+      [
+        6.0,
+        4.0,
+        -1.0,
+        -9.0
+      ],
+      [
+        -8.0,
+        2.0,
+        -8.0,
+        6.0
+      ],
+      [
+        0.0,
+        3.0,
+        2.0,
+        0.0
+      ],
+      [
+        -2.0,
+        -5.0,
+        -3.0,
+        4.0
+      ],
+      [
+        -3.0,
+        -1.0,
+        4.0,
+        -7.0
+      ],
+      [
+        10.0,
+        3.0,
+        6.0,
+        4.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "1",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_4"
+  },
+  {
+    "point_idx": 172,
+    "Z": [
+      [
+        -1.0,
+        -8.0,
+        4.0,
+        -4.0
+      ],
+      [
+        -8.0,
+        5.0,
+        2.0,
+        -9.0
+      ],
+      [
+        2.0,
+        -1.0,
+        0.0,
+        8.0
+      ],
+      [
+        9.0,
+        1.0,
+        -6.0,
+        8.0
+      ],
+      [
+        2.0,
+        10.0,
+        -1.0,
+        -8.0
+      ],
+      [
+        6.0,
+        5.0,
+        -10.0,
+        4.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "2",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 173,
+    "Z": [
+      [
+        -5.0,
+        1.0,
+        3.0,
+        -10.0
+      ],
+      [
+        1.0,
+        -8.0,
+        0.0,
+        1.0
+      ],
+      [
+        9.0,
+        -9.0,
+        9.0,
+        2.0
+      ],
+      [
+        -5.0,
+        8.0,
+        7.0,
+        -5.0
+      ],
+      [
+        -7.0,
+        7.0,
+        -9.0,
+        10.0
+      ],
+      [
+        7.0,
+        -2.0,
+        -10.0,
+        0.0
+      ]
+    ],
+    "A": null,
+    "H": null,
+    "A_reason": "zero_angle_bracket",
+    "H_reason": "zero_angle_bracket",
+    "status": "None",
+    "reason": "A: zero_angle_bracket; H: zero_angle_bracket",
+    "min_minor": "3",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_5"
+  },
+  {
+    "point_idx": 174,
+    "Z": [
+      [
+        3.0,
+        -5.0,
+        -6.0,
+        6.0
+      ],
+      [
+        -2.0,
+        0.0,
+        0.0,
+        -5.0
+      ],
+      [
+        7.0,
+        0.0,
+        5.0,
+        -2.0
+      ],
+      [
+        1.0,
+        3.0,
+        -1.0,
+        -7.0
+      ],
+      [
+        -7.0,
+        2.0,
+        -9.0,
+        -2.0
+      ],
+      [
+        -4.0,
+        6.0,
+        4.0,
+        -3.0
+      ]
+    ],
+    "A": null,
+    "H": null,
+    "A_reason": "zero_angle_bracket",
+    "H_reason": "zero_angle_bracket",
+    "status": "None",
+    "reason": "A: zero_angle_bracket; H: zero_angle_bracket",
+    "min_minor": "2",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_2_3_4"
+  },
+  {
+    "point_idx": 175,
+    "Z": [
+      [
+        10.0,
+        10.0,
+        -7.0,
+        -9.0
+      ],
+      [
+        9.0,
+        -5.0,
+        -1.0,
+        6.0
+      ],
+      [
+        -5.0,
+        -2.0,
+        -9.0,
+        -3.0
+      ],
+      [
+        7.0,
+        -5.0,
+        8.0,
+        -2.0
+      ],
+      [
+        -5.0,
+        5.0,
+        -5.0,
+        -10.0
+      ],
+      [
+        4.0,
+        -9.0,
+        -6.0,
+        0.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "10",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 176,
+    "Z": [
+      [
+        -10.0,
+        -6.0,
+        -10.0,
+        5.0
+      ],
+      [
+        -10.0,
+        -10.0,
+        -6.0,
+        -7.0
+      ],
+      [
+        1.0,
+        -3.0,
+        -6.0,
+        -2.0
+      ],
+      [
+        -2.0,
+        -4.0,
+        -2.0,
+        9.0
+      ],
+      [
+        1.0,
+        -10.0,
+        10.0,
+        -5.0
+      ],
+      [
+        -9.0,
+        -1.0,
+        3.0,
+        -9.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "10",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 177,
+    "Z": [
+      [
+        7.0,
+        2.0,
+        -4.0,
+        -6.0
+      ],
+      [
+        7.0,
+        4.0,
+        4.0,
+        -1.0
+      ],
+      [
+        8.0,
+        10.0,
+        3.0,
+        10.0
+      ],
+      [
+        5.0,
+        -3.0,
+        -1.0,
+        -2.0
+      ],
+      [
+        5.0,
+        -9.0,
+        -4.0,
+        -6.0
+      ],
+      [
+        5.0,
+        -10.0,
+        4.0,
+        -9.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "5",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 178,
+    "Z": [
+      [
+        -7.0,
+        5.0,
+        2.0,
+        -1.0
+      ],
+      [
+        9.0,
+        4.0,
+        -8.0,
+        7.0
+      ],
+      [
+        4.0,
+        5.0,
+        4.0,
+        0.0
+      ],
+      [
+        -7.0,
+        2.0,
+        -2.0,
+        -10.0
+      ],
+      [
+        3.0,
+        5.0,
+        5.0,
+        -9.0
+      ],
+      [
+        9.0,
+        9.0,
+        1.0,
+        -4.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "18",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_3_4"
+  },
+  {
+    "point_idx": 179,
+    "Z": [
+      [
+        9.0,
+        0.0,
+        -6.0,
+        0.0
+      ],
+      [
+        -8.0,
+        -4.0,
+        -1.0,
+        -1.0
+      ],
+      [
+        -7.0,
+        2.0,
+        -8.0,
+        5.0
+      ],
+      [
+        -4.0,
+        6.0,
+        3.0,
+        6.0
+      ],
+      [
+        0.0,
+        1.0,
+        10.0,
+        9.0
+      ],
+      [
+        -7.0,
+        10.0,
+        6.0,
+        -10.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "4",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_5"
+  },
+  {
+    "point_idx": 180,
+    "Z": [
+      [
+        7.0,
+        1.0,
+        -5.0,
+        -3.0
+      ],
+      [
+        -4.0,
+        7.0,
+        -5.0,
+        -7.0
+      ],
+      [
+        1.0,
+        2.0,
+        4.0,
+        -2.0
+      ],
+      [
+        -4.0,
+        7.0,
+        8.0,
+        1.0
+      ],
+      [
+        1.0,
+        -5.0,
+        6.0,
+        8.0
+      ],
+      [
+        5.0,
+        9.0,
+        2.0,
+        -4.0
+      ]
+    ],
+    "A": null,
+    "H": null,
+    "A_reason": "zero_angle_bracket",
+    "H_reason": "zero_angle_bracket",
+    "status": "None",
+    "reason": "A: zero_angle_bracket; H: zero_angle_bracket",
+    "min_minor": "13",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_3_5"
+  },
+  {
+    "point_idx": 181,
+    "Z": [
+      [
+        -9.0,
+        -4.0,
+        -3.0,
+        4.0
+      ],
+      [
+        4.0,
+        1.0,
+        -8.0,
+        -4.0
+      ],
+      [
+        3.0,
+        5.0,
+        -3.0,
+        6.0
+      ],
+      [
+        -1.0,
+        1.0,
+        6.0,
+        9.0
+      ],
+      [
+        7.0,
+        10.0,
+        0.0,
+        -5.0
+      ],
+      [
+        2.0,
+        5.0,
+        8.0,
+        -1.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "7",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 182,
+    "Z": [
+      [
+        -2.0,
+        8.0,
+        -8.0,
+        -8.0
+      ],
+      [
+        -5.0,
+        -8.0,
+        -3.0,
+        -9.0
+      ],
+      [
+        -8.0,
+        9.0,
+        -9.0,
+        -4.0
+      ],
+      [
+        -10.0,
+        5.0,
+        -1.0,
+        -4.0
+      ],
+      [
+        -9.0,
+        10.0,
+        9.0,
+        0.0
+      ],
+      [
+        9.0,
+        -7.0,
+        5.0,
+        -5.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "27",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 183,
+    "Z": [
+      [
+        -5.0,
+        -9.0,
+        -5.0,
+        10.0
+      ],
+      [
+        2.0,
+        8.0,
+        3.0,
+        3.0
+      ],
+      [
+        -2.0,
+        6.0,
+        2.0,
+        8.0
+      ],
+      [
+        -7.0,
+        9.0,
+        -7.0,
+        7.0
+      ],
+      [
+        -3.0,
+        -4.0,
+        -3.0,
+        9.0
+      ],
+      [
+        4.0,
+        8.0,
+        9.0,
+        -7.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "4",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_5"
+  },
+  {
+    "point_idx": 184,
+    "Z": [
+      [
+        4.0,
+        10.0,
+        6.0,
+        -7.0
+      ],
+      [
+        -1.0,
+        -1.0,
+        0.0,
+        -6.0
+      ],
+      [
+        -7.0,
+        -5.0,
+        1.0,
+        -4.0
+      ],
+      [
+        0.0,
+        -9.0,
+        9.0,
+        4.0
+      ],
+      [
+        3.0,
+        -1.0,
+        4.0,
+        -10.0
+      ],
+      [
+        4.0,
+        2.0,
+        2.0,
+        -1.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "2",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 185,
+    "Z": [
+      [
+        -10.0,
+        -9.0,
+        4.0,
+        -9.0
+      ],
+      [
+        9.0,
+        -4.0,
+        1.0,
+        6.0
+      ],
+      [
+        8.0,
+        -6.0,
+        10.0,
+        -1.0
+      ],
+      [
+        6.0,
+        8.0,
+        8.0,
+        -9.0
+      ],
+      [
+        3.0,
+        4.0,
+        6.0,
+        -5.0
+      ],
+      [
+        -7.0,
+        -2.0,
+        9.0,
+        8.0
+      ]
+    ],
+    "A": null,
+    "H": null,
+    "A_reason": "zero_square_bracket",
+    "H_reason": "zero_square_bracket",
+    "status": "None",
+    "reason": "A: zero_square_bracket; H: zero_square_bracket",
+    "min_minor": "22",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 186,
+    "Z": [
+      [
+        3.0,
+        1.0,
+        7.0,
+        -10.0
+      ],
+      [
+        -3.0,
+        9.0,
+        -3.0,
+        3.0
+      ],
+      [
+        -1.0,
+        -3.0,
+        3.0,
+        6.0
+      ],
+      [
+        3.0,
+        -10.0,
+        -5.0,
+        -9.0
+      ],
+      [
+        -9.0,
+        1.0,
+        -3.0,
+        -8.0
+      ],
+      [
+        1.0,
+        10.0,
+        -4.0,
+        4.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "18",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 187,
+    "Z": [
+      [
+        1.0,
+        8.0,
+        5.0,
+        0.0
+      ],
+      [
+        -10.0,
+        9.0,
+        0.0,
+        6.0
+      ],
+      [
+        1.0,
+        1.0,
+        -8.0,
+        -10.0
+      ],
+      [
+        10.0,
+        -7.0,
+        -5.0,
+        8.0
+      ],
+      [
+        -7.0,
+        -5.0,
+        8.0,
+        -10.0
+      ],
+      [
+        -3.0,
+        -3.0,
+        -3.0,
+        -4.0
+      ]
+    ],
+    "A": "9419308369772/682590753891780435492615",
+    "H": "9419308369772/682590753891780435492615",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "computation_error",
+    "error": "'sage.rings.rational.Rational' object has no attribute 'simplify_rational'",
+    "min_minor": "6",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 188,
+    "Z": [
+      [
+        8.0,
+        -9.0,
+        -8.0,
+        -10.0
+      ],
+      [
+        6.0,
+        1.0,
+        -7.0,
+        -6.0
+      ],
+      [
+        10.0,
+        -3.0,
+        3.0,
+        10.0
+      ],
+      [
+        9.0,
+        9.0,
+        -7.0,
+        3.0
+      ],
+      [
+        0.0,
+        5.0,
+        3.0,
+        -2.0
+      ],
+      [
+        7.0,
+        -10.0,
+        -5.0,
+        2.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "17",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_4"
+  },
+  {
+    "point_idx": 189,
+    "Z": [
+      [
+        -10.0,
+        9.0,
+        -3.0,
+        5.0
+      ],
+      [
+        -7.0,
+        9.0,
+        0.0,
+        9.0
+      ],
+      [
+        9.0,
+        6.0,
+        -2.0,
+        10.0
+      ],
+      [
+        -8.0,
+        -9.0,
+        -3.0,
+        -4.0
+      ],
+      [
+        -4.0,
+        2.0,
+        5.0,
+        3.0
+      ],
+      [
+        -4.0,
+        3.0,
+        -6.0,
+        -3.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "4",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_4"
+  },
+  {
+    "point_idx": 190,
+    "Z": [
+      [
+        4.0,
+        2.0,
+        1.0,
+        -5.0
+      ],
+      [
+        4.0,
+        -7.0,
+        -2.0,
+        10.0
+      ],
+      [
+        -3.0,
+        -4.0,
+        -6.0,
+        -1.0
+      ],
+      [
+        10.0,
+        -2.0,
+        -7.0,
+        2.0
+      ],
+      [
+        -6.0,
+        -6.0,
+        6.0,
+        -6.0
+      ],
+      [
+        -6.0,
+        7.0,
+        -6.0,
+        0.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "36",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_4"
+  },
+  {
+    "point_idx": 191,
+    "Z": [
+      [
+        7.0,
+        -7.0,
+        -4.0,
+        -5.0
+      ],
+      [
+        -9.0,
+        -6.0,
+        4.0,
+        10.0
+      ],
+      [
+        9.0,
+        2.0,
+        10.0,
+        -3.0
+      ],
+      [
+        5.0,
+        -7.0,
+        -8.0,
+        -2.0
+      ],
+      [
+        -8.0,
+        2.0,
+        9.0,
+        5.0
+      ],
+      [
+        6.0,
+        -5.0,
+        -7.0,
+        9.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "7",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 192,
+    "Z": [
+      [
+        -8.0,
+        -3.0,
+        1.0,
+        -2.0
+      ],
+      [
+        -2.0,
+        10.0,
+        10.0,
+        -4.0
+      ],
+      [
+        7.0,
+        -9.0,
+        -8.0,
+        -3.0
+      ],
+      [
+        -2.0,
+        -10.0,
+        3.0,
+        -1.0
+      ],
+      [
+        0.0,
+        -7.0,
+        0.0,
+        -5.0
+      ],
+      [
+        8.0,
+        3.0,
+        -2.0,
+        -3.0
+      ]
+    ],
+    "A": null,
+    "H": null,
+    "A_reason": "zero_denominator_angle",
+    "H_reason": "zero_denominator_angle",
+    "status": "None",
+    "reason": "A: zero_denominator_angle; H: zero_denominator_angle",
+    "min_minor": "14",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 193,
+    "Z": [
+      [
+        4.0,
+        -4.0,
+        4.0,
+        -2.0
+      ],
+      [
+        -2.0,
+        -1.0,
+        10.0,
+        0.0
+      ],
+      [
+        6.0,
+        -8.0,
+        10.0,
+        -2.0
+      ],
+      [
+        -9.0,
+        -5.0,
+        6.0,
+        6.0
+      ],
+      [
+        2.0,
+        -2.0,
+        -1.0,
+        6.0
+      ],
+      [
+        -1.0,
+        -7.0,
+        2.0,
+        -7.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "12",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 194,
+    "Z": [
+      [
+        -9.0,
+        8.0,
+        -5.0,
+        3.0
+      ],
+      [
+        -7.0,
+        -5.0,
+        -4.0,
+        0.0
+      ],
+      [
+        1.0,
+        10.0,
+        -2.0,
+        0.0
+      ],
+      [
+        8.0,
+        8.0,
+        3.0,
+        -2.0
+      ],
+      [
+        -10.0,
+        -4.0,
+        5.0,
+        -4.0
+      ],
+      [
+        -5.0,
+        8.0,
+        -6.0,
+        -8.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "32",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_4_5"
+  },
+  {
+    "point_idx": 195,
+    "Z": [
+      [
+        -1.0,
+        -7.0,
+        1.0,
+        8.0
+      ],
+      [
+        6.0,
+        9.0,
+        7.0,
+        -2.0
+      ],
+      [
+        -7.0,
+        -6.0,
+        7.0,
+        0.0
+      ],
+      [
+        4.0,
+        -7.0,
+        2.0,
+        6.0
+      ],
+      [
+        -7.0,
+        0.0,
+        -4.0,
+        -4.0
+      ],
+      [
+        -7.0,
+        -7.0,
+        -5.0,
+        5.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "27",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 196,
+    "Z": [
+      [
+        -2.0,
+        2.0,
+        -3.0,
+        0.0
+      ],
+      [
+        5.0,
+        8.0,
+        -10.0,
+        7.0
+      ],
+      [
+        -8.0,
+        -10.0,
+        -2.0,
+        -2.0
+      ],
+      [
+        -8.0,
+        1.0,
+        -4.0,
+        9.0
+      ],
+      [
+        4.0,
+        1.0,
+        4.0,
+        10.0
+      ],
+      [
+        1.0,
+        -1.0,
+        -4.0,
+        5.0
+      ]
+    ],
+    "A": null,
+    "H": null,
+    "A_reason": "zero_denominator_angle",
+    "H_reason": "zero_denominator_angle",
+    "status": "None",
+    "reason": "A: zero_denominator_angle; H: zero_denominator_angle",
+    "min_minor": "5",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_3_5"
+  },
+  {
+    "point_idx": 197,
+    "Z": [
+      [
+        7.0,
+        9.0,
+        -6.0,
+        4.0
+      ],
+      [
+        -4.0,
+        4.0,
+        -1.0,
+        5.0
+      ],
+      [
+        4.0,
+        -1.0,
+        -6.0,
+        -10.0
+      ],
+      [
+        1.0,
+        -7.0,
+        -7.0,
+        -4.0
+      ],
+      [
+        -2.0,
+        2.0,
+        -2.0,
+        -8.0
+      ],
+      [
+        -9.0,
+        10.0,
+        3.0,
+        -6.0
+      ]
+    ],
+    "A": null,
+    "H": null,
+    "A_reason": "zero_angle_bracket",
+    "H_reason": "zero_angle_bracket",
+    "status": "None",
+    "reason": "A: zero_angle_bracket; H: zero_angle_bracket",
+    "min_minor": "2",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  },
+  {
+    "point_idx": 198,
+    "Z": [
+      [
+        -3.0,
+        -1.0,
+        0.0,
+        8.0
+      ],
+      [
+        2.0,
+        -4.0,
+        0.0,
+        8.0
+      ],
+      [
+        -4.0,
+        7.0,
+        -9.0,
+        -10.0
+      ],
+      [
+        1.0,
+        -8.0,
+        3.0,
+        6.0
+      ],
+      [
+        -2.0,
+        4.0,
+        -5.0,
+        10.0
+      ],
+      [
+        3.0,
+        7.0,
+        8.0,
+        6.0
+      ]
+    ],
+    "A": null,
+    "H": null,
+    "A_reason": "zero_angle_bracket",
+    "H_reason": "zero_angle_bracket",
+    "status": "None",
+    "reason": "A: zero_angle_bracket; H: zero_angle_bracket",
+    "min_minor": "2",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_4"
+  },
+  {
+    "point_idx": 199,
+    "Z": [
+      [
+        -6.0,
+        -10.0,
+        -3.0,
+        1.0
+      ],
+      [
+        -8.0,
+        3.0,
+        -2.0,
+        8.0
+      ],
+      [
+        8.0,
+        1.0,
+        -8.0,
+        9.0
+      ],
+      [
+        -7.0,
+        9.0,
+        0.0,
+        -5.0
+      ],
+      [
+        4.0,
+        -8.0,
+        -6.0,
+        7.0
+      ],
+      [
+        -6.0,
+        5.0,
+        8.0,
+        -5.0
+      ]
+    ],
+    "A": "0",
+    "H": "0",
+    "A_reason": "ok",
+    "H_reason": "ok",
+    "status": "H_zero",
+    "min_minor": "20",
+    "positivity_ok": false,
+    "positivity_reason": "negative_minor_0_1_2_3"
+  }
+]

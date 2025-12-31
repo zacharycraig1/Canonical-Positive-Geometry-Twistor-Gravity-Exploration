@@ -1,0 +1,7 @@
+Residue Audit for (1, 2, 3)
+Chart 1 Size: 402
+Chart 2 Size: 396
+Subspace Dim: 58
+Chart 1 Null Dim: 48
+Chart 2 Null Dim: 48
+Status: PASS

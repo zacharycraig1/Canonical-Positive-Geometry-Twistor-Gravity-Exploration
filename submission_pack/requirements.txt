@@ -1,0 +1,4 @@
+sage
+numpy
+scipy
+

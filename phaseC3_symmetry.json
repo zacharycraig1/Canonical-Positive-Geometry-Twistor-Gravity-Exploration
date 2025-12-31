@@ -1,0 +1,30 @@
+[
+  {
+    "seed": 9000,
+    "results": {
+      "pass": 5,
+      "fail": 15
+    }
+  },
+  {
+    "seed": 9001,
+    "results": {
+      "pass": 3,
+      "fail": 17
+    }
+  },
+  {
+    "seed": 9002,
+    "results": {
+      "pass": 1,
+      "fail": 19
+    }
+  },
+  {
+    "seed": 9003,
+    "results": {
+      "pass": 6,
+      "fail": 14
+    }
+  }
+]

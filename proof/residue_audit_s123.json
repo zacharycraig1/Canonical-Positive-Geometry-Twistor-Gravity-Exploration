@@ -1,0 +1,9 @@
+{
+  "divisor": "(1, 2, 3)",
+  "chart1_size": 402,
+  "chart2_size": 396,
+  "dim_subspace": 58,
+  "null_dim_chart1": 48,
+  "null_dim_chart2": 48,
+  "status": "PASS"
+}
