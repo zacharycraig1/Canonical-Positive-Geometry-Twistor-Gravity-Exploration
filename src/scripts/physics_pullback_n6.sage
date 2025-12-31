@@ -91,24 +91,33 @@ def physics_pullback_n6_exact():
         M_expected = sign * h_factor * F_val / (norm_factor * prod_C_sq)
         
         # Comparison
-        if abs(M_expected) < 1e-15:
-            print(f"Trial {t}: Expected amplitude is zero. Skipping ratio.")
-            continue
+        if M_expected == 0:
+            if M_amp == 0:
+                # print(f"Trial {t}: Both zero (consistent).")
+                continue
+            else:
+                print(f"Trial {t}: M_expected=0 but M_amp!=0. FAILURE.")
+                consistent = False
+                continue
             
         ratio = M_amp / M_expected
-        ratio_val = float(ratio)
         
-        print(f"Trial {t}: Ratio = {ratio_val:.6f}  (M_amp={float(M_amp):.2e}, M_exp={float(M_expected):.2e})")
-        
-        if abs(ratio_val - 1.0) > 1e-5:
+        if ratio != 1:
             consistent = False
-            print(f"MISMATCH at trial {t}!")
+            print(f"MISMATCH at trial {t}! Ratio = {ratio}")
+            print(f"M_amp = {M_amp}")
+            print(f"M_exp = {M_expected}")
+        else:
+            # print(f"Trial {t}: Exact match.")
+            pass
             
     if consistent:
-        print("\nSUCCESS: Exact identity verified for n=6!")
+        print(f"\nSUCCESS: Exact identity verified for n=6 ({trials} trials)!")
+        return True
     else:
         print("\nFAILURE: Identity did not match for some trials.")
-        exit(1)
+        return False
 
 if __name__ == "__main__":
-    physics_pullback_n6_exact()
+    if not physics_pullback_n6_exact():
+        exit(1)

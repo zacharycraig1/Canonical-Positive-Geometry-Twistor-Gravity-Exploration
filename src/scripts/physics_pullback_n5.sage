@@ -16,7 +16,7 @@ def physics_pullback_n5_exact():
     roots = [0, 1, 2]
     
     # Run multiple trials
-    trials = 5
+    trials = 20
     consistent = True
     
     for t in range(trials):
@@ -67,21 +67,28 @@ def physics_pullback_n5_exact():
         
         # Comparison
         if M_expected == 0:
-            print(f"Trial {t}: Expected is 0?")
-            continue
+            if M_amp == 0:
+                continue
+            else:
+                print(f"Trial {t}: M_expected=0 but M_amp!=0. FAILURE.")
+                consistent = False
+                continue
             
         ratio = M_amp / M_expected
-        ratio_val = float(ratio)
-        print(f"Trial {t}: Ratio = {ratio_val:.6f}  (M_amp={float(M_amp):.2e}, M_exp={float(M_expected):.2e})")
-        
-        if abs(ratio_val - 1.0) > 1e-5:
+        if ratio != 1:
             consistent = False
+            print(f"MISMATCH at trial {t}! Ratio = {ratio}")
+        else:
+            pass
             
     if consistent:
-        print("\nSUCCESS: Exact identity verified for n=5!")
+        print(f"\nSUCCESS: Exact identity verified for n=5 ({trials} trials)!")
+        return True
     else:
         print("\nFAILURE: Identity did not match.")
+        return False
 
 if __name__ == "__main__":
-    physics_pullback_n5_exact()
+    if not physics_pullback_n5_exact():
+        exit(1)
 
