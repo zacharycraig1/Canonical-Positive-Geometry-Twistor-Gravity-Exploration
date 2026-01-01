@@ -1,0 +1,146 @@
+# Phase O+ Handoff - Oracle Verification & Geometric Rigor
+Date: 2025-12-31
+Phase: O+ (KLT Oracle Fix, Polytope, Canonical Form)
+
+## STATUS SUMMARY
+
+### COMPLETED TASKS
+
+1. **KLT n=4 Verification** - PASS
+   - Ground truth formula: `M4 = - s_01 * A(0,1,2,3) * A(0,1,3,2)`
+   - Verified permutation invariance.
+   - File: `src/chy_oracle/test_klt_n4.sage`
+
+2. **KLT n=5 Verification** - PASS
+   - Implemented 2x2 permutation sum over {1,2}.
+   - Ratio Hodges/KLT = -1 (sign convention difference, acceptable).
+   - File: `src/chy_oracle/test_klt_n5.sage`
+
+3. **KLT n=6 Fix** - PASS
+   - **Root Cause:** `theta_beta(a,b)` was checking `pos[a] > pos[b]` (AFTER).
+   - **Fix:** Changed to `pos[a] < pos[b]` (BEFORE) to match convention.
+   - **Result:** Ratio Hodges/KLT = -1 for all 17 successful samples.
+   - File: `src/chy_oracle/klt.py` (updated)
+
+4. **Forest Polytope Inequality Generator** - IMPLEMENTED
+   - Generates inequalities based on super-root construction.
+   - File: `src/posgeom/forest_polytope_inequalities.py`
+
+### IN-PROGRESS TASKS
+
+5. **Facet Verification (n=6)** - IN PROGRESS
+   - Polytope constructed successfully.
+   - Dimension = 11 (matches: 15 vars - 1 equality - 3 forced-zero edges).
+   - Vertices = 108 (currently mismatches theoretical 196; need to verify Laplacian formula).
+   - 22 facets computed.
+   - **Issue:** JSON serialization error in `compare_facets.py` line 144 (variable `stats` not defined before use).
+   - File: `src/posgeom/compare_facets.py` (needs fix)
+
+### REMAINING TASKS
+
+6. **Implement robust canonical form evaluator** - PENDING
+   - New file needed: `src/posgeom/canonical_form.py`
+
+7. **Add unit tests for canonical form** - PENDING
+   - `src/tests/test_canonical_simplex.py`
+   - `src/tests/test_canonical_square.py`
+
+8. **Map polytope boundaries to physical limits** - PENDING
+   - `src/pushforward/boundary_dictionary.py`
+
+9. **Finalize Pushforward Theorem Statement** - PENDING
+   - Update `docs/pushforward_statement.md`
+
+---
+
+## EXECUTION PLAN (Phase O+)
+
+### Phase O: Fix KLT vs Hodges Mismatch [COMPLETED]
+- Goal: Establish verified independent oracle.
+- Result: KLT now matches Hodges with constant ratio -1 for n=4,5,6.
+
+### Phase P: Explicit Forest Polytope Definition [IN PROGRESS]
+- Goal: Define polytope via inequalities.
+- Strategy: Super-root construction for rooted forests.
+- Current: Inequality generator works, facet verification partially complete.
+- Fix Needed: `compare_facets.py` has a bug - `stats` dictionary is referenced before assignment.
+
+### Phase Q: Robust Canonical Form Evaluation [NOT STARTED]
+- Goal: Triangulation-independent evaluation with signed volumes.
+- Files to Create:
+  - `src/posgeom/canonical_form.py`
+  - `src/tests/test_canonical_simplex.py`
+  - `src/tests/test_canonical_square.py`
+
+### Phase R: Pushforward Theorem & Boundary Dictionary [NOT STARTED]
+- Goal: Prove pushforward statement, map limits to facets.
+- Files to Create:
+  - `src/pushforward/boundary_dictionary.py`
+  - Update `docs/pushforward_statement.md`
+
+---
+
+## IMMEDIATE NEXT STEPS FOR NEXT AGENT
+
+1. **Fix `src/posgeom/compare_facets.py`:**
+   - The `stats` dictionary is referenced at line 144 but defined much earlier in original code.
+   - The file was partially edited and the `stats` definition got lost.
+   - Need to re-add stats definition before the `pass` statement:
+   ```python
+   stats = {
+       "n": int(n),
+       "roots": [int(r) for r in roots],
+       "dim": int(P.dim()),
+       "n_vertices": int(P.n_vertices()),
+       "n_facets": int(P.n_facets()),
+   }
+   ```
+
+2. **Investigate vertex count mismatch:**
+   - Expected: det(L_sub) where L_sub is correct Laplacian.
+   - Got 108 vertices.
+   - Need to verify which Laplacian formula applies (K6 vs K6+superroot).
+
+3. **Implement canonical form evaluator (Phase Q).**
+
+4. **Implement boundary dictionary (Phase R).**
+
+---
+
+## KEY FILES CREATED/MODIFIED
+
+### New Files This Phase:
+- `src/chy_oracle/test_klt_n4.sage` - n=4 ground truth check
+- `src/chy_oracle/test_klt_n5.sage` - n=5 verification
+- `src/posgeom/forest_polytope_inequalities.py` - inequality generator
+- `src/posgeom/compare_facets.py` - facet verification (NEEDS FIX)
+
+### Modified Files:
+- `src/chy_oracle/klt.py` - Fixed theta function, added parke_taylor_n_pt
+
+---
+
+## COMMANDS TO RUN
+
+```bash
+# Verify KLT works
+.\sage.ps1 src/chy_oracle/test_klt_n4.sage
+.\sage.ps1 src/chy_oracle/test_klt_n5.sage
+.\sage.ps1 src/pushforward/end_to_end_n6.sage
+
+# Verify polytope (after fixing compare_facets.py)
+.\sage.ps1 src/posgeom/compare_facets.py
+```
+
+---
+
+## CRITICAL FINDINGS
+
+1. **KLT Kernel Convention:** The theta function must use "BEFORE" ordering (pos[a] < pos[b]), not "AFTER".
+
+2. **Forest Polytope Dimension:** For n=6, roots={0,1,2}, dimension is 11 (not 14) because edges between roots are forced to 0.
+
+3. **Hodges vs KLT Sign:** There is a consistent -1 sign difference. This is a convention choice, not an error. Both formulas agree up to this sign.
+
+
+

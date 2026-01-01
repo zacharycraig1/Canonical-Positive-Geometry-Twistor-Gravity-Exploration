@@ -192,3 +192,6 @@ Let's add $\langle 2 3 4 5 \rangle \langle 2 5 \rangle$ to the basis for $P$!
 
 
 
+
+
+

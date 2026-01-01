@@ -63,3 +63,6 @@ def left_nullspace_matrix(M):
 
 
 
+
+
+

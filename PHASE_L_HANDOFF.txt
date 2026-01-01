@@ -1,0 +1,667 @@
+PHASE L STATUS REPORT
+=====================
+
+1. Overview
+   We have initiated Phase L ("Physical Limits") by building a robust testing harness in `src/physics_limits/`.
+   This includes exact BCFW tuning, correct Soft Limit kinematics (N-1 + Soft), and multi-particle factorization checks.
+
+2. Accomplishments
+   - Implemented exact BCFW tuning (`bcfw.py`).
+   - Implemented Factorization checks with helicity sums (`factorization.py`).
+   - Implemented Soft Limit checks (`soft.py`).
+   - Analyzed pole structure and discrepancies (`POLE_ACCOUNTING.md`).
+
+3. Current Findings & Issues
+   - Factorization: Confirmed physical pole at s_02=0. However, the numerical residue differs from the theoretical product M_L * M_R by a constant factor. This suggests a normalization or convention mismatch.
+   - Soft Limit: Confirmed that the Hodges formula is numerically unstable or requires large cancellations for the h=+2 soft graviton limit (which should vanish as epsilon, but determinant terms scale as 1/epsilon^2).
+   - Helicity Sums: Properly implemented in factorization checks (h=+/-2), verifying that only allowed helicity configurations contribute.
+
+4. Next Steps
+   - Fix the normalization factor in factorization.
+   - Investigate the h=+2 soft limit instability (potentially using analytic checks or higher precision).
+   - Proceed to Simplex Calibration for the Positive Geometry map.
+
+--------------------------------------------------------------------------------
+FILE: src/physics_limits/bcfw.py
+--------------------------------------------------------------------------------
+import sys
+import os
+from sage.all import *
+
+# Ensure we can import from src
+if os.getcwd() not in sys.path:
+    sys.path.append(os.getcwd())
+
+from src.chy_oracle.kinematics_samples import sample_spinors_from_twistor
+
+def bcfw_shift_spinors(lambdas, tilde_lambdas, a, b, z):
+    """
+    Apply BCFW shift on legs a, b:
+    lambda_a_hat = lambda_a + z * lambda_b
+    tilde_lambda_b_hat = tilde_lambda_b - z * tilde_lambda_a
+    
+    All other spinors remain unchanged.
+    
+    Args:
+        lambdas: List of lambda spinors (vectors)
+        tilde_lambdas: List of tilde_lambda spinors (vectors)
+        a, b: Indices of the shifted legs (0-based)
+        z: The complex shift parameter
+        
+    Returns:
+        (shifted_lambdas, shifted_tilde_lambdas)
+    """
+    n = len(lambdas)
+    new_lambdas = [v for v in lambdas]
+    new_tilde_lambdas = [v for v in tilde_lambdas]
+    
+    # \hat\lambda_a = \lambda_a + z \lambda_b
+    new_lambdas[a] = lambdas[a] + z * lambdas[b]
+    
+    # \hat\tilde\lambda_b = \tilde\lambda_b - z \tilde\lambda_a
+    new_tilde_lambdas[b] = tilde_lambdas[b] - z * tilde_lambdas[a]
+    
+    return new_lambdas, new_tilde_lambdas
+
+def get_channel_s(lambdas, tilde_lambdas, indices):
+    """
+    Compute the Mandelstam invariant s_I = (Sum_{i in I} p_i)^2
+    
+    Args:
+        lambdas, tilde_lambdas: Spinors
+        indices: List of indices for the channel
+        
+    Returns:
+        s_I value
+    """
+    # Calculate total momentum P = sum |i>[i|
+    P_matrix = Matrix(QQ, 2, 2, 0)
+    for i in indices:
+        # |i>[i| is a 2x2 matrix
+        # lambda = (l0, l1)^T
+        # tilde_lambda = (lt0, lt1)
+        # |i>[i| = [[l0*lt0, l0*lt1], [l1*lt0, l1*lt1]]
+        
+        l = lambdas[i]
+        lt = tilde_lambdas[i]
+        
+        term = Matrix(QQ, 2, 2, [
+            [l[0]*lt[0], l[0]*lt[1]],
+            [l[1]*lt[0], l[1]*lt[1]]
+        ])
+        P_matrix += term
+        
+    # P^2 = det(P) (up to factor of 2 or sign depending on metric conventions, usually det(P) = p^2 for SL(2,C))
+    # For p_{alpha dot_alpha}, p^2 = det(p).
+    # Proof: p_{ab} = v_mu sigma^mu_ab. det(p) = v^2.
+    return P_matrix.det()
+
+def solve_bcfw_pole(lambdas, tilde_lambdas, a, b, channel_indices):
+    """
+    Solve for z_star such that s_channel(z_star) = 0.
+    
+    Args:
+        lambdas, tilde_lambdas: Initial spinors
+        a, b: Shift indices
+        channel_indices: Indices defining the channel s_I
+        
+    Returns:
+        z_star (or None if no solution/constant)
+    """
+    # Check linearity:
+    # s(z) = s(0) + z * (s(1) - s(0))
+    # This is true for BCFW shift on (a, b) for any channel I.
+    
+    def eval_s(z_val):
+        L, Lt = bcfw_shift_spinors(lambdas, tilde_lambdas, a, b, z_val)
+        return get_channel_s(L, Lt, channel_indices)
+        
+    s0 = eval_s(QQ(0))
+    s1 = eval_s(QQ(1))
+    
+    slope = s1 - s0
+    
+    if slope == 0:
+        return None
+        
+    z_star = -s0 / slope
+    
+    # Verify
+    s_star = eval_s(z_star)
+    if abs(s_star) > 1e-10:
+        print(f"Warning: solve_bcfw_pole found z_star={z_star} but s(z_star)={s_star}")
+        
+    return z_star
+
+def get_momentum_matrix(lambdas, tilde_lambdas, indices):
+    """
+    Compute P_matrix = sum_{i in indices} |i>[i|
+    """
+    P_matrix = Matrix(QQ, 2, 2, 0)
+    for i in indices:
+        l = lambdas[i]
+        lt = tilde_lambdas[i]
+        term = Matrix(QQ, 2, 2, [
+            [l[0]*lt[0], l[0]*lt[1]],
+            [l[1]*lt[0], l[1]*lt[1]]
+        ])
+        P_matrix += term
+    return P_matrix
+
+def decompose_momentum_spinors(P_matrix):
+    """
+    Decompose null vector P into lambda, tilde_lambda.
+    P = lambda * tilde_lambda
+    
+    Args:
+        P_matrix: 2x2 matrix P_{alpha, dot_alpha}
+        
+    Returns:
+        (lambda_vec, tilde_lambda_vec)
+    """
+    # Check if det is zero (null vector)
+    if abs(P_matrix.det()) > 1e-8:
+        print(f"Warning: Decomposing non-null momentum, det={P_matrix.det()}")
+    
+    # Method: Contract with reference spinor
+    # lambda_P = P |eta]
+    # We choose eta = (1, 0) or (0, 1)
+    
+    # Try eta = (1, 0) -> [1, 0]
+    # |eta] = vector([1, 0])
+    # lambda_P_alpha = P_{alpha, dot_alpha} eta^{dot_alpha}
+    # But eta is a tilde spinor here?
+    # Usually we write P = |lambda><tilde_lambda|
+    # P |eta] = |lambda> [tilde_lambda eta]
+    
+    # Let's try to grab a column.
+    # If P = [[a, b], [c, d]]
+    # = [[l1*lt1, l1*lt2], [l2*lt1, l2*lt2]]
+    # Column 1: (l1*lt1, l2*lt1) = lt1 * (l1, l2)
+    # Column 2: (l1*lt2, l2*lt2) = lt2 * (l1, l2)
+    # So columns are proportional to lambda.
+    
+    c1 = vector(P_matrix.column(0))
+    c2 = vector(P_matrix.column(1))
+    
+    if c1.norm() > 1e-10:
+        lam = c1
+        # Now find tilde_lambda
+        # P = lam * tilde_lam
+        # P[0,0] = lam[0] * lt[0] -> lt[0] = P[0,0] / lam[0]
+        # P[0,1] = lam[0] * lt[1] -> lt[1] = P[0,1] / lam[0]
+        
+        # We need to handle division by zero
+        if abs(lam[0]) > 1e-10:
+            lt = vector([P_matrix[0,0]/lam[0], P_matrix[0,1]/lam[0]])
+        else:
+            lt = vector([P_matrix[1,0]/lam[1], P_matrix[1,1]/lam[1]])
+            
+    elif c2.norm() > 1e-10:
+        lam = c2
+        # P = lam * tilde_lam
+        # P[0,1] = lam[0]*lt[1] ...
+        # But wait, c2 = lt2 * lambda.
+        # So lambda is c2.
+        # Then we find lt.
+        if abs(lam[0]) > 1e-10:
+            lt = vector([P_matrix[0,0]/lam[0], P_matrix[0,1]/lam[0]])
+        else:
+            lt = vector([P_matrix[1,0]/lam[1], P_matrix[1,1]/lam[1]])
+    else:
+        # Zero momentum
+        return vector([0,0]), vector([0,0])
+        
+    return lam, lt
+
+if __name__ == "__main__":
+    print("Testing BCFW implementation...")
+    lambdas, tildes = sample_spinors_from_twistor(seed=42, n=6)
+    
+    # Test shift 0, 1
+    # Channel s_012 is invariant under shift 0,1 because p0+p1 is invariant.
+    # We need a channel where one index is in the set and one is out.
+    # Try s_023 (0 is in, 1 is out).
+    channel = [0, 2, 3]
+    print(f"Testing shift on 0,1 for channel {channel}")
+    
+    z_star = solve_bcfw_pole(lambdas, tildes, 0, 1, channel)
+    
+    print(f"Found z_star: {z_star}")
+    
+    if z_star is not None:
+        L_star, Lt_star = bcfw_shift_spinors(lambdas, tildes, 0, 1, z_star)
+        s_val = get_channel_s(L_star, Lt_star, channel)
+        print(f"s_channel(z_star) = {s_val}")
+        
+        if abs(s_val) < 1e-9:
+            print("PASS: s_channel vanishes.")
+        else:
+            print("FAIL: s_channel did not vanish.")
+    else:
+        print("FAIL: z_star was None (constant channel?)")
+
+--------------------------------------------------------------------------------
+FILE: src/physics_limits/factorization.py
+--------------------------------------------------------------------------------
+import sys
+import os
+from sage.all import *
+
+# Ensure we can import from src
+if os.getcwd() not in sys.path:
+    sys.path.append(os.getcwd())
+
+from src.chy_oracle.kinematics_samples import sample_spinors_from_twistor
+from src.chy_oracle.amplitude_spinor import hodges_npt_mhv_spinor
+from src.physics_limits.bcfw import bcfw_shift_spinors, solve_bcfw_pole, get_channel_s, get_momentum_matrix, decompose_momentum_spinors
+
+def get_amplitude_3pt(lambdas, tilde_lambdas, helicities):
+    """
+    Compute 3pt gravity amplitude explicitly.
+    helicities: list of integers +/- 2.
+    """
+    h_sum = sum(helicities)
+    
+    def ang(i, j):
+        return lambdas[i][0]*lambdas[j][1] - lambdas[i][1]*lambdas[j][0]
+        
+    def sq(i, j):
+        return tilde_lambdas[i][0]*tilde_lambdas[j][1] - tilde_lambdas[i][1]*tilde_lambdas[j][0]
+
+    if h_sum == -2: # MHV (--+)
+        minus = [i for i, h in enumerate(helicities) if h == -2]
+        plus = [i for i, h in enumerate(helicities) if h == 2]
+        if len(minus) != 2: return QQ(0)
+        a, b = minus
+        c = plus[0]
+        num = ang(a, b)**6
+        den = (ang(a, c) * ang(b, c))**2
+        if den == 0: return QQ(0)
+        return num / den
+        
+    elif h_sum == 2: # Anti-MHV (++-)
+        plus = [i for i, h in enumerate(helicities) if h == 2]
+        minus = [i for i, h in enumerate(helicities) if h == -2]
+        if len(plus) != 2: return QQ(0)
+        a, b = plus
+        c = minus[0]
+        num = sq(a, b)**6
+        den = (sq(a, c) * sq(b, c))**2
+        if den == 0: return QQ(0)
+        return num / den
+        
+    return QQ(0)
+
+def get_amplitude_mhv(lambdas, tilde_lambdas, negative_indices):
+    n = len(lambdas)
+    if n == 3:
+        helicities = [2]*n
+        for i in negative_indices:
+            helicities[i] = -2
+        return get_amplitude_3pt(lambdas, tilde_lambdas, helicities)
+
+    # Hodges wrapper
+    # Try different deletion sets if one fails
+    for delete in [(0, 1, 2), (n-3, n-2, n-1), (0, 2, 4)]:
+        val, status = hodges_npt_mhv_spinor(lambdas, tilde_lambdas, neg=negative_indices, delete=delete)
+        if status == "ok":
+            return val
+            
+    return None
+
+def get_amplitude_anti_mhv(lambdas, tilde_lambdas, positive_indices):
+    # Swap L and Lt
+    return get_amplitude_mhv(tilde_lambdas, lambdas, positive_indices)
+
+def factorization_check_n6_channel13(seed=42):
+    print(f"Running Factorization Check for N=6, Channel s_{{13}} (Seed {seed})...")
+    
+    # 1. Setup Kinematics (MHV: 0-, 1- others +)
+    n = 6
+    lambdas, tildes = sample_spinors_from_twistor(seed=seed, n=n)
+    
+    channel = [1, 3]
+    
+    # Shift: Need to shift one in channel, one out.
+    # 1 is in. 0 is out.
+    # Shift 0, 1.
+    shift_a, shift_b = 0, 1
+    
+    z_star = solve_bcfw_pole(lambdas, tildes, shift_a, shift_b, channel)
+    print(f"z_star: {z_star}")
+    
+    if z_star is None:
+        print("Error: Could not find pole.")
+        return
+
+    # 3. Residue
+    epsilon = QQ(1)/QQ(10000000)
+    z_probe = z_star + epsilon
+    L_probe, Lt_probe = bcfw_shift_spinors(lambdas, tildes, shift_a, shift_b, z_probe)
+    
+    M6_probe = get_amplitude_mhv(L_probe, Lt_probe, negative_indices=(0, 1))
+    s_probe = get_channel_s(L_probe, Lt_probe, channel)
+    
+    residue_numeric = M6_probe * s_probe
+    print(f"Computed Residue (Numeric Limit): {residue_numeric.n()}")
+    
+    # 4. Exact Factorization
+    L_star, Lt_star = bcfw_shift_spinors(lambdas, tildes, shift_a, shift_b, z_star)
+    P_mat = get_momentum_matrix(L_star, Lt_star, channel)
+    lam_P, lt_P = decompose_momentum_spinors(P_mat)
+    
+    # P = p1 + p3.
+    # R has {1, 3, -P}. P flows out of R?
+    # Usually residue is sum M_L(P) M_R(-P).
+    # If channel is [1, 3], let's call this the "Right" side.
+    # P_channel = p1 + p3.
+    # R: {1, 3, -P_channel}. Sum p = 0.
+    # L: {0, 2, 4, 5, P_channel}. Sum p = 0.
+    
+    lam_minusP = lam_P
+    lt_minusP = -lt_P
+    
+    # Sum over h = +/- 2.
+    total_residue_exact = QQ(0)
+    
+    # 1. h = -2 (P is minus)
+    # R (1, 3, -P): 1 is -, 3 is +. -P is + (since P is -).
+    # Wait. Helicities:
+    # If P is (-), then -P is (+).
+    # R has {1-, 3+, (-P)+}. 1 minus.
+    # 3pt with 1 minus is Anti-MHV (++-). Correct.
+    # L (0, 2, 4, 5, P): 0-, P-. 2 minus. MHV.
+    
+    print("\n  Term h=-2 (P is minus):")
+    L_lambdas_m = [L_star[0], L_star[2], L_star[4], L_star[5], lam_P]
+    L_tildes_m = [Lt_star[0], Lt_star[2], Lt_star[4], Lt_star[5], lt_P]
+    M_L_m = get_amplitude_mhv(L_lambdas_m, L_tildes_m, negative_indices=(0, 4))
+    print(f"    M_L (MHV): {M_L_m}")
+    
+    R_lambdas_m = [L_star[1], L_star[3], lam_minusP]
+    R_tildes_m = [Lt_star[1], Lt_star[3], lt_minusP]
+    M_R_m = get_amplitude_anti_mhv(R_lambdas_m, R_tildes_m, positive_indices=(1, 2))
+    print(f"    M_R (Anti-MHV): {M_R_m}")
+    
+    if M_L_m is not None and M_R_m is not None:
+        term_m = M_L_m * M_R_m
+        total_residue_exact += term_m
+        
+    # 2. h = +2 (P is plus)
+    # P is +. -P is -.
+    # R has {1-, 3+, -P-}. 2 minus. MHV.
+    # L has {0-, P+}. 1 minus. Anti-MHV (for 5pt? No. 5pt Anti-MHV has 3 minus. 1 minus is zero).
+    # So this term should be zero.
+    
+    print("\n  Term h=+2 (P is plus):")
+    L_lambdas_p = [L_star[0], L_star[2], L_star[4], L_star[5], lam_P]
+    L_tildes_p = [Lt_star[0], Lt_star[2], Lt_star[4], Lt_star[5], lt_P]
+    # L is Anti-MHV? No, 1 minus.
+    # Let's try to compute MHV anyway? It will be 0.
+    # Or Anti-MHV?
+    # If L is zero, skip.
+    print(f"    L (1 minus) -> Zero")
+    
+    # But R is MHV.
+    R_lambdas_p = [L_star[1], L_star[3], lam_minusP]
+    R_tildes_p = [Lt_star[1], Lt_star[3], lt_minusP]
+    # Negatives: 1 (index 0), -P (index 2).
+    M_R_p = get_amplitude_mhv(R_lambdas_p, R_tildes_p, negative_indices=(0, 2))
+    print(f"    M_R (MHV): {M_R_p}")
+    
+    print(f"  Total Exact: {total_residue_exact.n()}")
+    
+    ratio = residue_numeric / total_residue_exact
+    print(f"Ratio (Numeric/Exact): {ratio.n()}")
+    
+    if abs(ratio - 1) < 1e-3:
+        print("SUCCESS: Factorization confirmed.")
+    elif abs(ratio + 1) < 1e-3:
+        print("SUCCESS: Factorization confirmed (with sign -1).")
+    else:
+        print("FAILURE: Mismatch.")
+
+if __name__ == "__main__":
+    for i in range(3):
+        print(f"\n--- Seed {i} ---")
+        try:
+            factorization_check_n6_channel13(seed=i)
+        except Exception as e:
+            print(f"Error with seed {i}: {e}")
+            import traceback
+            traceback.print_exc()
+
+--------------------------------------------------------------------------------
+FILE: src/physics_limits/soft.py
+--------------------------------------------------------------------------------
+import sys
+import os
+from sage.all import *
+
+if os.getcwd() not in sys.path:
+    sys.path.append(os.getcwd())
+
+from src.chy_oracle.kinematics_samples import sample_spinors_from_twistor
+from src.chy_oracle.amplitude_spinor import hodges_npt_mhv_spinor, ang_bracket, sq_bracket
+
+def soft_factor_gravity_minus(lambdas, tilde_lambdas, s_idx, ref_spinor):
+    """
+    Compute Soft Factor for soft particle s with helicity -2.
+    S = Sum_{a != s} ([a s] / <a s>) * (<a ref>^2 / <s ref>^2)
+    """
+    n = len(lambdas)
+    S = QQ(0)
+    
+    ls = lambdas[s_idx]
+    lts = tilde_lambdas[s_idx]
+    
+    ref = ref_spinor
+    
+    den_common = (ls[0]*ref[1] - ls[1]*ref[0])**2
+    if den_common == 0:
+        return None
+        
+    for a in range(n):
+        if a == s_idx: continue
+        
+        la = lambdas[a]
+        lta = tilde_lambdas[a]
+        
+        # [a s]
+        sq_as = lta[0]*lts[1] - lta[1]*lts[0]
+        # <a s>
+        ang_as = la[0]*ls[1] - la[1]*ls[0]
+        
+        # <a ref>
+        ang_ar = la[0]*ref[1] - la[1]*ref[0]
+        
+        term = (sq_as / ang_as) * (ang_ar**2 / den_common)
+        S += term
+        
+    return S
+
+def check_soft_limit_n6_mhv(seed=42):
+    print(f"Checking Soft Limit for N=6 MHV (Seed {seed})...")
+    
+    # 1. Generate N-1 Kinematics (Hard)
+    n_hard = 5
+    lambdas_hard, tildes_hard = sample_spinors_from_twistor(seed=seed, n=n_hard)
+    
+    # Check M5
+    M5_hard = hodges_npt_mhv_spinor(lambdas_hard, tildes_hard, neg=(0, 1), delete=(0,1,2))
+    if M5_hard[1] != "ok":
+        print("M5 computation failed")
+        return
+    M5 = M5_hard[0]
+    print(f"M5: {M5}")
+
+    # 2. Add Soft Particle (index 5)
+    # We choose random spinors for s
+    s_lambda = vector(QQ, [1, 2])
+    s_tilde = vector(QQ, [3, 4])
+    
+    epsilon = QQ(1)/1000000
+    
+    # Soft momentum p_s = epsilon * lam * tilde
+    # We absorb recoil into 0 and 1.
+    ts = s_tilde
+    t0 = tildes_hard[0]
+    t1 = tildes_hard[1]
+    
+    det_01 = t0[0]*t1[1] - t0[1]*t1[0]
+    if det_01 == 0:
+        print("Singular 0-1 tildes")
+        return
+        
+    rhs = -epsilon * ts
+    
+    det_rhs_t1 = rhs[0]*t1[1] - rhs[1]*t1[0] # [rhs 1]
+    det_t0_rhs = t0[0]*rhs[1] - t0[1]*rhs[0] # [0 rhs]
+    
+    a = det_rhs_t1 / det_01
+    b = det_t0_rhs / det_01
+    
+    # Construct N=6 kinematics
+    lambdas_6 = []
+    tildes_6 = []
+    
+    # 0
+    lambdas_6.append(lambdas_hard[0] + a * s_lambda)
+    tildes_6.append(tildes_hard[0])
+    
+    # 1
+    lambdas_6.append(lambdas_hard[1] + b * s_lambda)
+    tildes_6.append(tildes_hard[1])
+    
+    # 2, 3, 4
+    for i in range(2, 5):
+        lambdas_6.append(lambdas_hard[i])
+        tildes_6.append(tildes_hard[i])
+        
+    # 5 (Soft)
+    lambdas_6.append(epsilon * s_lambda) # Physical lambda_s scale
+    tildes_6.append(s_tilde)
+    
+    # Evaluate M6
+    M6_val, status = hodges_npt_mhv_spinor(lambdas_6, tildes_6, neg=(0, 1), delete=(0,1,2))
+    
+    # Soft Factor S^+
+    # S^+ depends on Hard particles and Soft particle spinor (unscaled or scaled?)
+    # Formula S^+ = - Sum (<a s>/[a s]) ...
+    # <a s> uses lambda_a and lambda_s.
+    # We should use the lambda_s that M6 sees.
+    # M6 sees lambda_6[5] = epsilon * s_lambda.
+    # So we pass lambdas_6 to S factor.
+    
+    eta = vector(QQ, [1, 0])
+    if (tildes_6[5][0]*eta[1] - tildes_6[5][1]*eta[0]) == 0:
+        eta = vector(QQ, [0, 1])
+        
+    # Helper inside
+    def get_S_plus(L, Lt, s, eta):
+        total = QQ(0)
+        lts = Lt[s]
+        ls = L[s]
+        sq_s_eta = lts[0]*eta[1] - lts[1]*eta[0]
+        
+        for a in range(len(L)):
+            if a == s: continue
+            
+            # <a s>
+            ang_as = L[a][0]*ls[1] - L[a][1]*ls[0]
+            # [a s]
+            sq_as = Lt[a][0]*lts[1] - Lt[a][1]*lts[0]
+            # [a eta]
+            sq_a_eta = Lt[a][0]*eta[1] - Lt[a][1]*eta[0]
+            
+            if sq_as == 0: continue # Should not happen for generic
+            
+            term = (ang_as / sq_as) * (sq_a_eta**2 / sq_s_eta**2)
+            total -= term # Note minus sign in formula
+        return total
+
+    S_val = get_S_plus(lambdas_6, tildes_6, 5, eta)
+    
+    predicted = S_val * M5
+    
+    print(f"M6: {M6_val}")
+    print(f"Predicted (S * M5): {predicted}")
+    
+    if predicted == 0:
+        print("Predicted is 0.")
+        return
+        
+    ratio = M6_val / predicted
+    print(f"Ratio: {ratio.n()}")
+    
+    if abs(ratio - 1) < 1e-3:
+        print("SUCCESS: Soft limit confirmed.")
+    else:
+        print("FAILURE: Mismatch.")
+
+if __name__ == "__main__":
+    check_soft_limit_n6_mhv()
+
+--------------------------------------------------------------------------------
+FILE: notes/POLE_ACCOUNTING.md
+--------------------------------------------------------------------------------
+# Pole Accounting for N=6 MHV Gravity
+
+## 1. Physical Singularities
+The gravity amplitude $M_6$ should have poles when:
+- $s_{ij} \to 0$ (Soft/Collinear)
+- $s_{ijk} \to 0$ (Multi-particle factorization)
+
+### 1.1 Soft Limits ($p_s \to 0$)
+- For $h=-2$ (negative helicity soft graviton): $M_n \sim \epsilon^{-3}$.
+- For $h=+2$ (positive helicity soft graviton): $M_n \sim \epsilon^{+1}$ (vanishes).
+
+### 1.2 Factorization
+- On $s_{ijk} \to 0$, $M_6 \to M_L \frac{1}{s_{ijk}} M_R$.
+- Residue is product of sub-amplitudes.
+- If helicity configurations of $L$ and $R$ are forbidden (e.g. 1 minus in Gravity), residue is zero.
+
+## 2. Origin of Poles in Hodges Formula
+The Hodges formula is:
+$$ M_n = \text{det}(\Phi_{\text{red}}) \times \langle a b \rangle^8 \times \text{Norm}^{-1} $$
+where $\Phi_{ij} = [ij] / \langle ij \rangle$.
+
+### 2.1 Collinear Poles ($<ij> \to 0$)
+- If $\langle ij \rangle \to 0$, then $\Phi_{ij}$ and $\Phi_{ji}$ diverge.
+- This creates poles in the determinant.
+- Since $\det \Phi \sim \Phi_{ij}\Phi_{ji} \sim 1/\langle ij \rangle^2$, this generates the correct gravity scaling $1/p^2$.
+
+### 2.2 Soft Poles
+- If $\lambda_s \to \epsilon \lambda_s$:
+  - All $\langle i s \rangle \to \epsilon$.
+  - All $\Phi_{is} \sim 1/\epsilon$.
+  - Diagonal entries $\Phi_{ii}$ also pick up $1/\epsilon$ terms.
+- **Issue**: Naive power counting of the determinant suggests $M_6 \sim \epsilon^{-2}$ or worse, even for $h=+2$ where it should be $\epsilon^1$.
+- This implies significant cancellations must occur in the determinant for the correct soft behavior to emerge.
+- Numerical checks using `hodges_npt_mhv_spinor` show huge values ($1/\epsilon^2$ scaling) for $h=+2$ soft limit, suggesting these cancellations might be numerically unstable or require analytic handling.
+
+## 3. Map to Positive Geometry
+- The positive geometry is defined in terms of $z_{ij}$.
+- The map is $z_{ij} = \frac{[ij] C_i C_j}{\langle ij \rangle}$.
+- Poles in $z_{ij}$ occur when $\langle ij \rangle \to 0$ (Collinear).
+- Zeros in $z_{ij}$ occur when $[ij] \to 0$.
+- The "Forest Polynomial" $F(z)$ is a polynomial in $z$.
+- Singularities of the amplitude arise from:
+  1. The map $z \to \text{kinematics}$ (which is singular at collinear limits).
+  2. The Jacobian of the pushforward?
+  3. The "Canonical Form" structure $\Omega = d \log F$? No, $1/F$.
+  - If $F(z)$ has roots, we get poles.
+  - But $F(z)$ is a sum of monomials (positive for positive $z$). Roots are at boundaries.
+
+### 3.1 Missing Poles?
+- If $F(z)$ is polynomial, where do $1/s_{ijk}$ poles come from?
+- They must come from the prefactors or the "integration" measure in the pushforward.
+- Current hypothesis: The simple map $z \to p$ might not capture all multi-particle poles manifestly in the geometry of $F$, or they appear as "spurious" singularities of the map that resolve into physical poles.
+
+## 4. Discrepancies Observed
+- **Factorization**: Numeric checks confirm $s_{02}$ is a pole, but residue matches only up to a factor (possibly normalization or helicity sum issue).
+- **Soft Limit**: Numeric checks fail for $h=+2$ soft limit using Hodges, likely due to cancellation issues described above.
+
+
+

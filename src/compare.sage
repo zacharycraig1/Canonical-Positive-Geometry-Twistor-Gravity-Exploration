@@ -160,3 +160,6 @@ def verify_identity_polynomial(H_func, A_func, twistor_generator, n_tests=100):
 
 
 
+
+
+

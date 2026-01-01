@@ -27,3 +27,6 @@ $$D(Z) = \frac{ \left( \prod_{1 \le i < j \le 6} \langle ij \rangle \right) \tim
 
 
 
+
+
+

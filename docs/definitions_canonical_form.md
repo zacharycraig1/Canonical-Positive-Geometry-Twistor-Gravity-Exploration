@@ -36,3 +36,6 @@ Equivalently, the amplitude is the canonical function of the **dual** polytope $
 
 Our construction $F_{n,R}(z)$ is precisely the Newton Polynomial of the polytope $P$, and its reciprocal defines the canonical form on the dual.
 
+
+
+

@@ -50,3 +50,6 @@ The facets of $P_{n,R}$ correspond to poles of the amplitude.
 - The "Gravituhedron" in this sector is a Forest Polytope.
 - Future work: NMHV, loop level.
 
+
+
+

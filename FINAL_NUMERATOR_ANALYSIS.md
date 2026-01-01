@@ -129,3 +129,6 @@ I will finalize the report with this conclusion: The Numerator is a polynomial i
 
 
 
+
+
+
