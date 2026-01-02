@@ -1,0 +1,8006 @@
+{
+  "results": [
+    {
+      "seed": 0,
+      "hodges": -7.928587294337505e-06,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 1,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 2,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 3,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 4,
+      "hodges": -0.0004810556051140475,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 5,
+      "hodges": 2.7978015580823935e-06,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 6,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 7,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 8,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 9,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 10,
+      "hodges": 0.0027234766429597734,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 11,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 12,
+      "hodges": 0.003475344628248954,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 13,
+      "hodges": 1.0227436502742577e-07,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 14,
+      "hodges": -7.73852443331132e-09,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 15,
+      "hodges": -7.73852443331132e-09,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 16,
+      "hodges": 0.0021234030537622232,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 17,
+      "hodges": -6.079295253664619e-06,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 18,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 19,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 20,
+      "hodges": -0.05196612756788114,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 21,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 22,
+      "hodges": 1.1696421755762261e-08,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 23,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 24,
+      "hodges": -2.7881586653409927,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 25,
+      "hodges": 114.7728932991573,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 26,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 27,
+      "hodges": -0.10483368288362557,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 28,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 29,
+      "hodges": -2.524593663391157e-12,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 30,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 31,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 32,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 33,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 34,
+      "hodges": -0.0002201449570089194,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 35,
+      "hodges": -0.0002201449570089194,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 36,
+      "hodges": -0.0002201449570089194,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 37,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 38,
+      "hodges": -7.538646288944968e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 39,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 40,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 41,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 42,
+      "hodges": 5.26807770515251e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 43,
+      "hodges": 5.26807770515251e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 44,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 45,
+      "hodges": -0.0003721705566495228,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 46,
+      "hodges": -1.2464312885228993e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 47,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 48,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 49,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 50,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 51,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 52,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 53,
+      "hodges": -3.3044434265069784e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 54,
+      "hodges": 0.2571563669213038,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 55,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 56,
+      "hodges": -21.680089500307044,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 57,
+      "hodges": 0.0574390133440767,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 58,
+      "hodges": -0.007687057817083313,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 59,
+      "hodges": -0.0003044668794129217,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 60,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 61,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 62,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 63,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 64,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 65,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 66,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 67,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 68,
+      "hodges": 2185.523191547525,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 69,
+      "hodges": -0.0005558019481285584,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 70,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 71,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 72,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 73,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 74,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 75,
+      "hodges": -0.0008327184359079599,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 76,
+      "hodges": -126.50335796069045,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 77,
+      "hodges": -0.00015922271045463332,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 78,
+      "hodges": -0.007922008890080589,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 79,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 80,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 81,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 82,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 83,
+      "hodges": 9.489671713676204,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 84,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 85,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 86,
+      "hodges": 0.000609629940473117,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 87,
+      "hodges": -58.74176022064584,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 88,
+      "hodges": 468.28445506606977,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 89,
+      "hodges": 468.28445506606977,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 90,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 91,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 92,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 93,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 94,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 95,
+      "hodges": 0.0376858031618455,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 96,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 97,
+      "hodges": -0.05665473104418193,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 98,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 99,
+      "hodges": -0.2858761610359763,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 100,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 101,
+      "hodges": -4.9971395501366794e-06,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 102,
+      "hodges": -0.3338800835543277,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 103,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 104,
+      "hodges": -2.161155190190383e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 105,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 106,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 107,
+      "hodges": -1.2390712720892696,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 108,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 109,
+      "hodges": 0.00023173998250202138,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 110,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 111,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 112,
+      "hodges": 1.657311094665876e-10,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 113,
+      "hodges": -0.05133363991828433,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 114,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 115,
+      "hodges": 1.5097607127869563e-07,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 116,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 117,
+      "hodges": -0.003326564847408733,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 118,
+      "hodges": -2.747591986152775,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 119,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 120,
+      "hodges": 0.09241088294083738,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 121,
+      "hodges": 252.1910936515988,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 122,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 123,
+      "hodges": -3.9019664802833294e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 124,
+      "hodges": 9.417287133988384e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 125,
+      "hodges": -2.360997785905435,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 126,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 127,
+      "hodges": 2.1712517772407993e-11,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 128,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 129,
+      "hodges": -0.002392239679974493,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 130,
+      "hodges": -0.026698609790977892,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 131,
+      "hodges": -0.026698609790977892,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 132,
+      "hodges": 1.1232998363772476e-07,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 133,
+      "hodges": 0.0019711337372029327,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 134,
+      "hodges": -4.118201773547635e-06,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 135,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 136,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 137,
+      "hodges": -0.0004926743647887942,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 138,
+      "hodges": 4.192955293078493e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 139,
+      "hodges": -0.0004241897453458801,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 140,
+      "hodges": -0.0004241897453458801,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 141,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 142,
+      "hodges": 8.319219564543025e-08,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 143,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 144,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 145,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 146,
+      "hodges": -5.599786211720477,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 147,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 148,
+      "hodges": 0.47624900148335864,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 149,
+      "hodges": 0.00024101780550686854,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 150,
+      "hodges": 4.0964970129270186e-07,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 151,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 152,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 153,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 154,
+      "hodges": -8.53701406195236e-07,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 155,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 156,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 157,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 158,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 159,
+      "hodges": -4.853803497511585e-07,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 160,
+      "hodges": 2.318913672750828e-11,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 161,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 162,
+      "hodges": 0.0007021740555370175,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 163,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 164,
+      "hodges": 2.3797873747083887e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 165,
+      "hodges": 0.9558008232522067,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 166,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 167,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 168,
+      "hodges": -7.4464517308791525,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 169,
+      "hodges": -7.4464517308791525,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 170,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 171,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 172,
+      "hodges": -0.0905999777871062,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 173,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 174,
+      "hodges": 5.8231957010812785,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 175,
+      "hodges": 5.8231957010812785,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 176,
+      "hodges": 0.0030554295280376207,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 177,
+      "hodges": 4.768470949010179e-09,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 178,
+      "hodges": -0.011900760109053004,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 179,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 180,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 181,
+      "hodges": -0.00023884806529562354,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 182,
+      "hodges": 0.0003362094861655881,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 183,
+      "hodges": -0.0005267032315932967,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 184,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 185,
+      "hodges": -0.009317245151050466,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 186,
+      "hodges": -0.009317245151050466,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 187,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 188,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 189,
+      "hodges": 4.214932050758336e-07,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 190,
+      "hodges": -1.3421072630773636e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 191,
+      "hodges": 2.509075368711913,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 192,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 193,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 194,
+      "hodges": -6.649763917894347e-06,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 195,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 196,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 197,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 198,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 199,
+      "hodges": 0.0015905654904931337,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 200,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 201,
+      "hodges": -1.9852538511669096e-12,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 202,
+      "hodges": -2.972969120822656e-06,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 203,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 204,
+      "hodges": -1.3786162544729394e-09,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 205,
+      "hodges": 0.04268811410593898,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 206,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 207,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 208,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 209,
+      "hodges": -8.623496167811771e-07,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 210,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 211,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 212,
+      "hodges": 0.0002995146746804199,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 213,
+      "hodges": -1.4883499846271974e-07,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 214,
+      "hodges": 549.8789453158926,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 215,
+      "hodges": 0.00404435355721049,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 216,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 217,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 218,
+      "hodges": -74965.96822958512,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 219,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 220,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 221,
+      "hodges": -2.139240432758072e-06,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 222,
+      "hodges": -0.00011254359814706349,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 223,
+      "hodges": 3.8416804141930486e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 224,
+      "hodges": -0.021116626371777077,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 225,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 226,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 227,
+      "hodges": -0.003782099297419108,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 228,
+      "hodges": -2.802392300418105e-10,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 229,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 230,
+      "hodges": 5.890402086777698e-07,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 231,
+      "hodges": -1.5773652676414748e-08,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 232,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 233,
+      "hodges": -0.00024426399780455034,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 234,
+      "hodges": -8.817930936122162e-07,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 235,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 236,
+      "hodges": 7.111344181316106e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 237,
+      "hodges": 7.111344181316106e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 238,
+      "hodges": 1.6223996962604154e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 239,
+      "hodges": -0.6005644842207912,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 240,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 241,
+      "hodges": 3.568021719641836e-08,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 242,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 243,
+      "hodges": -3.4411017142723374e-07,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 244,
+      "hodges": 0.0005216157717368619,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 245,
+      "hodges": 0.0005216157717368619,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 246,
+      "hodges": 0.0005216157717368619,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 247,
+      "hodges": 6.445158094209238e-06,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 248,
+      "hodges": -4.71970037090936e-09,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 249,
+      "hodges": 7.773342457445626e-07,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 250,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 251,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 252,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 253,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 254,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 255,
+      "hodges": 8.437383126529596e-10,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 256,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 257,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 258,
+      "hodges": -6.424022189663785e-06,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 259,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 260,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 261,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 262,
+      "hodges": 1.6855840854653992e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 263,
+      "hodges": 1.9568870132224318e-08,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 264,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 265,
+      "hodges": -3.597157432950429e-11,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 266,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 267,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 268,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 269,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 270,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 271,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 272,
+      "hodges": -0.15483867818035393,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 273,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 274,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 275,
+      "hodges": 0.001977915817120458,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 276,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 277,
+      "hodges": 0.9693140301683035,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 278,
+      "hodges": -0.020642524538686934,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 279,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 280,
+      "hodges": -1.5445909974215891e-06,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 281,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 282,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 283,
+      "hodges": -1.449204746258542e-11,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 284,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 285,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 286,
+      "hodges": -0.22018382761108984,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 287,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 288,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 289,
+      "hodges": 20.12974008564036,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 290,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 291,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 292,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 293,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 294,
+      "hodges": -0.8445694024835999,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 295,
+      "hodges": 20.585881928021934,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 296,
+      "hodges": 6.676434866371787e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 297,
+      "hodges": 5805.217189918222,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 298,
+      "hodges": 1.2751950029838917e-09,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 299,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 300,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 301,
+      "hodges": 0.0006881010186286245,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 302,
+      "hodges": 1.9710167978042863,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 303,
+      "hodges": -7.364663317576406e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 304,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 305,
+      "hodges": -0.024494593109066293,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 306,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 307,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 308,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 309,
+      "hodges": 358.4802709749208,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 310,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 311,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 312,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 313,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 314,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 315,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 316,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 317,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 318,
+      "hodges": -0.0009303458134118723,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 319,
+      "hodges": -0.09459406221872614,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 320,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 321,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 322,
+      "hodges": 6.9830560637520124e-06,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 323,
+      "hodges": -0.0003630259631566743,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 324,
+      "hodges": 7.996066890084539e-09,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 325,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 326,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 327,
+      "hodges": -0.0024596041021336147,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 328,
+      "hodges": -5.930160303005778,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 329,
+      "hodges": 0.00017106720213674818,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 330,
+      "hodges": 0.004726163936664823,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 331,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 332,
+      "hodges": -66894.18659800009,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 333,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 334,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 335,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 336,
+      "hodges": -0.0007797891644011836,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 337,
+      "hodges": -0.00490002889972499,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 338,
+      "hodges": -4.197893559186374e-09,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 339,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 340,
+      "hodges": 7.355287247655229e-08,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 341,
+      "hodges": -1.677172464728348e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 342,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 343,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 344,
+      "hodges": -4.722446389078323e-08,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 345,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 346,
+      "hodges": -6.098351848687902e-10,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 347,
+      "hodges": 0.5058574256433706,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 348,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 349,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 350,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 351,
+      "hodges": 1.0086626129480948e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 352,
+      "hodges": 1.0086626129480948e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 353,
+      "hodges": 1.316923678930241e-10,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 354,
+      "hodges": -0.00468713782068035,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 355,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 356,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 357,
+      "hodges": 3.879860112234472e-08,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 358,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 359,
+      "hodges": 0.1215079291824878,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 360,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 361,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 362,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 363,
+      "hodges": 0.0030482677136998526,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 364,
+      "hodges": 4.0813676408978445e-07,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 365,
+      "hodges": -4.2793273263670027e-07,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 366,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 367,
+      "hodges": 16.318948359249713,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 368,
+      "hodges": 16.318948359249713,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 369,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 370,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 371,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 372,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 373,
+      "hodges": -2.0519593391081482e-07,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 374,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 375,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 376,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 377,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 378,
+      "hodges": -9.94805381773081e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 379,
+      "hodges": 0.0018023944162563789,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 380,
+      "hodges": 8.51452370603773,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 381,
+      "hodges": 8.51452370603773,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 382,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 383,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 384,
+      "hodges": -0.0005732442118292874,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 385,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 386,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 387,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 388,
+      "hodges": -1.2437335925910143e-09,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 389,
+      "hodges": 0.03579064037864834,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 390,
+      "hodges": -26.888583845225522,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 391,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 392,
+      "hodges": 2.426318434533277e-08,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 393,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 394,
+      "hodges": -0.00026249600354250014,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 395,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 396,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 397,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 398,
+      "hodges": -0.11336319973701187,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 399,
+      "hodges": -0.00028864974545179587,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 400,
+      "hodges": 0.00037142793486617733,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 401,
+      "hodges": 3.464950926877379e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 402,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 403,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 404,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 405,
+      "hodges": 0.047043810213636225,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 406,
+      "hodges": 2.8881992263708824e-06,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 407,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 408,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 409,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 410,
+      "hodges": -0.17407718839242892,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 411,
+      "hodges": 0.0022983159482871393,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 412,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 413,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 414,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 415,
+      "hodges": 1.6779629956018702,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 416,
+      "hodges": -2.4633534508198924e-08,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 417,
+      "hodges": 1.8606455469878523e-07,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 418,
+      "hodges": -1.3930150770946934e-06,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 419,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 420,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 421,
+      "hodges": -0.009453319388453845,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 422,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 423,
+      "hodges": -2.727696668817386e-06,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 424,
+      "hodges": -1.0260271586406352e-07,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 425,
+      "hodges": -1.0260271586406352e-07,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 426,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 427,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 428,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 429,
+      "hodges": 2.0735378017535868e-07,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 430,
+      "hodges": -2.480145585093714e-07,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 431,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 432,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 433,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 434,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 435,
+      "hodges": 2.321910949615425e-06,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 436,
+      "hodges": 2.321910949615425e-06,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 437,
+      "hodges": -0.0003533666033271855,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 438,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 439,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 440,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 441,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 442,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 443,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 444,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 445,
+      "hodges": -2.5420567942990498e-14,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 446,
+      "hodges": 9.392787454014683e-14,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 447,
+      "hodges": 9.392787454014683e-14,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 448,
+      "hodges": 9.392787454014683e-14,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 449,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 450,
+      "hodges": -8.596540476750396e-06,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 451,
+      "hodges": 0.020347957859502316,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 452,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 453,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 454,
+      "hodges": -3.463726026633461e-07,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 455,
+      "hodges": -0.626488664844134,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 456,
+      "hodges": 1.4537212081012856,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 457,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 458,
+      "hodges": 1.627148408611896e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 459,
+      "hodges": -0.016022504491183767,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 460,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 461,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 462,
+      "hodges": -5.9588969217162004,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 463,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 464,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 465,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 466,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 467,
+      "hodges": 0.003070939645191068,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 468,
+      "hodges": 0.003070939645191068,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 469,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 470,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 471,
+      "hodges": 1.4298894487637366e-07,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 472,
+      "hodges": -0.0005976870322282036,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 473,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 474,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 475,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 476,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 477,
+      "hodges": 0.0133569584390898,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 478,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 479,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 480,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 481,
+      "hodges": -1.3926868962407508,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 482,
+      "hodges": -1.3926868962407508,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 483,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 484,
+      "hodges": 2.3687288457033174e-09,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 485,
+      "hodges": 0.0006724164429495991,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 486,
+      "hodges": -0.08546543203312432,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 487,
+      "hodges": -8.695493104521165e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 488,
+      "hodges": 3.732602441799445e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 489,
+      "hodges": 4.4431494040757533e-10,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 490,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 491,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 492,
+      "hodges": 41.86731558044065,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 493,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 494,
+      "hodges": -2.2254578038340666e-06,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 495,
+      "hodges": 0.005291313681958692,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 496,
+      "hodges": 0.0012587702819987585,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 497,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 498,
+      "hodges": -0.0023380936019215827,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 499,
+      "hodges": -0.0023380936019215827,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 500,
+      "hodges": -1.861553673197312e-08,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 501,
+      "hodges": -9.418669759202946e-06,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 502,
+      "hodges": -0.041423136969280794,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 503,
+      "hodges": -4.55341018193008e-06,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 504,
+      "hodges": -4.55341018193008e-06,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 505,
+      "hodges": -0.006851904666157806,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 506,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 507,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 508,
+      "hodges": -0.00580756873619184,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 509,
+      "hodges": -0.001105875900728605,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 510,
+      "hodges": 8.932703942249722e-06,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 511,
+      "hodges": 0.38694334456935653,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 512,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 513,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 514,
+      "hodges": -0.01605593385395621,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 515,
+      "hodges": -5.839742753644396e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 516,
+      "hodges": -5.839742753644396e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 517,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 518,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 519,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 520,
+      "hodges": 0.10460749990466722,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 521,
+      "hodges": -0.01639312795626985,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 522,
+      "hodges": -0.01639312795626985,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 523,
+      "hodges": -0.01639312795626985,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 524,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 525,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 526,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 527,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 528,
+      "hodges": 6.28449185144128e-10,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 529,
+      "hodges": -0.009739472537707147,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 530,
+      "hodges": -2.1370730627173494e-06,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 531,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 532,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 533,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 534,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 535,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 536,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 537,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 538,
+      "hodges": -0.0005457137975577439,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 539,
+      "hodges": -0.0065532873184359205,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 540,
+      "hodges": -2.8455495080648707e-07,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 541,
+      "hodges": -4.401943286799443,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 542,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 543,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 544,
+      "hodges": -0.008137213332953672,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 545,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 546,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 547,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 548,
+      "hodges": 1.016853870569173e-08,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 549,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 550,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 551,
+      "hodges": 0.485487819695001,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 552,
+      "hodges": 7.27987900826843e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 553,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 554,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 555,
+      "hodges": 9.124770198006542e-06,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 556,
+      "hodges": 9.124770198006542e-06,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 557,
+      "hodges": -2.169553679900579e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 558,
+      "hodges": -4.0459340849580616e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 559,
+      "hodges": -76909.21945052002,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 560,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 561,
+      "hodges": 1.2346196749715832e-09,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 562,
+      "hodges": 1.2346196749715832e-09,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 563,
+      "hodges": 9.080001063610038e-08,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 564,
+      "hodges": -2.021310522137641e-11,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 565,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 566,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 567,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 568,
+      "hodges": 0.05282660742084474,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 569,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 570,
+      "hodges": -8.622285075791608e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 571,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 572,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 573,
+      "hodges": 1.1148855733414942e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 574,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 575,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 576,
+      "hodges": 0.0003935905734065367,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 577,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 578,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 579,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 580,
+      "hodges": -19.96287480430905,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 581,
+      "hodges": -0.15650224307244232,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 582,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 583,
+      "hodges": 0.0006553054589737235,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 584,
+      "hodges": 0.0006553054589737235,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 585,
+      "hodges": 9.37902145515155e-06,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 586,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 587,
+      "hodges": -4.422693215648186,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 588,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 589,
+      "hodges": -0.0004014193678000118,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 590,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 591,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 592,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 593,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 594,
+      "hodges": 4.037436089863436,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 595,
+      "hodges": -0.2327109336225956,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 596,
+      "hodges": 4.857803518799833e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 597,
+      "hodges": -0.0002275606178375272,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 598,
+      "hodges": 0.00012251181661032911,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 599,
+      "hodges": 3.2400826428753936e-09,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 600,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 601,
+      "hodges": -0.5972881523960367,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 602,
+      "hodges": 0.0034903655502262895,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 603,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 604,
+      "hodges": -6.479351492967876e-08,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 605,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 606,
+      "hodges": -8.578777718429882e-11,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 607,
+      "hodges": 2.6885284620726397e-08,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 608,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 609,
+      "hodges": 2.51790982087382e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 610,
+      "hodges": -0.001611779318472767,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 611,
+      "hodges": -5.7257218747637125e-06,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 612,
+      "hodges": -0.008583653754469138,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 613,
+      "hodges": -0.0002569802895161317,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 614,
+      "hodges": -0.0002569802895161317,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 615,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 616,
+      "hodges": 87538.29680780211,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 617,
+      "hodges": -1.1243320197305818e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 618,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 619,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 620,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 621,
+      "hodges": 0.000669363039674219,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 622,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 623,
+      "hodges": -2.0811316728936114e-09,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 624,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 625,
+      "hodges": -2.742783906830079e-08,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 626,
+      "hodges": -0.00011342006703999233,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 627,
+      "hodges": -4.154809762385806,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 628,
+      "hodges": -1.292079933249302e-07,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 629,
+      "hodges": 179.77314430756212,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 630,
+      "hodges": -9.370078061402328e-07,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 631,
+      "hodges": -9.370078061402328e-07,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 632,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 633,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 634,
+      "hodges": -6.208828248624483,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 635,
+      "hodges": -23.68062029131117,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 636,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 637,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 638,
+      "hodges": -2.4800971084200963e-07,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 639,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 640,
+      "hodges": 2.33128796574543e-08,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 641,
+      "hodges": 2.33128796574543e-08,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 642,
+      "hodges": 5.4275291755857115e-08,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 643,
+      "hodges": 5.4275291755857115e-08,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 644,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 645,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 646,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 647,
+      "hodges": 0.0019240912434775534,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 648,
+      "hodges": 0.0019240912434775534,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 649,
+      "hodges": -3.522169060431754e-09,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 650,
+      "hodges": -3.084541196902203e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 651,
+      "hodges": 2.3306182503074828e-07,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 652,
+      "hodges": -5.807823050459466,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 653,
+      "hodges": -5.807823050459466,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 654,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 655,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 656,
+      "hodges": -39.473314854431585,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 657,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 658,
+      "hodges": -1.4355464389559746e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 659,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 660,
+      "hodges": 1.2207931676917358,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 661,
+      "hodges": 0.062332807683658994,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 662,
+      "hodges": -9.698789394031003e-11,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 663,
+      "hodges": -9.698789394031003e-11,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 664,
+      "hodges": -58.87434153776406,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 665,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 666,
+      "hodges": -8.161026230473432e-08,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 667,
+      "hodges": -51.72506411670966,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 668,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 669,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 670,
+      "hodges": 2.1710156631797347e-06,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 671,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 672,
+      "hodges": -0.0002813810921062957,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 673,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 674,
+      "hodges": 0.0003158952764023104,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 675,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 676,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 677,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 678,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 679,
+      "hodges": -3.1939126026246414e-07,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 680,
+      "hodges": -0.20925002051915506,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 681,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 682,
+      "hodges": -0.002554265363475099,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 683,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 684,
+      "hodges": 0.030433653179614446,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 685,
+      "hodges": 0.030433653179614446,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 686,
+      "hodges": -0.00014304370901237323,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 687,
+      "hodges": -0.00014304370901237323,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 688,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 689,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 690,
+      "hodges": 0.000570086380245802,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 691,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 692,
+      "hodges": -3.82173255340085e-09,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 693,
+      "hodges": 3.32251825812865e-08,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 694,
+      "hodges": -5.555638842961191e-08,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 695,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 696,
+      "hodges": -1.4674120515254066e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 697,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 698,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 699,
+      "hodges": -8.422616957852804e-06,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 700,
+      "hodges": -3.969803836497652e-10,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 701,
+      "hodges": -2.9225640709494346e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 702,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 703,
+      "hodges": -0.08800389351615237,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 704,
+      "hodges": -0.09522572748640752,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 705,
+      "hodges": -0.09522572748640752,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 706,
+      "hodges": -0.09522572748640752,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 707,
+      "hodges": -6.724459475501604e-07,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 708,
+      "hodges": -6.724459475501604e-07,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 709,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 710,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 711,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 712,
+      "hodges": -0.029914794721214458,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 713,
+      "hodges": -0.005309093512552276,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 714,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 715,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 716,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 717,
+      "hodges": -5.350078440594415e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 718,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 719,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 720,
+      "hodges": 5.1570342105701314,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 721,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 722,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 723,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 724,
+      "hodges": -5.004761142490154,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 725,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 726,
+      "hodges": -0.00010118874912748335,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 727,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 728,
+      "hodges": 4.0703111111520424e-11,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 729,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 730,
+      "hodges": -2.145883109219051e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 731,
+      "hodges": -6.707843524977943e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 732,
+      "hodges": -0.5432210174842438,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 733,
+      "hodges": -5.096111973403019,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 734,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 735,
+      "hodges": -4.2797390728684864e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 736,
+      "hodges": 3.966423847721184e-07,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 737,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 738,
+      "hodges": 0.02491245703377222,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 739,
+      "hodges": -1.205374231565223e-08,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 740,
+      "hodges": -0.0018822972165070252,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 741,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 742,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 743,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 744,
+      "hodges": -0.00027746050856024686,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 745,
+      "hodges": -0.00027746050856024686,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 746,
+      "hodges": -9.522716551254847e-07,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 747,
+      "hodges": 2.207662614462155e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 748,
+      "hodges": 0.0030104156489301833,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 749,
+      "hodges": 9.057203190854891e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 750,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 751,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 752,
+      "hodges": -0.007571260275196477,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 753,
+      "hodges": 0.0020347122921215367,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 754,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 755,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 756,
+      "hodges": 26.3892050013343,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 757,
+      "hodges": -9.912724142814078e-06,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 758,
+      "hodges": -7433.886377624389,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 759,
+      "hodges": -3.2694503700754686e-09,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 760,
+      "hodges": -0.00016460053645769523,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 761,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 762,
+      "hodges": 0.0028510392085234516,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 763,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 764,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 765,
+      "hodges": 2.9616553167250144e-17,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 766,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 767,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 768,
+      "hodges": -0.0002018114396357198,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 769,
+      "hodges": -0.07942964056436472,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 770,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 771,
+      "hodges": -0.018430676491034477,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 772,
+      "hodges": 2.3164992649381836e-07,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 773,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 774,
+      "hodges": -0.0014085149829567076,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 775,
+      "hodges": 0.012724357262662066,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 776,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 777,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 778,
+      "hodges": -1.634377969132967e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 779,
+      "hodges": -1.634377969132967e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 780,
+      "hodges": 183.17261030147606,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 781,
+      "hodges": 183.17261030147606,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 782,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 783,
+      "hodges": -4.219766349557529e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 784,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 785,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 786,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 787,
+      "hodges": 0.0003167241523129623,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 788,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 789,
+      "hodges": -0.004059834896378137,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 790,
+      "hodges": -6.54696801026293e-11,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 791,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 792,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 793,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 794,
+      "hodges": 0.17211774432499713,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 795,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 796,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 797,
+      "hodges": 2.3392120348792423e-09,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 798,
+      "hodges": 2.3392120348792423e-09,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 799,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 800,
+      "hodges": -1.2860904286141588,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 801,
+      "hodges": -0.0003883800461990355,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 802,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 803,
+      "hodges": -0.00958854960835578,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 804,
+      "hodges": 0.005466145772873676,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 805,
+      "hodges": -2.732057691367651e-06,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 806,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 807,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 808,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 809,
+      "hodges": -0.0001964193221590638,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 810,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 811,
+      "hodges": 2.7354224813914575e-09,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 812,
+      "hodges": -3.714080903621389e-07,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 813,
+      "hodges": -0.005965621070643667,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 814,
+      "hodges": 2.844503867578277e-07,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 815,
+      "hodges": -5.409036698980632e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 816,
+      "hodges": -5.409036698980632e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 817,
+      "hodges": -2.8506707552524656e-09,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 818,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 819,
+      "hodges": -6.356305899283685e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 820,
+      "hodges": 8.794097982138153e-06,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 821,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 822,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 823,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 824,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 825,
+      "hodges": -2110.4713414266357,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 826,
+      "hodges": -2.449393161169138e-11,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 827,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 828,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 829,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 830,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 831,
+      "hodges": -5.883515683696513e-08,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 832,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 833,
+      "hodges": 1.3192372485489761e-09,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 834,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 835,
+      "hodges": 0.002295698439602252,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 836,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 837,
+      "hodges": -5.5389181412926755e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 838,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 839,
+      "hodges": 0.15101152598228368,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 840,
+      "hodges": -6.789243251330189e-07,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 841,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 842,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 843,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 844,
+      "hodges": 0.7049317272517475,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 845,
+      "hodges": 1.3619626084866313e-09,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 846,
+      "hodges": 1.3619626084866313e-09,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 847,
+      "hodges": 1.3619626084866313e-09,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 848,
+      "hodges": 1.3619626084866313e-09,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 849,
+      "hodges": 1.3619626084866313e-09,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 850,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 851,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 852,
+      "hodges": -1.4099087997275882e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 853,
+      "hodges": 2.687379581322933e-07,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 854,
+      "hodges": 8.55050312842886e-07,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 855,
+      "hodges": 0.003023844603174286,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 856,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 857,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 858,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 859,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 860,
+      "hodges": -5.4635052585646085e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 861,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 862,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 863,
+      "hodges": -1.48077627708883e-10,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 864,
+      "hodges": 0.0001072664305441971,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 865,
+      "hodges": 0.0005849760615108236,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 866,
+      "hodges": 7.4354161855718105e-06,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 867,
+      "hodges": 0.018249414129796783,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 868,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 869,
+      "hodges": -4582296.92596145,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 870,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 871,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 872,
+      "hodges": -0.0007147156623226432,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 873,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 874,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 875,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 876,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 877,
+      "hodges": 0.6460231326028131,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 878,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 879,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 880,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 881,
+      "hodges": -202.6101095754565,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 882,
+      "hodges": -4.227776475325469e-08,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 883,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 884,
+      "hodges": -5.358142896619522e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 885,
+      "hodges": -5.358142896619522e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 886,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 887,
+      "hodges": -1.7281585299686663e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 888,
+      "hodges": -2.308935031543347e-08,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 889,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 890,
+      "hodges": -883.5815031827012,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 891,
+      "hodges": 8.7878723123905e-06,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 892,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 893,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 894,
+      "hodges": 3.8201703956203885e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 895,
+      "hodges": 5.901596268499804e-06,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 896,
+      "hodges": 0.00035309571830869073,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 897,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 898,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 899,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 900,
+      "hodges": -1059.115069982569,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 901,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 902,
+      "hodges": -2.8044771105051356e-07,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 903,
+      "hodges": 0.0010447863815124928,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 904,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 905,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 906,
+      "hodges": -1.331727917226389e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 907,
+      "hodges": 0.009842428356027298,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 908,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 909,
+      "hodges": 1.1698993899048198,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 910,
+      "hodges": 1.00668998793193e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 911,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 912,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 913,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 914,
+      "hodges": 2.0350492603056484e-06,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 915,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 916,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 917,
+      "hodges": -0.0003568539281088641,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 918,
+      "hodges": 20.401711988616018,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 919,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 920,
+      "hodges": -0.30561882694737624,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 921,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 922,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 923,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 924,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 925,
+      "hodges": -1.3579132044103404e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 926,
+      "hodges": -1.3579132044103404e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 927,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 928,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 929,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 930,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 931,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 932,
+      "hodges": 1.866826815331211e-06,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 933,
+      "hodges": -0.0421907236093303,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 934,
+      "hodges": -0.0421907236093303,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 935,
+      "hodges": 9.034319581437169e-06,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 936,
+      "hodges": 9.034319581437169e-06,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 937,
+      "hodges": 7.825918396533867e-11,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 938,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 939,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 940,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 941,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 942,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 943,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 944,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 945,
+      "hodges": 0.03692271481759837,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 946,
+      "hodges": -0.11227212104902251,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 947,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 948,
+      "hodges": 2.0773415704245852e-07,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 949,
+      "hodges": 2.0773415704245852e-07,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 950,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 951,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 952,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 953,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 954,
+      "hodges": 6.304699836080638,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 955,
+      "hodges": 0.00074932375806615,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 956,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 957,
+      "hodges": 0.008233136421572638,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 958,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 959,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 960,
+      "hodges": 5.885418315968282e-06,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 961,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 962,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 963,
+      "hodges": 1.0249271251997271e-07,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 964,
+      "hodges": -0.0002750371163539914,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 965,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 966,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 967,
+      "hodges": -0.13227535378838015,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 968,
+      "hodges": -1.5087458725505656,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 969,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 970,
+      "hodges": -1.8559184173352456e-06,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 971,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 972,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 973,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 974,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 975,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 976,
+      "hodges": 0.02929622111697294,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 977,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 978,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 979,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 980,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 981,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 982,
+      "hodges": -0.0009972635262259471,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 983,
+      "hodges": 0.0005292765912530601,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 984,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 985,
+      "hodges": -5.403920500961187e-06,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 986,
+      "hodges": 6.94013912192866e-06,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 987,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 988,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 989,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 990,
+      "hodges": -0.0003099269294796055,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 991,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 992,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 993,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 994,
+      "hodges": 0.0009859888595052158,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 995,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 996,
+      "hodges": 0.039436429171487604,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 997,
+      "hodges": null,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 998,
+      "hodges": 5.6252892015523217e-05,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    },
+    {
+      "seed": 999,
+      "hodges": -0.09178935552783876,
+      "pushforward": null,
+      "ratio": null,
+      "forest_val": null,
+      "success": false
+    }
+  ],
+  "last_seed": "999",
+  "timestamp": 1767228640.5015774
+}

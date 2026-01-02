@@ -6,7 +6,10 @@ from sage.all import *
 if __name__ == "__main__":
     sys.path.append(os.getcwd())
 
-from src.chy_oracle.amplitude_spinor import hodges_6pt_mhv_spinor, ang_bracket, sq_bracket
+try:
+    from src.chy_oracle.amplitude_spinor import hodges_6pt_mhv_spinor, ang_bracket, sq_bracket
+except ImportError:
+    from chy_oracle.amplitude_spinor import hodges_6pt_mhv_spinor, ang_bracket, sq_bracket
 
 # Cache for spanning trees of K6
 _K6_SPANNING_TREES = None

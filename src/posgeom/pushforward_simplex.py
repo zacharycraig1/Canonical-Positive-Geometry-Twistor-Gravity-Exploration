@@ -38,3 +38,7 @@ def simplex_canonical_form(W, vertices):
         
     return abs(vol) / denom
 
+
+
+
+

@@ -16,3 +16,7 @@ There is no single $S_6$-invariant differential form on the moduli space $M_{0,6
 
 
 
+
+
+
+

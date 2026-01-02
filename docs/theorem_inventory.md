@@ -1,62 +1,36 @@
-# Theorem Inventory: MHV Gravity & Positive Geometry
+# Theorem Inventory
 
-This document tracks the precise mathematical statements verified in this repository, distinguishing between **background knowledge** (known theorems) and **new claims** (novel geometric constructions).
+## Validated Statements
 
-## 1. Background Theorems (The "Ansatz")
+### 1. The Core Identity
+The MHV gravity amplitude (reconstructed from Hodges determinant or KLT) is proportional to the **Rooted Forest Polynomial** evaluated on the spinor edge variables $z_{ij}$.
 
-These are established results we treat as infrastructure. Our contribution is **not** rediscovering these, but providing a specific geometric realization for them.
+\[ M_{MHV} = (-1)^{n-1} \frac{\langle 01 \rangle^8}{N_R \prod_{k \notin R} C_k^2} F_{n,R}(z_{ij}) \]
 
-### T1. The Matrix-Tree Theorem for All Minors
-**Source:** Chaiken (1982), "A combinatorial proof of the all minors matrix tree theorem".
-**Statement:**
-For a graph $G$ with Laplacian matrix $L$, the determinant of a submatrix $L^{(R)}_{(\bar{R})}$ (removing rows $R$ and columns $\bar{R}$) enumerates forests with specific root conditions.
-**In our context:**
-The "Weighted Laplacian" minor $\det(\tilde{L}^{(R)})$ exactly enumerates spanning forests where each component contains exactly one root from the set $R$.
-\[
-\det(\tilde{L}^{(R)}) = \sum_{F \in \text{Forests}(n, R)} \prod_{(i,j) \in E(F)} z_{ij}
-\]
-where $z_{ij}$ are the edge weights.
+*   **Status:** Verified for $n=4, 5, 6$.
+*   **Code:** `src/scripts/physics_pullback_n*.sage`.
+*   **Relation to Literature:** Equivalent to NSVW tree formula + Matrix-Tree Theorem.
 
-### T2. MHV Gravity as a Determinant
-**Source:** Hodges (2011), "New expressions for gravitational scattering amplitudes".
-**Statement:**
-The $n$-point MHV gravity amplitude is given by:
-\[
-M_n^{\text{MHV}} = (-1)^{n-1} \sigma_{n,R} \det(\Phi^{(R)})
-\]
-where $\Phi$ is a Hodges matrix (weighted Laplacian).
+### 2. Forest Polytope Facets
+The Newton polytope of $F_{n,R}$ (the "Forest Polytope") has boundaries that match physical factorization channels.
+For $n=6$, the 26 facets classify into:
+*   $x_{ij} \ge 0$ (14 facets): Contact terms / Simple boundaries.
+*   $\sum_{e \in S} x_e \le k$ (subset sums): Correspond to soft/collinear limits where a subset of particles goes soft/collinear.
+*   Global sum constraints.
 
-### T3. Canonical Forms of Polytopes
-**Source:** Arkani-Hamed, Bai, Lam (2017), "Positive Geometries and Canonical Forms".
-**Statement:**
-For a convex polytope $P$, there exists a unique canonical form $\Omega(P)$ on the dual projective space, which has logarithmic singularities on the boundaries dual to the vertices/facets of $P$.
+*   **Status:** Verified for $n=6$.
+*   **Code:** `src/posgeom/facets_to_subsets.py`.
 
----
+### 3. Saddle Point Pushforward
+The canonical form of the Forest Polytope $\Omega(P)$ can be computed as the pushforward of the dlog form on the positive orthant via the **Moment Map** $X = \nabla \log F(z)$.
+\[ \Omega(X) = \sum_{z^* : X(z^*)=X} \frac{1}{\det J(z^*)} \]
+This resolves the dimensional mismatch between the parameter space (108 dims for n=6) and the intrinsic polytope space (11 dims).
 
-## 2. New Geometric Claims (The "Result")
+*   **Status:** Verified numerically for $n=4, 5$.
+*   **Code:** `src/posgeom/saddle_pushforward.py`, `src/tests/test_saddle_pushforward.py`.
 
-These are the specific statements we aim to prove and publish.
+## Open Conjectures / Next Steps (Phase V)
 
-### C1. The "Forest Polytope" Identity
-**Status:** Verified for $n=4, 5$.
-**Statement:**
-The Newton polytope of the MHV gravity numerator (in the specific edge variables $z_{ij}$) is the **3-rooted spanning forest polytope** of the complete graph $K_n$.
-\[
-P_{\text{grav}} = \text{Newton}\left( \det(\tilde{L}^{(R)}) \right) = \text{Conv}\left( \{ e_F \mid F \in \text{Forests}(n, R) \} \right)
-\]
-
-### C2. The Toric Pushforward (Target of Phase H)
-**Status:** In Progress.
-**Statement:**
-There exists a projective toric variety $X_{P} \subset \mathbb{P}^{V-1}$ and a monomial map $\phi: (\mathbb{C}^*)^d \to X_P$ such that the pushforward of the standard toric form $\Omega_T = d\log t_1 \wedge \dots \wedge d\log t_d$ is the canonical form of the polytope $P$ (which equals the Amplitude).
-
-**Precision required:**
-We must define the map $\phi$ explicitly in terms of the lattice basis of the Forest Polytope.
-
-### C3. Factorization via Facet Geometry
-**Status:** To be verified.
-**Statement:**
-The facets of the Forest Polytope $P_{\text{grav}}$ are in one-to-one correspondence with the physical factorization channels of the amplitude (compatible with the poles of $\det(\tilde{L})$).
-
-
-
+1.  **Exact Jacobian Factor:** The map sweep for $n=6$ shows that the raw pushforward value is not simply equal to the amplitude (Ratio ~ $10^{-20}$ or $NaN$). There is likely a missing **Jacobian factor** or prefactor in the definition of the map itself to match the physical normalization.
+2.  **Map Uniqueness:** Is the Moment Map the *unique* map that generates the correct geometry? Or is there a "Twisted" map?
+3.  **Residues:** Explicitly matching the residues of the pushforward form to the factorization limits of gravity.

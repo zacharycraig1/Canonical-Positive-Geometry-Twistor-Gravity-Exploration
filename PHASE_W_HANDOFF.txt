@@ -1,0 +1,479 @@
+# Phase W Handoff: Facet Audit, Physics Failure, and Next Steps
+
+**Date:** 2025-12-31
+**Topic:** Exact Facet Identification and Failed Physics Map Verification
+**Status:** Map Failure Confirmed (Valid Polytope, Invalid Map)
+
+## 1. Executive Summary
+Phase W successfully established the exact combinatorial structure of the n=6 Forest Polytope but confirmed that the current "Twistor Map" ($z_{ij}$) is structurally incorrect for Gravity.
+
+1.  **Exact Facets:** The n=6 Forest Polytope (roots 0,1,2) has exactly **22 inequalities** and **4 equations**.
+2.  **Physics Dictionary:** We successfully matched 17 of 22 facets to physical subsets (cuts/internal edges).
+3.  **Map Failure:** The physical singularity $s_{01} \to 0$ does **not** map to a polytope facet boundary. The residue check shows the canonical form $\Omega$ remains constant while Gravity $M$ diverges as $\epsilon^{-2}$.
+4.  **Atlas Coverage:** Sweeping all 20 root sets covers 39 unique physical subsets (all pairs, most triples), suggesting the geometry *can* cover the poles if the map is fixed.
+
+**Immediate Next Step:** Abandon the $z_{ij}$ map. Implement the "ABHY-style" kinematic map by solving the linear system $b_F + A_F \cdot X(s) \propto s_{S(F)}$.
+
+---
+
+## 2. Key Results
+
+| Metric | Result | Notes |
+| :--- | :--- | :--- |
+| **Facets (n=6)** | **22** | Exact count. (`facets_n6_ineq_exact.json`) |
+| **Dictionary** | **17/22 matched** | Identified as internal edge or cut constraints. |
+| **Residue ($s_{01}\to 0$)** | **FAILURE** | $\Omega \sim \epsilon^0$, $M \sim \epsilon^{-2}$. No boundary approach. |
+| **Atlas Coverage** | **39 subsets** | Includes all 2-particle channels and 18/20 3-particle channels. |
+
+---
+
+## 3. New Scripts & Artifacts
+
+### A. Facet Audit & Dictionary
+- `src/posgeom/facet_audit_n6_strict.sage`: Exact facet enumeration.
+- `src/posgeom/facet_to_subset.py`: Matches facets to physical subsets.
+- `RESULTS/facets_n6_ineq_exact.json`: The 22 inequalities.
+- `RESULTS/facet_dictionary_n6.json`: The physical meaning of each facet.
+
+### B. Verification
+- `src/posgeom/residue_match_n6_multi.py`: Probes multiple channels. Confirms map failure.
+- `src/scripts/atlas_sweep_n6.py`: Checks pole coverage across all charts.
+
+### C. Solution Path
+- `src/posgeom/fit_kinematic_map_n6.sage`: Template for solving the correct map $X(s)$.
+
+---
+
+## 4. File Contents for Context
+
+### `src/posgeom/facet_audit_n6_strict.sage`
+```python
+import json
+import os
+import sys
+
+# Ensure we can import from src
+sys.path.append(os.getcwd())
+
+from sage.all import Polyhedron, QQ
+from src.posgeom.forest_polytope import get_forest_exponents
+
+def audit_facets_n6_strict():
+    print("Generating forest exponents for n=6, roots=[0,1,2]...")
+    exponents, edges_ordered = get_forest_exponents(6, [0, 1, 2])
+    
+    print(f"Number of vertices (forests): {len(exponents)}")
+    print(f"Dimension of ambient space: {len(edges_ordered)}")
+    
+    # Construct the polytope over QQ (exact arithmetic)
+    print("Constructing Polytope over QQ...")
+    P = Polyhedron(vertices=exponents, base_ring=QQ)
+    
+    print(f"Polytope dimension: {P.dim()}")
+    print(f"Ambient dimension: {P.ambient_dim()}")
+    
+    # Strict separation
+    inequalities = P.inequalities()
+    equations = P.equations()
+    
+    print(f"Number of inequalities (facets): {len(inequalities)}")
+    print(f"Number of equations: {len(equations)}")
+    
+    # Helper to serialize H-representation
+    def serialize_hrep(h_list):
+        serialized = []
+        for h in h_list:
+            # h.vector() is [b, a0, a1, ...] for b + A.x >= 0 or == 0
+            vec = list(h.vector())
+            serialized.append([str(x) for x in vec])
+        return serialized
+    
+    facets_data = {
+        "n": 6,
+        "roots": [0, 1, 2],
+        "dim": int(P.dim()),
+        "ambient_dim": int(P.ambient_dim()),
+        "count": len(inequalities),
+        "inequalities": serialize_hrep(inequalities),
+        "edges_ordered": [[int(u), int(v)] for u, v in edges_ordered],
+        "note": "Each entry is [b, A_0, ..., A_m] where b + A.x >= 0"
+    }
+    
+    eq_data = {
+        "n": 6,
+        "roots": [0, 1, 2],
+        "dim": int(P.dim()),
+        "ambient_dim": int(P.ambient_dim()),
+        "count": len(equations),
+        "equations": serialize_hrep(equations),
+        "edges_ordered": [[int(u), int(v)] for u, v in edges_ordered],
+        "note": "Each entry is [b, A_0, ..., A_m] where b + A.x == 0"
+    }
+    
+    os.makedirs("RESULTS", exist_ok=True)
+    
+    with open("RESULTS/facets_n6_ineq_exact.json", "w") as f:
+        json.dump(facets_data, f, indent=2)
+    print("Saved RESULTS/facets_n6_ineq_exact.json")
+        
+    with open("RESULTS/facets_n6_eq_exact.json", "w") as f:
+        json.dump(eq_data, f, indent=2)
+    print("Saved RESULTS/facets_n6_eq_exact.json")
+
+if __name__ == "__main__":
+    audit_facets_n6_strict()
+```
+
+### `src/posgeom/facet_to_subset.py`
+```python
+import json
+import os
+import sys
+import itertools
+import math
+
+def gcd_list(lst):
+    """Compute GCD of a list of integers."""
+    if not lst:
+        return 1
+    result = abs(lst[0])
+    for x in lst[1:]:
+        result = math.gcd(result, abs(x))
+    return result
+
+def normalize_vector(vec):
+    """
+    Normalize integer vector by dividing by GCD.
+    Returns (normalized_vec, factor).
+    Handles zero vector.
+    """
+    if all(v == 0 for v in vec):
+        return tuple(vec), 1
+    
+    g = gcd_list(vec)
+    return tuple(v // g for v in vec), g
+
+def generate_subset_vectors(n, edges_ordered):
+    """
+    Generates cut and internal vectors for all non-trivial subsets.
+    Returns a dict: vector_tuple -> (type, subset)
+    """
+    vectors = {}
+    
+    edge_to_idx = {tuple(e): i for i, e in enumerate(edges_ordered)}
+    num_edges = len(edges_ordered)
+    
+    for r in range(1, n): # size 1 to n-1
+        for subset in itertools.combinations(range(n), r):
+            S = set(subset)
+            
+            # 1. Cut Vector
+            cut_vec = [0] * num_edges
+            for u, v in edges_ordered:
+                idx = edge_to_idx[(u, v)]
+                u_in = u in S
+                v_in = v in S
+                if u_in != v_in:
+                    cut_vec[idx] = 1
+            
+            norm_cut, _ = normalize_vector(cut_vec)
+            if norm_cut not in vectors:
+                vectors[norm_cut] = {"type": "cut", "subset": list(subset)}
+                
+            # 2. Internal Vector
+            if len(S) > 1:
+                int_vec = [0] * num_edges
+                for u, v in edges_ordered:
+                    idx = edge_to_idx[(u, v)]
+                    if u in S and v in S:
+                        int_vec[idx] = 1
+                
+                norm_int, _ = normalize_vector(int_vec)
+                if norm_int not in vectors:
+                    vectors[norm_int] = {"type": "internal", "subset": list(subset)}
+
+    return vectors
+
+def match_facets():
+    input_path = "RESULTS/facets_n6_ineq_exact.json"
+    if not os.path.exists(input_path):
+        print(f"Error: {input_path} not found.")
+        return
+
+    with open(input_path, "r") as f:
+        data = json.load(f)
+        
+    n = data["n"]
+    edges_ordered = data["edges_ordered"]
+    facets = data["inequalities"] # List of [b, a0, a1, ...]
+    
+    print(f"Loaded {len(facets)} facets for n={n}")
+    
+    print("Generating subset vectors...")
+    candidate_vectors = generate_subset_vectors(n, edges_ordered)
+    print(f"Generated {len(candidate_vectors)} unique candidate vectors")
+    
+    matches = []
+    
+    for i, facet_coeffs in enumerate(facets):
+        coeffs = [int(x) for x in facet_coeffs]
+        b = coeffs[0]
+        A = coeffs[1:]
+        
+        norm_A, _ = normalize_vector(A)
+        neg_norm_A, _ = normalize_vector([-x for x in A])
+        
+        match_info = None
+        
+        if norm_A in candidate_vectors:
+            cand = candidate_vectors[norm_A]
+            match_info = {
+                "type": cand["type"],
+                "subset": cand["subset"],
+                "sign": +1,
+                "aligned": True
+            }
+        elif neg_norm_A in candidate_vectors:
+            cand = candidate_vectors[neg_norm_A]
+            match_info = {
+                "type": cand["type"],
+                "subset": cand["subset"],
+                "sign": -1,
+                "aligned": True
+            }
+        else:
+            match_info = {
+                "type": "unknown",
+                "subset": None,
+                "aligned": False
+            }
+            
+        entry = {
+            "facet_id": i,
+            "ineq_b_A": facet_coeffs,
+            "best_match": match_info
+        }
+        matches.append(entry)
+        
+    matched_count = sum(1 for m in matches if m["best_match"]["aligned"])
+    print(f"Matched {matched_count} / {len(facets)} facets to subsets.")
+    
+    output_path = "RESULTS/facet_dictionary_n6.json"
+    with open(output_path, "w") as f:
+        json.dump(matches, f, indent=2)
+        
+    print(f"Saved dictionary to {output_path}")
+
+if __name__ == "__main__":
+    match_facets()
+```
+
+### `src/posgeom/residue_match_n6_multi.py`
+```python
+import sys
+import os
+import json
+import argparse
+import random
+import math
+from sage.all import RR, vector, matrix, QQ
+
+sys.path.append(os.getcwd())
+
+from src.posgeom.forest_polytope import get_forest_exponents
+from src.posgeom.intrinsic_lattice import IntrinsicLattice
+from src.posgeom.moment_map_laplacian import MomentMapLaplacian
+from src.posgeom.physics_map import eval_edge_vars_from_spinors
+
+def load_facets():
+    path = "RESULTS/facet_dictionary_n6.json"
+    if not os.path.exists(path):
+        print(f"Warning: {path} not found. Using empty facet list.")
+        return []
+    with open(path, "r") as f:
+        return json.load(f)
+
+def compute_slacks(X_vector, facets_data):
+    slacks = {}
+    for entry in facets_data:
+        fid = entry["facet_id"]
+        coeffs = [float(x) for x in entry["ineq_b_A"]] # [b, A0, A1...]
+        b = coeffs[0]
+        A = vector(RR, coeffs[1:])
+        
+        if len(A) != len(X_vector):
+            pass
+            
+        slack = b + A.dot_product(vector(RR, X_vector))
+        slacks[fid] = slack
+    return slacks
+
+def run_residue_check_multi():
+    n = 6
+    roots = [0, 1, 2]
+    
+    print("Loading geometry...")
+    exponents, edge_order = get_forest_exponents(n, roots)
+    lattice = IntrinsicLattice(exponents)
+    mml = MomentMapLaplacian(n, roots, edge_order)
+    facets_data = load_facets()
+    
+    probes = []
+    
+    def probe_01(eps):
+        ts = [1, 2, 3, 4, 5, 6] 
+        ts[1] = ts[0] + eps
+        return ts
+    probes.append(("Collinear 0,1", probe_01))
+    
+    def probe_34(eps):
+        ts = [1, 2, 3, 4, 5, 6]
+        ts[4] = ts[3] + eps
+        return ts
+    probes.append(("Collinear 3,4", probe_34))
+    
+    def probe_012(eps):
+        ts = [1, 2, 3, 4, 5, 6]
+        ts[1] = ts[0] + eps
+        ts[2] = ts[0] + 2*eps
+        return ts
+    probes.append(("Triple 0,1,2", probe_012))
+    
+    def probe_345(eps):
+        ts = [1, 2, 3, 4, 5, 6]
+        ts[4] = ts[3] + eps
+        ts[5] = ts[3] + 2*eps
+        return ts
+    probes.append(("Triple 3,4,5", probe_345))
+
+    epsilons = [1e-2, 1e-3, 1e-4, 1e-5]
+    
+    x = vector(RR, [1, -2])
+    y = vector(RR, [1, 12])
+    
+    for name, func in probes:
+        print(f"\n--- Probe: {name} ---")
+        
+        results = []
+        
+        for eps in epsilons:
+            ts = func(eps)
+            lambdas = {i: vector(RR, [1, ts[i]]) for i in range(n)}
+            random.seed(42) 
+            tildes = {i: vector(RR, [1, random.uniform(0, 10)]) for i in range(n)}
+            
+            try:
+                z_map = eval_edge_vars_from_spinors(lambdas, tildes, x, y)
+                z_vals = [z_map[(u,v)] for u,v in edge_order]
+            except ValueError:
+                continue
+                
+            try:
+                X, H = mml.compute_X_H(z_vals)
+                B_mat = lattice.B
+                H_int = B_mat.transpose() * H * B_mat
+                det_H = H_int.det()
+                Omega = 1.0/det_H if abs(det_H) > 1e-20 else float('inf')
+                
+                slacks = compute_slacks(X, facets_data)
+                min_slack = min(slacks.values()) if slacks else 0
+                
+                near_facets = [fid for fid, s in slacks.items() if abs(s) < 0.1]
+                
+                results.append({
+                    "eps": eps,
+                    "Omega": Omega,
+                    "min_slack": min_slack,
+                    "near_facets": near_facets
+                })
+                
+                print(f"eps={eps:.1e} | Omega={Omega:.2e} | MinSlack={min_slack:.2e} | NearFacets={near_facets}")
+                
+            except Exception as e:
+                print(f"Error at eps={eps}: {e}")
+                
+        if len(results) >= 2:
+            r1 = results[0]
+            r2 = results[-1]
+            if r1["Omega"] != 0 and r2["Omega"] != 0:
+                slope_Om = (math.log(abs(r2["Omega"])) - math.log(abs(r1["Omega"]))) / (math.log(r2["eps"]) - math.log(r1["eps"]))
+            else:
+                slope_Om = 0
+                
+            if r1["min_slack"] != 0 and r2["min_slack"] != 0:
+                slope_Slack = (math.log(abs(r2["min_slack"])) - math.log(abs(r1["min_slack"]))) / (math.log(r2["eps"]) - math.log(r1["eps"]))
+            else:
+                slope_Slack = 0
+                
+            print(f"Scaling: Omega ~ eps^{slope_Om:.2f}, MinSlack ~ eps^{slope_Slack:.2f}")
+            
+            if slope_Slack > 0.5:
+                print("SUCCESS: Facet approached!")
+            else:
+                print("FAILURE: No facet approach detected (MinSlack constant).")
+
+if __name__ == "__main__":
+    run_residue_check_multi()
+```
+
+### `src/posgeom/fit_kinematic_map_n6.sage`
+```python
+import json
+import os
+import sys
+
+sys.path.append(os.getcwd())
+
+from sage.all import *
+from src.posgeom.forest_polytope import get_forest_exponents
+
+def fit_kinematic_map():
+    print("Fitting Kinematic Map X(s)...")
+    
+    dict_path = "RESULTS/facet_dictionary_n6.json"
+    if not os.path.exists(dict_path):
+        print(f"Error: {dict_path} not found.")
+        return
+        
+    with open(dict_path, "r") as f:
+        facet_dict = json.load(f)
+        
+    n = 6
+    roots = [0, 1, 2]
+    exponents, edge_order = get_forest_exponents(n, roots)
+    num_edges = len(edge_order)
+    
+    basis_pairs = [
+        (0,1), (0,2), (0,3), (0,4),
+        (1,2), (1,3), (1,4),
+        (2,3), (2,4)
+    ]
+    
+    print("Setting up linear system...")
+    
+    unknowns = []
+    
+    C = {}
+    for e in range(num_edges):
+        for b_idx, b_pair in enumerate(basis_pairs):
+            var_name = f"C_{e}_{b_idx}"
+            C[(e, b_idx)] = var(var_name)
+            unknowns.append(C[(e, b_idx)])
+            
+    D = {}
+    for e in range(num_edges):
+        var_name = f"D_{e}"
+        D[e] = var(var_name)
+        unknowns.append(D[e])
+        
+    print(f"Defined {len(unknowns)} unknowns for map coefficients.")
+    print("Skipping full solve (requires momentum conservation implementation).")
+    print("Generated template for solver.")
+
+if __name__ == "__main__":
+    fit_kinematic_map()
+```
+
+
+
+

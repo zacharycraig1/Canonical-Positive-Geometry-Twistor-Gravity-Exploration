@@ -1,0 +1,915 @@
+================================================================================
+       AGENT DIRECTIVE: PROVE POSITIVE GEOMETRY FOR 6-POINT MHV GRAVITY
+================================================================================
+
+CONJECTURE:
+-----------
+The 6-point MHV gravity amplitude is the canonical form of the positive region 
+in M̄_{0,6} defined by positivity of principal minors of the reduced CHY Ψ-matrix.
+
+GOAL: Full mathematical proof, not just numerical verification.
+
+================================================================================
+                              PHASE 0: SETUP
+================================================================================
+
+REQUIRED SOFTWARE:
+- SageMath (with symbolic ring)
+- Python 3.x
+- Optional: Mathematica for cross-verification
+
+NOTATION CONVENTIONS:
+- Particles labeled i = 1, 2, 3, 4, 5, 6
+- MHV configuration: particles 1, 2 have negative helicity; 3, 4, 5, 6 positive
+- Worldsheet coordinates: z_i ∈ CP^1
+- Gauge fixing: (z_1, z_2, z_3) = (0, 1, ∞)
+- Free variables: z_4, z_5, z_6
+
+================================================================================
+                     PHASE 1: SPINOR-HELICITY FORMALISM
+================================================================================
+
+FOUR-MOMENTUM DECOMPOSITION:
+----------------------------
+Every null momentum p_i^μ (with p_i^2 = 0) decomposes as:
+
+    p_i^{αα̇} = λ_i^α  λ̃_i^{α̇}
+
+where:
+    α, α̇ ∈ {1, 2}  (SL(2,C) spinor indices)
+    λ_i = (λ_i^1, λ_i^2)      "holomorphic spinor"
+    λ̃_i = (λ̃_i^1, λ̃_i^2)    "anti-holomorphic spinor"
+
+SPINOR BRACKETS:
+----------------
+Angle bracket (holomorphic):
+
+    ⟨ij⟩ = λ_i^1 λ_j^2 - λ_i^2 λ_j^1 = ε_{αβ} λ_i^α λ_j^β
+
+Square bracket (anti-holomorphic):
+
+    [ij] = λ̃_i^1 λ̃_j^2 - λ̃_i^2 λ̃_j^1 = ε_{α̇β̇} λ̃_i^{α̇} λ̃_j^{β̇}
+
+where ε_{12} = -ε_{21} = 1, ε_{11} = ε_{22} = 0.
+
+PROPERTIES:
+    ⟨ij⟩ = -⟨ji⟩           (antisymmetric)
+    [ij] = -[ji]            (antisymmetric)
+    ⟨ii⟩ = [ii] = 0
+
+MANDELSTAM INVARIANTS:
+----------------------
+    s_{ij} = (p_i + p_j)^2 = ⟨ij⟩[ij]
+
+Multi-particle invariants:
+    s_{ijk} = (p_i + p_j + p_k)^2 = s_{ij} + s_{jk} + s_{ik}
+    s_{123} = s_{12} + s_{23} + s_{13}
+
+For massless 6-particle scattering:
+    s_{123} = s_{456}    (momentum conservation)
+    s_{234} = s_{156}
+    s_{345} = s_{126}
+
+MOMENTUM CONSERVATION:
+----------------------
+    Σ_{i=1}^{6} p_i^μ = 0
+
+In spinor form:
+    Σ_{i=1}^{6} λ_i^α λ̃_i^{α̇} = 0
+
+This gives 4 real constraints. Use to eliminate λ_6 and λ̃_6:
+
+    λ_6 = - (λ_1[1̃6] + λ_2[2̃6] + λ_3[3̃6] + λ_4[4̃6] + λ_5[5̃6]) / [6̃6]
+    
+(But [66] = 0, so use the full 2x2 linear system instead.)
+
+EXPLICIT PARAMETRIZATION:
+-------------------------
+Choose coordinates:
+    λ_1 = (1, 0)
+    λ_2 = (0, 1)  
+    λ_3 = (1, 1)
+    λ_4 = (1, x_4)
+    λ_5 = (1, x_5)
+    λ_6 = determined by momentum conservation
+
+    λ̃_1 = (1, 0)
+    λ̃_2 = (0, 1)
+    λ̃_3 = (y_3, z_3)
+    λ̃_4 = (y_4, z_4)
+    λ̃_5 = (y_5, z_5)
+    λ̃_6 = determined by momentum conservation
+
+With this:
+    ⟨12⟩ = 1
+    ⟨13⟩ = 1
+    ⟨23⟩ = 1
+    ⟨14⟩ = x_4
+    ⟨24⟩ = -1
+    etc.
+
+================================================================================
+                      PHASE 2: CHY SCATTERING EQUATIONS
+================================================================================
+
+THE CHY FORMULA:
+----------------
+The tree-level S-matrix for n massless particles is:
+
+    M_n = ∫ dμ_n × I_L(z, p, ε) × I_R(z, p, ε)
+
+where dμ_n is the measure over M_{0,n} localized on scattering equation solutions.
+
+SCATTERING EQUATIONS:
+---------------------
+For each particle i:
+
+    f_i(z) = Σ_{j≠i} s_{ij} / (z_i - z_j) = 0
+
+These are n equations, but only (n-3) are independent due to SL(2,C) invariance.
+
+GAUGE FIXING:
+-------------
+Fix three points: (z_1, z_2, z_3) = (0, 1, ∞)
+
+Remaining equations for 6-point:
+
+    f_4 = s_{14}/z_4 + s_{24}/(z_4-1) + s_{45}/(z_4-z_5) + s_{46}/(z_4-z_6) = 0
+    
+    f_5 = s_{15}/z_5 + s_{25}/(z_5-1) + s_{45}/(z_5-z_4) + s_{56}/(z_5-z_6) = 0
+    
+    f_6 = s_{16}/z_6 + s_{26}/(z_6-1) + s_{46}/(z_6-z_4) + s_{56}/(z_6-z_5) = 0
+
+Note: Terms with z_3 = ∞ vanish: s_{34}/(z_4 - ∞) → 0
+
+JACOBIAN MATRIX:
+----------------
+    Φ_{ij} = ∂f_i / ∂z_j    for i,j ∈ {4, 5, 6}
+
+Explicit entries:
+
+    Φ_{44} = -s_{14}/z_4^2 - s_{24}/(z_4-1)^2 - s_{45}/(z_4-z_5)^2 - s_{46}/(z_4-z_6)^2
+    
+    Φ_{45} = s_{45}/(z_4-z_5)^2
+    
+    Φ_{46} = s_{46}/(z_4-z_6)^2
+    
+    (and cyclic permutations)
+
+NUMBER OF SOLUTIONS:
+--------------------
+For n-point, there are (n-3)! solutions.
+For n = 6: (6-3)! = 3! = 6 solutions
+
+Label solutions as z^{(σ)} for σ = 1, ..., 6.
+
+================================================================================
+                        PHASE 3: THE CHY Ψ-MATRIX
+================================================================================
+
+DEFINITION:
+-----------
+The Ψ-matrix is a 2n × 2n antisymmetric matrix. For gravity MHV, we use the 
+reduced n × n version.
+
+For particles i, j (i ≠ j):
+
+    Ψ_{ij} = (ε_i · ε_j) / (z_i - z_j)
+
+where ε_i is the polarization vector of particle i.
+
+POLARIZATION VECTORS:
+---------------------
+In spinor-helicity formalism:
+
+Positive helicity (i = 3,4,5,6):
+    ε_i^{+,μ} = ⟨q|σ^μ|i] / (√2 ⟨qi⟩)
+
+Negative helicity (i = 1,2):
+    ε_i^{-,μ} = ⟨i|σ^μ|q] / (√2 [iq])
+
+where q is an arbitrary reference spinor.
+
+POLARIZATION DOT PRODUCTS:
+--------------------------
+    ε_i^+ · ε_j^+ = [ij]^2 / (⟨qi⟩⟨qj⟩)  × (reference-dependent factor)
+    
+    ε_i^- · ε_j^- = ⟨ij⟩^2 / ([qi][qj])  × (reference-dependent factor)
+    
+    ε_i^- · ε_j^+ = ⟨ij⟩[ij] / (⟨qi⟩[qj]) × (reference-dependent factor)
+
+After gauge fixing the reference spinor cleverly, for MHV (1,2 negative):
+
+    Ψ_{ij} = [ij]^2 / (z_i - z_j)           for i,j ∈ {3,4,5,6}
+    
+    Ψ_{ij} = ⟨ij⟩^2 / (z_i - z_j)           for i,j ∈ {1,2}  [only ⟨12⟩^2/(z_1-z_2)]
+    
+    Ψ_{ij} = ⟨ij⟩[ij] / (z_i - z_j)         for mixed helicity
+
+EXPLICIT 6×6 Ψ-MATRIX:
+----------------------
+Ψ = 
+
+       |   1        2          3          4          5          6      |
+    ---|----------------------------------------------------------------|
+     1 |   0      ⟨12⟩²/z₁₂   ⟨13⟩[13]/z₁₃  ⟨14⟩[14]/z₁₄  ⟨15⟩[15]/z₁₅  ⟨16⟩[16]/z₁₆
+     2 | -⟨12⟩²/z₁₂   0       ⟨23⟩[23]/z₂₃  ⟨24⟩[24]/z₂₄  ⟨25⟩[25]/z₂₅  ⟨26⟩[26]/z₂₆
+     3 |  ...       ...         0         [34]²/z₃₄    [35]²/z₃₅    [36]²/z₃₆
+     4 |  ...       ...       ...           0         [45]²/z₄₅    [46]²/z₄₆
+     5 |  ...       ...       ...         ...           0         [56]²/z₅₆
+     6 |  ...       ...       ...         ...         ...           0
+
+where z_{ij} = z_i - z_j.
+
+With gauge fixing (z_1, z_2, z_3) = (0, 1, ∞):
+
+    z_{12} = -1
+    z_{13} = -∞  →  terms with z_{13} in denominator vanish
+    z_{14} = -z_4
+    z_{15} = -z_5
+    z_{16} = -z_6
+    z_{23} = -∞  →  terms vanish
+    z_{24} = 1 - z_4
+    z_{25} = 1 - z_5
+    z_{26} = 1 - z_6
+    z_{34} = ∞   →  terms vanish
+    z_{35} = ∞   →  terms vanish
+    z_{36} = ∞   →  terms vanish
+    z_{45} = z_4 - z_5
+    z_{46} = z_4 - z_6
+    z_{56} = z_5 - z_6
+
+REDUCED Ψ-MATRIX:
+-----------------
+Delete rows and columns 1 and 6 to get Ψ' (4×4 matrix, indices {2,3,4,5}).
+
+But wait: row/col 3 has all zeros after gauge fixing!
+
+IMPORTANT: The correct reduction for CHY is to delete rows/cols corresponding 
+to the gauge-fixed points. Standard choice: delete rows/cols 1, n (here 1, 6).
+
+Ψ'_{4×4} has indices {2, 3, 4, 5}:
+
+    Ψ'_{23} = lim_{z_3→∞} ⟨23⟩[23]/(1 - z_3) = 0
+    Ψ'_{24} = ⟨24⟩[24]/(1 - z_4)
+    Ψ'_{25} = ⟨25⟩[25]/(1 - z_5)
+    Ψ'_{34} = lim_{z_3→∞} [34]²/(z_3 - z_4) = 0
+    Ψ'_{35} = 0
+    Ψ'_{45} = [45]²/(z_4 - z_5)
+
+So Ψ' is:
+
+         |   2              3       4                5            |
+      ---|--------------------------------------------------------|
+       2 |   0              0    ⟨24⟩[24]/(1-z₄)  ⟨25⟩[25]/(1-z₅)  
+       3 |   0              0       0                0            
+       4 | -⟨24⟩[24]/(1-z₄)  0       0          [45]²/(z₄-z₅)     
+       5 | -⟨25⟩[25]/(1-z₅)  0   -[45]²/(z₄-z₅)      0            
+
+PFAFFIAN:
+---------
+For 4×4 antisymmetric matrix A with entries A_{ij}:
+
+    Pf(A) = A_{12}A_{34} - A_{13}A_{24} + A_{14}A_{23}
+
+For our Ψ' (with row 3 all zeros):
+
+    Pf(Ψ') = Ψ'_{23}·Ψ'_{45} - Ψ'_{24}·Ψ'_{35} + Ψ'_{25}·Ψ'_{34}
+           = 0·Ψ'_{45} - Ψ'_{24}·0 + Ψ'_{25}·0
+           = 0
+
+This is a problem! The naive gauge fixing kills the Pfaffian.
+
+RESOLUTION: USE DIFFERENT REDUCTION
+-----------------------------------
+The correct CHY procedure uses "reduced Pfaffian":
+
+    Pf'(Ψ) = (-1)^{i+j} Pf(Ψ^{ij,ij}) / (z_i - z_j)
+
+where Ψ^{ij,ij} means delete rows AND columns i and j.
+
+Standard choice: i = 1, j = 2 (not 1 and 6!)
+
+Ψ^{12,12} is 4×4 with indices {3, 4, 5, 6}:
+
+    Ψ^{12,12}_{34} = [34]²/(z_3 - z_4) = [34]²/(∞ - z_4) = 0
+    Ψ^{12,12}_{35} = [35]²/(∞ - z_5) = 0
+    Ψ^{12,12}_{36} = [36]²/(∞ - z_6) = 0
+    Ψ^{12,12}_{45} = [45]²/(z_4 - z_5)
+    Ψ^{12,12}_{46} = [46]²/(z_4 - z_6)
+    Ψ^{12,12}_{56} = [56]²/(z_5 - z_6)
+
+So Ψ^{12,12} is:
+
+         |   3       4                5                6            |
+      ---|-----------------------------------------------------------|
+       3 |   0       0                0                0            
+       4 |   0       0          [45]²/(z₄-z₅)    [46]²/(z₄-z₆)     
+       5 |   0   -[45]²/(z₄-z₅)       0          [56]²/(z₅-z₆)     
+       6 |   0   -[46]²/(z₄-z₆)  -[56]²/(z₅-z₆)       0            
+
+Pf(Ψ^{12,12}) = Ψ_{34}Ψ_{56} - Ψ_{35}Ψ_{46} + Ψ_{36}Ψ_{45}
+              = 0·Ψ_{56} - 0·Ψ_{46} + 0·Ψ_{45}
+              = 0
+
+STILL ZERO. The z_3 = ∞ gauge kills column 3.
+
+CORRECT APPROACH: TAKE LIMIT CAREFULLY
+--------------------------------------
+Before gauge fixing, define:
+
+    Pf'(Ψ) = Pf(Ψ^{12,12}) / (z_1 - z_2)
+
+Then take limit z_1 → 0, z_2 → 1, z_3 → ∞.
+
+The correct formula (Cachazo-He-Yuan) is:
+
+    Pf'(Ψ) = Pf(Ψ^{ij,kl}) × (z_k - z_l) / ((z_i - z_j)(z_i - z_k)(z_j - z_l))
+
+with specific index choices. See Phase 3B below.
+
+================================================================================
+                   PHASE 3B: CORRECT CHY GRAVITY INTEGRAND
+================================================================================
+
+The gravity amplitude in CHY is:
+
+    M_n^{gravity} = ∫ dμ_n × Pf'(Ψ)^2
+
+where the measure is:
+
+    dμ_n = (z_{ab} z_{bc} z_{ca})^2 × |Φ^{abc}|^{-1} × Π_{i≠a,b,c} δ(f_i) dz_i
+
+with (a,b,c) = (1,2,3) the gauge-fixed points.
+
+EXPLICIT FORMULA FOR 6-POINT:
+-----------------------------
+    M_6 = (z_{12} z_{23} z_{31})^2 × Σ_{solutions σ} [Pf'(Ψ)]^2 / |det Φ^{123}|
+
+    = Σ_{σ=1}^{6}  [Pf'(Ψ)|_{z=z^(σ)}]^2 / |det Φ_{3×3}|_{z=z^(σ)}
+
+The reduced Pfaffian Pf'(Ψ) for MHV can be computed as:
+
+    Pf'(Ψ)_{MHV} = ⟨12⟩^4 × Σ_{cyc} [34][56] / ((z_1-z_3)(z_1-z_5)(z_2-z_4)(z_2-z_6))
+
+(This is the Hodges formula in CHY language.)
+
+================================================================================
+                   PHASE 4: POSITIVITY CONDITIONS
+================================================================================
+
+CONJECTURE REFINEMENT:
+----------------------
+The positive geometry for gravity is defined on M_{0,n}^+ (the positive part 
+of the moduli space) with additional constraints from the Ψ-matrix.
+
+CONDITION SET A: Worldsheet positivity
+--------------------------------------
+The "positive" region of M_{0,n} is typically:
+
+    0 < z_1 < z_2 < ... < z_n < ∞  (after Möbius fixing z_n = ∞)
+
+With our gauge (z_1, z_2, z_3) = (0, 1, ∞):
+
+    0 < z_4, z_5, z_6   AND   orderings to be determined
+
+For positive geometry, try:
+
+    ORDERING 1: 0 < z_4 < z_5 < z_6
+    ORDERING 2: 0 < z_4 < 1 < z_5 < z_6  
+    ORDERING 3: All 3! orderings contribute
+
+CONDITION SET B: Ψ-matrix positivity
+------------------------------------
+For the positive geometry, require:
+
+    OPTION B1: All (non-gauge-fixed) entries Ψ_{ij} > 0
+    
+    OPTION B2: Pf'(Ψ) > 0
+    
+    OPTION B3: All principal minors of Ψ_{reduced} > 0 (totally positive)
+    
+    OPTION B4: The matrix (iΨ) is positive semi-definite
+
+TEST EACH OPTION:
+-----------------
+For B1 with indices {4,5,6}:
+    [45]²/(z_4 - z_5) > 0  requires  z_4 > z_5  (since [45]² ≥ 0)
+    [46]²/(z_4 - z_6) > 0  requires  z_4 > z_6
+    [56]²/(z_5 - z_6) > 0  requires  z_5 > z_6
+    
+    Combined: z_4 > z_5 > z_6 > 0
+
+For B2:
+    Compute Pf'(Ψ) explicitly and find where it's positive.
+
+TASK FOR AGENT:
+---------------
+1. Implement Pf'(Ψ) as function of (z_4, z_5, z_6) and spinors
+2. For each ordering (z_4 > z_5 > z_6, etc.), check if Pf'(Ψ) > 0
+3. The correct region R should have EXACTLY 6 connected components 
+   (corresponding to 6 scattering equation solutions)
+
+================================================================================
+                    PHASE 5: CANONICAL FORM COMPUTATION
+================================================================================
+
+DEFINITION:
+-----------
+The canonical form Ω(R) of a positive geometry R is the unique differential 
+form satisfying:
+
+1. Ω has logarithmic singularities on all boundaries of R
+2. Res_{∂R} Ω = Ω(∂R)  (recursive structure)
+3. For a point (0-dimensional R), Ω = 1
+
+FORMULA FOR SIMPLE POLYTOPES:
+-----------------------------
+If R is a simplex with vertices v_1, ..., v_{d+1} in ℝ^d:
+
+    Ω(R) = ⟨Y d^d Y⟩ / (⟨Y v_1⟩ ⟨Y v_2⟩ ... ⟨Y v_{d+1}⟩)
+
+where Y is a point in projective space and ⟨·⟩ denotes the standard pairing.
+
+For d = 3 (our case with z_4, z_5, z_6):
+
+    Ω = (vol form) / (product of 4 linear factors)
+
+FORMULA FOR GENERAL POSITIVE GEOMETRIES:
+----------------------------------------
+If R = {x : g_1(x) > 0, ..., g_k(x) > 0}:
+
+    Ω(R) = (±1) × d^n x / (g_1 × g_2 × ... × g_k)  
+    
+    (with correct orientation and normalization)
+
+For rational constraints, use partial fractions.
+
+FORMULA USING ORLIK-SOLOMON ALGEBRA:
+------------------------------------
+For hyperplane arrangements, the canonical form is:
+
+    Ω = Σ_F  c_F × d log(H_1) ∧ d log(H_2) ∧ ... ∧ d log(H_k)
+
+where the sum is over flags F of flats, and H_i are hyperplane equations.
+
+YOUR EXISTING COMPUTATION:
+--------------------------
+If you've computed connected flats and Orlik-Solomon relations, use:
+
+    Ω = Σ_{connected flats F} (±1) × ω_F
+
+where ω_F = d log(f_1) ∧ ... ∧ d log(f_k) for hyperplanes in flat F.
+
+EXPLICIT TASK:
+--------------
+1. Identify boundaries of R (where does each positivity condition become = 0?)
+2. Write Ω as:
+   
+       Ω = N(z_4, z_5, z_6; spinors) × dz_4 ∧ dz_5 ∧ dz_6
+           -------------------------------------------------
+           D_1(z) × D_2(z) × ... × D_k(z)
+   
+   where D_i are the boundary equations.
+
+3. Determine numerator N by requiring:
+   - Correct degree (should be degree 0 in z's after accounting for measure)
+   - Unit leading residues
+
+================================================================================
+                   PHASE 6: KNOWN GRAVITY AMPLITUDE
+================================================================================
+
+BGK FORMULA (Berends-Giele-Kuijf):
+----------------------------------
+The n-point MHV gravity amplitude is:
+
+    M_n^{MHV} = ⟨12⟩^8 / ⟨12⟩⟨23⟩...⟨n1⟩ × Σ_{perms} F(perm)
+
+For 6-point specifically:
+
+    M_6^{MHV} = ⟨12⟩^8 × G_6 / (⟨12⟩⟨23⟩⟨34⟩⟨45⟩⟨56⟩⟨61⟩ × s_{123} s_{234} s_{345})
+
+where G_6 is a polynomial in angle and square brackets.
+
+HODGES FORMULA (cleaner):
+-------------------------
+    M_n^{MHV} = det(H) / (⟨12⟩⟨23⟩...⟨n1⟩)
+
+where H is the (n-2) × (n-2) Hodges matrix:
+
+    H_{ij} = [i+1, j+1] / ⟨i+1, j+1⟩   for i ≠ j
+    H_{ii} = - Σ_{k≠i} [i+1, k+1] ⟨1, k+1⟩⟨2, k+1⟩ / (⟨1, i+1⟩⟨2, i+1⟩⟨i+1, k+1⟩)
+
+For n = 6, H is 4×4.
+
+BCFW RECURSION:
+---------------
+    M_6^{MHV} = Σ_{channels} M_L × 1/P² × M_R
+
+Channels for (1^- 2^- 3^+ 4^+ 5^+ 6^+):
+    - (12|3456): M_3(1,2,P) × M_5(-P,3,4,5,6)
+    - (123|456): M_4(1,2,3,P) × M_4(-P,4,5,6)
+    - etc.
+
+CHY FORMULA (for verification):
+-------------------------------
+    M_6 = Σ_{σ=1}^{6} [Pf'(Ψ)]^2 / J_σ
+
+where J_σ = |det Φ_{3×3}| at solution σ.
+
+EXPLICIT NUMERICAL TEST POINT:
+------------------------------
+Choose specific spinor values:
+
+    ⟨12⟩ = 1,  ⟨13⟩ = 1,  ⟨14⟩ = t,   ⟨15⟩ = t²,  ⟨16⟩ = computed
+    [12] = -s₁₂, [13] = -s₁₃, [14] = -s₁₄/t, etc.
+
+with s_{ij} = 1 for simplicity, then verify:
+
+    Ω(R)|_{evaluated} == M_6^{MHV}|_{same kinematics}
+
+================================================================================
+                    PHASE 7: BOUNDARY-FACTORIZATION CHECK
+================================================================================
+
+PHYSICAL FACTORIZATION:
+-----------------------
+At pole s_{ijk} → 0, the amplitude factorizes:
+
+    M_6 → M_4(i,j,k,P) × 1/s_{ijk} × M_4(-P, remaining)
+
+GEOMETRIC INTERPRETATION:
+-------------------------
+The boundary of R where s_{ijk} → 0 should satisfy:
+
+    Res_{s_{ijk}=0} Ω(R) = Ω(R_L) × Ω(R_R)
+
+where R_L and R_R are positive geometries for 4-point amplitudes.
+
+TASK:
+-----
+For each factorization channel (s_{123}, s_{234}, s_{345}, s_{126}, etc.):
+
+1. Find the corresponding boundary ∂_i R
+2. Compute residue: Res_{∂_i} Ω(R)
+3. Verify: Res = (4-pt gravity) × (4-pt gravity)
+
+4-POINT GRAVITY:
+----------------
+    M_4^{gravity} = ⟨12⟩^8 [34]^8 / (s t u)
+    
+where s = s_{12} = s_{34}, t = s_{13} = s_{24}, u = s_{14} = s_{23}.
+
+For MHV 4-point: M_4 = ⟨12⟩^4 [34]^4 / (s_{12} s_{23})
+
+================================================================================
+                      PHASE 8: PROOF STRUCTURE
+================================================================================
+
+THEOREM STATEMENT:
+------------------
+Let R_6 ⊂ M_{0,6} be the region defined by:
+    [explicit inequalities from Phase 4]
+
+Then:
+1. R_6 is a positive geometry (boundaries are positive geometries)
+2. The canonical form Ω(R_6) equals the 6-point MHV gravity amplitude
+3. Each codimension-1 boundary of R_6 corresponds to a factorization channel
+
+PROOF OUTLINE:
+--------------
+Step 1: Define R_6 explicitly
+    - Give inequalities in (z_4, z_5, z_6) coordinates
+    
+Step 2: Compute dim(R_6) = 3, verify it's full-dimensional
+
+Step 3: Enumerate boundaries ∂_i R_6
+    - Each should be 2-dimensional
+    
+Step 4: Compute canonical form
+    - Use triangulation or direct formula
+    
+Step 5: Compare to M_6^{MHV}
+    - Symbolic equality, not just numerical
+    
+Step 6: Verify boundary residues
+    - Each residue = lower-point canonical form
+    
+Step 7: Prove uniqueness
+    - Ω is uniquely determined by boundary structure
+
+================================================================================
+                    IMPLEMENTATION CODE SKELETON
+================================================================================
+
+```python
+# File: positive_geometry_gravity.sage
+
+from sage.all import *
+import itertools
+
+# ============ PHASE 1: Spinor Setup ============
+
+class SpinorKinematics:
+    """6-particle MHV kinematics in spinor-helicity formalism."""
+    
+    def __init__(self):
+        # Define symbolic spinor components
+        self.R = PolynomialRing(QQ, 
+            ['l1a','l1b','l2a','l2b','l3a','l3b','l4a','l4b','l5a','l5b','l6a','l6b',
+             't1a','t1b','t2a','t2b','t3a','t3b','t4a','t4b','t5a','t5b','t6a','t6b'])
+        self.vars = self.R.gens()
+        
+    def angle_bracket(self, i, j):
+        """Compute <ij> = λ_i^1 λ_j^2 - λ_i^2 λ_j^1"""
+        la_i, lb_i = self.vars[2*(i-1)], self.vars[2*(i-1)+1]
+        la_j, lb_j = self.vars[2*(j-1)], self.vars[2*(j-1)+1]
+        return la_i * lb_j - lb_i * la_j
+    
+    def square_bracket(self, i, j):
+        """Compute [ij] = λ̃_i^1 λ̃_j^2 - λ̃_i^2 λ̃_j^1"""
+        ta_i, tb_i = self.vars[12 + 2*(i-1)], self.vars[12 + 2*(i-1)+1]
+        ta_j, tb_j = self.vars[12 + 2*(j-1)], self.vars[12 + 2*(j-1)+1]
+        return ta_i * tb_j - tb_i * ta_j
+    
+    def mandelstam(self, i, j):
+        """Compute s_{ij} = <ij>[ij]"""
+        return self.angle_bracket(i,j) * self.square_bracket(i,j)
+
+
+# ============ PHASE 2: Scattering Equations ============
+
+class ScatteringEquations:
+    """Scattering equations with gauge fixing (z1,z2,z3) = (0,1,∞)."""
+    
+    def __init__(self, kinematics):
+        self.kin = kinematics
+        self.R = PolynomialRing(kinematics.R.base_ring(), ['z4','z5','z6'])
+        self.z4, self.z5, self.z6 = self.R.gens()
+        self.z = [0, 1, oo, self.z4, self.z5, self.z6]  # z1=0, z2=1, z3=∞
+        
+    def f(self, i):
+        """Scattering equation f_i = Σ_{j≠i} s_{ij}/(z_i - z_j) = 0"""
+        # i is 1-indexed particle label
+        if i <= 3:
+            return None  # gauge-fixed
+        
+        result = 0
+        z_i = self.z[i-1]
+        for j in range(1, 7):
+            if j == i:
+                continue
+            z_j = self.z[j-1]
+            s_ij = self.kin.mandelstam(i, j)
+            
+            if z_j == oo:  # z_3 = ∞
+                continue  # term vanishes
+            elif z_j == 0:  # z_1 = 0
+                result += s_ij / z_i
+            elif z_j == 1:  # z_2 = 1
+                result += s_ij / (z_i - 1)
+            else:
+                result += s_ij / (z_i - z_j)
+        
+        return result
+    
+    def jacobian(self):
+        """3x3 Jacobian matrix Φ_{ij} = ∂f_i/∂z_j for i,j ∈ {4,5,6}"""
+        J = matrix(self.R, 3, 3)
+        for ii, i in enumerate([4, 5, 6]):
+            for jj, j in enumerate([4, 5, 6]):
+                J[ii, jj] = diff(self.f(i), self.R.gens()[jj])
+        return J
+
+
+# ============ PHASE 3: CHY Psi Matrix ============
+
+class PsiMatrix:
+    """CHY Ψ-matrix for MHV gravity."""
+    
+    def __init__(self, kinematics, z4, z5, z6):
+        self.kin = kinematics
+        self.z = [0, 1, None, z4, z5, z6]  # z3 = ∞, handle separately
+        
+    def entry(self, i, j):
+        """
+        Ψ_{ij} = (ε_i · ε_j) / (z_i - z_j)
+        
+        For MHV (1,2 negative helicity):
+        - i,j both in {3,4,5,6}: [ij]^2 / (z_i - z_j)
+        - i,j both in {1,2}: <ij>^2 / (z_i - z_j)  
+        - mixed: <ij>[ij] / (z_i - z_j)
+        """
+        if i == j:
+            return 0
+            
+        neg = {1, 2}
+        pos = {3, 4, 5, 6}
+        
+        z_i = self.z[i-1]
+        z_j = self.z[j-1]
+        
+        # Handle z_3 = ∞ 
+        if i == 3 or j == 3:
+            return 0  # These entries vanish in the limit
+            
+        denom = z_i - z_j
+        
+        if i in neg and j in neg:
+            numer = self.kin.angle_bracket(i,j)**2
+        elif i in pos and j in pos:
+            numer = self.kin.square_bracket(i,j)**2
+        else:
+            numer = self.kin.angle_bracket(i,j) * self.kin.square_bracket(i,j)
+            
+        return numer / denom
+    
+    def reduced_matrix(self, delete_rows_cols):
+        """Return Ψ with specified rows/cols deleted."""
+        indices = [i for i in range(1,7) if i not in delete_rows_cols]
+        n = len(indices)
+        M = matrix(SR, n, n)
+        for ii, i in enumerate(indices):
+            for jj, j in enumerate(indices):
+                M[ii, jj] = self.entry(i, j)
+        return M
+    
+    def reduced_pfaffian(self):
+        """
+        Compute Pf'(Ψ) using standard CHY prescription.
+        Delete rows/cols 1,2 and divide by (z_1 - z_2).
+        """
+        M = self.reduced_matrix([1, 2])  # 4x4 matrix with indices {3,4,5,6}
+        # But index 3 gives all zeros! Need different approach.
+        
+        # Alternative: use the explicit MHV formula
+        return self._mhv_reduced_pfaffian()
+    
+    def _mhv_reduced_pfaffian(self):
+        """
+        For MHV, the reduced Pfaffian has a known closed form.
+        """
+        # Implement Hodges/CHY MHV formula here
+        pass
+
+
+# ============ PHASE 4: Positivity Region ============
+
+class PositivityRegion:
+    """Define and analyze the positive region R."""
+    
+    def __init__(self, psi_matrix):
+        self.psi = psi_matrix
+        
+    def boundary_equations(self):
+        """Return list of functions that define ∂R (each = 0 on boundary)."""
+        boundaries = []
+        
+        # Ordering boundaries
+        # z4 - z5 = 0, z5 - z6 = 0, etc.
+        
+        # Psi entry sign boundaries
+        # Ψ_{ij} = 0 for various i,j
+        
+        return boundaries
+    
+    def is_inside(self, z4_val, z5_val, z6_val, spinor_vals):
+        """Check if point is inside R."""
+        pass
+    
+    def vertices(self):
+        """Find vertices of R (should be scattering equation solutions)."""
+        pass
+
+
+# ============ PHASE 5: Canonical Form ============
+
+class CanonicalForm:
+    """Compute canonical form Ω(R)."""
+    
+    def __init__(self, region):
+        self.region = region
+        
+    def compute(self):
+        """
+        Compute Ω(R) = N(z) dz4 ∧ dz5 ∧ dz6 / (product of boundary equations)
+        """
+        pass
+    
+    def residue_at_boundary(self, boundary_index):
+        """Compute Res_{∂_i R} Ω."""
+        pass
+
+
+# ============ PHASE 6: Amplitude Verification ============
+
+class GravityAmplitude:
+    """Known 6-point MHV gravity amplitude for comparison."""
+    
+    def __init__(self, kinematics):
+        self.kin = kinematics
+        
+    def hodges_formula(self):
+        """Compute M_6^MHV via Hodges determinant."""
+        pass
+    
+    def chy_formula(self, z_solutions):
+        """Compute M_6 via CHY sum over solutions."""
+        pass
+    
+    def bcfw_formula(self):
+        """Compute M_6 via BCFW recursion."""
+        pass
+
+
+# ============ MAIN VERIFICATION ============
+
+def main():
+    print("=" * 60)
+    print("POSITIVE GEOMETRY FOR 6-POINT MHV GRAVITY")
+    print("=" * 60)
+    
+    # Step 1: Setup kinematics
+    print("\n[Phase 1] Setting up spinor kinematics...")
+    kin = SpinorKinematics()
+    
+    # Step 2: Scattering equations
+    print("\n[Phase 2] Constructing scattering equations...")
+    scat_eq = ScatteringEquations(kin)
+    
+    # Step 3: Ψ-matrix
+    print("\n[Phase 3] Building CHY Ψ-matrix...")
+    z4, z5, z6 = var('z4 z5 z6')
+    psi = PsiMatrix(kin, z4, z5, z6)
+    
+    # Step 4: Define positivity region
+    print("\n[Phase 4] Defining positivity region R...")
+    region = PositivityRegion(psi)
+    
+    # Step 5: Compute canonical form
+    print("\n[Phase 5] Computing canonical form Ω(R)...")
+    omega = CanonicalForm(region)
+    omega_result = omega.compute()
+    
+    # Step 6: Compare to known amplitude
+    print("\n[Phase 6] Comparing to known gravity amplitude...")
+    amp = GravityAmplitude(kin)
+    m6_hodges = amp.hodges_formula()
+    
+    print("\n[Phase 7] Checking boundary factorization...")
+    # For each boundary, verify residue = lower-point amplitude product
+    
+    print("\n" + "=" * 60)
+    print("RESULT: [PASS/FAIL]")
+    print("=" * 60)
+
+
+if __name__ == "__main__":
+    main()
+```
+
+================================================================================
+                         CRITICAL EQUATIONS SUMMARY
+================================================================================
+
+SPINOR BRACKETS:
+    ⟨ij⟩ = λ_i^1 λ_j^2 - λ_i^2 λ_j^1
+    [ij] = λ̃_i^1 λ̃_j^2 - λ̃_i^2 λ̃_j^1
+    s_{ij} = ⟨ij⟩[ij]
+
+SCATTERING EQUATIONS (gauge-fixed):
+    f_4 = s_{14}/z_4 + s_{24}/(z_4-1) + s_{45}/(z_4-z_5) + s_{46}/(z_4-z_6) = 0
+    f_5 = s_{15}/z_5 + s_{25}/(z_5-1) + s_{45}/(z_5-z_4) + s_{56}/(z_5-z_6) = 0
+    f_6 = s_{16}/z_6 + s_{26}/(z_6-1) + s_{46}/(z_6-z_4) + s_{56}/(z_6-z_5) = 0
+
+CHY GRAVITY FORMULA:
+    M_6 = Σ_{σ=1}^{6} [Pf'(Ψ)]² / |det Φ|_{z = z^(σ)}
+
+PFAFFIAN (4×4 antisymmetric):
+    Pf(A) = A_{12}A_{34} - A_{13}A_{24} + A_{14}A_{23}
+
+CANONICAL FORM (simplex):
+    Ω = ⟨Y d³Y⟩ / (⟨Y v_1⟩⟨Y v_2⟩⟨Y v_3⟩⟨Y v_4⟩)
+
+MHV GRAVITY (Hodges):
+    M_n = det(H) / (⟨12⟩⟨23⟩...⟨n1⟩)
+
+FACTORIZATION:
+    Res_{s_{ijk}=0} M_6 = M_4(i,j,k,P) × M_4(-P, remaining)
+
+================================================================================
+                            SUCCESS CRITERIA
+================================================================================
+
+□ Region R_6 defined by explicit inequalities
+□ dim(R_6) = 3 verified  
+□ 6 vertices found (= scattering equation solutions)
+□ Canonical form Ω(R_6) computed in closed form
+□ Symbolic equality: Ω(R_6) = M_6^{MHV}
+□ All boundary residues factorize correctly
+□ Uniqueness proven via cohomological argument
+
+================================================================================
+                               END OF DIRECTIVE
+================================================================================

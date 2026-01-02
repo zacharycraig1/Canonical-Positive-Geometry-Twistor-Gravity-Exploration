@@ -2,8 +2,14 @@ import sys
 import os
 from sage.all import *
 
-from src.chy_oracle.amplitude_spinor import ang_bracket
-from src.chy_oracle.matrix_tree import hodges_weighted_laplacian
+try:
+    from src.chy_oracle.amplitude_spinor import ang_bracket
+except ImportError:
+    from chy_oracle.amplitude_spinor import ang_bracket
+try:
+    from src.chy_oracle.matrix_tree import hodges_weighted_laplacian
+except ImportError:
+    from chy_oracle.matrix_tree import hodges_weighted_laplacian
 
 def reconstruct_mhv_from_laplacian(lambdas, tilde_lambdas, x, y, roots=(0,1,2), neg=(0,1)):
     """
@@ -69,6 +75,7 @@ def reconstruct_mhv_from_laplacian(lambdas, tilde_lambdas, x, y, roots=(0,1,2), 
 def weighted_laplacian(n, lambdas, tildes, x, y):
     """Wrapper for consistency with instructions."""
     return hodges_weighted_laplacian(lambdas, tildes, x, y)
+
 
 
 

@@ -1,0 +1,53 @@
+# Handoff: Atlas Active Charts & Kinematic Search
+
+## Status Summary (Dec 31, 2025)
+We have successfully **ruled out geometry bugs** as the cause of "0 active charts". The polytope and moment map definitions are consistent. The issue is strictly **kinematic sampling**: we are unable to find a configuration of twistors that yields all 15 $z_{ij} > 0$ simultaneously.
+
+### 1. Verification of Geometry (CRITICAL SUCCESS)
+**Script:** `src/atlas/test_moment_map_hits_polytope.sage`
+- We generated random positive $z$ vectors ($z_e > 0$) and mapped them to $X$ via the moment map.
+- **Result:** 100/100 points landed inside the polytope.
+- **Meaning:** The inequalities $Ax \ge b$ and the map $\mu(z)$ are correct. If we find kinematics where $z > 0$, we **will** get active charts.
+
+### 2. New Tools Implemented
+All tools are in `src/atlas/`:
+
+1.  `solve_conservation_pair.sage`:
+    - Generalized solver allowing *any* pair $(a,b)$ to be the dependent twistors.
+    - Usage: `tildes = solve_conservation_pair(lambdas, tildes_free, (a,b), n=6, RF=RR)`
+
+2.  `diagnose_dependent_pairs.sage`:
+    - Sweeps all 15 pairs to find which one yields the most positive $z_{ij}$ under random sampling.
+    - **Findings:** No pair yields 15/15 naturally with "ordered slope" heuristics. Best averages (~10.8/15) come from pairs `(0,1)` and `(4,5)`.
+
+3.  `search_all_positive_z.sage`:
+    - A hill-climb optimizer that perturbs free tildes to minimize `sum(abs(z_neg))`.
+    - **Current Performance:** Reaches 11/15 positive $z$. It gets stuck in local optima.
+
+### 3. Immediate Next Steps for GPT
+The tooling is robust. The task is now a **pure optimization problem**.
+
+**A. Improve the Search (`search_all_positive_z.sage`)**
+The current loss function is naive. You should:
+1.  **Optimize Reference Spinors:** Include `tx`, `ty` (which define $x, y$) in the optimization variables. The signs of $z_{ij}$ depend on $C_i C_j$, where $C_i = \langle i x \rangle \langle i y \rangle$. Flipping $C_i$ signs is a powerful way to fix $z$ signs.
+2.  **Use a Better Loss:** Try `Softplus(-z)` to provide gradients even when $z > 0$ (pushing it further positive) and smoother penalties when $z < 0$.
+3.  **Run Longer:** The search space is 10-dimensional. Run 500+ restarts.
+
+**B. Alternative "Sign Flipping" Strategy**
+Instead of just perturbing continuous variables:
+1.  Sample random kinematics.
+2.  Calculate the signs of $[ji] / \langle ij \rangle$.
+3.  Solve for signs $s_i = \text{sgn}(C_i)$ such that $s_i s_j = \text{sgn}(\text{desired})$. This is a 6-variable Boolean satisfaction problem (easy).
+4.  If a solution exists, pick $x, y$ to match those signs.
+
+**C. Once a Point is Found:**
+Save it to `RESULTS/golden_kinematics.json` and use it as the seed for the coefficient fitting pipeline.
+
+### Files Provided
+- `src/atlas/solve_conservation_pair.sage`
+- `src/atlas/diagnose_dependent_pairs.sage`
+- `src/atlas/test_moment_map_hits_polytope.sage`
+- `src/atlas/search_all_positive_z.sage`
+
+
+

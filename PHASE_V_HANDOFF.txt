@@ -1,0 +1,509 @@
+# Phase V Handoff: Exact Intrinsic Pushforward & Residues
+
+**Date:** 2025-12-31
+**Topic:** Exact Geometric Infrastructure and Failed Physics Verification for n=6
+
+## 1. Summary
+Phase V focused on replacing all floating-point approximations in the pushforward calculation with **exact integer lattice arithmetic** (Hermite Normal Form) to resolve the normalization instability observed in Phase U.
+
+We successfully built a rigorous geometric engine:
+1.  **Exact Intrinsic Basis:** No SVD or float projections. The lattice basis is integer-exact.
+2.  **Exact Facet Count:** Resolved the n=6 facet count to exactly **26**.
+3.  **Efficient Moment Map:** Computed via traces of the Laplacian, avoiding forest enumeration.
+
+However, the **physics verification failed**:
+1.  **Normalization:** The ratio $M_{MHV} / \Omega$ is not constant (varies by $10^4$).
+2.  **Residues:** The geometric form $\Omega$ does not have poles where gravity does ($s_{ij} \to 0$). Gravity scales as $\epsilon^{-2}$, while Geometry scales as $\epsilon^0$ (constant).
+
+**Conclusion:** The Forest Polytope geometry is robustly defined, but the current map $z_{ij}$ does not map physical singularities to the polytope boundaries correctly.
+
+## 2. Key Results (Phase V)
+
+| Metric | Result | Notes |
+| :--- | :--- | :--- |
+| **Facet Count (n=6)** | **26** | Exact over $\mathbb{Q}$. Resolved "22 vs 26" confusion. |
+| **Lattice Covolume** | **$2\sqrt{3}$** | Computed via HNF. |
+| **Normalization Ratio** | **Unstable** | Varies by $10^4 \dots 10^8$. |
+| **Residue Scaling ($s_{01}\to 0$)** | **Mismatch** | $M \sim \epsilon^{-2}$, $\Omega \sim \epsilon^0$. |
+
+## 3. New & Modified Scripts
+
+### A. Report
+`PHASE_V_REPORT.md`: Full details of the findings.
+
+### B. Geometric Infrastructure
+`src/posgeom/facet_audit_n6.sage`: Computes exact facets and normal vectors.
+`src/posgeom/intrinsic_lattice.py`: Computes exact integer basis $B$ for the lattice.
+`src/posgeom/moment_map_laplacian.py`: Computes $X$ and Hessian $H$ efficiently.
+
+### C. Verification Scripts
+`src/scripts/map_sweep_n6_exact.py`: Runs the normalization check (FAILED).
+`src/posgeom/residue_match_n6.py`: Runs the residue scaling check (FAILED).
+
+## 4. File Contents
+
+### `PHASE_V_REPORT.md`
+```markdown
+# Phase V Report: Exact Intrinsic Pushforward & Residues
+
+**Date:** 2025-12-31
+**Status:** Completed (Negative Result)
+
+## Executive Summary
+Phase V implemented the rigorous "Exact Intrinsic Basis" strategy to resolve normalization issues. While the geometric infrastructure (lattices, exact facets, moment map) is now numerically perfect, the **physics verification failed**.
+1. The normalization ratio $M_{MHV} / \Omega$ is **not stable** across the moduli space (varies by $10^4$).
+2. The **residue scaling** does not match: as $s_{01} \to 0$, Gravity scales as $1/\epsilon^2$, while Geometry $\Omega$ is constant ($\sim \epsilon^0$).
+
+**Conclusion:** The current Forest Polytope + Map $z_{ij}$ combination does **not** capture the physical singularities of MHV gravity. The physical poles ($s_{ij} \to 0$) do not map to the geometric boundaries ($z_{e} \to 0$).
+
+## 1. Geometric Achievements (Successes)
+- **Facet Audit:** Resolved discrepancy. $n=6$ Forest Polytope has exactly **26 facets**. (`src/posgeom/facet_audit_n6.sage`)
+- **Exact Lattice:** Implemented HNF-based integer basis, eliminating SVD errors. Covolume for $n=6$ is exactly $2\sqrt{3}$. (`src/posgeom/intrinsic_lattice.py`)
+- **Moment Map:** Efficiently implemented using trace of Laplacian inverse. Verified $\det H = 0$ in ambient space but non-zero in projected space.
+
+## 2. Physics Verification (Failures)
+### A. Map Sweep Normalization
+Run of `src/scripts/map_sweep_n6_exact.py` showed unstable ratios even with exact lattice:
+- Sample 0: Ratio $\sim -1.8 \times 10^4$
+- Sample 15: Ratio $\sim -1.0 \times 10^8$
+- Normalized ratio (by $\langle xy \rangle^8$) also unstable.
+
+### B. Residue Matching
+Run of `src/posgeom/residue_match_n6.py` tested $s_{01} \to 0$ limit ($\epsilon \to 0$):
+- **Gravity $M_{MHV}$**: Scales as $\epsilon^{-2.0}$ (Correct, pole).
+- **Geometry $\Omega$**: Scales as $\epsilon^{-0.0008}$ (Constant, no pole).
+
+This proves that the collinear limit $0 \to 1$ does not correspond to a boundary of the current Forest Polytope under the current map.
+
+## 3. Next Steps
+The failure is **structural**, not numerical.
+- **Hypothesis:** The map $z_{ij}$ is insufficient or the polytope is "too small" (doesn't have the right boundaries).
+- **Direction:** Re-evaluate the **physics map**. If $s_{ij} \to 0$ implies $z_{ij} \to 1$, we need a map where $z_{ij} \to 0$ or $\infty$.
+- **Alternative:** The "Amplituhedron" for gravity might be the **Inverse Soft Factor** polytope or related to the **Hessian of the logarithm of the Amplitude** directly, rather than this specific Forest Polytope.
+```
+
+### `src/posgeom/facet_audit_n6.sage`
+```python
+import json
+import os
+import sys
+# Ensure we can import from src
+sys.path.append(os.getcwd())
+
+from sage.all import Polyhedron, QQ
+from src.posgeom.forest_polytope import get_forest_exponents
+
+def audit_facets_n6():
+    print("Generating forest exponents for n=6, roots=[0,1,2]...")
+    # Use the existing function to get exponents (vertices) and edge ordering
+    exponents, edges_ordered = get_forest_exponents(6, [0, 1, 2])
+    
+    print(f"Number of vertices (forests): {len(exponents)}")
+    print(f"Dimension of ambient space: {len(edges_ordered)}")
+    
+    # Construct the polytope over QQ (exact arithmetic)
+    print("Constructing Polytope over QQ...")
+    P = Polyhedron(vertices=exponents, base_ring=QQ)
+    
+    print(f"Polytope dimension: {P.dim()}")
+    print(f"Ambient dimension: {P.ambient_dim()}")
+    
+    # Get H-representation (inequalities)
+    # The H-representation is a list of inequalities of the form: A*x + b >= 0
+    # Sage returns them as HRepresentation objects
+    print("Computing H-representation...")
+    H = P.Hrepresentation()
+    
+    num_facets = len(H)
+    print(f"Number of facets: {num_facets}")
+    
+    # Extract facets in a serializable format
+    # Each inequality is usually stored as [b, a_0, a_1, ..., a_m] representing b + a*x >= 0
+    # We want to store exactly what Sage gives us
+    
+    facets_list = []
+    for h in H:
+        # h.vector() returns (b, a_0, a_1, ...)
+        # We ensure they are integers/rationals
+        vec = list(h.vector())
+        facets_list.append([str(x) for x in vec])
+        
+    results = {
+        "n": int(6),
+        "roots": [int(0), int(1), int(2)],
+        "num_vertices": int(len(exponents)),
+        "num_facets": int(num_facets),
+        "edges_ordered": [[int(u), int(v)] for u, v in edges_ordered],
+        "facets_b_A": facets_list,
+        "note": "Each facet is [b, A_0, ..., A_m] where b + A.x >= 0"
+    }
+    
+    # Ensure RESULTS directory exists
+    os.makedirs("RESULTS", exist_ok=True)
+    
+    output_path = "RESULTS/facets_n6_exact.json"
+    with open(output_path, "w") as f:
+        json.dump(results, f, indent=2)
+        
+    print(f"Results saved to {output_path}")
+
+if __name__ == "__main__":
+    audit_facets_n6()
+```
+
+### `src/posgeom/intrinsic_lattice.py`
+```python
+import sys
+import os
+
+# Ensure we can import from src
+sys.path.append(os.getcwd())
+
+# Ensure we can import sage
+try:
+    from sage.all import Matrix, ZZ, vector, RR
+except ImportError:
+    print("This module must be run with SageMath: 'sage -python ...'")
+    sys.exit(1)
+
+class IntrinsicLattice:
+    def __init__(self, exponents):
+        """
+        Computes an integer basis for the lattice spanned by the exponent vectors.
+        
+        Args:
+            exponents: list of integer vectors (list or tuple)
+        """
+        if not exponents:
+            raise ValueError("Exponents list cannot be empty")
+            
+        self.exponents = [vector(ZZ, v) for v in exponents]
+        self.a0 = self.exponents[0]
+        
+        # Differences from the first exponent (affine anchor)
+        diffs = [v - self.a0 for v in self.exponents[1:]]
+        
+        if not diffs:
+            # Single point, dimension 0
+            self.B = Matrix(ZZ, len(self.a0), 0)
+            self.basis_vectors = []
+        else:
+            # Create matrix with diffs as rows
+            M = Matrix(ZZ, diffs)
+            
+            # Row Hermite Normal Form
+            # The non-zero rows of the HNF form a basis for the lattice spanned by the rows of M.
+            # Sage's hermite_form returns H.
+            H = M.hermite_form()
+            
+            # Extract non-zero rows
+            self.basis_vectors = []
+            for row in H.rows():
+                if not row.is_zero():
+                    self.basis_vectors.append(row)
+            
+            # Basis matrix B (columns are basis vectors)
+            # B is m x d where m is ambient dimension, d is lattice dimension
+            self.B = Matrix(ZZ, self.basis_vectors).transpose()
+            
+        self.dim = self.B.ncols()
+        self.ambient_dim = self.B.nrows()
+        
+    def to_intrinsic(self, point_ambient):
+        """
+        Maps a point in the ambient space (minus a0) to intrinsic coordinates t.
+        Solves B * t = point_ambient - a0
+        """
+        diff = vector(point_ambient) - self.a0
+        try:
+            return self.B.solve_right(diff)
+        except ValueError:
+            # Not in the column space
+            return None
+            
+    def to_ambient(self, t):
+        """
+        Maps intrinsic coordinates t to ambient space.
+        Returns a0 + B * t
+        """
+        return self.a0 + self.B * vector(t)
+        
+    @property
+    def covolume(self):
+        """
+        Returns the covolume of the lattice (volume of fundamental domain).
+        For a basis B (m x d), this is sqrt(det(B^T * B)).
+        """
+        if self.dim == 0:
+            return 1
+        gram = self.B.transpose() * self.B
+        return gram.det().sqrt()
+
+def main():
+    import argparse
+    from src.posgeom.forest_polytope import get_forest_exponents
+    
+    parser = argparse.ArgumentParser(description="Compute intrinsic lattice basis for forest polytope")
+    parser.add_argument("--n", type=int, default=6, help="Number of points")
+    parser.add_argument("--roots", type=int, nargs="+", default=[0, 1, 2], help="Root vertices")
+    
+    args = parser.parse_args()
+    
+    print(f"Computing lattice for n={args.n}, roots={args.roots}")
+    exponents, _ = get_forest_exponents(args.n, args.roots)
+    
+    lattice = IntrinsicLattice(exponents)
+    
+    print(f"Ambient dimension: {lattice.ambient_dim}")
+    print(f"Intrinsic dimension (rank): {lattice.dim}")
+    print(f"Basis B shape: {lattice.B.nrows()}x{lattice.B.ncols()}")
+    print(f"Covolume: {lattice.covolume}")
+    
+    # Check if a0 is zero (it usually isn't)
+    print(f"Anchor a0 (first 5 coords): {lattice.a0[:5]}...")
+
+if __name__ == "__main__":
+    main()
+```
+
+### `src/posgeom/moment_map_laplacian.py`
+```python
+import sys
+import os
+import time
+
+# Ensure we can import from src
+sys.path.append(os.getcwd())
+
+try:
+    from sage.all import Matrix, vector, QQ, ZZ
+except ImportError:
+    pass # Will fail if not run with sage, handled by checks
+
+class MomentMapLaplacian:
+    def __init__(self, n, roots, edge_ordering=None):
+        self.n = n
+        self.roots = sorted(roots)
+        self.non_roots = sorted([i for i in range(n) if i not in roots])
+        
+        # M is indexed by non_roots
+        # Map non_root vertex index to matrix index 0..k-1
+        self.v_to_idx = {v: i for i, v in enumerate(self.non_roots)}
+        self.dim_M = len(self.non_roots)
+        
+        # Edge ordering
+        if edge_ordering is None:
+            # Canonical ordering
+            self.edges = []
+            for i in range(n):
+                for j in range(i + 1, n):
+                    self.edges.append((i, j))
+        else:
+            self.edges = edge_ordering
+            
+        self.num_edges = len(self.edges)
+        
+        # Precompute derivatives of M
+        # dM[edge_idx] = sparse matrix or list of (row, col, val)
+        self.dM_updates = []
+        
+        for k, (u, v) in enumerate(self.edges):
+            # Edge (u, v) with u < v
+            updates = []
+            
+            # Diagonal terms in Laplacian: sum_{k!=i} z_{ik}
+            # z_{uv} appears in L_{uu} and L_{vv} with +1
+            
+            if u in self.v_to_idx:
+                idx_u = self.v_to_idx[u]
+                updates.append((idx_u, idx_u, 1))
+                
+            if v in self.v_to_idx:
+                idx_v = self.v_to_idx[v]
+                updates.append((idx_v, idx_v, 1))
+                
+            # Off-diagonal terms: L_{uv} = -z_{uv}
+            if u in self.v_to_idx and v in self.v_to_idx:
+                idx_u = self.v_to_idx[u]
+                idx_v = self.v_to_idx[v]
+                updates.append((idx_u, idx_v, -1))
+                updates.append((idx_v, idx_u, -1))
+                
+            self.dM_updates.append(updates)
+            
+    def compute_X_H(self, z_values):
+        """
+        Computes the moment map X and Hessian H in ambient log-coordinates.
+        
+        Args:
+            z_values: list or vector of edge variables z_{ij} corresponding to self.edges
+            
+        Returns:
+            X: vector of length num_edges
+            H: matrix of size num_edges x num_edges
+        """
+        # Construct M
+        M = Matrix(QQ, self.dim_M, self.dim_M)
+        
+        # We can construct M by summing dM * z
+        # But iterating is faster
+        # M_{ab} = L_{non_roots[a], non_roots[b]}
+        
+        # Initialize diagonals to 0
+        
+        for k, (u, v) in enumerate(self.edges):
+            val = z_values[k]
+            if val == 0: continue
+            
+            # Apply updates
+            for r, c, sgn in self.dM_updates[k]:
+                M[r, c] += sgn * val
+                
+        # Invert M
+        try:
+            Minv = M.inverse()
+        except ZeroDivisionError:
+            raise ValueError("Matrix M is singular")
+            
+        # Compute Tr(Minv * dM/dz_e) for each e
+        # This is equivalent to sum_{i,j} Minv_{ji} * (dM/dz_e)_{ij}
+        # Since dM is sparse (at most 4 entries), this is fast.
+        
+        X = [0] * self.num_edges
+        tr_Minv_dM = [0] * self.num_edges
+        
+        for k in range(self.num_edges):
+            updates = self.dM_updates[k]
+            if not updates:
+                continue
+                
+            trace_val = 0
+            for r, c, sgn in updates:
+                trace_val += sgn * Minv[c, r]
+            
+            tr_Minv_dM[k] = trace_val
+            X[k] = z_values[k] * trace_val
+            
+        # Compute Hessian
+        # H_{ef} = z_e z_f [ -Tr(Minv dM_f Minv dM_e) ] + delta_{ef} X_e
+        
+        H = Matrix(QQ, self.num_edges, self.num_edges)
+        
+        # We need A_e = Minv * dM_e
+        # Computing A_e explicitly is expensive (dense matrix mult).
+        # But dM_e is sparse. A_e col j = sum_k Minv_{jk} (dM_e)_{kj}
+        # A_e is Minv * (sparse).
+        # We need Tr(A_f A_e).
+        
+        # Optimization:
+        # H_{ef} = - z_e z_f * sum_{r,c} (Minv * dM_f)_{rc} * (Minv * dM_e)_{cr}
+        # Actually Tr(M^{-1} dM_f M^{-1} dM_e)
+        # Let B_f = M^{-1} dM_f. We want Tr(B_f B_e).
+        
+        # B_e is sparse-ish? No, Minv is dense.
+        # But dM_e has few entries.
+        # B_e[i, j] = sum_k Minv[i, k] dM_e[k, j]
+        # dM_e only has entries at (u,u), (v,v), (u,v), (v,u) (mapped to indices)
+        
+        # Let's precompute B_e for all e where z_e != 0 (or relevant)
+        # Actually we need it for all e?
+        # If z_e is 0, then X_e is 0 and H_{ef} = 0 (due to z_e factor), EXCEPT maybe if limit?
+        # Assuming z_e != 0 for now (interior of polytope).
+        
+        Bs = [] # List of matrices or better, just needed components?
+        # We need Tr(B_f B_e).
+        # Let's store B_e as a dense matrix for now. dimension is small (3x3 for n=6).
+        
+        for k in range(self.num_edges):
+            updates = self.dM_updates[k]
+            if not updates:
+                Bs.append(None)
+                continue
+                
+            # Construct B_k = Minv * dM_k
+            # column j of B_k = Minv * (col j of dM_k)
+            # col j of dM_k has non-zeros only at specific rows
+            
+            # Since dim is small (3), standard matrix mult is fine.
+            # dM_k matrix
+            dMk = Matrix(QQ, self.dim_M, self.dim_M)
+            for r, c, sgn in updates:
+                dMk[r, c] = sgn
+            
+            Bk = Minv * dMk
+            Bs.append(Bk)
+            
+        for i in range(self.num_edges):
+            if Bs[i] is None: continue
+            
+            for j in range(i, self.num_edges):
+                if Bs[j] is None: continue
+                
+                # Tr(B_i * B_j)
+                term = (Bs[i] * Bs[j]).trace()
+                
+                val = - z_values[i] * z_values[j] * term
+                
+                if i == j:
+                    val += X[i]
+                
+                H[i, j] = val
+                if i != j:
+                    H[j, i] = val
+                    
+        return vector(QQ, X), H
+
+def main():
+    import argparse
+    from src.posgeom.forest_polytope import get_forest_exponents
+    from src.posgeom.intrinsic_lattice import IntrinsicLattice
+    
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--n", type=int, default=6)
+    parser.add_argument("--samples", type=int, default=1)
+    args = parser.parse_args()
+    
+    n = args.n
+    roots = [0, 1, 2]
+    
+    print(f"Testing MomentMapLaplacian for n={n}, roots={roots}")
+    
+    # Get edge ordering
+    _, edges = get_forest_exponents(n, roots)
+    
+    mml = MomentMapLaplacian(n, roots, edges)
+    
+    # Test on random z
+    # Make sure to use positive z
+    from sage.all import RR
+    import random
+    
+    for s in range(args.samples):
+        z_vals = [random.randint(1, 10) for _ in range(mml.num_edges)]
+        # Use QQ
+        z_vals = [QQ(z) for z in z_vals]
+        
+        start = time.time()
+        X, H = mml.compute_X_H(z_vals)
+        dt = time.time() - start
+        
+        print(f"Sample {s}: Computed X (norm={float(X.norm(2)):.4f}) and H (det={H.det()})")
+        print(f"Time: {dt*1000:.2f} ms")
+        
+        # Check projection
+        # We need lattice to project
+        exponents, _ = get_forest_exponents(n, roots)
+        lattice = IntrinsicLattice(exponents)
+        
+        # Projected Hessian
+        # H_int = B.T * H * B
+        H_int = lattice.B.transpose() * H * lattice.B
+        print(f"Projected H det: {H_int.det()}")
+
+if __name__ == "__main__":
+    main()
+```
+
+
+
+

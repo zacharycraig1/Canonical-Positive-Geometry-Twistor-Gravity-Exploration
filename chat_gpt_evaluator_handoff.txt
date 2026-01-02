@@ -1,0 +1,613 @@
+# PHASE S HANDOFF: Canonical Form & Physics Checks
+# =============================================================================
+# This file contains the results of the "Phase S" work package, which focused on:
+# 1. Fixing the canonical form evaluator for dimension-deficient polytopes.
+# 2. Verifying triangulation invariance and scaling properties.
+# 3. Investigating the "missing" Col(4||5) singularity (residue check).
+# 4. Performing a rigorous numerical pushforward ratio test for n=6.
+#
+# CONTENTS:
+# 1. phase_s/RESULTS.md (Summary of findings)
+# 2. src/posgeom/canonical_form.py (Updated Evaluator)
+# 3. phase_s/triangulation_invariance_test.py (Verification Script)
+# 4. phase_s/iterated_residue_check.py (Singularity Check)
+# 5. phase_s/ratio_test_pushforward_n6.sage (Pushforward Test)
+# =============================================================================
+
+# FILE: phase_s/RESULTS.md
+# -----------------------------------------------------------------------------
+# Phase S Results
+
+## 1. Geometric Engine Updates
+- **Canonical Form Evaluator**: Updated to handle dimension-deficient polytopes (like the Forest Polytope) via affine projection.
+- **Triangulation Invariance**: Verified. The value of $\Omega(P)$ is independent of the triangulation choice and scales correctly with degree $-(d+1)$.
+  - **Polytope Dimension**: For $n=5, |R|=2$, dimension is 8 (Ambient 10).
+  - **Scaling**: Verified $2^{-9}$ scaling factor.
+
+## 2. Physical Singularity Checks
+- **Collinear (4||5)**: Identified as a codimension-3 face in the current Forest Polytope ($n=6, R=[0,1,2]$).
+- **Iterated Residue**: Computed $\Omega(F)$ on this face.
+  - **Result**: Non-zero value ($\approx 10^{300}$ range for limit kinematics, indicating a pole).
+  - **Interpretation**: The geometry *does* have a boundary corresponding to this singularity, but it is higher codimension than expected (3 vs 1). This implies the "Facet Dictionary" needs to account for higher-codimension boundaries or a different root basis is needed to make it a facet.
+
+## 3. Pushforward Ratio Test ($n=6$)
+- **Method**: Compared $M_{\text{MHV}}$ (Hodges) to $\Omega(P)(z(\lambda,\tilde\lambda))$ for random rational kinematics.
+- **Result**: **FAIL**. The ratio is not constant.
+  - Trial 0: Ratio $\sim 10^{16}$
+  - Trial 1: Ratio $\sim 10^{2}$
+  - Trial 3: Ratio $\sim 10^{16}$
+  - Trial 4: Ratio $\sim 10^{24}$
+- **Conclusion**: The naive pullback $\Phi^*(\Omega_P) = M_{\text{MHV}}$ does not hold. This indicates either:
+  1. A missing Jacobian factor from the map $\Phi$.
+  2. The Forest Polytope canonical form requires additional weight factors (numerator weights).
+  3. The map itself needs adjustment (e.g. different reference spinor dependence).
+
+## 4. Next Steps
+- Investigate the Jacobian of the edge-variable map.
+- Explore "Weighted Forest Polytopes" where edges carry weights derived from the matrix-tree theorem coefficients.
+- Re-evaluate the "missing" codimension-1 behavior for Col(4||5) by checking other root choices (Phase S3/S4).
+
+# FILE: src/posgeom/canonical_form.py
+# -----------------------------------------------------------------------------
+import numpy as np
+from sage.all import *
+
+class CanonicalFormEvaluator:
+    """
+    Evaluates the canonical form of a polytope P on dual vector W.
+    Omega_P(W) = sum_{triangulation} sgn(Delta) * Omega_Delta(W)
+    
+    where Omega_Delta(W) = det(Z_0...Z_d) / prod(W.Z_i)
+    """
+    
+    @staticmethod
+    def eval_simplex(vertices, W):
+        """
+        Evaluate canonical form for a simplex defined by vertices.
+        vertices: list of vectors (or Matrix columns) [Z_0, ..., Z_d]
+        W: dual vector (same dimension as Z_i)
+        """
+        dim = len(vertices) - 1
+        # Check dimensions
+        if len(W) != len(vertices[0]):
+            raise ValueError(f"Dimension mismatch: W has {len(W)}, Z has {len(vertices[0])}")
+            
+        # Construct matrix Z = [Z_0, ..., Z_d]
+        Z_mat = Matrix(vertices).transpose() # Columns are vertices
+        
+        # Numerator: det(Z)
+        # Note: Sage Matrix determinant
+        num = Z_mat.det()
+        
+        # Denominator: prod(W . Z_i)
+        denom = 1
+        for Z_i in vertices:
+            dot_prod = sum(w*z for w, z in zip(W, Z_i))
+            if dot_prod == 0:
+                raise ValueError("Pole encountered: W . Z_i = 0")
+            denom *= dot_prod
+            
+        return num / denom
+
+    @staticmethod
+    def eval_polytope(P, W, method='triangulation'):
+        """
+        Evaluate canonical form for a polytope P.
+        P: Sage Polyhedron object
+        W: dual vector
+        method: 'triangulation' (default)
+        """
+        # 1. Handle Dimension Deficiency (Projection)
+        # Check if the ambient dimension matches the intrinsic dimension
+        # P.vertices() are in R^N. P.dim() is d.
+        # If N > d, we must project to R^d to define the volume form consistently.
+        
+        vertices = list(P.vertices())
+        vecs = [v.vector() for v in vertices]
+        N = len(vecs[0])
+        d = P.dim()
+        
+        # W has dimension N+1 (homogeneous dual)
+        if len(W) != N + 1:
+            raise ValueError(f"W must have dimension {N+1} (ambient dim + 1), got {len(W)}")
+
+        if d < N:
+            # PROJECT TO AFFINE SUBSPACE
+            # 1. Pick origin v0
+            v0 = vecs[0]
+            
+            # 2. Find basis for subspace V = span(v - v0)
+            shifted_vecs = [v - v0 for v in vecs]
+            # Use Sage's VectorSpace to find basis
+            V_space = VectorSpace(QQ, N)
+            subspace = V_space.subspace(shifted_vecs)
+            basis = subspace.basis() # List of d vectors B_1, ..., B_d
+            
+            if len(basis) != d:
+                # This check ensures numerical stability / correct dimension
+                raise ValueError(f"Basis size {len(basis)} does not match P.dim() {d}")
+                
+            # 3. Map vertices to coordinates c in R^d
+            # v = v0 + sum c_i B_i
+            # We need to solve for c_i.
+            # Construct matrix B with columns B_i. (N x d)
+            # (v - v0) = B * c
+            # c = (B^T B)^-1 B^T (v - v0)  (or use solve_right)
+            
+            B_mat = Matrix(basis).transpose() # N x d
+            
+            projected_vecs = []
+            for v in vecs:
+                diff = v - v0
+                # solve B_mat * c = diff
+                try:
+                    c = B_mat.solve_right(diff)
+                    projected_vecs.append(c)
+                except ValueError:
+                    raise ValueError("Vertex not in affine span!")
+            
+            # 4. Map W to W_proj in (R^d)*
+            # W_proj = [ W.(1, v0), W.(0, B_1), ..., W.(0, B_d) ]
+            # W is (N+1)-dim: (w_0, w_1...w_N)
+            # Dual pairing: W . (1, v) = w_0 + sum w_k v_k
+            
+            # Component 0: W evaluated at origin v0
+            # (1, v0)
+            Z0 = vector(QQ, [1] + list(v0))
+            w_proj_0 = W.dot_product(Z0)
+            
+            # Component i: W evaluated at direction B_i (homogeneous part 0)
+            w_proj_rest = []
+            for b in basis:
+                # (0, b)
+                Zb = vector(QQ, [0] + list(b))
+                val = W.dot_product(Zb)
+                w_proj_rest.append(val)
+                
+            W_proj = vector(QQ, [w_proj_0] + w_proj_rest)
+            
+            # Update variables for evaluation
+            # Vertices are now in R^d
+            vecs = projected_vecs
+            # W is in R^{d+1}
+            W = W_proj
+            
+            # Update N to be d
+            N = d
+            
+            # Note: We need to reconstruct P for triangulation?
+            # Yes, we need to triangulate the projected polytope.
+            P_proj = Polyhedron(vertices=vecs)
+            P = P_proj
+
+        if method == 'triangulation':
+            # Use Sage's triangulation
+            try:
+                triangulation = P.triangulation()
+            except AttributeError:
+                # Fallback using PointConfiguration for backends like PPL
+                from sage.geometry.triangulation.point_configuration import PointConfiguration
+                pc = PointConfiguration(P.vertices())
+                triangulation = pc.triangulate()
+
+            # Homogenize vertices for evaluation: Z = (1, v)
+            Z_vecs = [vector(QQ, [1] + list(v)) for v in vecs]
+
+            # Determine a reference W_ref in the dual cone
+            dim = len(vecs[0]) # Should be d
+            W_ref = vector(QQ, [1]*(dim+1))
+            
+            # Perturb W_ref if invalid
+            if any(W_ref.dot_product(z) == 0 for z in Z_vecs):
+                W_ref = vector(QQ, [1]*(dim+1)) + vector(QQ, [QQ(1)/(i+10) for i in range(dim+1)])
+
+            total_val = 0
+            # P.triangulation() yields tuples of indices
+            for simplex_indices in triangulation:
+                simplex_verts = [Z_vecs[i] for i in simplex_indices]
+                
+                # Evaluate at W_ref to determine sign
+                try:
+                    ref_val = CanonicalFormEvaluator.eval_simplex(simplex_verts, W_ref)
+                except ValueError:
+                    # Retry with random W_ref
+                    W_ref_rand = CanonicalFormEvaluator.get_valid_W(P, seed=42)
+                    ref_val = CanonicalFormEvaluator.eval_simplex(simplex_verts, W_ref_rand)
+                
+                if ref_val == 0: continue 
+
+                sign = 1 if ref_val > 0 else -1
+                
+                # Evaluate at actual W
+                term = CanonicalFormEvaluator.eval_simplex(simplex_verts, W)
+                total_val += sign * term
+                
+            return total_val
+        else:
+            raise NotImplementedError(f"Method {method} not implemented")
+
+    @staticmethod
+    def get_valid_W(P, seed=None):
+        """
+        Generate a random W that avoids poles (W . Z_i != 0).
+        P should be the projected polytope if applicable.
+        """
+        if seed is not None:
+            set_random_seed(seed)
+            
+        dim = P.dim() + 1 # Ambient dimension (projective)
+        vertices = [vector(QQ, [1] + list(v)) for v in P.vertices()]
+        
+        while True:
+            # Random integer vector
+            W = vector(QQ, [randint(-10, 10) for _ in range(dim)])
+            if all(W.dot_product(v) != 0 for v in vertices):
+                return W
+
+
+# FILE: phase_s/triangulation_invariance_test.py
+# -----------------------------------------------------------------------------
+import sys
+import os
+from sage.all import *
+
+if os.getcwd() not in sys.path:
+    sys.path.append(os.getcwd())
+
+from src.posgeom.canonical_form import CanonicalFormEvaluator
+from src.posgeom.forest_polytope import get_forest_exponents
+
+def test_triangulation_invariance():
+    print("S4: Testing Triangulation Invariance & Scaling...")
+    
+    # Setup Forest Polytope (n=5, roots={0,1})
+    n = 5
+    roots = [0, 1]
+    exponents, _ = get_forest_exponents(n, roots)
+    
+    # Vertices in R^10 (since 5 choose 2 = 10 edges)
+    # Dimension should be 5 - 2 - 1 = 2 ?? No.
+    # Vertices of forest polytope are indicator vectors.
+    P = Polyhedron(vertices=exponents)
+    print(f"Polytope dim: {P.dim()}, Ambient dim: {len(exponents[0])}")
+    
+    # Generate random W in dual space (Ambient dim + 1)
+    dim_ambient = len(exponents[0])
+    
+    # Run 5 trials
+    for i in range(5):
+        set_random_seed(i + 100) # New seed
+        
+        # Try to find a valid W
+        W = None
+        Z_vecs = [vector(QQ, [1] + list(v)) for v in exponents]
+        
+        for attempt in range(100):
+            # Use larger range and maybe rational denominator to avoid accidental zeros
+            cand = vector(QQ, [QQ(randint(-100, 100))/randint(1,5) for _ in range(dim_ambient + 1)])
+            if all(cand.dot_product(z) != 0 for z in Z_vecs):
+                W = cand
+                break
+        
+        if W is None:
+            print(f"Could not find non-singular W for trial {i}")
+            continue
+            
+        print(f"\nTrial {i}: W = {W[:3]}...")
+        
+        # 1. Base Evaluation
+        try:
+            val1 = CanonicalFormEvaluator.eval_polytope(P, W)
+            print(f"  Val (Order 1): {val1}")
+        except Exception as e:
+            print(f"  Error Order 1: {e}")
+            continue
+            
+        # 2. Permuted Vertex Order (should induce different triangulation)
+        import random
+        shuffled_exponents = list(exponents)
+        random.shuffle(shuffled_exponents)
+        P2 = Polyhedron(vertices=shuffled_exponents)
+        
+        try:
+            val2 = CanonicalFormEvaluator.eval_polytope(P2, W)
+            print(f"  Val (Order 2): {val2}")
+        except Exception as e:
+            print(f"  Error Order 2: {e}")
+            val2 = None
+
+        if val1 is not None and val2 is not None:
+            diff = val1 - val2
+            if abs(diff) < 1e-10:
+                print("  [PASS] Triangulation Invariance")
+            else:
+                print(f"  [FAIL] Difference: {diff}")
+                
+        # 3. Scaling Test
+        # Omega(cW) = c^{-(d+1)} Omega(W) where d = P.dim()
+        # Note: eval_polytope projects P to R^d.
+        # So effective homogeneous degree is -(d+1).
+        
+        scale = QQ(2)
+        W_scaled = scale * W
+        
+        val_scaled = CanonicalFormEvaluator.eval_polytope(P, W_scaled)
+        
+        d = P.dim()
+        expected_ratio = scale ** (-(d + 1))
+        
+        ratio = val_scaled / val1
+        print(f"  Scaling Ratio: {ratio} (Expected 2^{-d-1} = {expected_ratio})")
+        
+        if abs(ratio - expected_ratio) < 1e-10:
+            print("  [PASS] Scaling Property")
+        else:
+            print("  [FAIL] Scaling Property")
+
+if __name__ == "__main__":
+    test_triangulation_invariance()
+
+
+# FILE: phase_s/iterated_residue_check.py
+# -----------------------------------------------------------------------------
+import sys
+import os
+import json
+from sage.all import *
+
+if os.getcwd() not in sys.path:
+    sys.path.append(os.getcwd())
+
+from src.posgeom.forest_polytope import get_forest_exponents
+from src.posgeom.canonical_form import CanonicalFormEvaluator
+from src.posgeom.physics_map import eval_edge_vars_from_spinors
+from phase_s.probe_limits_on_shell import probe_limit
+
+def check_residue_col45():
+    print("S2: Checking Iterated Residue for Col(4||5)...")
+    
+    # 1. Load active facets
+    with open("phase_s/active_facets.json", "r") as f:
+        data = json.load(f)
+        
+    facets_data = data.get("Col(4||5)", [])
+    if not facets_data:
+        print("No active facets found for Col(4||5)")
+        return
+        
+    print(f"Found {len(facets_data)} active inequalities.")
+    
+    # 2. Build Polyhedron (n=6, roots=[0,1,2])
+    n = 6
+    roots = [0, 1, 2]
+    exponents, edge_order = get_forest_exponents(n, roots)
+    P = Polyhedron(vertices=exponents)
+    
+    # 3. Identify Face Vertices
+    # A vertex v is on the face if it satisfies A.v + b = 0 for all active facets
+    # Note: JSON stores slack. We want slack=0 (or epsilon).
+    
+    active_ineqs = []
+    for entry in facets_data:
+        if entry['slack'] < 1e-5: # Threshold
+            active_ineqs.append(entry['inequality'])
+            
+    print(f"Number of binding inequalities: {len(active_ineqs)}")
+    
+    face_vertices = []
+    for v in exponents:
+        v_vec = vector(QQ, v)
+        on_face = True
+        for coeffs in active_ineqs:
+            # coeffs is [A0...Ad, b]
+            # ineq is A.x + b >= 0
+            A = vector(QQ, coeffs[:-1])
+            b = QQ(coeffs[-1])
+            val = A.dot_product(v_vec) + b
+            if abs(val) > 1e-10:
+                on_face = False
+                break
+        if on_face:
+            face_vertices.append(v)
+            
+    print(f"Face has {len(face_vertices)} vertices out of {len(exponents)}.")
+    
+    if len(face_vertices) == 0:
+        print("Error: Empty face!")
+        return
+        
+    F = Polyhedron(vertices=face_vertices)
+    print(f"Face Dimension: {F.dim()}")
+    print(f"Polytope Dimension: {P.dim()}")
+    print(f"Codimension: {P.dim() - F.dim()}")
+    
+    # 4. Evaluate Omega(F) at a point on the face
+    # We need a W that lies in the face?
+    # No, W is dual.
+    # If we are verifying the residue, we evaluate Omega(F) at the limit point projected to F?
+    # The physics map sends the collinear limit to this face.
+    # So we take the limit point z(epsilon -> 0).
+    
+    # Get limit point
+    limit_res = probe_limit(n, "collinear", epsilon=1e-8, i=4, j=5, positive=True, seed=42)
+    lambdas = limit_res.lambdas
+    tildes = limit_res.tilde_lambdas
+    
+    # Compute z
+    x_ref = vector(QQ, [1, 0])
+    y_ref = vector(QQ, [0, 1])
+    z_vals = eval_edge_vars_from_spinors(lambdas, tildes, x_ref, y_ref)
+    
+    # Construct W vector from z_vals
+    W_comps = []
+    # W must match edge order
+    # Note: W is homogeneous dual.
+    # z variables correspond to coordinate planes?
+    # Actually, the map is z_e.
+    # The point in the dual space is Y = (z_e).
+    # Wait, my CanonicalFormEvaluator expects W.
+    # If the polytope is in the space of exponents, W are the log-variables z?
+    # No. The polytope P is the Newton polytope.
+    # The form is Omega(Y) where Y are the variables z_e.
+    # Yes. So W = vector(z_e).
+    # But W must be homogeneous?
+    # If P is in R^E, then W is in (P^E)*?
+    # Actually, usually W = (1, z_e).
+    # Let's assume W = (1, z_e) for now.
+    
+    W_list = [1] # Homogeneous component
+    for u, v in edge_order:
+        val = z_vals.get((u, v))
+        if val is None: val = z_vals.get(f"z_{u}_{v}")
+        W_list.append(val)
+        
+    W = vector(QQ, W_list)
+    
+    # Evaluate Omega(F) at W
+    # Note: Omega(F) is defined on the subspace spanned by F.
+    # The Evaluator handles projection!
+    
+    print("Evaluating Omega(F) at limit point...")
+    try:
+        val = CanonicalFormEvaluator.eval_polytope(F, W)
+        print(f"Omega(F) value: {val}")
+        if val != 0:
+            print("  [PASS] Non-zero residue.")
+        else:
+            print("  [WARN] Residue is zero?")
+    except Exception as e:
+        print(f"  [FAIL] Evaluation error: {e}")
+
+if __name__ == "__main__":
+    check_residue_col45()
+
+
+# FILE: phase_s/ratio_test_pushforward_n6.sage
+# -----------------------------------------------------------------------------
+import sys
+import os
+from sage.all import *
+
+if os.getcwd() not in sys.path:
+    sys.path.append(os.getcwd())
+
+from src.posgeom.forest_polytope import get_forest_exponents
+from src.posgeom.canonical_form import CanonicalFormEvaluator
+from src.posgeom.physics_map import eval_edge_vars_from_spinors
+
+# Load Hodges modules
+try:
+    load('src/hodges_sigma.sage')
+    load('src/hodges.sage')
+    print("Loaded src/hodges.sage")
+except Exception as e:
+    print(f"Error loading src/hodges.sage: {e}")
+    # If load fails, we might be in python mode not sage mode? 
+    # But we are running with sage.ps1
+    pass
+
+def run_ratio_test():
+    print("S5: Pushforward Ratio Test (n=6)...")
+    
+    # Check if MomentumTwistor is available
+    if 'MomentumTwistor' not in globals():
+        print("MomentumTwistor class not found. Import failed.")
+        return
+
+    # 2. Setup Polytope (n=6, roots=[0,1,2])
+    n = 6
+    roots = [0, 1, 2]
+    print(f"Building Forest Polytope (n={n}, roots={roots})...")
+    exponents, edge_order = get_forest_exponents(n, roots)
+    P = Polyhedron(vertices=exponents)
+    print(f"Polytope dim: {P.dim()}")
+    
+    # 3. Loop trials
+    num_trials = 5
+    ratios = []
+    
+    for trial in range(num_trials):
+        seed_val = 100 + trial
+        set_random_seed(seed_val)
+        
+        # A. Generate Kinematics
+        # We need MomentumTwistor
+        # Random integers for twistors to stay in QQ
+        data = [[randint(-10, 10) for _ in range(4)] for _ in range(n)]
+        # Fix: Pass Z explicitly
+        twistor = MomentumTwistor(n=n, Z=data)
+        
+        # Check non-degenerate
+        if any(twistor.get_angle(i, (i+1)%n) == 0 for i in range(n)):
+            continue
+            
+        # B. Compute Amplitude
+        # Need reference spinors for Hodges
+        ref_spinors = sample_reference_spinors(twistor)
+        if ref_spinors[0] is None:
+            print("Failed to sample ref spinors")
+            continue
+            
+        amp, status = hodges_6pt_mhv_reduced(twistor, ref_spinors)
+        if amp is None:
+            print(f"Hodges failed: {status}")
+            continue
+            
+        # C. Compute Canonical Form
+        # Get lambdas/tildes
+        lambdas = {i: vector(QQ, twistor.get_lambda(i)) for i in range(n)}
+        tildes = {i: vector(QQ, twistor.get_tilde_lambda(i)) for i in range(n)}
+        
+        # Physics Map needs reference spinors x, y
+        # We can use the same ones used for Hodges!
+        lam_x, lam_y = ref_spinors
+        
+        try:
+            z_vals = eval_edge_vars_from_spinors(lambdas, tildes, lam_x, lam_y)
+        except ValueError as e:
+            print(f"Map failed: {e}")
+            continue
+            
+        # Construct W
+        W_list = [1]
+        for u, v in edge_order:
+            if u > v: u, v = v, u
+            val = z_vals.get((u, v))
+            if val is None: val = z_vals.get(f"z_{u}_{v}")
+            W_list.append(val)
+        W = vector(QQ, W_list)
+        
+        # Eval Polytope
+        try:
+            omega = CanonicalFormEvaluator.eval_polytope(P, W)
+        except Exception as e:
+            print(f"Eval Polytope failed: {e}")
+            continue
+            
+        # D. Ratio
+        if omega == 0:
+            print("Omega is 0!")
+            continue
+            
+        ratio = amp / omega
+        ratios.append(ratio)
+        print(f"Trial {trial}: Amp={float(amp):.4e}, Omega={float(omega):.4e}, Ratio={float(ratio):.4e}")
+        
+    # Check consistency
+    if len(ratios) > 1:
+        first = ratios[0]
+        consistent = all(abs(r - first)/abs(first) < 1e-5 for r in ratios)
+        if consistent:
+            print(f"\n[PASS] Ratio is constant: {first}")
+        else:
+            print("\n[FAIL] Ratio varies.")
+            print(ratios)
+    else:
+        print("Not enough data.")
+
+if __name__ == "__main__":
+    run_ratio_test()
+
+
+
+
