@@ -68,10 +68,13 @@ docker run --rm -v "${PWD}:/home/sage/project" -w /home/sage/project sagemath/sa
 |------|---------------|-----------------|
 | `src/scripts/physics_pullback_n6.sage` | Core identity M = F(z) | "SUCCESS: Exact identity verified" |
 | `tests/signed_geometry_verification.sage` | Full test suite (15 tests) | "15/15 PASSED" |
-| `tests/test_oracle_match.sage` | Independent oracle (non-circular) | "ALL ORACLE TESTS PASSED" |
+| `tests/test_oracle_match.sage` | MTT ↔ det(L) consistency check | "ALL ORACLE TESTS PASSED" |
 | `src/signed_geometry/verify_chy_sign_derivation.sage` | Sign rule formula | "100% accuracy" |
 | `src/signed_geometry/generalize_n7.sage` | n=7 extension | "20/20 samples verified" |
 | `src/signed_geometry/verify_factorization_signs.sage` | Factorization axiom | "AXIOM 3 VERIFIED" |
+| `src/signed_geometry/prove_klt_forest_theorem.sage` | KLT-Forest theorem | "Modal split (54,54)" |
+
+**Note on oracle tests:** The `test_oracle_match.sage` verifies forest enumeration and Laplacian construction by comparing the forest sum against Sage's direct determinant computation. This is an independent check of the MTT implementation, not a proof of any CHY-level identity.
 
 ### Physics Implementation
 

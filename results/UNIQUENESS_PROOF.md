@@ -1,74 +1,84 @@
-# Proof of Uniqueness of Sign Rule
+# Rigorous Proof of Uniqueness of Forest Coefficients
 
 **Date:** January 2026  
-**Status:** PROVEN (Upgraded from Conjecture)
+**Status:** PROVEN (Polynomial-Monomial Approach)
 
 ---
 
-## Theorem (Uniqueness of Sign Rule)
+## Theorem (Uniqueness of Monomial Coefficients)
 
-Within the forest triangulation, the sign rule
-$$\varepsilon(F) = \text{sign}\left(\prod_{e} w_e\right) \times \text{sign}\left(\prod_v C_v^{\deg(v)}\right)$$
-is the **unique** assignment such that:
-1. The sum reproduces the Hodges determinant
-2. Signs are multiplicative under factorization
+In the polynomial ring $\mathbb{Z}[a_{ij}]$ with $a_{ij} = w_{ij} C_i C_j$ treated as independent formal variables, the forest expansion
+
+$$\det(\tilde{L}^{(R)}) = \sum_{F \in \mathcal{F}_R} \prod_{e \in E(F)} a_e$$
+
+has **unique** coefficients: each forest $F$ corresponds to a distinct monomial $\prod_{e \in E(F)} a_e$, and all coefficients are $+1$.
 
 ---
 
 ## Proof
 
-### Step 1: The sign is determined by the formula
+### Step 1: Distinct Monomials
 
-The Matrix-Tree Theorem gives:
-$$\det(\tilde{L}^{(R)}) = \sum_{F \in \mathcal{F}_R} \prod_{e \in E(F)} a_e$$
+Different forests have different edge sets:
+$$F \neq F' \implies E(F) \neq E(F')$$
 
-where $a_e = w_e C_i C_j$ for edge $e = (i,j)$.
+Therefore their monomials are distinct:
+$$\prod_{e \in E(F)} a_e \neq \prod_{e \in E(F')} a_e$$
 
-Each term is:
-$$\text{term}(F) = \prod_e (w_e C_i C_j) = \left(\prod_e w_e\right) \cdot \left(\prod_v C_v^{\deg(v)}\right)$$
+in the polynomial ring $\mathbb{Z}[a_{ij}]$.
 
-The sign of this term is:
-$$\varepsilon(F) = \text{sign}(\text{term}(F)) = \text{sign}\left(\prod_e w_e\right) \times \text{sign}\left(\prod_v C_v^{\deg(v)}\right)$$
+### Step 2: Unique Polynomial Expansion
 
-**There is no freedom here.** The sign is determined by the numerical values of $w_e$ and $C_v$.
+A polynomial in independent variables has a **unique** expansion as a sum of monomials. Each monomial appears with a unique coefficient.
 
-### Step 2: Uniqueness follows from determinacy
+### Step 3: Apply Matrix-Tree Theorem
 
-Suppose there were an alternative sign assignment $\varepsilon'(F)$ such that:
-$$\sum_F \varepsilon'(F) \cdot |\omega(F)| = \det(\tilde{L}^{(R)})$$
+The All-Minors Matrix-Tree Theorem states:
+$$\det(L^{(R)}) = \sum_{F \in \mathcal{F}_R} \prod_{e \in E(F)} a_e$$
 
-For this to equal the MTT result, we need:
-$$\varepsilon'(F) \cdot |\omega(F)| = \varepsilon(F) \cdot |\omega(F)|$$
+where each forest contributes with coefficient $+1$.
 
-for all $F$ with $|\omega(F)| \neq 0$.
+### Step 4: Conclusion
 
-This requires $\varepsilon'(F) = \varepsilon(F)$ for all contributing forests.
-
-### Step 3: Multiplicativity is automatic
-
-For a forest $F = F_L \cup F_R$ that decomposes across a cut:
-$$\text{term}(F) = \text{term}(F_L) \cdot \text{term}(F_R)$$
-
-Therefore:
-$$\varepsilon(F) = \text{sign}(\text{term}(F)) = \text{sign}(\text{term}(F_L)) \cdot \text{sign}(\text{term}(F_R)) = \varepsilon(F_L) \cdot \varepsilon(F_R)$$
-
-Multiplicativity is not an additional constraint—it's a consequence of the product structure.
-
----
-
-## Conclusion
-
-The sign rule is **uniquely determined** by the requirement that the sum equals the Hodges determinant. There is no alternative sign assignment that could make all terms positive while preserving the correct amplitude.
+Since the monomials are distinct and polynomials have unique expansions, the coefficient of each forest monomial is uniquely determined to be $+1$.
 
 **QED** ∎
 
 ---
 
-## Implication
+## Corollary: Signs on Real Slices
 
-This proves that the mixed-sign structure is **intrinsic** to the forest triangulation. To obtain a positive geometry for gravity, one would need a fundamentally different triangulation—not merely a different sign convention within the forest framework.
+When we specialize to a **real kinematic slice** (rational spinors, split signature), each $a_e = w_e C_i C_j$ takes a real value.
+
+The "sign of forest $F$" is:
+$$\varepsilon(F) = \text{sign}\left(\prod_{e \in E(F)} a_e\right) = \text{sign}(\prod w) \times \text{sign}(\prod C^{\deg})$$
+
+This sign is determined by the numerical values of $w_e$ and $C_v$ at the given kinematic point.
 
 ---
 
-*Proof completed January 2026.*
+## What This Does and Does NOT Prove
 
+### What It Proves:
+- The forest expansion in the MTT basis has **unique, fixed coefficients**
+- Any attempt to "re-sign" the terms changes the polynomial
+- The mixed-sign structure is intrinsic to the forest triangulation
+
+### What It Does NOT Prove:
+- That no positive geometry exists for gravity
+- That no other triangulation could yield uniform signs
+- That the sign structure persists for complex kinematics
+
+---
+
+## Previous Incorrect Argument (Corrected)
+
+The earlier version claimed: "If all terms had different signs, the sum would differ."
+
+This is **not valid** without the polynomial structure. Sums can be equal even with different term-by-term values.
+
+The correct argument uses **polynomial uniqueness**: distinct monomials have unique coefficients.
+
+---
+
+*Proof corrected January 2026.*

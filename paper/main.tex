@@ -47,6 +47,8 @@ We make explicit the \textbf{sign structure} of each forest term and connect it 
 
 \section{Conventions}
 
+\textbf{Real kinematic slice.} Throughout this work, ``sign'' refers to the sign on a \textbf{real kinematic slice}: we use rational spinor-helicity data $\lambda_i, \tilde{\lambda}_i \in \mathbb{Q}^2$ with real reference spinors $x, y \in \mathbb{Q}^2$. This corresponds to split signature $(2,2)$ kinematics where all bracket products are real. For generic complex kinematics, signs are not defined.
+
 \begin{definition}[Hodges Weighted Laplacian]
 For $n$ particles with spinor-helicity variables $(\lambda_i, \tilde{\lambda}_i)$ and reference spinors $(x, y)$, define:
 \begin{align}
@@ -226,32 +228,28 @@ For a forest $F$ that decomposes as $F = F_L \cup F_R$ across a kinematic cut,
 
 This ensures that residues at kinematic poles inherit the signed structure.
 
-\subsection{Uniqueness Within Forest Triangulation}
+\subsection{Uniqueness of Forest Coefficients}
 
-\begin{theorem}[Uniqueness of Sign Rule]
+\begin{theorem}[Uniqueness of Monomial Coefficients]
 \label{thm:uniqueness}
-Within the forest triangulation, the sign rule $\varepsilon(F) = \text{sign}(\prod w) \times \text{sign}(\prod C^{\deg})$ is the \textbf{unique} assignment such that the sum reproduces the Hodges determinant.
+In the polynomial ring $\mathbb{Z}[a_{ij}]$ with $a_{ij} = w_{ij} C_i C_j$ treated as independent formal variables, the forest expansion
+\begin{equation}
+\det(\tilde{L}^{(R)}) = \sum_{F \in \mathcal{F}_R} \prod_{e \in E(F)} a_e
+\end{equation}
+has \textbf{unique} coefficients: each forest $F$ corresponds to a distinct monomial $\prod_{e \in E(F)} a_e$, and all coefficients are $+1$.
 \end{theorem}
 
 \begin{proof}
-The Matrix-Tree Theorem gives:
-\begin{equation}
-\det(\tilde{L}^{(R)}) = \sum_{F} \prod_{e \in E(F)} a_e = \sum_F \left(\prod_e w_e\right) \cdot \left(\prod_v C_v^{\deg(v)}\right)
-\end{equation}
-
-Each term is a specific numerical value determined by the kinematics and reference spinors. Its sign is therefore:
-\begin{equation}
-\varepsilon(F) = \text{sign}\left(\prod_e w_e \cdot \prod_v C_v^{\deg(v)}\right) = \text{sign}(\prod w) \times \text{sign}(\prod C^{\deg})
-\end{equation}
-
-There is no freedom in choosing alternative signs---they are determined by the numerical values. Any alternative assignment $\varepsilon'(F) \neq \varepsilon(F)$ would give a different sum, not equal to the Hodges determinant.
+Different forests have different edge sets, so their monomials $\prod_{e \in E(F)} a_e$ are distinct in $\mathbb{Z}[a_{ij}]$. Since polynomials have unique monomial expansions, the coefficient of each monomial is uniquely determined. By the All-Minors Matrix-Tree Theorem, each coefficient is $+1$.
 \end{proof}
 
-\begin{remark}
-Multiplicativity under factorization (Theorem 7.1) is not an additional constraint but a consequence: for $F = F_L \cup F_R$, we have $\text{term}(F) = \text{term}(F_L) \cdot \text{term}(F_R)$, so $\varepsilon(F) = \varepsilon(F_L) \cdot \varepsilon(F_R)$ automatically.
+\begin{remark}[Sign on Real Slices]
+When we specialize to a \textbf{real kinematic slice} (e.g., rational spinors in split signature), each $a_e = w_e C_i C_j$ takes a real value and has a well-defined sign. The ``sign of forest $F$'' is then $\varepsilon(F) = \text{sign}(\prod_{e \in E(F)} a_e)$, which factors as stated in Theorem~\ref{thm:sign-rule}. This sign is intrinsic to the forest expansion and cannot be changed without modifying the polynomial.
 \end{remark}
 
-This theorem shows that the mixed-sign structure is \textbf{intrinsic} to the forest triangulation and cannot be eliminated by any sign redefinition within this framework.
+\begin{remark}
+This does not prove that no positive geometry exists for gravity---only that the \textbf{forest triangulation in the MTT basis} is intrinsically signed. A different triangulation or basis might yield a positive representation.
+\end{remark}
 
 \subsection{Open Questions}
 
