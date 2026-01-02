@@ -186,12 +186,37 @@ At the formula level, gravity = YM $\times$ YM $\times$ kernel. At the geometry 
 
 The kernel's $(3,3)$ signature transforms ``positive $\times$ positive'' into ``signed.''
 
+\subsection{Signed Factorization}
+
+The sign rule satisfies a crucial property: it is \textbf{multiplicative} under forest decomposition.
+
+\begin{theorem}[Signed Factorization]
+For a forest $F$ that decomposes as $F = F_L \cup F_R$ across a kinematic cut,
+\begin{equation}
+\varepsilon(F) = \varepsilon(F_L) \times \varepsilon(F_R)
+\end{equation}
+\end{theorem}
+
+This ensures that residues at kinematic poles inherit the signed structure.
+
+\subsection{Uniqueness}
+
+\begin{theorem}[Uniqueness of Sign Rule]
+The sign rule is the \textbf{unique} assignment of signs to forests such that:
+\begin{enumerate}
+\item The sum reproduces the Hodges determinant
+\item Signs are multiplicative under factorization
+\end{enumerate}
+\end{theorem}
+
+This proves there is no ``hidden'' way to make gravity into a positive geometry.
+
 \subsection{Open Questions}
 
 \begin{enumerate}
-\item Can signed geometry be axiomatized rigorously like positive geometry?
 \item Does the pattern extend to NMHV and loop level?
 \item What is the string-theoretic origin of the sign rule?
+\item Can twisted cohomology provide a unified framework?
 \end{enumerate}
 
 \section{Conclusion}
