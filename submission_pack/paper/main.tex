@@ -121,14 +121,10 @@ $\text{sign}(\prod C^{\deg})$ & Reference spinors & Gauge (cancels in total) \\
 
 \section{The 50/50 Sign Split}
 
-\begin{theorem}[Empirical Sign Split]
-\label{thm:empirical-split}
-For $n=6$ with $|R|=3$, the 108 spanning forests split with mode $(54, 54)$ positive/negative across generic kinematic configurations.
-\end{theorem}
-
-\begin{proof}
-By numerical verification over 50 generic kinematic configurations using exact rational arithmetic. The $(54, 54)$ split is the most common outcome, occurring in 44\% of samples. See Appendix for verification scripts.
-\end{proof}
+\begin{observation}[Empirical Sign Split]
+\label{obs:empirical-split}
+For $n=6$ with $|R|=3$, numerical sampling over 50 generic kinematic configurations (using exact rational arithmetic) shows the 108 spanning forests split with mode $(54, 54)$ positive/negative, occurring in 44\% of samples.
+\end{observation}
 
 We conjecture this is not coincidental---it reflects the \textbf{split signature} of the KLT kernel.
 
@@ -139,14 +135,14 @@ The KLT relations express gravity as:
 M_{\text{gravity}} = A_{\text{YM}}^T \cdot S_{\text{KLT}} \cdot \tilde{A}_{\text{YM}}
 \end{equation}
 
-\begin{theorem}[KLT Signature]
-\label{thm:klt-signature}
-The KLT kernel matrix for $n=6$ generically has signature $(3,3)$---three positive and three negative eigenvalues.
-\end{theorem}
+\begin{observation}[KLT Signature]
+\label{obs:klt-signature}
+Numerical computation over 20 generic kinematic configurations (using exact rational arithmetic) shows the KLT kernel matrix for $n=6$ has signature $(3,3)$---three positive and three negative eigenvalues---in all non-degenerate samples.
+\end{observation}
 
-\begin{proof}
-By numerical computation over 20 generic kinematic configurations using exact rational arithmetic. The signature $(3,3)$ is verified in all non-degenerate samples. See Appendix for verification scripts.
-\end{proof}
+\begin{conjecture}[KLT Signature Stability]
+On the real kinematic slice (split signature $(2,2)$), away from degeneracies, the $n=6$ KLT kernel has constant signature $(3,3)$.
+\end{conjecture}
 
 \begin{theorem}[Mixed Signs are Generic]
 \label{thm:mixed-signs}
@@ -256,14 +252,10 @@ A positive geometry $(X, \Omega)$ satisfies:
 
 Yang-Mills amplitudes satisfy these axioms (Amplituhedron). For gravity, we find:
 
-\begin{theorem}[Mixed-Sign Structure]
-\label{thm:mixed-sign-structure}
-Under the natural forest triangulation of MHV gravity amplitudes, the 108 terms exhibit an intrinsic mixed-sign structure with approximately 54 positive and 54 negative contributions. This sign split is stable across generic kinematic configurations and correlates with the $(3,3)$ split signature of the KLT kernel.
-\end{theorem}
-
-\begin{proof}
-Follows from Theorems~\ref{thm:empirical-split}, \ref{thm:klt-signature}, and \ref{thm:modal-split}. The forest sign rule (Theorem~\ref{thm:sign-rule}) determines signs uniquely, and exhaustive enumeration confirms the modal split. Numerical verification over 50 kinematic samples confirms stability.
-\end{proof}
+\begin{observation}[Mixed-Sign Structure]
+\label{obs:mixed-sign-structure}
+Under the natural forest triangulation of MHV gravity amplitudes, the 108 terms exhibit an intrinsic mixed-sign structure. Observations~\ref{obs:empirical-split} and \ref{obs:klt-signature}, combined with Theorem~\ref{thm:modal-split}, provide computational evidence that approximately 54 positive and 54 negative contributions is typical, correlating with the $(3,3)$ split signature of the KLT kernel.
+\end{observation}
 
 \begin{remark}
 This does not constitute a proof that \emph{no} positive geometry exists for gravity---such a proof would require demonstrating an obstruction to \emph{all possible} triangulations. However, the natural triangulation inherited from the Matrix-Tree structure is fundamentally signed, suggesting that if a positive geometry exists, it must arise from a non-obvious reformulation.
@@ -284,18 +276,32 @@ A signed geometry $(X, \Omega_\pm)$ is characterized by:
 
 Gravity under the forest triangulation is the prototypical signed geometry, with the sign rule from Theorem~\ref{thm:sign-rule}.
 
-\section{Numerical Verification}
+\section{Computational Evidence}
+
+We verify the sign rule and sign split patterns using exact rational arithmetic throughout. This section documents our computational methodology.
+
+\subsection{Sampling Protocol}
+
+\textbf{Kinematic samples:} We generate random spinor-helicity data $(\lambda_i, \tilde{\lambda}_i) \in \mathbb{Q}^2$ satisfying momentum conservation $\sum_i \lambda_i \tilde{\lambda}_i^T = 0$. Spinor components are sampled uniformly from integers in $[-100, 100]$, then the last two $\tilde{\lambda}$ are solved exactly to enforce conservation.
+
+\textbf{Seed handling:} Each sample uses a deterministic seed (sample index $\times$ constant), ensuring reproducibility.
+
+\textbf{Degeneracy handling:} Samples with $\langle ij \rangle = 0$ for any $i \neq j$, or with singular reference factors $C_i = 0$, are detected and skipped. For $n=7$, forests with zero-weight edges (due to $w_{ij} = 0$) are tracked separately.
+
+\subsection{Verification Results}
 
 \begin{center}
-\begin{tabular}{|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|c|}
 \hline
-$n$ & Forests & Modal Split & Sign Rule Verified \\
+$n$ & Forests & Modal Split & Sign Rule Accuracy & Samples \\
 \hline
-6 & 108 & (54, 54) & 20/20 samples \\
-7 & 1029 & $\approx$(515, 514) & 20/20 samples \\
+6 & 108 & (54, 54) at 44\% & 100\% (2160/2160) & 20 \\
+7 & 1029 & (515, 514) at 30\% & 100\% (20580/20580) & 20 \\
 \hline
 \end{tabular}
 \end{center}
+
+\textbf{Note on $n=7$:} The modal split $(515, 514)$ is the closest possible to 50/50 since 1029 is odd. One sample exhibited 597 zero-weight forests due to degenerate kinematics; these are excluded from the split percentage but included in sign-rule verification (where zero-weight terms are skipped consistently).
 
 All verification code is available at: \url{https://github.com/zacharycraig1/Canonical-Positive-Geometry-Twistor-Gravity-Exploration}
 
