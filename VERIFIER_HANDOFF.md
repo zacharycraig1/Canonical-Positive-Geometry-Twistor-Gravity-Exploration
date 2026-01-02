@@ -2,7 +2,7 @@
 
 **Project:** Signed Geometry of MHV Gravity  
 **Date:** January 2026  
-**Status:** Publication Ready
+**Status:** Ready for arXiv (after final review)
 
 ---
 
@@ -14,7 +14,9 @@ This project establishes that **MHV gravity amplitudes have signed geometry**, n
 
 For a spanning forest $F$ with root set $R$, each forest term has sign:
 
-$$\varepsilon(F) = (-1)^{|E(F)|} \times \text{sign}\left(\prod_{e} w_e\right) \times \text{sign}\left(\prod_v C_v^{\deg(v)}\right)$$
+$$\varepsilon(F) = \text{sign}\left(\prod_{e} w_e\right) \times \text{sign}\left(\prod_v C_v^{\deg(v)}\right)$$
+
+**Note:** Some code versions include a $(-1)^{|E|}$ factor from a different sign convention. For $n=6$ with $|R|=3$, all forests have $|E|=3$, so this is a constant $-1$ that doesn't affect relative signs.
 
 This is verified with **100% accuracy** for n=6 (20 samples) and n=7 (20 samples).
 

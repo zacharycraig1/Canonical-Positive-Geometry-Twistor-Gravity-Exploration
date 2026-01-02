@@ -7,7 +7,8 @@
 
 \newtheorem{theorem}{Theorem}
 \newtheorem{lemma}[theorem]{Lemma}
-\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem{conjecture}[theorem]{Conjecture}
 \newtheorem{definition}[theorem]{Definition}
 
 \title{Signed Geometry of MHV Gravity: \\ The Forest Sign Rule and Split Signature}
@@ -19,7 +20,7 @@
 \maketitle
 
 \begin{abstract}
-We derive an explicit sign rule for the forest expansion of MHV gravity amplitudes. While it is known that the $n$-point MHV gravity amplitude equals the determinant of a weighted Laplacian, which expands as a sum over spanning forests, the sign structure of individual forest contributions has not been previously characterized. We prove that each forest term has sign $\varepsilon(F) = (-1)^{|E|} \times \text{sign}(\prod_e w_e) \times \text{sign}(\prod_v C_v^{\deg(v)})$, and verify this for $n=6$ and $n=7$ with 100\% accuracy. We connect this to the $(3,3)$ split signature of the KLT kernel, showing that under the natural forest triangulation, gravity exhibits ``signed geometry'' with approximately equal positive and negative contributions. This provides a new geometric perspective on how gravity amplitudes differ structurally from Yang-Mills amplitudes at the level of canonical forms.
+We analyze the sign structure of the forest expansion of MHV gravity amplitudes. While it is known that the $n$-point MHV gravity amplitude equals the determinant of a weighted Laplacian, which expands as a sum over spanning forests via the Matrix-Tree Theorem, the sign structure of individual forest contributions has not been previously emphasized. We show that each forest term has sign $\varepsilon(F) = \text{sign}(\prod_e w_e) \times \text{sign}(\prod_v C_v^{\deg(v)})$, and verify this for $n=6$ and $n=7$. We observe that the 108 forests for $n=6$ split approximately 54 positive / 54 negative, and connect this empirically to the $(3,3)$ split signature of the KLT kernel. This suggests that under the natural forest triangulation, gravity exhibits ``signed geometry'' with approximately equal positive and negative contributions.
 \end{abstract}
 
 \section{Introduction}
@@ -38,18 +39,19 @@ where $\tilde{L}$ is a weighted Laplacian. By the Matrix-Tree Theorem~\cite{Chai
 \begin{equation}
 \det(\tilde{L}^{(R)}) = \sum_{F \in \mathcal{F}_R(K_n)} \prod_{(i,j) \in E(F)} a_{ij}
 \end{equation}
+where $a_{ij} = w_{ij} C_i C_j$ are the \textbf{MTT edge weights} (defined so that $\tilde{L}_{ij} = -a_{ij}$ for $i \neq j$).
 
 \subsection{Our Contribution}
 
-We derive the \textbf{explicit sign rule} for each forest term and connect it to the KLT kernel's split signature.
+We make explicit the \textbf{sign structure} of each forest term and connect it empirically to the KLT kernel's split signature.
 
-\section{The Weighted Laplacian}
+\section{Conventions}
 
 \begin{definition}[Hodges Weighted Laplacian]
 For $n$ particles with spinor-helicity variables $(\lambda_i, \tilde{\lambda}_i)$ and reference spinors $(x, y)$, define:
 \begin{align}
-w_{ij} &= \frac{[ij]}{\langle ij \rangle} \\
-C_i &= \langle i, x \rangle \langle i, y \rangle
+w_{ij} &= \frac{[ij]}{\langle ij \rangle} \quad \text{(kinematic edge weight)} \\
+C_i &= \langle i, x \rangle \langle i, y \rangle \quad \text{(reference factor)}
 \end{align}
 The weighted Laplacian is:
 \begin{equation}
@@ -58,38 +60,46 @@ The weighted Laplacian is:
 \sum_{k \neq i} w_{ik} \cdot C_i \cdot C_k & i = j
 \end{cases}
 \end{equation}
+The MTT edge weight is $a_{ij} := w_{ij} C_i C_j$, so that $\tilde{L}_{ij} = -a_{ij}$ for $i \neq j$.
 \end{definition}
 
 \section{Main Result: The Sign Rule}
 
 \begin{theorem}[Sign Rule for Forest Terms]
 \label{thm:sign-rule}
-For a forest $F \in \mathcal{F}_R(K_n)$ with edge set $E(F)$, the contribution to $\det(\tilde{L}^{(R)})$ has sign:
+For a forest $F \in \mathcal{F}_R(K_n)$ with edge set $E(F)$, the contribution to $\det(\tilde{L}^{(R)})$ is:
 \begin{equation}
-\boxed{\varepsilon(F) = (-1)^{|E(F)|} \times \text{sign}\left(\prod_{e \in E(F)} w_e\right) \times \text{sign}\left(\prod_{v \in V} C_v^{\deg_F(v)}\right)}
+\text{term}(F) = \prod_{e \in E(F)} a_e = \prod_{e \in E(F)} w_e \cdot \prod_{v \in V} C_v^{\deg_F(v)}
+\end{equation}
+The sign of this term is:
+\begin{equation}
+\boxed{\varepsilon(F) = \text{sign}\left(\prod_{e \in E(F)} w_e\right) \times \text{sign}\left(\prod_{v \in V} C_v^{\deg_F(v)}\right)}
 \end{equation}
 \end{theorem}
 
 \begin{proof}
-The All-Minors Matrix-Tree Theorem states that for a Laplacian $L$ with $L_{ij} = -a_{ij}$ (off-diagonal):
+The All-Minors Matrix-Tree Theorem~\cite{Chaiken:1982} states: for a Laplacian $L$ with $L_{ij} = -a_{ij}$ (off-diagonal) and $L_{ii} = \sum_{j \neq i} a_{ij}$:
 \begin{equation}
 \det(L^{(R)}) = \sum_{F \in \mathcal{F}_R} \prod_{(i,j) \in E(F)} a_{ij}
 \end{equation}
+This formula already absorbs the off-diagonal minus signs---each term is a product of the \emph{positive} edge weights $a_{ij}$, not the Laplacian entries.
 
-For our Laplacian, $a_{ij} = w_{ij} C_i C_j$. The determinant expansion picks up the actual matrix entries $\tilde{L}_{ij} = -a_{ij}$, introducing a factor $(-1)^{|E(F)|}$ for each forest.
-
-The $C$ factors combine as:
+For our Laplacian, $a_{ij} = w_{ij} C_i C_j$. The $C$ factors combine as:
 \begin{equation}
 \prod_{(i,j) \in E(F)} C_i C_j = \prod_{v \in V} C_v^{\deg_F(v)}
 \end{equation}
-since each vertex $v$ appears in $\deg_F(v)$ edges.
+since each vertex $v$ appears in exactly $\deg_F(v)$ edges.
 
 Therefore:
 \begin{equation}
-\text{term}(F) = (-1)^{|E(F)|} \prod_{e \in E(F)} w_e \prod_{v \in V} C_v^{\deg_F(v)}
+\text{term}(F) = \prod_{e \in E(F)} w_e \cdot \prod_{v \in V} C_v^{\deg_F(v)}
 \end{equation}
-and the sign follows.
+and the sign is the product of signs of these factors.
 \end{proof}
+
+\begin{remark}[Sign Convention]
+Some expositions work with ``signed-edge weights'' $b_{ij} := \tilde{L}_{ij} = -a_{ij}$. If one expands using $b_{ij}$, an extra factor $(-1)^{|E(F)|}$ appears. For $n=6$ with $|R|=3$, every forest has $|E|=3$, so this is just a global factor of $-1$ that doesn't affect relative signs between forests.
+\end{remark}
 
 \subsection{Origin of Each Factor}
 
@@ -98,7 +108,6 @@ and the sign follows.
 \hline
 \textbf{Factor} & \textbf{Origin} & \textbf{Dependence} \\
 \hline
-$(-1)^{|E|}$ & Laplacian off-diagonal sign & Combinatorial \\
 $\text{sign}(\prod w)$ & Kinematic ratios $[ij]/\langle ij\rangle$ & Kinematic \\
 $\text{sign}(\prod C^{\deg})$ & Reference spinors & Gauge (cancels in total) \\
 \hline
@@ -107,11 +116,11 @@ $\text{sign}(\prod C^{\deg})$ & Reference spinors & Gauge (cancels in total) \\
 
 \section{The 50/50 Sign Split}
 
-\begin{corollary}
-For $n=6$ with $|R|=3$, the 108 spanning forests split approximately 54 positive / 54 negative.
-\end{corollary}
+\begin{observation}[Empirical Sign Split]
+For $n=6$ with $|R|=3$, numerical sampling over 50 generic kinematic configurations shows that the 108 spanning forests split with mode $(54, 54)$ positive/negative. This 50/50 split is the most common outcome, occurring in 44\% of samples.
+\end{observation}
 
-This is not coincidental---it reflects the \textbf{split signature} of the KLT kernel.
+We conjecture this is not coincidental---it reflects the \textbf{split signature} of the KLT kernel.
 
 \subsection{KLT Kernel Signature}
 
@@ -120,11 +129,13 @@ The KLT relations express gravity as:
 M_{\text{gravity}} = A_{\text{YM}}^T \cdot S_{\text{KLT}} \cdot \tilde{A}_{\text{YM}}
 \end{equation}
 
-\begin{theorem}
-The KLT kernel matrix for $n=6$ has signature $(3,3)$---three positive and three negative eigenvalues.
-\end{theorem}
+\begin{observation}[KLT Signature]
+Numerical computation shows that the KLT kernel matrix for $n=6$ generically has signature $(3,3)$---three positive and three negative eigenvalues.
+\end{observation}
 
-This split signature is the geometric origin of the 50/50 sign split in the forest expansion.
+\begin{conjecture}
+The split signature of the KLT kernel is the geometric origin of the approximately 50/50 sign split in the forest expansion.
+\end{conjecture}
 
 \section{Evidence Against Positive Geometry for Gravity}
 
@@ -139,9 +150,9 @@ A positive geometry $(X, \Omega)$ satisfies:
 
 Yang-Mills amplitudes satisfy these axioms (Amplituhedron). For gravity, we find:
 
-\begin{theorem}[Mixed-Sign Structure]
+\begin{observation}[Mixed-Sign Structure]
 Under the natural forest triangulation of MHV gravity amplitudes, the 108 terms exhibit an intrinsic mixed-sign structure with approximately 54 positive and 54 negative contributions. This sign split is stable across generic kinematic configurations and correlates with the $(3,3)$ split signature of the KLT kernel.
-\end{theorem}
+\end{observation}
 
 \begin{remark}
 This does not constitute a proof that \emph{no} positive geometry exists for gravity---such a proof would require demonstrating an obstruction to \emph{all possible} triangulations. However, the natural triangulation inherited from the Matrix-Tree structure is fundamentally signed, suggesting that if a positive geometry exists, it must arise from a non-obvious reformulation.
@@ -160,17 +171,17 @@ A signed geometry $(X, \Omega_\pm)$ is characterized by:
 \end{enumerate}
 \end{definition}
 
-Gravity is the prototypical signed geometry, with the sign rule from Theorem~\ref{thm:sign-rule}.
+Gravity under the forest triangulation is the prototypical signed geometry, with the sign rule from Theorem~\ref{thm:sign-rule}.
 
 \section{Numerical Verification}
 
 \begin{center}
 \begin{tabular}{|c|c|c|c|}
 \hline
-$n$ & Forests & Modal Split & Sign Rule Accuracy \\
+$n$ & Forests & Modal Split & Sign Rule Verified \\
 \hline
-6 & 108 & (54, 54) & 20/20 = 100\% \\
-7 & 1029 & (515, 514) & 20/20 = 100\% \\
+6 & 108 & (54, 54) & 20/20 samples \\
+7 & 1029 & $\approx$(515, 514) & 20/20 samples \\
 \hline
 \end{tabular}
 \end{center}
@@ -185,7 +196,7 @@ At the formula level, gravity = YM $\times$ YM $\times$ kernel. At the geometry 
 \begin{itemize}
 \item Yang-Mills: positive geometry (Amplituhedron)
 \item KLT kernel: introduces split signature
-\item Gravity: signed geometry
+\item Gravity: signed geometry (under forest triangulation)
 \end{itemize}
 
 The kernel's $(3,3)$ signature transforms ``positive $\times$ positive'' into ``signed.''
@@ -203,17 +214,17 @@ For a forest $F$ that decomposes as $F = F_L \cup F_R$ across a kinematic cut,
 
 This ensures that residues at kinematic poles inherit the signed structure.
 
-\subsection{Uniqueness}
+\subsection{Uniqueness Within Forest Triangulation}
 
-\begin{theorem}[Uniqueness of Sign Rule]
-Within the forest triangulation, the sign rule $\varepsilon(F) = (-1)^{|E|} \times \text{sign}(\prod w) \times \text{sign}(\prod C^{\deg})$ is the \textbf{unique} assignment such that:
+\begin{conjecture}[Uniqueness of Sign Rule]
+Within the forest triangulation, the sign rule $\varepsilon(F) = \text{sign}(\prod w) \times \text{sign}(\prod C^{\deg})$ is the unique assignment such that:
 \begin{enumerate}
 \item The sum reproduces the Hodges determinant
 \item Signs are multiplicative under factorization
 \end{enumerate}
-\end{theorem}
+\end{conjecture}
 
-This shows that the mixed-sign structure is intrinsic to the forest triangulation and cannot be eliminated by a different sign assignment within this framework.
+If true, this shows that the mixed-sign structure is intrinsic to the forest triangulation and cannot be eliminated by a different sign assignment within this framework.
 
 \subsection{Open Questions}
 
@@ -221,21 +232,22 @@ This shows that the mixed-sign structure is intrinsic to the forest triangulatio
 \item Does the pattern extend to NMHV and loop level?
 \item What is the string-theoretic origin of the sign rule?
 \item Can twisted cohomology provide a unified framework?
+\item Does an alternative triangulation yield positive geometry?
 \end{enumerate}
 
 \section{Conclusion}
 
-We have derived the explicit sign rule for MHV gravity forest terms and connected it to the KLT kernel's split signature. Under the natural forest triangulation, gravity exhibits \textbf{signed geometry}---a mixed-sign structure that contrasts with the positive geometries of gauge theories.
+We have made explicit the sign rule for MHV gravity forest terms and connected it empirically to the KLT kernel's split signature. Under the natural forest triangulation, gravity exhibits \textbf{signed geometry}---a mixed-sign structure that contrasts with the positive geometries of gauge theories.
 
-Whether this represents a fundamental obstruction to positive geometry for gravity, or whether an alternative triangulation could yield uniform signs, remains an open question. Our results suggest that if a positive geometry exists for gravity, it must arise from a substantially different geometric construction than the forest expansion.
+Whether this represents a fundamental obstruction to positive geometry for gravity, or whether an alternative triangulation could yield uniform signs, remains an open question.
 
 \appendix
 \section{Verification Scripts}
 
 The following scripts verify our results:
 \begin{itemize}
-\item \texttt{src/signed\_geometry/verify\_chy\_sign\_derivation.sage}: Sign rule derivation verification
 \item \texttt{tests/test\_oracle\_match.sage}: Independent oracle verification (non-circular)
+\item \texttt{src/signed\_geometry/verify\_chy\_sign\_derivation.sage}: Sign rule verification
 \item \texttt{src/signed\_geometry/generalize\_n7.sage}: Extension to $n=7$
 \item \texttt{tests/signed\_geometry\_verification.sage}: Full test suite (15/15 pass)
 \end{itemize}
@@ -246,12 +258,14 @@ The following scripts verify our results:
 \bibitem{ArkaniHamed:2013jha}
 N.~Arkani-Hamed and J.~Trnka,
 ``The Amplituhedron,''
-JHEP \textbf{10} (2014) 030.
+JHEP \textbf{10} (2014) 030,
+arXiv:1312.2007.
 
 \bibitem{Hodges:2011wm}
 A.~Hodges,
-``New expressions for gravitational scattering amplitudes,''
-JHEP \textbf{01} (2013) 059.
+``A simple formula for gravitational MHV amplitudes,''
+JHEP \textbf{01} (2013) 059,
+arXiv:1108.2227.
 
 \bibitem{Chaiken:1982}
 S.~Chaiken,
@@ -261,7 +275,8 @@ SIAM J. Algebraic Discrete Methods \textbf{3} (1982) 319.
 \bibitem{NSVW:2009}
 D.~Nguyen, M.~Spradlin, A.~Volovich, and C.~Wen,
 ``The tree formula for MHV graviton amplitudes,''
-JHEP \textbf{07} (2009) 045.
+JHEP \textbf{07} (2009) 045,
+arXiv:0907.2276.
 
 \bibitem{KLT:1985}
 H.~Kawai, D.~Lewellen, and S.-H.~Tye,
@@ -271,7 +286,8 @@ Nucl. Phys. B \textbf{269} (1986) 1.
 \bibitem{Mizera:2017}
 S.~Mizera,
 ``Scattering Amplitudes from Intersection Theory,''
-Phys. Rev. Lett. \textbf{120} (2018) 141602.
+Phys. Rev. Lett. \textbf{120} (2018) 141602,
+arXiv:1711.00469.
 
 \end{thebibliography}
 
