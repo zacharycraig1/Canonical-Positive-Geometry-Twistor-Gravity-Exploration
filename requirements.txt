@@ -1,10 +1,15 @@
-sage
-numpy
-scipy
+# Requirements for Signed Geometry of MHV Gravity
+# Use SageMath 10.x container for full compatibility
 
+# Python packages (used inside SageMath environment)
+numpy>=1.21.0
+scipy>=1.7.0
 
+# SageMath is required but installed via Docker:
+# docker run --rm -v "${PWD}:/home/sage/project" -w /home/sage/project sagemath/sagemath:latest sage <script.sage>
 
-
-
-
-
+# Tested with:
+# - SageMath 10.2 (sagemath/sagemath:latest as of Jan 2026)
+# - Python 3.11
+# - numpy 1.26.4
+# - scipy 1.11.4
