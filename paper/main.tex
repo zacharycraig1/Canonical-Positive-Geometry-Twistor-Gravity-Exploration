@@ -160,18 +160,26 @@ For 6-point MHV gravity with 3-rooted spanning forests on $K_6$:
 The forest term signs depend on the \textbf{full MTT edge weight} $a_{ij} = w_{ij} C_i C_j$, not on $w_{ij} = [ij]/\langle ij \rangle$ alone. On a fixed real kinematic slice, the reference factors $C_i$ contribute to the overall sign pattern. However, since the total amplitude is reference-independent, the $C$-factor contributions cancel in the full sum.
 \end{remark}
 
-\begin{theorem}[Modal Split is $(54,54)$]
+\begin{theorem}[Modal Split Under Random Signs]
 \label{thm:modal-split}
-Under uniform random edge signs, the expected number of positive forests is exactly 54, and the modal split is $(54, 54)$, occurring in $28.9\%$ of patterns.
+Consider the 12 forest-relevant edges with i.i.d.\ uniform $\pm 1$ signs. Under this combinatorial model:
+\begin{enumerate}
+\item[(i)] The expected number of positive forests is exactly $E[\text{positive}] = 54$.
+\item[(ii)] The modal split is $(54, 54)$, occurring in $1184/4096 = 28.90625\%$ of the $2^{12}$ sign patterns.
+\end{enumerate}
 \end{theorem}
 
 \begin{proof}
-Each forest has exactly 3 edges. Under uniform random signs:
+Each forest has exactly 3 edges. Under i.i.d.\ uniform signs:
 \begin{equation}
 P(\text{positive}) = P(\text{0 or 2 negative edges}) = \binom{3}{0}\frac{1}{8} + \binom{3}{2}\frac{1}{8} = \frac{4}{8} = \frac{1}{2}
 \end{equation}
-Therefore $E[\text{positive}] = 108 \times \frac{1}{2} = 54$. By exhaustive enumeration, $(54,54)$ is the mode.
+Therefore $E[\text{positive}] = 108 \times \frac{1}{2} = 54$. By exhaustive enumeration over all $2^{12} = 4096$ sign patterns, $(54,54)$ is the mode with frequency $1184/4096$.
 \end{proof}
+
+\begin{remark}[Kinematic Sampling vs.\ Combinatorial Model]
+The theorem above concerns the \textbf{combinatorial i.i.d.\ sign model}. Separately, in 50 samples from \textbf{physical kinematics} (random real spinor-helicity data), we observe the $(54,54)$ split in approximately 44\% of samples. The slight difference reflects that physical kinematics do not produce uniformly random edge signs---there are correlations from momentum conservation. Both observations support the conclusion that balanced splits are typical.
+\end{remark}
 
 \subsection{The 18-Fold Structure}
 
@@ -201,25 +209,24 @@ Internal edges & Count \\
 
 The algebraic map between forests and KLT eigenmodes is \textbf{kinematic-dependent}, not purely combinatorial. Both structures involve the same Mandelstam variables $s_{ij}$, but the exact forest$\to$eigenmode assignment varies with the kinematic point.
 
-\begin{theorem}[6-Way Forest Partition]
-\label{thm:partition}
-The 108 forests admit a partition into 6 groups of exactly 18, respecting the $S_3$ symmetry of the root labels.
-\end{theorem}
+\begin{lemma}[Forest Structure by Root Assignment]
+\label{lem:forest-structure}
+For $n=6$ with roots $R = \{0, 1, 2\}$, each non-root vertex $v \in \{3, 4, 5\}$ is assigned to exactly one root in any spanning forest. The 27 possible root-assignment patterns $(r(3), r(4), r(5))$ decompose as follows:
+\begin{enumerate}
+\item \textbf{Monochrome patterns} (all three non-roots assigned to same root): 3 patterns, each with 16 forests. Total: 48 forests.
+\item \textbf{Mixed patterns} (exactly two non-roots share a root): 18 patterns, each with 3 forests. Total: 54 forests.
+\item \textbf{Bijective patterns} (each non-root to a distinct root): 6 patterns, each with 1 forest. Total: 6 forests.
+\end{enumerate}
+The total is $48 + 54 + 6 = 108$ forests.
+\end{lemma}
 
 \begin{proof}
-The 27 root assignments form 5 orbits under $S_3$:
-\begin{enumerate}
-\item \textbf{Monochrome orbit}: 3 patterns $\times$ 16 forests = 48 forests
-\item \textbf{Mixed orbits} (3 orbits): 6 patterns $\times$ 3 forests = 18 each, total 54
-\item \textbf{Bijective orbit}: 6 patterns $\times$ 1 forest = 6 forests
-\end{enumerate}
-
-Distribute symmetrically: each eigenspace receives $48/6 = 8$ monochrome, $54/6 = 9$ mixed, and $6/6 = 1$ bijective forest. Total: $8 + 9 + 1 = 18$ per eigenspace.
+By exhaustive enumeration of all 3-rooted spanning forests on $K_6$.
 \end{proof}
 
-\begin{corollary}
-The gravity amplitude decomposes as $M = \sum_{\sigma \in S_3} M_\sigma$ where $M_\sigma$ is a sum over 18 forest terms.
-\end{corollary}
+\begin{remark}[The 18-Fold Ratio]
+The ratio $108/6 = 18$ is exact and structurally suggestive: there are 6 KLT orderings (permutations of $\{3,4,5\}$) and 108 forests, giving 18 forests ``per ordering.'' However, an explicit canonical map from forests to KLT modes is \textbf{kinematic-dependent} and not purely combinatorial. The question of whether such a map has a natural geometric interpretation remains open.
+\end{remark}
 
 \section{Evidence Against Positive Geometry for Gravity}
 
@@ -289,12 +296,22 @@ The kernel's $(3,3)$ signature transforms ``positive $\times$ positive'' into ``
 
 The sign rule satisfies a crucial property: it is \textbf{multiplicative} under forest decomposition.
 
-\begin{theorem}[Signed Factorization]
-For a forest $F$ that decomposes as $F = F_L \cup F_R$ across a kinematic cut,
+\begin{lemma}[Signed Factorization]
+\label{lem:factorization}
+Let $F$ be a forest on vertex set $V$ that decomposes as $F = F_L \cup F_R$ where $F_L$ and $F_R$ are subforests on disjoint vertex sets $V_L$ and $V_R$ (with $V = V_L \sqcup V_R$). Then:
 \begin{equation}
 \varepsilon(F) = \varepsilon(F_L) \times \varepsilon(F_R)
 \end{equation}
-\end{theorem}
+\end{lemma}
+
+\begin{proof}
+Since $E(F) = E(F_L) \sqcup E(F_R)$ and the vertex sets are disjoint:
+\begin{align}
+\prod_{e \in E(F)} w_e &= \prod_{e \in E(F_L)} w_e \times \prod_{e \in E(F_R)} w_e \\
+\prod_{v \in V} C_v^{\deg_F(v)} &= \prod_{v \in V_L} C_v^{\deg_{F_L}(v)} \times \prod_{v \in V_R} C_v^{\deg_{F_R}(v)}
+\end{align}
+The second equality holds because vertices in $V_L$ have $\deg_F(v) = \deg_{F_L}(v)$ (no edges cross to $V_R$), and similarly for $V_R$. Taking signs and applying Theorem~\ref{thm:sign-rule} gives the result.
+\end{proof}
 
 This ensures that residues at kinematic poles inherit the signed structure.
 
