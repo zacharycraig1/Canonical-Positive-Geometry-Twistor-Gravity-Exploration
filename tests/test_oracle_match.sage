@@ -1,16 +1,16 @@
 #!/usr/bin/env sage
 """
-MTT ↔ det(L) Consistency Check
+MTT Identity: Independent Implementation Check
 
 This test verifies that the forest expansion matches the Laplacian determinant.
-This is a NON-CIRCULAR verification because:
+It provides an independent implementation check by comparing two different algorithms:
 
 1. Oracle: Computes det(L^minor) directly via Sage's matrix determinant
 2. Forest: Computes Σ_F Π_e (edge weights) via explicit enumeration
 
-These are two completely different algorithms that should give the same result
-by the Matrix-Tree Theorem. This validates that our forest enumeration and
-weight computation are correctly implemented.
+These two algorithms should give the same result by the Matrix-Tree Theorem.
+This validates that our forest enumeration and weight computation are correctly
+implemented.
 
 Run with: sage tests/test_oracle_match.sage
 """

@@ -155,7 +155,7 @@ For 6-point MHV gravity with 3-rooted spanning forests on $K_6$:
 \end{theorem}
 
 \begin{proof}
-\textbf{(i)} A 3-rooted forest with roots $R = \{1,2,3\}$ has each root forming its own tree. Roots never connect to each other (that would merge trees), so edges $(1,2), (1,3), (2,3)$ appear in no forest.
+\textbf{(i)} A 3-rooted forest with roots $R = \{0,1,2\}$ has each root forming its own tree. Roots never connect to each other (that would merge trees), so edges $(0,1), (0,2), (1,2)$ appear in no forest.
 
 \textbf{(ii)} By exhaustive enumeration: among all $2^{15}$ edge-sign patterns, exactly 8 give all forests positive (all 12 forest edges $+$, any signs on 3 unused edges) and 8 give all forests negative.
 
@@ -215,7 +215,7 @@ Internal edges & Count \\
 \end{theorem}
 
 \begin{proof}
-By exhaustive enumeration of all 3-rooted spanning forests on $K_6$. An internal edge connects two non-root vertices; each forest has $n - |R| = 3$ edges total.
+By exhaustive enumeration of all 3-rooted spanning forests on $K_6$ (see \texttt{src/signed\_geometry/} in the verification packet). An internal edge connects two non-root vertices; each forest has $n - |R| = 3$ edges total.
 \end{proof}
 
 The algebraic map between forests and KLT eigenmodes is \textbf{kinematic-dependent}, not purely combinatorial. Both structures involve the same Mandelstam variables $s_{ij}$, but the exact forest$\to$eigenmode assignment varies with the kinematic point.
@@ -232,7 +232,7 @@ The total is $48 + 54 + 6 = 108$ forests.
 \end{theorem}
 
 \begin{proof}
-By exhaustive enumeration of all 3-rooted spanning forests on $K_6$. The root assignment for a non-root vertex $v$ is uniquely determined by the connected component containing $v$, which must contain exactly one root. We enumerate all edge subsets of size 3 that form valid forests and classify by root assignment pattern.
+By exhaustive enumeration of all 3-rooted spanning forests on $K_6$ (see \texttt{src/signed\_geometry/} in the verification packet). The root assignment for a non-root vertex $v$ is uniquely determined by the connected component containing $v$, which must contain exactly one root. We enumerate all edge subsets of size 3 that form valid forests and classify by root assignment pattern.
 \end{proof}
 
 \begin{remark}[The 18-Fold Ratio]
@@ -290,18 +290,31 @@ We verify the sign rule and sign split patterns using exact rational arithmetic 
 
 \subsection{Verification Results}
 
+\textbf{Sign rule verification} (Theorem~\ref{thm:sign-rule}):
 \begin{center}
-\begin{tabular}{|c|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|}
 \hline
-$n$ & Forests & Modal Split & Sign Rule Accuracy & Samples \\
+$n$ & Forests & Sign Rule Accuracy & Samples \\
 \hline
-6 & 108 & (54, 54) at 44\% & 100\% (2160/2160) & 20 \\
-7 & 1029 & (515, 514) at 30\% & 100\% (20580/20580) & 20 \\
+6 & 108 & 100\% (2160/2160 checks) & 20 \\
+7 & 1029 & 100\% (20580/20580 checks) & 20 \\
 \hline
 \end{tabular}
 \end{center}
 
-\textbf{Note on $n=7$:} The modal split $(515, 514)$ is the closest possible to 50/50 since 1029 is odd. One sample exhibited 597 zero-weight forests due to degenerate kinematics; these are excluded from the split percentage but included in sign-rule verification (where zero-weight terms are skipped consistently).
+\textbf{Sign split distribution} (Observation~\ref{obs:empirical-split}):
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+$n$ & Modal Split & Mode Frequency & Samples \\
+\hline
+6 & (54, 54) & 44\% (22/50) & 50 \\
+7 & (515, 514) & 30\% (6/20) & 20 \\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{Note on $n=7$:} The modal split $(515, 514)$ is the closest possible to 50/50 since 1029 is odd. One sample exhibited 597 zero-weight forests due to degenerate kinematics; these are excluded from the split percentage but the sign rule is still verified for all non-zero terms.
 
 All verification code is available at: \url{https://github.com/zacharycraig1/Canonical-Positive-Geometry-Twistor-Gravity-Exploration}
 
@@ -386,7 +399,7 @@ Whether this represents a fundamental obstruction to positive geometry for gravi
 
 The following scripts verify our results:
 \begin{itemize}
-\item \texttt{tests/test\_oracle\_match.sage}: MTT $\leftrightarrow$ det$(L)$ consistency check (non-circular: compares explicit forest enumeration against Sage matrix determinant)
+\item \texttt{tests/test\_oracle\_match.sage}: Independent implementation check of the MTT identity (compares explicit forest enumeration against Sage matrix determinant)
 \item \texttt{src/signed\_geometry/verify\_chy\_sign\_derivation.sage}: Sign rule verification
 \item \texttt{src/signed\_geometry/generalize\_n7.sage}: Extension to $n=7$ with full logging
 \item \texttt{tests/signed\_geometry\_verification.sage}: Full test suite (15/15 pass)
