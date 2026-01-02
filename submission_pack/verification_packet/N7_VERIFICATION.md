@@ -53,7 +53,7 @@ Ratio: 50.05% positive
 |--------|----------|----------|-------|------------|
 | 0 | 515 | 514 | 1029 | 50.05% |
 | 1 | 627 | 402 | 1029 | 60.93% |
-| 2 | 220 | 212 | 432* | 50.93% |
+| 2 | 220 | 212 | 432† | 50.93% |
 | 3 | 507 | 522 | 1029 | 49.27% |
 | 4 | 495 | 534 | 1029 | 48.10% |
 | 5 | 527 | 502 | 1029 | 51.22% |
@@ -72,7 +72,7 @@ Ratio: 50.05% positive
 | 18 | 507 | 522 | 1029 | 49.27% |
 | 19 | 517 | 512 | 1029 | 50.24% |
 
-*Sample 2: Some forests had zero weight (kinematic degeneracy), so fewer than 1029 contribute.
+†Sample 2: This kinematic sample hit a degeneracy where some edge weights $w_{ij} = 0$, causing 597 forests to have zero weight. Only the 432 forests with non-zero weight are counted in the sign split. The sign rule verification (below) still checks all 1029 forests per sample.
 
 ### Statistics:
 - **Modal split:** (515, 514) — occurs in 7/20 samples
