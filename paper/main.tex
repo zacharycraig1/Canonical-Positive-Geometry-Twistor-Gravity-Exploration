@@ -10,6 +10,8 @@
 \newtheorem{observation}[theorem]{Observation}
 \newtheorem{conjecture}[theorem]{Conjecture}
 \newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
 
 \title{Signed Geometry of MHV Gravity: \\ The Forest Sign Rule and Split Signature}
 \author{[Author Names]}
@@ -47,7 +49,7 @@ We make explicit the \textbf{sign structure} of each forest term and connect it 
 
 \section{Conventions}
 
-\textbf{Real kinematic slice.} Throughout this work, ``sign'' refers to the sign on a \textbf{real kinematic slice}: we use rational spinor-helicity data $\lambda_i, \tilde{\lambda}_i \in \mathbb{Q}^2$ with real reference spinors $x, y \in \mathbb{Q}^2$. This corresponds to split signature $(2,2)$ kinematics where all bracket products are real. For generic complex kinematics, signs are not defined.
+\textbf{Real kinematic slice.} Throughout this work, ``sign'' refers to the sign on a \textbf{real kinematic slice}: we use rational spinor-helicity data $\lambda_i, \tilde{\lambda}_i \in \mathbb{Q}^2$ with real reference spinors $x, y \in \mathbb{Q}^2$. This corresponds to split signature $(2,2)$ kinematics where all bracket products are real. In our numerical verification code, we sample spinors with rational entries so that all computed quantities are exactly real. For generic complex kinematics, signs are not defined.
 
 \begin{definition}[Hodges Weighted Laplacian]
 For $n$ particles with spinor-helicity variables $(\lambda_i, \tilde{\lambda}_i)$ and reference spinors $(x, y)$, define:
@@ -135,21 +137,22 @@ M_{\text{gravity}} = A_{\text{YM}}^T \cdot S_{\text{KLT}} \cdot \tilde{A}_{\text
 Numerical computation shows that the KLT kernel matrix for $n=6$ generically has signature $(3,3)$---three positive and three negative eigenvalues.
 \end{observation}
 
-\begin{theorem}[KLT-Forest Correspondence]
-\label{thm:klt-forest}
-For $n$-point MHV gravity:
+\begin{conjecture}[KLT-Forest Correspondence]
+\label{conj:klt-forest}
+The balanced $(3,3)$ signature of the KLT kernel is causally related to the approximately 50/50 sign split in the forest expansion. More generally, for $n$-point amplitudes where the KLT kernel has signature $(p,q)$, the forest expansion should exhibit a sign tendency reflecting this ratio.
+\end{conjecture}
+
+\noindent\textbf{Evidence and heuristic argument:}
+
 \begin{enumerate}
-\item[(i)] If the KLT kernel has indefinite signature (both positive and negative eigenvalues), then the forest expansion necessarily has both positive and negative terms for generic kinematics.
-\item[(ii)] If the KLT signature is balanced $(p,p)$, then the modal forest split is $(N/2, N/2)$ where $N$ is the number of forests.
+\item[(i)] \textbf{Mixed signs are necessary:} Since the KLT bilinear form $M = A^T S \tilde{A}$ has indefinite signature, the form can take either sign for different inputs. This suggests (but does not rigorously prove) that the forest sum computing the same $M$ must have both positive and negative terms.
+
+\item[(ii)] \textbf{Balanced split from combinatorics:} Under a \textit{heuristic} uniform random sign model for edge weights $w_e$, each forest picks 3 edges, and the product of 3 independent $\pm 1$ signs is balanced: $P(+) = P(-) = 1/2$. Numerical simulation confirms the modal split is $(54, 54)$, occurring in 30\% of random trials. Physical kinematics appear to sample a distribution centered on this balanced point.
 \end{enumerate}
-For $n=6$: The KLT signature is $(3,3)$ and the modal forest split is $(54,54)$.
-\end{theorem}
 
-\begin{proof}
-\textbf{Part (i):} The gravity amplitude has two representations: the forest sum $M = \sum_F \text{term}(F)$ and the KLT bilinear form $M = A^T S \tilde{A}$. Since $S$ has indefinite signature, the bilinear form can take either sign depending on the direction of $(A, \tilde{A})$. If all forest terms had the same sign, the sum would have definite sign for all kinematics, contradicting the indefinite KLT form.
-
-\textbf{Part (ii):} Each of the 108 forests selects 3 edges from $K_6$. Under a uniform random sign model for edges (each $w_e$ equally likely to be $+$ or $-$), the product of 3 signs is balanced: $P(+) = P(-) = 1/2$. Numerical simulation confirms the modal split is exactly $(54, 54)$, occurring in 30\% of random trials. Physical kinematics sample a distribution centered on this balanced point.
-\end{proof}
+\begin{remark}
+This conjecture is supported by strong numerical evidence but lacks a rigorous algebraic proof connecting the 6-dimensional KLT eigenstructure to the 108-dimensional forest sign structure. Establishing such a connection is an interesting open problem.
+\end{remark}
 
 \section{Evidence Against Positive Geometry for Gravity}
 
@@ -240,7 +243,9 @@ has \textbf{unique} coefficients: each forest $F$ corresponds to a distinct mono
 \end{theorem}
 
 \begin{proof}
-Different forests have different edge sets, so their monomials $\prod_{e \in E(F)} a_e$ are distinct in $\mathbb{Z}[a_{ij}]$. Since polynomials have unique monomial expansions, the coefficient of each monomial is uniquely determined. By the All-Minors Matrix-Tree Theorem, each coefficient is $+1$.
+Different forests have different edge sets, so their monomials $\prod_{e \in E(F)} a_e$ are \textbf{distinct as monomials in the independent edge variables} $\{a_{ij}\}$. Since polynomials in independent variables have unique monomial expansions, the coefficient of each monomial is uniquely determined. By the All-Minors Matrix-Tree Theorem, each coefficient is $+1$.
+
+(Note: when we later specialize $a_{ij} = w_{ij} C_i C_j$, relations among these products could in principle allow cancellations. But the polynomial identity holds at the level of formal variables, establishing uniqueness before specialization.)
 \end{proof}
 
 \begin{remark}[Sign on Real Slices]
