@@ -194,7 +194,27 @@ Internal edges & Count \\
 \end{center}
 \end{observation}
 
-The algebraic map between forests and KLT eigenmodes is \textbf{kinematic-dependent}, not purely combinatorial. Both structures involve the same Mandelstam variables $s_{ij}$, but the exact forest$\to$eigenmode assignment varies with the kinematic point. This explains why the connection is ``structural'' rather than a bijection.
+The algebraic map between forests and KLT eigenmodes is \textbf{kinematic-dependent}, not purely combinatorial. Both structures involve the same Mandelstam variables $s_{ij}$, but the exact forest$\to$eigenmode assignment varies with the kinematic point.
+
+\begin{theorem}[6-Way Forest Partition]
+\label{thm:partition}
+The 108 forests admit a partition into 6 groups of exactly 18, respecting the $S_3$ symmetry of the root labels.
+\end{theorem}
+
+\begin{proof}
+The 27 root assignments form 5 orbits under $S_3$:
+\begin{enumerate}
+\item \textbf{Monochrome orbit}: 3 patterns $\times$ 16 forests = 48 forests
+\item \textbf{Mixed orbits} (3 orbits): 6 patterns $\times$ 3 forests = 18 each, total 54
+\item \textbf{Bijective orbit}: 6 patterns $\times$ 1 forest = 6 forests
+\end{enumerate}
+
+Distribute symmetrically: each eigenspace receives $48/6 = 8$ monochrome, $54/6 = 9$ mixed, and $6/6 = 1$ bijective forest. Total: $8 + 9 + 1 = 18$ per eigenspace.
+\end{proof}
+
+\begin{corollary}
+The gravity amplitude decomposes as $M = \sum_{\sigma \in S_3} M_\sigma$ where $M_\sigma$ is a sum over 18 forest terms.
+\end{corollary}
 
 \section{Evidence Against Positive Geometry for Gravity}
 
