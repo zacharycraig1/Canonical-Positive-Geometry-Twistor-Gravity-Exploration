@@ -154,7 +154,7 @@ def compute_forest_sign_n7(forest, lambdas, tilde_lambdas, x_spinor, y_spinor):
 
 
 def analyze_n7_sign_structure(num_samples=20):
-    """Analyze the sign structure for n=7."""
+    """Analyze the sign structure for n=7 with full zero-term tracking."""
     print("=" * 70)
     print("N=7 SIGN STRUCTURE ANALYSIS")
     print("=" * 70)
@@ -167,16 +167,16 @@ def analyze_n7_sign_structure(num_samples=20):
     all_forests = list(enumerate_rooted_forests(n, roots))
     num_forests = len(all_forests)
     print(f"Total forests: {num_forests}")
+    print(f"Edges per forest: {n - len(roots)}")
     
-    # Expected: for n=7, k=3, we have n-k=4 edges per forest
-    # The number of such forests is given by a formula involving Cayley's theorem
-    
-    # Analyze sign splits
+    # Analyze sign splits with zero-term tracking
     sign_splits = []
+    detailed_results = []
     
     for sample in range(num_samples):
         result = sample_spinor_helicity_n7(seed=sample * 67)
         if result is None:
+            print(f"Sample {sample}: SKIPPED (singular kinematics)")
             continue
         
         lambdas, tilde_lambdas = result
@@ -185,45 +185,74 @@ def analyze_n7_sign_structure(num_samples=20):
         
         pos_count = 0
         neg_count = 0
+        zero_count = 0
+        undefined_count = 0
         
         for forest in all_forests:
             sign, weight = compute_forest_sign_n7(forest, lambdas, tilde_lambdas, x_spinor, y_spinor)
             if sign is None:
-                continue
-            if sign > 0:
+                undefined_count += 1
+            elif sign > 0:
                 pos_count += 1
             elif sign < 0:
                 neg_count += 1
+            else:  # sign == 0
+                zero_count += 1
         
+        total_classified = pos_count + neg_count + zero_count
         split = (pos_count, neg_count)
         sign_splits.append(split)
-        print(f"Sample {sample}: {pos_count}+ / {neg_count}-")
+        detailed_results.append({
+            'sample': sample,
+            'pos': pos_count,
+            'neg': neg_count,
+            'zero': zero_count,
+            'undefined': undefined_count,
+            'total': total_classified
+        })
+        
+        # Print with zero/undefined tracking
+        status = ""
+        if zero_count > 0:
+            status = f" (zero: {zero_count})"
+        if undefined_count > 0:
+            status += f" (undefined: {undefined_count})"
+        print(f"Sample {sample}: {pos_count}+ / {neg_count}- / total={total_classified}{status}")
     
     # Analyze
     if sign_splits:
-        print("\nSign split analysis:")
+        print("\n" + "-" * 70)
+        print("Sign split analysis:")
+        print("-" * 70)
         
         from collections import Counter
         split_counts = Counter(sign_splits)
         
-        print(f"Total forests: {num_forests}")
+        print(f"Total forests enumerated: {num_forests}")
         
         mode_split = split_counts.most_common(1)[0][0]
-        print(f"Modal split: {mode_split}")
+        mode_count = split_counts.most_common(1)[0][1]
+        print(f"Modal split: {mode_split} (occurred in {mode_count}/{len(sign_splits)} samples)")
         
         # Check if close to 50/50
         mode_pos, mode_neg = mode_split
         ratio = float(mode_pos) / float(mode_pos + mode_neg) if (mode_pos + mode_neg) > 0 else 0
-        print(f"Ratio: {ratio:.2%} positive")
+        print(f"Ratio: {ratio:.4%} positive")
+        
+        # Report on zero terms
+        samples_with_zeros = sum(1 for r in detailed_results if r['zero'] > 0)
+        if samples_with_zeros > 0:
+            print(f"\nNote: {samples_with_zeros}/{len(detailed_results)} samples had forests with zero weight")
+            print("      (due to degenerate kinematics where some w_ij = 0)")
         
         if abs(ratio - 0.5) < 0.1:
-            print("✓ Approximately 50/50 split!")
+            print("\n✓ Approximately 50/50 split!")
         else:
-            print(f"Split differs from 50/50 by {abs(ratio - 0.5):.1%}")
+            print(f"\nSplit differs from 50/50 by {abs(ratio - 0.5):.1%}")
 
 
 def verify_sign_rule_n7(num_samples=20):
-    """Verify the sign rule still holds for n=7."""
+    """Verify the sign rule still holds for n=7 with full logging."""
     print("\n" + "=" * 70)
     print("N=7 SIGN RULE VERIFICATION")
     print("=" * 70)
@@ -235,12 +264,19 @@ def verify_sign_rule_n7(num_samples=20):
     print("Enumerating forests...")
     all_forests = list(enumerate_rooted_forests(n, roots))
     print(f"Total: {len(all_forests)}")
+    print(f"Edges per forest: {n - len(roots)}")
+    print("-" * 70)
     
     perfect_matches = 0
+    skipped_samples = 0
+    total_forests_checked = 0
+    total_mismatches = 0
     
     for sample in range(num_samples):
         result = sample_spinor_helicity_n7(seed=sample * 89)
         if result is None:
+            skipped_samples += 1
+            print(f"Sample {sample}: SKIPPED (singular kinematics)")
             continue
         
         lambdas, tilde_lambdas = result
@@ -263,13 +299,19 @@ def verify_sign_rule_n7(num_samples=20):
         
         matches = 0
         total = 0
+        zeros_skipped = 0
         
         for forest in all_forests:
             edges = list(forest)
             
             # Compute actual sign
-            actual_sign, _ = compute_forest_sign_n7(forest, lambdas, tilde_lambdas, x_spinor, y_spinor)
+            actual_sign, weight = compute_forest_sign_n7(forest, lambdas, tilde_lambdas, x_spinor, y_spinor)
             if actual_sign is None:
+                continue
+            
+            # Skip zero-weight forests for sign comparison (sign is undefined)
+            if actual_sign == 0:
+                zeros_skipped += 1
                 continue
             
             # Compute predicted sign from rule
@@ -295,21 +337,32 @@ def verify_sign_rule_n7(num_samples=20):
             total += 1
             if predicted_sign == actual_sign:
                 matches += 1
+            else:
+                total_mismatches += 1
         
+        total_forests_checked += total
         match_rate = float(matches) / total if total > 0 else 0
+        
+        status_extra = ""
+        if zeros_skipped > 0:
+            status_extra = f" (zeros skipped: {zeros_skipped})"
         
         if match_rate > 0.99:
             perfect_matches += 1
-            print(f"Sample {sample}: {matches}/{total} = {match_rate:.1%} ✓")
+            print(f"Sample {sample}: {matches}/{total} = {match_rate:.1%} ✓{status_extra}")
         else:
-            print(f"Sample {sample}: {matches}/{total} = {match_rate:.1%} ✗")
+            print(f"Sample {sample}: {matches}/{total} = {match_rate:.1%} ✗{status_extra}")
     
-    print(f"\nPerfect matches: {perfect_matches}/{num_samples}")
+    print("-" * 70)
+    print(f"Samples tested: {num_samples - skipped_samples}/{num_samples}")
+    print(f"Perfect matches: {perfect_matches}/{num_samples - skipped_samples}")
+    print(f"Total forests checked: {total_forests_checked}")
+    print(f"Total mismatches: {total_mismatches}")
     
-    if perfect_matches == num_samples:
-        print("✓ Sign rule verified for n=7!")
+    if perfect_matches == num_samples - skipped_samples and perfect_matches > 0:
+        print("\n✓ Sign rule verified for n=7!")
     else:
-        print("✗ Some samples failed")
+        print("\n✗ Some samples failed")
 
 
 if __name__ == "__main__":

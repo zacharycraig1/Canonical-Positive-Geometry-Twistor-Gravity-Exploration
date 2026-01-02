@@ -7,6 +7,7 @@
 
 \newtheorem{theorem}{Theorem}
 \newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
 \newtheorem{observation}[theorem]{Observation}
 \newtheorem{conjecture}[theorem]{Conjecture}
 \newtheorem{definition}[theorem]{Definition}
@@ -142,8 +143,8 @@ Numerical computation shows that the KLT kernel matrix for $n=6$ generically has
 For 6-point MHV gravity with 3-rooted spanning forests on $K_6$:
 \begin{enumerate}
 \item[(i)] Of the 15 edges in $K_6$, exactly 3 (the root-root edges) appear in \textbf{zero} forests. The remaining 12 ``forest-relevant'' edges determine all forest signs.
-\item[(ii)] Uniform forest signs (all positive or all negative) require all 12 forest-relevant edges to have the same sign. This is satisfied by only $16$ out of $2^{15} = 32768$ edge-sign patterns ($0.049\%$).
-\item[(iii)] For generic kinematics where edge signs $w_{ij} = [ij]/\langle ij \rangle$ are not all identical, \textbf{mixed forest signs are forced}.
+\item[(ii)] Uniform forest signs (all positive or all negative) require all 12 forest-relevant MTT edge weights $a_{ij} = w_{ij} C_i C_j$ to have the same sign. This is satisfied by only $16$ out of $2^{15} = 32768$ edge-sign patterns ($0.049\%$).
+\item[(iii)] For generic kinematics where the 12 forest-relevant edge weights $a_{ij}$ are not all the same sign, \textbf{mixed forest signs are forced}.
 \end{enumerate}
 \end{theorem}
 
@@ -152,8 +153,12 @@ For 6-point MHV gravity with 3-rooted spanning forests on $K_6$:
 
 \textbf{(ii)} By exhaustive enumeration: among all $2^{15}$ edge-sign patterns, exactly 8 give all forests positive (all 12 forest edges $+$, any signs on 3 unused edges) and 8 give all forests negative.
 
-\textbf{(iii)} If the 12 forest-relevant edge weights $w_{ij}$ are not all the same sign, then the 108 forest products cannot all share a sign. Under uniformly random independent edge signs, uniform-sign outcomes occur with probability $16/2^{15} = 0.049\%$.
+\textbf{(iii)} If the 12 forest-relevant MTT edge weights $a_{ij} = w_{ij} C_i C_j$ are not all the same sign, then the 108 forest products cannot all share a sign. Under uniformly random independent edge signs, uniform-sign outcomes occur with probability $16/2^{15} = 0.049\%$.
 \end{proof}
+
+\begin{remark}[Edge Weight Signs]
+The forest term signs depend on the \textbf{full MTT edge weight} $a_{ij} = w_{ij} C_i C_j$, not on $w_{ij} = [ij]/\langle ij \rangle$ alone. On a fixed real kinematic slice, the reference factors $C_i$ contribute to the overall sign pattern. However, since the total amplitude is reference-independent, the $C$-factor contributions cancel in the full sum.
+\end{remark}
 
 \begin{theorem}[Modal Split is $(54,54)$]
 \label{thm:modal-split}
@@ -338,9 +343,9 @@ Whether this represents a fundamental obstruction to positive geometry for gravi
 
 The following scripts verify our results:
 \begin{itemize}
-\item \texttt{tests/test\_oracle\_match.sage}: Independent oracle verification (non-circular)
+\item \texttt{tests/test\_oracle\_match.sage}: MTT $\leftrightarrow$ det$(L)$ consistency check (non-circular: compares explicit forest enumeration against Sage matrix determinant)
 \item \texttt{src/signed\_geometry/verify\_chy\_sign\_derivation.sage}: Sign rule verification
-\item \texttt{src/signed\_geometry/generalize\_n7.sage}: Extension to $n=7$
+\item \texttt{src/signed\_geometry/generalize\_n7.sage}: Extension to $n=7$ with full logging
 \item \texttt{tests/signed\_geometry\_verification.sage}: Full test suite (15/15 pass)
 \end{itemize}
 

@@ -1,17 +1,16 @@
 #!/usr/bin/env sage
 """
-Independent Oracle Verification Test
+MTT ↔ det(L) Consistency Check
 
-This test verifies that the forest expansion matches an INDEPENDENTLY computed
-amplitude oracle. This is NOT circular because:
+This test verifies that the forest expansion matches the Laplacian determinant.
+This is a NON-CIRCULAR verification because:
 
 1. Oracle: Computes det(L^minor) directly via Sage's matrix determinant
 2. Forest: Computes Σ_F Π_e (edge weights) via explicit enumeration
 
 These are two completely different algorithms that should give the same result
-by the Matrix-Tree Theorem.
-
-Additionally, we verify soft limits and factorization behavior.
+by the Matrix-Tree Theorem. This validates that our forest enumeration and
+weight computation are correctly implemented.
 
 Run with: sage tests/test_oracle_match.sage
 """
@@ -387,11 +386,11 @@ def test_reference_independence(num_samples=20):
 
 
 def run_all_tests():
-    """Run all oracle verification tests."""
+    """Run all MTT consistency tests."""
     print("=" * 70)
-    print("INDEPENDENT ORACLE VERIFICATION SUITE")
+    print("MTT ↔ det(L) CONSISTENCY CHECK SUITE")
     print("=" * 70)
-    print("These tests verify the forest expansion against independent oracles.")
+    print("These tests verify the forest expansion against Laplacian determinant.")
     print("=" * 70)
     
     results = {}
@@ -413,7 +412,7 @@ def run_all_tests():
     
     print("-" * 70)
     if all_pass:
-        print("✓ ALL ORACLE TESTS PASSED")
+        print("✓ ALL MTT CONSISTENCY TESTS PASSED")
     else:
         print("✗ SOME TESTS FAILED")
     
