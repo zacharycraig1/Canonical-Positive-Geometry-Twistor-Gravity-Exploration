@@ -19,14 +19,14 @@
 \maketitle
 
 \begin{abstract}
-We derive an explicit sign rule for the forest expansion of MHV gravity amplitudes. While it is known that the $n$-point MHV gravity amplitude equals the determinant of a weighted Laplacian, which expands as a sum over spanning forests, the sign structure of individual forest contributions has not been previously characterized. We prove that each forest term has sign $\varepsilon(F) = (-1)^{|E|} \times \text{sign}(\prod_e w_e) \times \text{sign}(\prod_v C_v^{\deg(v)})$, and verify this for $n=6$ and $n=7$ with 100\% accuracy. We connect this to the $(3,3)$ split signature of the KLT kernel, explaining why gravity has ``signed geometry'' rather than positive geometry. This provides a new geometric perspective on why gravity amplitudes differ fundamentally from Yang-Mills amplitudes at the level of canonical forms.
+We derive an explicit sign rule for the forest expansion of MHV gravity amplitudes. While it is known that the $n$-point MHV gravity amplitude equals the determinant of a weighted Laplacian, which expands as a sum over spanning forests, the sign structure of individual forest contributions has not been previously characterized. We prove that each forest term has sign $\varepsilon(F) = (-1)^{|E|} \times \text{sign}(\prod_e w_e) \times \text{sign}(\prod_v C_v^{\deg(v)})$, and verify this for $n=6$ and $n=7$ with 100\% accuracy. We connect this to the $(3,3)$ split signature of the KLT kernel, showing that under the natural forest triangulation, gravity exhibits ``signed geometry'' with approximately equal positive and negative contributions. This provides a new geometric perspective on how gravity amplitudes differ structurally from Yang-Mills amplitudes at the level of canonical forms.
 \end{abstract}
 
 \section{Introduction}
 
 The Amplituhedron program~\cite{ArkaniHamed:2013jha} has revealed that tree-level Yang-Mills amplitudes are canonical forms of positive geometries. A natural question arises: \textit{Does gravity have a positive geometry?}
 
-We answer this question in the negative. Gravity has \textbf{signed geometry}---a generalization where the canonical form involves both positive and negative contributions with a characteristic sign structure.
+We provide evidence that the answer is subtle. Under the natural forest triangulation inherited from the Matrix-Tree Theorem, gravity exhibits \textbf{signed geometry}---a structure where the canonical form involves both positive and negative contributions with a characteristic sign pattern. Whether an alternative triangulation could yield a positive geometry remains open.
 
 \subsection{Known Results}
 
@@ -126,7 +126,7 @@ The KLT kernel matrix for $n=6$ has signature $(3,3)$---three positive and three
 
 This split signature is the geometric origin of the 50/50 sign split in the forest expansion.
 
-\section{Why Gravity is NOT Positive Geometry}
+\section{Evidence Against Positive Geometry for Gravity}
 
 \begin{definition}[Positive Geometry]
 A positive geometry $(X, \Omega)$ satisfies:
@@ -137,11 +137,15 @@ A positive geometry $(X, \Omega)$ satisfies:
 \end{enumerate}
 \end{definition}
 
-Yang-Mills amplitudes satisfy these axioms (Amplituhedron). However:
+Yang-Mills amplitudes satisfy these axioms (Amplituhedron). For gravity, we find:
 
-\begin{theorem}
-MHV gravity amplitudes do NOT arise from a positive geometry. The forest expansion has intrinsically mixed signs that cannot be made uniformly positive by any choice of kinematic region.
+\begin{theorem}[Mixed-Sign Structure]
+Under the natural forest triangulation of MHV gravity amplitudes, the 108 terms exhibit an intrinsic mixed-sign structure with approximately 54 positive and 54 negative contributions. This sign split is stable across generic kinematic configurations and correlates with the $(3,3)$ split signature of the KLT kernel.
 \end{theorem}
+
+\begin{remark}
+This does not constitute a proof that \emph{no} positive geometry exists for gravity---such a proof would require demonstrating an obstruction to \emph{all possible} triangulations. However, the natural triangulation inherited from the Matrix-Tree structure is fundamentally signed, suggesting that if a positive geometry exists, it must arise from a non-obvious reformulation.
+\end{remark}
 
 \subsection{Signed Geometry}
 
@@ -202,14 +206,14 @@ This ensures that residues at kinematic poles inherit the signed structure.
 \subsection{Uniqueness}
 
 \begin{theorem}[Uniqueness of Sign Rule]
-The sign rule is the \textbf{unique} assignment of signs to forests such that:
+Within the forest triangulation, the sign rule $\varepsilon(F) = (-1)^{|E|} \times \text{sign}(\prod w) \times \text{sign}(\prod C^{\deg})$ is the \textbf{unique} assignment such that:
 \begin{enumerate}
 \item The sum reproduces the Hodges determinant
 \item Signs are multiplicative under factorization
 \end{enumerate}
 \end{theorem}
 
-This proves there is no ``hidden'' way to make gravity into a positive geometry.
+This shows that the mixed-sign structure is intrinsic to the forest triangulation and cannot be eliminated by a different sign assignment within this framework.
 
 \subsection{Open Questions}
 
@@ -221,14 +225,17 @@ This proves there is no ``hidden'' way to make gravity into a positive geometry.
 
 \section{Conclusion}
 
-We have derived the explicit sign rule for MHV gravity forest terms and connected it to the KLT kernel's split signature. This establishes that gravity has \textbf{signed geometry}---a fundamental departure from the positive geometries of gauge theories.
+We have derived the explicit sign rule for MHV gravity forest terms and connected it to the KLT kernel's split signature. Under the natural forest triangulation, gravity exhibits \textbf{signed geometry}---a mixed-sign structure that contrasts with the positive geometries of gauge theories.
+
+Whether this represents a fundamental obstruction to positive geometry for gravity, or whether an alternative triangulation could yield uniform signs, remains an open question. Our results suggest that if a positive geometry exists for gravity, it must arise from a substantially different geometric construction than the forest expansion.
 
 \appendix
 \section{Verification Scripts}
 
 The following scripts verify our results:
 \begin{itemize}
-\item \texttt{src/signed\_geometry/verify\_chy\_sign\_derivation.sage}: Sign rule verification
+\item \texttt{src/signed\_geometry/verify\_chy\_sign\_derivation.sage}: Sign rule derivation verification
+\item \texttt{tests/test\_oracle\_match.sage}: Independent oracle verification (non-circular)
 \item \texttt{src/signed\_geometry/generalize\_n7.sage}: Extension to $n=7$
 \item \texttt{tests/signed\_geometry\_verification.sage}: Full test suite (15/15 pass)
 \end{itemize}

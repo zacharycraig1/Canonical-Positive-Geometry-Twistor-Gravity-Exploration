@@ -31,13 +31,16 @@ docker run --rm -v "${PWD}:/home/sage/project" -w /home/sage/project sagemath/sa
 # 2. Full test suite (should say "15/15 PASSED")
 docker run --rm -v "${PWD}:/home/sage/project" -w /home/sage/project sagemath/sagemath:latest sage tests/signed_geometry_verification.sage
 
-# 3. Sign rule verification
+# 3. Independent oracle test (should say "ALL ORACLE TESTS PASSED")
+docker run --rm -v "${PWD}:/home/sage/project" -w /home/sage/project sagemath/sagemath:latest sage tests/test_oracle_match.sage
+
+# 4. Sign rule verification
 docker run --rm -v "${PWD}:/home/sage/project" -w /home/sage/project sagemath/sagemath:latest sage src/signed_geometry/verify_chy_sign_derivation.sage
 
-# 4. n=7 generalization
+# 5. n=7 generalization
 docker run --rm -v "${PWD}:/home/sage/project" -w /home/sage/project sagemath/sagemath:latest sage src/signed_geometry/generalize_n7.sage
 
-# 5. Factorization axiom
+# 6. Factorization axiom
 docker run --rm -v "${PWD}:/home/sage/project" -w /home/sage/project sagemath/sagemath:latest sage src/signed_geometry/verify_factorization_signs.sage
 ```
 
@@ -50,10 +53,12 @@ docker run --rm -v "${PWD}:/home/sage/project" -w /home/sage/project sagemath/sa
 | File | Purpose |
 |------|---------|
 | `results/SIGNED_GEOMETRY_THEOREM.md` | Main theorem statement |
-| `results/ANALYTIC_SIGN_RULE_PROOF.md` | Analytic proof from Matrix-Tree |
+| `results/ANALYTIC_SIGN_RULE_PROOF.md` | Analytic proof from Matrix-Tree (convention-fixed) |
 | `results/SIGNED_GEOMETRY_AXIOMS.md` | Formal axiom system |
 | `results/UNIQUENESS_ARGUMENT.md` | Proof sign rule is unique |
 | `paper/main.tex` | LaTeX paper draft |
+| `submission_pack/CONVENTIONS.md` | Sign/normalization conventions |
+| `submission_pack/verification_packet/TEST_RESULTS.md` | Complete test results summary |
 
 ### Verification Code
 
@@ -61,6 +66,7 @@ docker run --rm -v "${PWD}:/home/sage/project" -w /home/sage/project sagemath/sa
 |------|---------------|-----------------|
 | `src/scripts/physics_pullback_n6.sage` | Core identity M = F(z) | "SUCCESS: Exact identity verified" |
 | `tests/signed_geometry_verification.sage` | Full test suite (15 tests) | "15/15 PASSED" |
+| `tests/test_oracle_match.sage` | Independent oracle (non-circular) | "ALL ORACLE TESTS PASSED" |
 | `src/signed_geometry/verify_chy_sign_derivation.sage` | Sign rule formula | "100% accuracy" |
 | `src/signed_geometry/generalize_n7.sage` | n=7 extension | "20/20 samples verified" |
 | `src/signed_geometry/verify_factorization_signs.sage` | Factorization axiom | "AXIOM 3 VERIFIED" |

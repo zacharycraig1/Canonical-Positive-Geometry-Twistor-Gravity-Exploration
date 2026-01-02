@@ -60,28 +60,34 @@ $$\text{term}_{\text{MTT}}(F) = \prod_{(i,j) \in E(F)} w_{ij} \cdot \prod_{v \in
 
 This is the **positive** contribution according to the standard MTT.
 
-### Step 6: Laplacian Sign Convention
+### Step 6: Convention Choice and Sign Factor
 
-In the determinant expansion, we use the actual matrix entries $\tilde{L}_{ij} = -a_{ij}$ for off-diagonal terms.
+We define two equivalent ways to express forest terms:
 
-When expanding the determinant, each forest term involves selecting $|E(F)|$ off-diagonal entries. Each off-diagonal entry has the form $-a_{ij}$.
+**Standard MTT Convention:** Define edge weights as $a_{ij} := -\tilde{L}_{ij} = w_{ij} C_i C_j$ (positive form). Then:
+$$\det(\tilde{L}^{(R)}) = \sum_{F} \prod_{e \in E(F)} a_e = \sum_{F} \prod_{e} w_e \cdot \prod_v C_v^{\deg(v)}$$
 
-**Key observation:** The cofactor expansion picks up the product of selected entries. For a forest with $|E(F)|$ edges, this introduces a factor of $(-1)^{|E(F)|}$.
+**Signed-Edge Convention (used in code):** Use the actual Laplacian entries $b_{ij} := \tilde{L}_{ij} = -a_{ij}$. Then:
+$$\sum_{F} \prod_{e \in E(F)} b_e = \sum_{F} \prod_{e} (-a_e) = (-1)^{|E|} \sum_{F} \prod_{e} a_e = (-1)^{|E|} \det(\tilde{L}^{(R)})$$
 
-Therefore:
-$$\text{term}_{\text{det}}(F) = (-1)^{|E(F)|} \cdot \prod_{(i,j) \in E(F)} w_{ij} \cdot \prod_{v \in V} C_v^{\deg_F(v)}$$
+**Key point:** The factor $(-1)^{|E(F)|}$ arises from our *convention choice* of using signed-edge weights $b_{ij} = -w_{ij} C_i C_j$ rather than the standard MTT weights $a_{ij} = w_{ij} C_i C_j$. For fixed $n$ and $|R|$, all forests have the same number of edges $|E| = n - |R|$, so this is a **global** sign factor.
+
+Using the signed-edge convention:
+$$\text{term}_{\text{signed}}(F) = \prod_{e} (-w_e C_i C_j) = (-1)^{|E|} \cdot \prod_{e} w_e \cdot \prod_v C_v^{\deg(v)}$$
 
 ### Step 7: Extract the Sign
 
-The term $\text{term}_{\text{det}}(F)$ can be written as:
-$$\text{term}_{\text{det}}(F) = \varepsilon(F) \cdot |\omega(F)|$$
+Each signed-edge forest term can be written as:
+$$\text{term}_{\text{signed}}(F) = \varepsilon(F) \cdot |\omega(F)|$$
 
 where:
 - $|\omega(F)| = \left|\prod_{e} w_e \cdot \prod_v C_v^{\deg(v)}\right|$ is the magnitude
-- $\varepsilon(F) = \text{sign}(\text{term}_{\text{det}}(F))$ is the sign
+- $\varepsilon(F) = \text{sign}(\text{term}_{\text{signed}}(F))$ is the sign
 
-From Step 6:
+From Step 6, the sign factorizes as:
 $$\varepsilon(F) = (-1)^{|E(F)|} \times \text{sign}\left(\prod_{e} w_e\right) \times \text{sign}\left(\prod_v C_v^{\deg(v)}\right)$$
+
+**Remark:** For $n=6$ with $|R|=3$, we have $|E|=3$ for all forests, so $(-1)^{|E|}=-1$ is constant. The sign *variation* across forests comes entirely from $\text{sign}(\prod w_e)$ and $\text{sign}(\prod C_v^{\deg})$.
 
 **QED** ∎
 
