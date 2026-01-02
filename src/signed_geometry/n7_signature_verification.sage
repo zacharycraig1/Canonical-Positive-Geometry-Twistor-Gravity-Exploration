@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env sage
+#!/usr/bin/env sage
 '''
 n=7 Generalization: Verify the Signature Pattern
 

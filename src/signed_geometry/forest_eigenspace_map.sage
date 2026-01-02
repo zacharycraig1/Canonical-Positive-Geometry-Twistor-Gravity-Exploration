@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env sage
+#!/usr/bin/env sage
 '''
 Forest -> Eigenspace Map: Search for the explicit correspondence
 
