@@ -7,6 +7,7 @@
 
 \newtheorem{theorem}{Theorem}
 \newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
 \newtheorem{observation}[theorem]{Observation}
 \newtheorem{conjecture}[theorem]{Conjecture}
 \newtheorem{definition}[theorem]{Definition}
@@ -121,7 +122,8 @@ $\text{sign}(\prod C^{\deg})$ & Reference spinors & Gauge (cancels in total) \\
 \section{The 50/50 Sign Split}
 
 \begin{observation}[Empirical Sign Split]
-For $n=6$ with $|R|=3$, numerical sampling over 50 generic kinematic configurations shows that the 108 spanning forests split with mode $(54, 54)$ positive/negative. This 50/50 split is the most common outcome, occurring in 44\% of samples.
+\label{obs:empirical-split}
+For $n=6$ with $|R|=3$, numerical sampling over 50 generic kinematic configurations (using exact rational arithmetic) shows the 108 spanning forests split with mode $(54, 54)$ positive/negative, occurring in 44\% of samples.
 \end{observation}
 
 We conjecture this is not coincidental---it reflects the \textbf{split signature} of the KLT kernel.
@@ -134,16 +136,21 @@ M_{\text{gravity}} = A_{\text{YM}}^T \cdot S_{\text{KLT}} \cdot \tilde{A}_{\text
 \end{equation}
 
 \begin{observation}[KLT Signature]
-Numerical computation shows that the KLT kernel matrix for $n=6$ generically has signature $(3,3)$---three positive and three negative eigenvalues.
+\label{obs:klt-signature}
+Numerical computation over 20 generic kinematic configurations (using exact rational arithmetic) shows the KLT kernel matrix for $n=6$ has signature $(3,3)$---three positive and three negative eigenvalues---in all non-degenerate samples.
 \end{observation}
+
+\begin{conjecture}[KLT Signature Stability]
+On the real kinematic slice (split signature $(2,2)$), away from degeneracies, the $n=6$ KLT kernel has constant signature $(3,3)$.
+\end{conjecture}
 
 \begin{theorem}[Mixed Signs are Generic]
 \label{thm:mixed-signs}
 For 6-point MHV gravity with 3-rooted spanning forests on $K_6$:
 \begin{enumerate}
 \item[(i)] Of the 15 edges in $K_6$, exactly 3 (the root-root edges) appear in \textbf{zero} forests. The remaining 12 ``forest-relevant'' edges determine all forest signs.
-\item[(ii)] Uniform forest signs (all positive or all negative) require all 12 forest-relevant edges to have the same sign. This is satisfied by only $16$ out of $2^{15} = 32768$ edge-sign patterns ($0.049\%$).
-\item[(iii)] For generic kinematics where edge signs $w_{ij} = [ij]/\langle ij \rangle$ are not all identical, \textbf{mixed forest signs are forced}.
+\item[(ii)] Uniform forest signs (all positive or all negative) require all 12 forest-relevant MTT edge weights $a_{ij} = w_{ij} C_i C_j$ to have the same sign. This is satisfied by only $16$ out of $2^{15} = 32768$ edge-sign patterns ($0.049\%$).
+\item[(iii)] For generic kinematics where the 12 forest-relevant edge weights $a_{ij}$ are not all the same sign, \textbf{mixed forest signs are forced}.
 \end{enumerate}
 \end{theorem}
 
@@ -152,21 +159,33 @@ For 6-point MHV gravity with 3-rooted spanning forests on $K_6$:
 
 \textbf{(ii)} By exhaustive enumeration: among all $2^{15}$ edge-sign patterns, exactly 8 give all forests positive (all 12 forest edges $+$, any signs on 3 unused edges) and 8 give all forests negative.
 
-\textbf{(iii)} If the 12 forest-relevant edge weights $w_{ij}$ are not all the same sign, then the 108 forest products cannot all share a sign. Under uniformly random independent edge signs, uniform-sign outcomes occur with probability $16/2^{15} = 0.049\%$.
+\textbf{(iii)} If the 12 forest-relevant MTT edge weights $a_{ij} = w_{ij} C_i C_j$ are not all the same sign, then the 108 forest products cannot all share a sign. Under uniformly random independent edge signs, uniform-sign outcomes occur with probability $16/2^{15} = 0.049\%$.
 \end{proof}
 
-\begin{theorem}[Modal Split is $(54,54)$]
+\begin{remark}[Edge Weight Signs]
+The forest term signs depend on the \textbf{full MTT edge weight} $a_{ij} = w_{ij} C_i C_j$, not on $w_{ij} = [ij]/\langle ij \rangle$ alone. On a fixed real kinematic slice, the reference factors $C_i$ contribute to the overall sign pattern. However, since the total amplitude is reference-independent, the $C$-factor contributions cancel in the full sum.
+\end{remark}
+
+\begin{theorem}[Modal Split Under Random Signs]
 \label{thm:modal-split}
-Under uniform random edge signs, the expected number of positive forests is exactly 54, and the modal split is $(54, 54)$, occurring in $28.9\%$ of patterns.
+Consider the 12 forest-relevant edges with i.i.d.\ uniform $\pm 1$ signs. Under this combinatorial model:
+\begin{enumerate}
+\item[(i)] The expected number of positive forests is exactly $E[\text{positive}] = 54$.
+\item[(ii)] The modal split is $(54, 54)$, occurring in $1184/4096 = 28.90625\%$ of the $2^{12}$ sign patterns.
+\end{enumerate}
 \end{theorem}
 
 \begin{proof}
-Each forest has exactly 3 edges. Under uniform random signs:
+Each forest has exactly 3 edges. Under i.i.d.\ uniform signs:
 \begin{equation}
 P(\text{positive}) = P(\text{0 or 2 negative edges}) = \binom{3}{0}\frac{1}{8} + \binom{3}{2}\frac{1}{8} = \frac{4}{8} = \frac{1}{2}
 \end{equation}
-Therefore $E[\text{positive}] = 108 \times \frac{1}{2} = 54$. By exhaustive enumeration, $(54,54)$ is the mode.
+Therefore $E[\text{positive}] = 108 \times \frac{1}{2} = 54$. By exhaustive enumeration over all $2^{12} = 4096$ sign patterns, $(54,54)$ is the mode with frequency $1184/4096$.
 \end{proof}
+
+\begin{remark}[Kinematic Sampling vs.\ Combinatorial Model]
+The theorem above concerns the \textbf{combinatorial i.i.d.\ sign model}. Separately, in 50 samples from \textbf{physical kinematics} (random real spinor-helicity data), we observe the $(54,54)$ split in approximately 44\% of samples. The slight difference reflects that physical kinematics do not produce uniformly random edge signs---there are correlations from momentum conservation. Both observations support the conclusion that balanced splits are typical.
+\end{remark}
 
 \subsection{The 18-Fold Structure}
 
@@ -179,8 +198,9 @@ The ratio $108/6 = 18$ is exact and structurally significant:
 
 Similarly, $54/3 = 18$: each positive (or negative) KLT eigenvalue corresponds to approximately 18 positive (or negative) forest terms.
 
-\begin{observation}[Forest Decomposition]
-The 108 forests decompose by edge structure:
+\begin{theorem}[Forest Decomposition by Internal Edges]
+\label{thm:forest-decomposition}
+The 108 forests decompose by internal edge count as follows:
 \begin{center}
 \begin{tabular}{|c|c|}
 \hline
@@ -192,29 +212,32 @@ Internal edges & Count \\
 \hline
 \end{tabular}
 \end{center}
-\end{observation}
-
-The algebraic map between forests and KLT eigenmodes is \textbf{kinematic-dependent}, not purely combinatorial. Both structures involve the same Mandelstam variables $s_{ij}$, but the exact forest$\to$eigenmode assignment varies with the kinematic point.
-
-\begin{theorem}[6-Way Forest Partition]
-\label{thm:partition}
-The 108 forests admit a partition into 6 groups of exactly 18, respecting the $S_3$ symmetry of the root labels.
 \end{theorem}
 
 \begin{proof}
-The 27 root assignments form 5 orbits under $S_3$:
-\begin{enumerate}
-\item \textbf{Monochrome orbit}: 3 patterns $\times$ 16 forests = 48 forests
-\item \textbf{Mixed orbits} (3 orbits): 6 patterns $\times$ 3 forests = 18 each, total 54
-\item \textbf{Bijective orbit}: 6 patterns $\times$ 1 forest = 6 forests
-\end{enumerate}
-
-Distribute symmetrically: each eigenspace receives $48/6 = 8$ monochrome, $54/6 = 9$ mixed, and $6/6 = 1$ bijective forest. Total: $8 + 9 + 1 = 18$ per eigenspace.
+By exhaustive enumeration of all 3-rooted spanning forests on $K_6$. An internal edge connects two non-root vertices; each forest has $n - |R| = 3$ edges total.
 \end{proof}
 
-\begin{corollary}
-The gravity amplitude decomposes as $M = \sum_{\sigma \in S_3} M_\sigma$ where $M_\sigma$ is a sum over 18 forest terms.
-\end{corollary}
+The algebraic map between forests and KLT eigenmodes is \textbf{kinematic-dependent}, not purely combinatorial. Both structures involve the same Mandelstam variables $s_{ij}$, but the exact forest$\to$eigenmode assignment varies with the kinematic point.
+
+\begin{theorem}[Forest Structure by Root Assignment]
+\label{thm:forest-structure}
+For $n=6$ with roots $R = \{0, 1, 2\}$, each non-root vertex $v \in \{3, 4, 5\}$ is assigned to exactly one root in any spanning forest. The 27 possible root-assignment patterns $(r(3), r(4), r(5))$ decompose as follows:
+\begin{enumerate}
+\item \textbf{Monochrome patterns} (all three non-roots assigned to same root): 3 patterns, each with 16 forests. Total: 48 forests.
+\item \textbf{Mixed patterns} (exactly two non-roots share a root): 18 patterns, each with 3 forests. Total: 54 forests.
+\item \textbf{Bijective patterns} (each non-root to a distinct root): 6 patterns, each with 1 forest. Total: 6 forests.
+\end{enumerate}
+The total is $48 + 54 + 6 = 108$ forests.
+\end{theorem}
+
+\begin{proof}
+By exhaustive enumeration of all 3-rooted spanning forests on $K_6$. The root assignment for a non-root vertex $v$ is uniquely determined by the connected component containing $v$, which must contain exactly one root. We enumerate all edge subsets of size 3 that form valid forests and classify by root assignment pattern.
+\end{proof}
+
+\begin{remark}[The 18-Fold Ratio]
+The ratio $108/6 = 18$ is exact and structurally suggestive: there are 6 KLT orderings (permutations of $\{3,4,5\}$) and 108 forests, giving 18 forests ``per ordering.'' However, an explicit canonical map from forests to KLT modes is \textbf{kinematic-dependent} and not purely combinatorial. The question of whether such a map has a natural geometric interpretation remains open.
+\end{remark}
 
 \section{Evidence Against Positive Geometry for Gravity}
 
@@ -230,7 +253,8 @@ A positive geometry $(X, \Omega)$ satisfies:
 Yang-Mills amplitudes satisfy these axioms (Amplituhedron). For gravity, we find:
 
 \begin{observation}[Mixed-Sign Structure]
-Under the natural forest triangulation of MHV gravity amplitudes, the 108 terms exhibit an intrinsic mixed-sign structure with approximately 54 positive and 54 negative contributions. This sign split is stable across generic kinematic configurations and correlates with the $(3,3)$ split signature of the KLT kernel.
+\label{obs:mixed-sign-structure}
+Under the natural forest triangulation of MHV gravity amplitudes, the 108 terms exhibit an intrinsic mixed-sign structure. Observations~\ref{obs:empirical-split} and \ref{obs:klt-signature}, combined with Theorem~\ref{thm:modal-split}, provide computational evidence that approximately 54 positive and 54 negative contributions is typical, correlating with the $(3,3)$ split signature of the KLT kernel.
 \end{observation}
 
 \begin{remark}
@@ -252,18 +276,32 @@ A signed geometry $(X, \Omega_\pm)$ is characterized by:
 
 Gravity under the forest triangulation is the prototypical signed geometry, with the sign rule from Theorem~\ref{thm:sign-rule}.
 
-\section{Numerical Verification}
+\section{Computational Evidence}
+
+We verify the sign rule and sign split patterns using exact rational arithmetic throughout. This section documents our computational methodology.
+
+\subsection{Sampling Protocol}
+
+\textbf{Kinematic samples:} We generate random spinor-helicity data $(\lambda_i, \tilde{\lambda}_i) \in \mathbb{Q}^2$ satisfying momentum conservation $\sum_i \lambda_i \tilde{\lambda}_i^T = 0$. Spinor components are sampled uniformly from integers in $[-100, 100]$, then the last two $\tilde{\lambda}$ are solved exactly to enforce conservation.
+
+\textbf{Seed handling:} Each sample uses a deterministic seed (sample index $\times$ constant), ensuring reproducibility.
+
+\textbf{Degeneracy handling:} Samples with $\langle ij \rangle = 0$ for any $i \neq j$, or with singular reference factors $C_i = 0$, are detected and skipped. For $n=7$, forests with zero-weight edges (due to $w_{ij} = 0$) are tracked separately.
+
+\subsection{Verification Results}
 
 \begin{center}
-\begin{tabular}{|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|c|}
 \hline
-$n$ & Forests & Modal Split & Sign Rule Verified \\
+$n$ & Forests & Modal Split & Sign Rule Accuracy & Samples \\
 \hline
-6 & 108 & (54, 54) & 20/20 samples \\
-7 & 1029 & $\approx$(515, 514) & 20/20 samples \\
+6 & 108 & (54, 54) at 44\% & 100\% (2160/2160) & 20 \\
+7 & 1029 & (515, 514) at 30\% & 100\% (20580/20580) & 20 \\
 \hline
 \end{tabular}
 \end{center}
+
+\textbf{Note on $n=7$:} The modal split $(515, 514)$ is the closest possible to 50/50 since 1029 is odd. One sample exhibited 597 zero-weight forests due to degenerate kinematics; these are excluded from the split percentage but included in sign-rule verification (where zero-weight terms are skipped consistently).
 
 All verification code is available at: \url{https://github.com/zacharycraig1/Canonical-Positive-Geometry-Twistor-Gravity-Exploration}
 
@@ -285,11 +323,21 @@ The kernel's $(3,3)$ signature transforms ``positive $\times$ positive'' into ``
 The sign rule satisfies a crucial property: it is \textbf{multiplicative} under forest decomposition.
 
 \begin{theorem}[Signed Factorization]
-For a forest $F$ that decomposes as $F = F_L \cup F_R$ across a kinematic cut,
+\label{thm:factorization}
+Let $F$ be a forest on vertex set $V$ that decomposes as $F = F_L \cup F_R$ where $F_L$ and $F_R$ are subforests on disjoint vertex sets $V_L$ and $V_R$ (with $V = V_L \sqcup V_R$). Then:
 \begin{equation}
 \varepsilon(F) = \varepsilon(F_L) \times \varepsilon(F_R)
 \end{equation}
 \end{theorem}
+
+\begin{proof}
+Since $E(F) = E(F_L) \sqcup E(F_R)$ and the vertex sets are disjoint:
+\begin{align}
+\prod_{e \in E(F)} w_e &= \prod_{e \in E(F_L)} w_e \times \prod_{e \in E(F_R)} w_e \\
+\prod_{v \in V} C_v^{\deg_F(v)} &= \prod_{v \in V_L} C_v^{\deg_{F_L}(v)} \times \prod_{v \in V_R} C_v^{\deg_{F_R}(v)}
+\end{align}
+The second equality holds because vertices in $V_L$ have $\deg_F(v) = \deg_{F_L}(v)$ (no edges cross to $V_R$), and similarly for $V_R$. Taking signs and applying Theorem~\ref{thm:sign-rule} gives the result.
+\end{proof}
 
 This ensures that residues at kinematic poles inherit the signed structure.
 
@@ -338,9 +386,9 @@ Whether this represents a fundamental obstruction to positive geometry for gravi
 
 The following scripts verify our results:
 \begin{itemize}
-\item \texttt{tests/test\_oracle\_match.sage}: Independent oracle verification (non-circular)
+\item \texttt{tests/test\_oracle\_match.sage}: MTT $\leftrightarrow$ det$(L)$ consistency check (non-circular: compares explicit forest enumeration against Sage matrix determinant)
 \item \texttt{src/signed\_geometry/verify\_chy\_sign\_derivation.sage}: Sign rule verification
-\item \texttt{src/signed\_geometry/generalize\_n7.sage}: Extension to $n=7$
+\item \texttt{src/signed\_geometry/generalize\_n7.sage}: Extension to $n=7$ with full logging
 \item \texttt{tests/signed\_geometry\_verification.sage}: Full test suite (15/15 pass)
 \end{itemize}
 

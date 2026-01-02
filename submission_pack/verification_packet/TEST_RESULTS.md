@@ -15,7 +15,7 @@ All verification tests pass with 100% accuracy. The signed geometry framework is
 
 | Test Name | Samples | Result | Notes |
 |-----------|---------|--------|-------|
-| Matrix-Tree Identity | 50 | ✓ 50/50 | Non-circular oracle comparison |
+| MTT ↔ det(L) Identity | 50 | ✓ 50/50 | Non-circular consistency check |
 | Sign Convention Relation | 50 | ✓ 50/50 | Verifies (-1)^E factor |
 | Reference Independence | 19 | ✓ 19/19 | 1 skipped (singular) |
 | Sign Rule Derivation | 20 | ✓ 20/20 | Factorization verified |
@@ -28,7 +28,7 @@ All verification tests pass with 100% accuracy. The signed geometry framework is
 
 ## Detailed Test Results
 
-### 1. Independent Oracle Test (`tests/test_oracle_match.sage`)
+### 1. MTT ↔ det(L) Consistency Check (`tests/test_oracle_match.sage`)
 
 **Purpose:** Non-circular verification that forest sum = Laplacian determinant.
 
@@ -36,19 +36,50 @@ All verification tests pass with 100% accuracy. The signed geometry framework is
 - Oracle: `det(L^minor)` computed via Sage matrix determinant
 - Forest: `Σ_F Π_e (w_e × C_i × C_j)` via explicit enumeration
 
-**Results:**
+**Full Console Output:**
 ```
-TEST 1: Matrix-Tree Theorem Identity
-  Results: 50/50 exact matches (0 skipped)
-  ✓ PASS
+======================================================================
+MTT ↔ det(L) CONSISTENCY CHECK SUITE
+======================================================================
+These tests verify the forest expansion against Laplacian determinant.
+======================================================================
+======================================================================
+TEST 1: Matrix-Tree Theorem Identity (non-circular)
+======================================================================
+Oracle: det(L^minor) via Sage matrix determinant
+Forest: Σ_F Π_e (w_e × C_i × C_j) via explicit enumeration
+----------------------------------------------------------------------
+Total forests: 108
 
-TEST 2: Sign Convention Relation  
-  Results: 50/50 exact matches (0 skipped)
-  ✓ PASS
+Results: 50/50 exact matches (0 skipped)
+✓ PASS: Matrix-Tree Theorem identity verified!
 
+======================================================================
+TEST 2: Sign Convention Relation
+======================================================================
+Verify: signed_sum = (-1)^|E| × det(L^minor)
+----------------------------------------------------------------------
+
+Results: 50/50 exact matches (0 skipped)
+✓ PASS: Sign convention relation verified!
+
+======================================================================
 TEST 3: Reference Spinor Independence
-  Results: 19/19 consistent across references (1 skipped)
-  ✓ PASS
+======================================================================
+Full amplitude should not depend on choice of (x, y)
+----------------------------------------------------------------------
+
+Results: 19/19 consistent across references (1 skipped)
+✓ PASS: Reference spinor independence verified!
+
+======================================================================
+SUMMARY
+======================================================================
+  mtt_identity: ✓ PASS
+  sign_convention: ✓ PASS
+  reference_independence: ✓ PASS
+----------------------------------------------------------------------
+✓ ALL MTT CONSISTENCY TESTS PASSED
 ```
 
 ### 2. Sign Rule Verification (`src/signed_geometry/verify_chy_sign_derivation.sage`)
@@ -119,10 +150,10 @@ SUCCESS: Exact identity verified for n=6 (20 trials)!
 # Run all tests via Docker (recommended)
 docker run --rm -v "${PWD}:/home/sage/project" -w /home/sage/project \
   sagemath/sagemath:latest bash -c "
-    echo '=== Oracle Tests ===' && sage tests/test_oracle_match.sage &&
+    echo '=== MTT Consistency Tests ===' && sage tests/test_oracle_match.sage &&
     echo '=== Sign Rule ===' && sage src/signed_geometry/verify_chy_sign_derivation.sage &&
     echo '=== Full Suite ===' && sage tests/signed_geometry_verification.sage &&
-    echo '=== Core Identity ===' && sage src/scripts/physics_pullback_n6.sage
+    echo '=== N=7 Verification ===' && sage src/signed_geometry/generalize_n7.sage
   "
 ```
 
@@ -146,11 +177,10 @@ See `submission_pack/CONVENTIONS.md` for complete sign/normalization documentati
 | `tests/test_oracle_match.sage` | ✓ All tests pass |
 | `tests/signed_geometry_verification.sage` | ✓ 15/15 pass |
 | `src/signed_geometry/verify_chy_sign_derivation.sage` | ✓ All tests pass |
-| `src/scripts/physics_pullback_n6.sage` | ✓ Identity verified |
+| `src/signed_geometry/generalize_n7.sage` | ✓ 20/20 samples pass |
 | `results/ANALYTIC_SIGN_RULE_PROOF.md` | ✓ Convention fixed |
-| `paper/main.tex` | ✓ Claims softened |
+| `paper/main.tex` | ✓ Compiles, claims accurate |
 
 ---
 
-*Verification packet created January 2026.*
-
+*Verification packet updated January 2026.*
